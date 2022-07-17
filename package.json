@@ -1,0 +1,30 @@
+{
+  "name": "a",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "standard"
+  },
+  "dependencies": {
+    "@vueuse/motion": "^2.0.0-beta.12",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.0",
+    "eslint": "^8.20.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.2.0",
+    "standard": "^17.0.0",
+    "unocss": "^0.44.3",
+    "vite": "^3.0.0",
+    "vue-eslint-parser": "^9.0.3"
+  }
+}
