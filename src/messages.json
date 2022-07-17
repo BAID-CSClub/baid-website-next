@@ -1,0 +1,14 @@
+{
+    "en": {
+
+    },
+    "zh": {
+        "views": {
+            "HomePage": "首页",
+            "AboutUs": "关于我们",
+            "EducationTeaching": "教育教学",
+            "CampusLife": "校园生活",
+            "JoinUs": "加入我们"
+        }
+    }
+}
