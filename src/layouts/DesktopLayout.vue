@@ -1,6 +1,6 @@
 <template>
     <DesktopHeader />
-    <main>
+    <main class="min-h-[calc(100vh-21.75rem)]">
         <slot></slot>
     </main>
     <DesktopFooter />
