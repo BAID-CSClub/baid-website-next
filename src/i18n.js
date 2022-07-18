@@ -3,7 +3,9 @@ import messages from './messages.json'
 
 export default createI18n({
   // ..
-  locale: navigator.language.split('-')[0],
+  locale: localStorage.getItem('locale') ? localStorage.getItem('locale') : navigator.language.split('-')[0],
   fallbackLocale: 'en',
+  legacy: false,
+  globalInjection: true,
   messages
 })
