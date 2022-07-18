@@ -1,6 +1,6 @@
 <template>
-  <header class="w-screen h-17 bg-white flex justify-between items-center transition-colors font-sans"
-    :class="{ 'bg-transparent': transparent }" :style="{ color }">
+  <header class="w-screen h-17 bg-white flex justify-between items-center transition-colors font-sans relative z-10"
+    :class="{ 'important-bg-transparent': transparent }" :style="{ color }">
     <div class="m-l-10">
       <SchoolLogo :color="color" :logoType="route.meta.header && route.meta.header.logoType" />
     </div>

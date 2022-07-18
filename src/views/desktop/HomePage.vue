@@ -1,3 +1,9 @@
 <template>
-  <h1>Home</h1>
+  <div>
+    <FirstSection/>
+  </div>
 </template>
+
+<script setup>
+import FirstSection from '../../components/DesktopHomePage/FirstSection.vue';
+</script>
