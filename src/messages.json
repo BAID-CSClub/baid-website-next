@@ -1,6 +1,12 @@
 {
     "en": {
-
+        "views": {
+            "HomePage": "Home",
+            "AboutUs": "About",
+            "EducationTeaching": "Education",
+            "CampusLife": "Life",
+            "JoinUs": "Join Us"
+        }
     },
     "zh": {
         "views": {
