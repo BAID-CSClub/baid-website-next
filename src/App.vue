@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="overflow-x-hidden">
     <component :is="$clientType === 'desktop' ? DesktopLayout : MobileLayout">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">

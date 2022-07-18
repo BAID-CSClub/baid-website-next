@@ -8,7 +8,12 @@ export const routes = [
     name: 'HomePage',
     component: () => import(`./views/${clientType}/HomePage.vue`),
     meta: {
-      navigation_transparent: true // Tell the navigation component to make the header's bg transparent
+      header: {
+        transparent: true, // Tell the navigation component to make the header's bg transparent
+        color: '#fff' // Set the header's text color
+        // logoType: 'normal' // Set the header's logo type
+        // lineColor: '#fff' // Set the header's line color
+      }
     }
   },
   {
