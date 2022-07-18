@@ -1,11 +1,12 @@
 <template>
-  <header class="w-screen h-17 bg-white flex justify-between items-center transition-colors"
+  <header class="w-screen h-17 bg-white flex justify-between items-center transition-colors font-sans"
     :class="{ 'bg-transparent': $route.meta.navigation_transparent }">
-    <span class="m-l-10 font-1000">LOGO HERE</span>
+    <!-- TODO: Replace with our logo (SVG recommend) -->
+    <span class="m-l-10 font-1000 font-mono">LOGO HERE</span>
     <div class="flex h-full m-r-10 items-center">
       <ul class="flex list-none p-0 relative h-full m-0" v-on:mouseleave="showBlock = false">
         <li v-for="(route, index) in routes" v-bind:key="route.name" v-on:mouseover="onHover(index)"
-          class="flex items-center justify-center w-30 h-full font-sans-serif font-500 text-16px margin-left-right-10px">
+          class="flex items-center justify-center w-30 h-full font-500 text-16px margin-left-right-10px">
           <router-link :to="route.path" class="
                     decoration-none
                     color-black
@@ -21,7 +22,7 @@
         <div class="absolute w-15 h-1 bg-#103C74 z-10 bottom-0 translate-x-1/2 transition-opacity"
           :style="{ left: lineLeft }" :class="{ 'opacity-0': !lineLeft || !showLine }"></div>
       </ul>
-      <hr class="h-7 w-2px m-y-0 m-x-5 bg-#122A2B" />
+      <hr class="h-7 w-3px m-y-0 m-x-5 bg-#122A2B border-none" />
       <p class="w-20 text-center font-500 opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer select-none">
         <transition mode="out-in" name="fast-fade">
           <span v-if="$i18n.locale === 'zh'" v-on:click="setLocale('en')">English</span>
