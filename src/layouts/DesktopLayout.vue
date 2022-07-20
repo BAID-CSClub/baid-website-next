@@ -1,9 +1,9 @@
 <template>
-    <DesktopHeader />
-    <main class="min-h-[calc(100vh-21.75rem)]">
-        <slot></slot>
-    </main>
-    <DesktopFooter />
+  <DesktopHeader />
+  <main class="min-h-[calc(100vh-21.75rem)]">
+    <slot></slot>
+  </main>
+  <DesktopFooter />
 </template>
 
 <script setup>
