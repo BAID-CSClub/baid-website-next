@@ -6,7 +6,10 @@ import { MotionPlugin } from '@vueuse/motion'
 import 'uno.css'
 
 const app = createApp(App)
-app.config.globalProperties.$clientType = navigator.userAgent.toLowerCase().indexOf('mobile') > -1 ? 'mobile' : 'desktop'
+app.config.globalProperties.$clientType =
+  navigator.userAgent.toLowerCase().indexOf('mobile') > -1
+    ? 'mobile'
+    : 'desktop'
 app.use(router)
 app.use(i18n)
 app.use(MotionPlugin)

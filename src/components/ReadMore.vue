@@ -23,7 +23,7 @@
           />
         </svg>
       </i>
-      <span class="w-max">{{ $t('ReadMore') }}</span>
+      <span class="w-max">{{ $t("ReadMore") }}</span>
     </div>
   </router-link>
 </template>

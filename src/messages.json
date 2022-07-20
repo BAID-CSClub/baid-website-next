@@ -1,29 +1,29 @@
 {
-    "en": {
-        "views": {
-            "HomePage": "Home",
-            "AboutUs": "About",
-            "EducationTeaching": "Education",
-            "CampusLife": "Life",
-            "JoinUs": "Join Us"
-        },
-        "HomePage": {},
-        "ReadMore": "Read More"
+  "en": {
+    "views": {
+      "HomePage": "Home",
+      "AboutUs": "About",
+      "EducationTeaching": "Education",
+      "CampusLife": "Life",
+      "JoinUs": "Join Us"
     },
-    "zh": {
-        "views": {
-            "HomePage": "首页",
-            "AboutUs": "关于我们",
-            "EducationTeaching": "教育教学",
-            "CampusLife": "校园生活",
-            "JoinUs": "加入我们"
-        },
-        "HomePage": {
-            "SecondSection": {
-                "Title": "北京中学国际部是一个团结友爱的大集体。",
-                "Content": "学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍。"
-            }
-        },
-        "ReadMore": "了解更多"
-    }
+    "HomePage": {},
+    "ReadMore": "Read More"
+  },
+  "zh": {
+    "views": {
+      "HomePage": "首页",
+      "AboutUs": "关于我们",
+      "EducationTeaching": "教育教学",
+      "CampusLife": "校园生活",
+      "JoinUs": "加入我们"
+    },
+    "HomePage": {
+      "SecondSection": {
+        "Title": "北京中学国际部是一个团结友爱的大集体。",
+        "Content": "学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍学校概况介绍。"
+      }
+    },
+    "ReadMore": "了解更多"
+  }
 }

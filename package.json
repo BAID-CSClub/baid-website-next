@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "eslint ./src --ext .js --ext .vue"
+    "test": "eslint ./src --ext .js --ext .vue",
+    "fix": "eslint ./src --ext .js --ext .vue --fix"
   },
   "dependencies": {
     "@vueuse/motion": "^2.0.0-beta.12",
@@ -27,6 +28,7 @@
     "eslint-plugin-vue": "^9.2.0",
     "unocss": "^0.44.3",
     "vite": "^3.0.1",
+    "vite-imagetools": "^4.0.4",
     "vue-eslint-parser": "^9.0.3"
   }
 }

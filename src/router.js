@@ -1,6 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const clientType = navigator.userAgent.toLowerCase().indexOf('mobile') > -1 ? 'mobile' : 'desktop'
+const clientType =
+  navigator.userAgent.toLowerCase().indexOf('mobile') > -1
+    ? 'mobile'
+    : 'desktop'
 
 export const routes = [
   {
