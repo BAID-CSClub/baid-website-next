@@ -1,7 +1,7 @@
 <template>
   <section class="h-screen m-t-[-4.25rem] relative overflow-hidden">
     <div class="absolute top-0 w-screen h-screen">
-      <FirstCarousel />
+      <CarouselVertical :images="images" />
     </div>
     <div
       class="absolute top-0 left-0 bg-#103C74 h-screen op-90 t-0 l-0 w-38% min-w-600px shadow shadow-lg shadow-black"
@@ -30,7 +30,13 @@
 </template>
 
 <script setup>
-import FirstCarousel from './FirstCarousel.vue'
+import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
+import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
+
+import CarouselVertical from '../CarouselVertical.vue'
+
+const images = [homeBg1, homeBg2, homeBg3]
 </script>
 
 <style scoped>
