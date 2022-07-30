@@ -19,7 +19,7 @@
         {{ $t("AboutUs.Alumni.Title") }}
       </h2>
       <div class="flex">
-        <div style="flex: 1; align-items: center;" class="pr-5 flex pl-8">
+        <div style="flex: 1" class="pr-5 flex pl-8 items-center">
           <img :src="homeBg1" style="max-width: 100%;
       max-height: 100%;" alt="pic1" class="alumni-big-pic" />
         </div>
@@ -70,6 +70,18 @@
           <img :src="homeBg1" style="max-width: 100%;
       max-height: 100%;" alt="pic1" />
         </div>
+      </div>
+    </div>
+    <div id="test-center" class="pt-5 pb-5 font-sans flex">
+      <div style="width: 50%; background-color: var(--standard-blue);" class="text-white flex-col">
+        <h2 class="text-9 ma-0">
+          {{ $t("AboutUs.TestCenter.Title") }}
+        </h2>
+        <p> {{ $t("AboutUs.TestCenter.Content") }}</p>
+      </div>
+      <div style="width: 50%">
+        <img :src="homeBg1" style="max-width: 100%;
+      max-height: 100%;" alt="pic1" />
       </div>
     </div>
   </section>
