@@ -1,20 +1,8 @@
 <template>
-  <section class="contentArea">
-    <div class="flex pt-5 pb-5 font-sans" id="vision">
-      <div style="width: 50%" class="pr-10">
-        <img :src="homeBg1" style="max-width: 100%;
-      max-height: 100%;" alt="pic1" />
-      </div>
-      <div style="width: 50%" class="pl-10">
-        <h2 class="color-[var(--standard-blue)] text-9  text-right ma-0">
-          {{ $t("AboutUs.Vision.Title") }}
-        </h2>
-        <p class="font-500 ">
-          {{ $t("AboutUs.Vision.Content") }}
-        </p>
-      </div>
-    </div>
-    <div id="alumni" class="pt-5 pb-5 font-sans flex-col">
+  <FirstSection />
+
+  <section class="section">
+    <div id="alumni" class="p-y-10 font-sans flex-col">
       <h2 class="color-[var(--standard-blue)] text-9 text-left ma-0">
         {{ $t("AboutUs.Alumni.Title") }}
       </h2>
@@ -46,7 +34,11 @@
         </div>
       </div>
     </div>
-    <div id="honor" class="pt-5 pb-5 font-sans flex-col" style="background-color: lightgrey;">
+  </section>
+
+  <div class="bg-[lightgrey]">
+  <section class="section">
+    <div id="honor" class="p-y-10 font-sans flex-col">
       <h2 class="color-[var(--standard-blue)] text-9 text-left ma-0">
         {{ $t("AboutUs.Honor.Title") }}
       </h2>
@@ -72,8 +64,13 @@
         </div>
       </div>
     </div>
-    <div id="test-center" class="pt-5 pb-5 font-sans flex">
-      <div style="width: 50%; background-color: var(--standard-blue);" class="text-white flex-col">
+  </section>
+  </div>
+
+  <div class="bg-[var(--standard-blue)]">
+  <section class="section">
+    <div id="test-center" class="p-y-10 font-sans flex">
+      <div class="text-white flex-col w-1/2">
         <h2 class="text-9 ma-0">
           {{ $t("AboutUs.TestCenter.Title") }}
         </h2>
@@ -85,10 +82,13 @@
       </div>
     </div>
   </section>
+  </div>
+
 </template>
 
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import FirstSection from '../../components/DesktopAboutUs/FirstSection.vue'
 </script>
 
 <style>
