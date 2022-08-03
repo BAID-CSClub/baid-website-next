@@ -94,7 +94,7 @@ import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 
 import FirstSection from '../../components/DesktopAboutUs/FirstSection.vue'
-import CarouselHorizontal from '../../components/CarouselHorizontal.vue';
+import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 </script>
 
 <style>

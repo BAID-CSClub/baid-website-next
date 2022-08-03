@@ -30,5 +30,8 @@
     "vite": "^3.0.4",
     "vite-imagetools": "^4.0.4",
     "vue-eslint-parser": "^9.0.3"
+  },
+  "prettier":{
+    "tabWidth": 2
   }
 }
