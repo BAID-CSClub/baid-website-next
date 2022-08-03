@@ -8,7 +8,10 @@
       - `desktop.css`
       - `mobile.css`
   - `components` - 全部**非页面组件**放到这里，命名一律为**多词CamelCase**
+  
+    如果是仅限于某个view内使用的组件，请将其放在一个文件夹内，文件夹名称类似 `DesktopAboutUs`
   - `layouts` - 基础布局
+  
     - `DesktopLayout.vue` - 桌面端的默认布局
     - `MobileLayout.vue` - 移动端的默认布局
   - `views` - 全部**页面组件**，每个页面都需要有桌面端的和移动端的，两个组件名称需**相同**
@@ -26,6 +29,28 @@
 - `npm run dev` - 打开开发服务器（Vite）
 - `npm test` - 检查代码有无任何不规范
 - `npm run build` - 生成静态构建
+
+> Note: 如果在安装依赖时遇到如下错误：
+>
+> ```
+> npm ERR! code 1
+> npm ERR! path ...\baid-website-next\node_modules\sharp
+> npm ERR! command failed
+> npm ERR! command C:\Windows\system32\cmd.exe /d /s /c C:\Users\lihel\AppData\Local\Temp\install-17987348.cmd
+> npm ERR! sharp: Downloading https://github.com/lovell/sharp-libvips/releases/download/v8.12.2/libvips-8.12.2-win32-x64.tar.br
+> npm ERR! sharp: Please see https://sharp.pixelplumbing.com/install for required dependencies
+> npm ERR! sharp: Installation error: unable to verify the first certificate
+> 
+> npm ERR! A complete log of this run can be found in:
+> npm ERR!     ...log
+> ```
+>
+> 该错误的产生原因是GitHub在国内的间歇性失效问题，可以执行如下命令：
+>
+> `npm config set sharp_libvips_binary_host=https://ghproxy.com/https://github.com/lovell/sharp-libvips/releases/download`
+>
+> 之后再次安装依赖即可解决问题，无需使用代理软件
+
 
 ## 开发时可能要用到的资料
 

@@ -3,7 +3,7 @@
     <div class="h-max w-screen absolute" :style="{ top }">
       <img
         v-for="(img, index) in props.images"
-        v-bind:key="img"
+        :key="img"
         :src="img"
         class="h-screen w-screen brightness-80 m-0"
         :class="{ 'm-t--4px': index > 0 }"
