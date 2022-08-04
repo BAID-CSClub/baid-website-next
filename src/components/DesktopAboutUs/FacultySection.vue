@@ -11,9 +11,7 @@
     </section>
 </template>
 
-
 <script>
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
 <style>
 .ratio {
