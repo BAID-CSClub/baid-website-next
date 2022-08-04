@@ -1,11 +1,11 @@
 <template>
   <div class="h-screen w-screen overflow-hidden relative">
-    <div class="h-max w-screen absolute" :style="{ top }">
+    <div class=" absolute" :style="{ top }">
       <img
         v-for="(img, index) in props.images"
         :key="img"
         :src="img"
-        class="h-screen w-screen brightness-80 m-0"
+        class="h-screen w-screen brightness-80"
         :class="{ 'm-t--4px': index > 0 }"
       />
     </div>
