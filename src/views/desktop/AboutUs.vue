@@ -1,7 +1,7 @@
 <template>
   <div>
     <CarouselHorizontal :images="[homeBg1, homeBg2]">
-      <h1 class="text-18 font-300 font-sans color-white">SOME TEXT</h1>
+      <h1 class="text-18 font-300 font-sans color-white"> {{ $t("AboutUs.Title") }}</h1>
     </CarouselHorizontal>
     <VisionSection />
     <AlumniSection />
@@ -31,9 +31,4 @@ import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 </script>
 
 <style>
-.title {
-  font-size: 2.25rem;
-  margin: 0;
-  color: var(--standard-blue);
-}
 </style>

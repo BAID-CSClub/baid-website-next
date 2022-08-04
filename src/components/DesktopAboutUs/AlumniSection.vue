@@ -1,6 +1,6 @@
 <template>
     <section class="section">
-        <div id="alumni" class="p-y-10 font-sans flex-col">
+        <div id="alumni" class="p-y-10 font-sans flex-col items-center">
             <h2 class="title">
                 {{ $t("AboutUs.Alumni.Title") }}
             </h2>
@@ -12,7 +12,7 @@
                 <div style="flex: 2" class="flex-col pl-5">
                     <div>
                         <div class="text-9 font-700">“</div>
-                        <div class="p-5">{{ $t("AboutUs.Alumni.Content") }}</div>
+                        <p class="p-5 content" style="font-size: 1.25rem">{{ $t("AboutUs.Alumni.Content") }}</p>
 
                         <div class="text-9 font-700 text-right">”</div>
                     </div>

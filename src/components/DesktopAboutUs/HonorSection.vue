@@ -1,6 +1,6 @@
 <template>
     <section class="section">
-        <div id="honor" class="p-y-10 font-sans flex-col">
+        <div id="honor" class="p-y-10 font-sans flex-col items-center">
             <h2 class="title">
                 {{ $t("AboutUs.Honor.Title") }}
             </h2>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="flex items-center">
-                <p style="width: 50%;" class="pr-7">{{ $t("AboutUs.Honor.Content") }}</p>
+                <p style="width: 50%;" class="pr-7 content">{{ $t("AboutUs.Honor.Content") }}</p>
                 <div style="width: 50%;" class="pl-7">
                     <img :src="homeBg1" style="max-width: 100%;
         max-height: 100%;" alt="pic1" />

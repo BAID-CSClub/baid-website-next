@@ -1,38 +1,43 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 const clientType =
-  navigator.userAgent.toLowerCase().indexOf('mobile') > -1
-    ? 'mobile'
-    : 'desktop'
+  navigator.userAgent.toLowerCase().indexOf("mobile") > -1
+    ? "mobile"
+    : "desktop";
 
 export const routes = [
   {
-    path: '/',
-    name: 'HomePage',
+    path: "/",
+    name: "HomePage",
     component: () => import(`./views/${clientType}/HomePage.vue`),
     meta: {
       header: {
         transparent: true, // Tell the navigation component to make the header's bg transparent
-        color: '#fff' // Set the header's text color
+        color: "#fff", // Set the header's text color
         // logoType: 'normal' // Set the header's logo type
         // lineColor: '#fff' // Set the header's line color
-      }
-    }
+      },
+    },
   },
   {
-    path: '/about',
-    name: 'AboutUs',
-    component: () => import(`./views/${clientType}/AboutUs.vue`)
+    path: "/about",
+    name: "AboutUs",
+    component: () => import(`./views/${clientType}/AboutUs.vue`),
   },
   {
-    path: '/education',
-    name: 'EducationTeaching',
-    component: () => import(`./views/${clientType}/EducationTeaching.vue`)
-  }
+    path: "/education",
+    name: "EducationTeaching",
+    component: () => import(`./views/${clientType}/EducationTeaching.vue`),
+  },
+  {
+    path: "/join",
+    name: "JoinUs",
+    component: () => import(`./views/${clientType}/JoinUs.vue`),
+  },
   // TODO: Add your routes here
-]
+];
 
 export default createRouter({
   history: createWebHistory(),
-  routes
-})
+  routes,
+});
