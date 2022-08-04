@@ -2,7 +2,7 @@
     <section class="section">
         <div id="test-center" class="p-y-10 font-sans flex">
             <div class="text-white flex-col w-1/2 pr-7">
-                <h2 class="text-9 ma-0">
+                <h2 class="title" style="color: white">
                     {{ $t("AboutUs.TestCenter.Title") }}
                 </h2>
                 <p> {{ $t("AboutUs.TestCenter.Content") }}</p>

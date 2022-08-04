@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div id="honor" class="p-y-10 font-sans flex-col">
-            <h2 class="color-[var(--standard-blue)] text-9 text-left ma-0">
+            <h2 class="title">
                 {{ $t("AboutUs.Honor.Title") }}
             </h2>
             <div class="flex pt-10 pb-10">
@@ -32,3 +32,9 @@
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
+
+<style>
+.honor-small-pic {
+    padding: 0 2.5rem;
+}
+</style>

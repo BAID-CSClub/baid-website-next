@@ -11,6 +11,8 @@
     <div class="bg-[var(--standard-blue)]">
       <TestCenterSection />
     </div>
+    <FacultySection />
+    <QuoteSection />
   </div>
 </template>
 
@@ -22,20 +24,16 @@ import VisionSection from '../../components/DesktopAboutUs/VisionSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import HonorSection from '../../components/DesktopAboutUs/HonorSection.vue'
 import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
+import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
+import QuoteSection from '../../components/DesktopAboutUs/QuoteSection.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 </script>
 
 <style>
-.alumni-small-pic {
-  margin: 1rem;
-}
-
-.alumni-big-pic {
-  box-shadow: -2rem 2rem var(--standard-red);
-}
-
-.honor-small-pic {
-  padding: 0 2.5rem;
+.title {
+  font-size: 2.25rem;
+  margin: 0;
+  color: var(--standard-blue);
 }
 </style>

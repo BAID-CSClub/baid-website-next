@@ -6,10 +6,10 @@
       max-height: 100%;" alt="pic1" />
       </div>
       <div style="width: 50%" class="pl-7">
-        <h2 class="color-[var(--standard-blue)] text-9  text-right ma-0">
+        <h2 class="title text-right">
           {{ $t("AboutUs.Vision.Title") }}
         </h2>
-        <p class="font-500 ">
+        <p>
           {{ $t("AboutUs.Vision.Content") }}
         </p>
       </div>

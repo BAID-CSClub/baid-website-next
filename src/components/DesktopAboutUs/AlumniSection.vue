@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <div id="alumni" class="p-y-10 font-sans flex-col">
-            <h2 class="color-[var(--standard-blue)] text-9 text-left ma-0">
+            <h2 class="title">
                 {{ $t("AboutUs.Alumni.Title") }}
             </h2>
             <div class="flex">
@@ -12,7 +12,8 @@
                 <div style="flex: 2" class="flex-col pl-5">
                     <div>
                         <div class="text-9 font-700">“</div>
-                        {{ $t("AboutUs.Alumni.Content") }}
+                        <div class="p-5">{{ $t("AboutUs.Alumni.Content") }}</div>
+
                         <div class="text-9 font-700 text-right">”</div>
                     </div>
                     <div class="flex">
@@ -38,3 +39,13 @@
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
+
+<style>
+.alumni-big-pic {
+    box-shadow: -2rem 2rem var(--standard-red), -0.25rem 0.25rem 0.25rem grey;
+}
+
+.alumni-small-pic {
+    margin: 1rem;
+}
+</style>
