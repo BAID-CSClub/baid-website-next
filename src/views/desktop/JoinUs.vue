@@ -12,8 +12,8 @@ import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
-import JoinStudentSection from '../../components/DesktopJoinUs/JoinStudentSection.vue';
-import JoinFacultySection from '../../components/DesktopJoinUs/JoinFacultySection.vue';
+import JoinStudentSection from '../../components/DesktopJoinUs/JoinStudentSection.vue'
+import JoinFacultySection from '../../components/DesktopJoinUs/JoinFacultySection.vue'
 </script>
 <style>
 </style>
