@@ -20,12 +20,12 @@ h1 {
 }
 
 .title {
-  font-size: 3.75rem;
+  font-size: 2.25rem;
   margin: 1rem 0;
   color: var(--standard-blue);
 }
 
 .content {
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0;
 }

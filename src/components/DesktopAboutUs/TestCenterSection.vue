@@ -1,6 +1,6 @@
 <template>
     <section class="section">
-        <div id="test-center" class="p-y-10 font-sans flex items-center">
+        <div id="test-center" class="p-y-10 font-sans flex">
             <div class="text-white flex-col w-1/2 pr-7">
                 <h2 class="title" style="color: white">
                     {{ $t("AboutUs.TestCenter.Title") }}
