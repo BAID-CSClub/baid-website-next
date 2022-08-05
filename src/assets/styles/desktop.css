@@ -18,3 +18,14 @@ h1 {
   --standard-blue: #103c74;
   --standard-red: #83050e;
 }
+
+.title {
+  font-size: 2.25rem;
+  margin: 1rem 0;
+  color: var(--standard-blue);
+}
+
+.content {
+  font-size: 1rem;
+  margin: 0;
+}

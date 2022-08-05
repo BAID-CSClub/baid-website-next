@@ -28,6 +28,11 @@ export const routes = [
     path: '/education',
     name: 'EducationTeaching',
     component: () => import(`./views/${clientType}/EducationTeaching.vue`)
+  },
+  {
+    path: '/join',
+    name: 'JoinUs',
+    component: () => import(`./views/${clientType}/JoinUs.vue`)
   }
   // TODO: Add your routes here
 ]
