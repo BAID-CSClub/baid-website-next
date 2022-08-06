@@ -12,7 +12,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import logoNormal from '../assets/images/logoNormal.png?webp'
+import logoNormal from '../../assets/images/logoNormal.png?webp'
 
 const props = defineProps({
   color: {
