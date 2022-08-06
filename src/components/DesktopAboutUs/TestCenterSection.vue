@@ -5,9 +5,9 @@
                 <h2 class="title" style="color: white">
                     {{ $t("AboutUs.TestCenter.Title") }}
                 </h2>
-                <p class="content"> {{ $t("AboutUs.TestCenter.Content") }}</p>
+                <p class="content "> {{ $t("AboutUs.TestCenter.Content") }}</p>
             </div>
-            <div style="width: 50%" class="pl-7">
+            <div style="width: 50%" class="pl-7 w-1/2">
                 <img :src="homeBg1" style="max-width: 100%;
         max-height: 100%;" alt="pic1" />
             </div>
