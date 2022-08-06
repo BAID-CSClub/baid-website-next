@@ -35,7 +35,7 @@ export const routes = [
     component: () => import(`./views/${clientType}/CampusLife.vue`)
   },
   {
-    path: '/joinus',
+    path: '/join',
     name: 'JoinUs',
     component: () => import(`./views/${clientType}/JoinUs.vue`)
   }
