@@ -2,9 +2,9 @@
   <CarouselHorizontal :images="[homeBg1, homeBg2, homeBg3, campusBg1]">
       <h1 class="text-18 font-300 font-sans color-white">校园生活</h1>
   </CarouselHorizontal>
-  <ActivitiesSection></ActivitiesSection>
-  <ClubsSection></ClubsSection>
-  <EventsSection></EventsSection>
+  <ActivitiesSection />
+  <ClubsSection />
+  <EventsSection />
 </template>
 
 <script setup>
