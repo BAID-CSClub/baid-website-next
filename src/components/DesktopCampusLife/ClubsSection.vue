@@ -19,7 +19,7 @@
 </template>
 
 <script setup>
-    import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
 
 <style scoped>
