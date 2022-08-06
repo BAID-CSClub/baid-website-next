@@ -3,13 +3,10 @@
     <h1 class="color-#122A28 m-0 text-10 font-title">
       <span v-for="word in top" :key="word" class="m-r-5">
         <span>{{ word.left }}</span>
-        <span
-          :class="{
-            'color-[var(--standard-blue)]': props.color === 'blue',
-            'color-[var(--standard-red)]': props.color === 'red'
-          }"
-          >{{ word.colored }}</span
-        >
+        <span :class="{
+          'color-[var(--standard-blue)]': props.color === 'blue',
+          'color-[var(--standard-red)]': props.color === 'red'
+        }">{{ word.colored }}</span>
         <span>{{ word.right }}</span>
       </span>
     </h1>
@@ -18,13 +15,10 @@
       <h1 class="color-#122A28 m-0 text-9 font-title font-300">
         <span v-for="word in btm" :key="word" class="m-r-5">
           <span>{{ word.left }}</span>
-          <span
-            :class="{
-              'color-[var(--standard-blue)]': props.color === 'blue',
-              'color-[var(--standard-red)]': props.color === 'red'
-            }"
-            >{{ word.colored }}</span
-          >
+          <span :class="{
+            'color-[var(--standard-blue)]': props.color === 'blue',
+            'color-[var(--standard-red)]': props.color === 'red'
+          }">{{ word.colored }}</span>
           <span>{{ word.right }}</span>
         </span>
       </h1>

@@ -11,7 +11,10 @@
     <div class="bg-[var(--standard-blue)]">
       <TestCenterSection />
     </div>
-    <FacultySection />
+    <div :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
+      style="background-size: cover; background-position: center;">
+      <FacultySection />
+    </div>
     <QuoteSection />
   </div>
 </template>

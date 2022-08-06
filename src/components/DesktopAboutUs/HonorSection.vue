@@ -1,9 +1,10 @@
 <template>
     <section class="section">
         <div id="honor" class="p-y-10 font-sans flex-col items-center">
-            <h2 class="title">
+            <!-- <h2 class="title">
                 {{ $t("AboutUs.Honor.Title") }}
-            </h2>
+            </h2> -->
+            <FancyTitle :top="$t('AboutUs.Honor.Title')" btm="Honors" color="blue"></FancyTitle>
             <div class="flex pt-10 pb-10">
                 <div class="honor-small-pic">
                     <img :src="homeBg1" style="max-width: 100%;
@@ -31,6 +32,7 @@
 
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import FancyTitle from '../FancyTitle.vue'
 </script>
 
 <style>

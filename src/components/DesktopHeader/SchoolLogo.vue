@@ -4,7 +4,7 @@
     <div class="flex flex-col justify-center transition-colors">
       <h2 class="m-0 text-4 font-500 m-b-1 font-sans">北京中学国际部</h2>
       <p class="m-0 text-3 font-sans">
-        Beijing Academy International department
+        Beijing Academy International Department
       </p>
     </div>
   </div>
