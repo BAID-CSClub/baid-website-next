@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen w-screen overflow-hidden relative">
-    <div class=" absolute" :style="{ top }">
+    <div class="absolute" :style="{ top }">
       <img
         v-for="(img, index) in props.images"
         :key="img"
@@ -14,7 +14,7 @@
         v-for="(img, index) in props.images"
         v-bind:key="img"
         :class="{ 'important-bg-white': current === index }"
-        class="dot w-4 h-4 m-y-3"
+        class="dot w-4 h-4 m-y-3 cursor-pointer"
         v-on:click="current = index"
       ></div>
     </div>

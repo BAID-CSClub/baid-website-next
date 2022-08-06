@@ -17,7 +17,8 @@
       </div>
     </div>
     <div
-      class="absolute bottom-5 left-1/2 color-white translate-x--1/2 learnMore flex flex-col"
+      class="absolute bottom-5 left-1/2 color-white translate-x--1/2 learnMore flex flex-col cursor-pointer active:op-70 transition-opacity"
+      v-on:click="scrollTo('#secondSection')"
     >
       <span class="text-6 font-sans select-none">Learn More</span>
       <div class="arrow relative w-full h-1 m-t-1 transition-all">
@@ -37,6 +38,13 @@ import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
 import CarouselVertical from '../CarouselVertical.vue'
 
 const images = [homeBg1, homeBg2, homeBg3]
+
+function scrollTo (id) {
+  const element = document.querySelector(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <style scoped>

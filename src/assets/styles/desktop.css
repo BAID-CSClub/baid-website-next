@@ -29,3 +29,8 @@ h1 {
   font-size: 1rem;
   margin: 0;
 }
+
+@font-face {
+  font-family: 'PangMenZhengDao';
+  src: url('../fonts/PangMenZhengDaoBiaoTiTi.ttf');
+}
