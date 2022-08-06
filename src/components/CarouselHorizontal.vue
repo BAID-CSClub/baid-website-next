@@ -1,7 +1,13 @@
- <template>
+<template>
   <div class="h-[calc(100vh-4.25rem)] w-screen overflow-hidden relative">
     <div class="absolute flex" :style="{ left }">
-      <img class="h-[calc(100vh-4.25rem)] w-screen brightness-80" v-for="img in props.images" :src="img" :alt="img" :key="img">
+      <img
+        class="h-[calc(100vh-4.25rem)] w-screen brightness-80"
+        v-for="img in props.images"
+        :src="img"
+        :alt="img"
+        :key="img"
+      />
     </div>
     <div class="absolute right-10 bottom-10 flex">
       <div
@@ -13,7 +19,9 @@
       ></div>
     </div>
     <div class="absolute pointer-events-none">
-      <div class="flex justify-center items-center w-screen h-[calc(100vh-4.25rem)]">
+      <div
+        class="flex justify-center items-center w-screen h-[calc(100vh-4.25rem)]"
+      >
         <slot></slot>
       </div>
     </div>
@@ -48,7 +56,6 @@ onMounted(() => {
     current.value = (current.value + 1) % props.images.length
   }, 5000)
 })
-
 </script>
 
 <style scoped>

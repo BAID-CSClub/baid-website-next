@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen w-screen overflow-hidden relative">
-    <div class=" absolute" :style="{ top }">
+    <div class="absolute" :style="{ top }">
       <img
         v-for="(img, index) in props.images"
         :key="img"
