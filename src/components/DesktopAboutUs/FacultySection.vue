@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import FancyTitle from '../FancyTitle.vue';
+import FancyTitle from '../FancyTitle.vue'
 </script>
 <style>
 .ratio {
