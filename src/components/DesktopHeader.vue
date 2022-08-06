@@ -64,7 +64,7 @@ import { animate } from 'popmotion'
 import { ref, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import SchoolLogo from './Desktopheader/SchoolLogo.vue'
+import SchoolLogo from './DesktopHeader/SchoolLogo.vue'
 
 const showBlock = ref(false)
 let blockLeftAnimation
