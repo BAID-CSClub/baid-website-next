@@ -1,10 +1,12 @@
 <template>
-  <CarouselHorizontal :images="[homeBg1, homeBg2, homeBg3, campusBg1]">
+  <div>
+    <CarouselHorizontal :images="[homeBg1, homeBg2, homeBg3, campusBg1]">
       <h1 class="text-18 font-300 font-sans color-white">校园生活</h1>
-  </CarouselHorizontal>
-  <ActivitiesSection />
-  <ClubsSection />
-  <EventsSection />
+    </CarouselHorizontal>
+    <ActivitiesSection />
+    <ClubsSection />
+    <EventsSection />
+  </div>
 </template>
 
 <script setup>
@@ -19,5 +21,4 @@ import EventsSection from '../../components/DesktopCampusLife/EventsSection.vue'
 </script>
 
 <style>
-
 </style>
