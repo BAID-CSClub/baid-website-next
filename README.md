@@ -30,27 +30,6 @@
 - `npm test` - 检查代码有无任何不规范
 - `npm run build` - 生成静态构建
 
-> Note: 如果在安装依赖时遇到如下错误：
->
-> ```
-> npm ERR! code 1
-> npm ERR! path ...\baid-website-next\node_modules\sharp
-> npm ERR! command failed
-> npm ERR! command C:\Windows\system32\cmd.exe /d /s /c C:\Users\lihel\AppData\Local\Temp\install-17987348.cmd
-> npm ERR! sharp: Downloading https://github.com/lovell/sharp-libvips/releases/download/v8.12.2/libvips-8.12.2-win32-x64.tar.br
-> npm ERR! sharp: Please see https://sharp.pixelplumbing.com/install for required dependencies
-> npm ERR! sharp: Installation error: unable to verify the first certificate
-> 
-> npm ERR! A complete log of this run can be found in:
-> npm ERR!     ...log
-> ```
->
-> 该错误的产生原因是GitHub在国内的间歇性失效问题，可以执行如下命令：
->
-> `npm config set sharp_libvips_binary_host=https://ghproxy.com/https://github.com/lovell/sharp-libvips/releases/download`
->
-> 之后再次安装依赖即可解决问题，无需使用代理软件
-
 
 ## 开发时可能要用到的资料
 

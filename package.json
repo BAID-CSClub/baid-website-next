@@ -1,8 +1,30 @@
 {
-  "name": "a",
+  "name": "BAID Website",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "homepage": "preivew.beijing.academy",
+  "maintainers": [
+    {
+      "name": "He Li",
+      "email": "li@imlihe.com",
+      "url": "https://imlihe.com"
+    },
+    {
+      "name": "Henry Wang",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Kevin Zhao",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Mufeng Li",
+      "email": "",
+      "url": ""
+    }
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -18,7 +40,7 @@
     "vue-router": "^4.1.3"
   },
   "devDependencies": {
-    "@intlify/vite-plugin-vue-i18n": "^5.0.1",
+    "@intlify/vite-plugin-vue-i18n": "^6.0.0",
     "@unocss/preset-uno": "^0.45.5",
     "@unocss/preset-web-fonts": "^0.45.5",
     "@vitejs/plugin-vue": "^3.0.1",
