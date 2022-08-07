@@ -1,8 +1,30 @@
 {
-  "name": "a",
+  "name": "BAID Website",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "homepage": "preivew.beijing.academy",
+  "maintainers": [
+    {
+      "name": "He Li",
+      "email": "li@imlihe.com",
+      "url": "https://imlihe.com"
+    },
+    {
+      "name": "Henry Wang",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Kevin Zhao",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Mufeng Li",
+      "email": "",
+      "url": ""
+    }
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
