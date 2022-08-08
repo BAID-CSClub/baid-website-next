@@ -6,7 +6,7 @@
         :key="img"
         :src="img"
         :alt="img"
-        class="h-screen w-screen brightness-80"
+        class="h-screen w-screen brightness-80 object-cover"
         :class="{ 'm-t--4px': index > 0 }"
       />
     </div>

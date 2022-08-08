@@ -12,7 +12,7 @@
     </div>
 
     <div class="flex h-full m-r-10 items-center">
-      <ul
+      <div
         class="flex list-none p-0 relative h-full m-0"
         v-on:mouseleave="showBlock = false"
       >
@@ -39,7 +39,7 @@
           :style="{ left: lineLeft, 'background-color': lineColor }"
           :class="{ 'opacity-0': !lineLeft || !showLine }"
         ></div>
-      </ul>
+      </div>
       <hr
         class="h-7 w-3px m-y-0 m-x-5 border-none"
         :style="{ 'background-color': color }"
