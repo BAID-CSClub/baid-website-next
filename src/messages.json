@@ -84,6 +84,11 @@
         "Join": "教师申请入口"
       }
     },
+    "CampusLife": {
+      "Activities": {
+        "Title": "学生活动"
+      }
+    },
     "ReadMore": "了解更多"
   }
 }
