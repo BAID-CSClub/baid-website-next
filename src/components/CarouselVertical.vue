@@ -5,6 +5,7 @@
         v-for="(img, index) in props.images"
         :key="img"
         :src="img"
+        :alt="img"
         class="h-screen w-screen brightness-80"
         :class="{ 'm-t--4px': index > 0 }"
       />
