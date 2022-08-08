@@ -33,4 +33,5 @@ h1 {
 @font-face {
   font-family: 'PangMenZhengDao';
   src: url('../fonts/PangMenZhengDaoBiaoTiTi.ttf');
+  font-display: swap;
 }
