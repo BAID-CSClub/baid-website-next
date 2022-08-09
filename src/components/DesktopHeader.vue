@@ -17,7 +17,7 @@
         v-on:mouseleave="showBlock = false"
       >
         <li
-          v-for="(route, index) in routes"
+          v-for="(route, index) in routesComputed"
           v-bind:key="route.name"
           v-on:mouseover="onHover(index)"
           class="flex items-center justify-center w-30 h-full font-500 text-16px margin-left-right-10px"
@@ -48,10 +48,8 @@
         class="w-20 text-center font-500 opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer select-none"
       >
         <transition mode="out-in" name="fast-fade">
-          <span v-if="$i18n.locale === 'zh'" v-on:click="setLocale('en')"
-            >English</span
-          >
-          <span v-else v-on:click="setLocale('zh')">中文</span>
+          <router-link class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60" v-if="$i18n.locale === 'zh-CN'" :to="route.path.replace('zh-CN', 'en-US')">English</router-link>
+          <router-link class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60" v-else :to="route.path.replace('en-US', 'zh-CN')">中文</router-link>
         </transition>
       </p>
     </div>
@@ -65,6 +63,13 @@ import { ref, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import SchoolLogo from './DesktopHeader/SchoolLogo.vue'
+
+const routesComputed = computed(() => {
+  return routes.map(route => {
+    const path = route.path.replace(':lang(zh-CN|en-US)', locale.value).replace(':lang(zh-CN|en-US)?', locale.value)
+    return { ...route, path }
+  }).filter(route => route.name !== 'NotFound')
+})
 
 const showBlock = ref(false)
 let blockLeftAnimation
@@ -96,15 +101,19 @@ const router = useRouter()
 const lineLeft = ref()
 const showLine = ref(false)
 
-router.beforeResolve((to) => {
+router.beforeResolve((to, from) => {
+  if (to.name === from.name) {
+    return
+  }
   showLine.value = false
-  const index = routes.findIndex((item) => item.name === to.name)
+  const index = routesComputed.value.findIndex((item) => item.name === to.name)
   setTimeout(() => {
     lineLeft.value = 7.5 * index + 'rem'
   }, 300) // Wait for the line fadeout animation to finish
 })
+
 router.afterEach((to) => {
-  const index = routes.findIndex((item) => item.name === to.name)
+  const index = routesComputed.value.findIndex((item) => item.name === to.name)
   if (index !== -1) {
     setTimeout(() => {
       showLine.value = true
@@ -113,11 +122,6 @@ router.afterEach((to) => {
 })
 
 const { locale } = useI18n({ useScope: 'global' })
-
-function setLocale (newLocale) {
-  localStorage.setItem('locale', newLocale)
-  locale.value = newLocale
-}
 
 const route = useRoute()
 
