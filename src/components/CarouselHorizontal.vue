@@ -2,7 +2,7 @@
   <div class="h-[calc(100vh-4.25rem)] w-screen overflow-hidden relative">
     <div class="absolute flex" :style="{ left }">
       <img
-        class="h-[calc(100vh-4.25rem)] w-screen brightness-80"
+        class="h-[calc(100vh-4.25rem)] w-screen brightness-80 object-cover"
         v-for="img in props.images"
         :src="img"
         :alt="img"

@@ -1,5 +1,5 @@
 {
-  "en": {
+  "en-US": {
     "views": {
       "HomePage": "Home",
       "AboutUs": "About",
@@ -10,7 +10,7 @@
     "HomePage": {},
     "ReadMore": "Read More"
   },
-  "zh": {
+  "zh-CN": {
     "views": {
       "HomePage": "首页",
       "AboutUs": "关于我们",

@@ -7,7 +7,7 @@ const clientType =
 
 export const routes = [
   {
-    path: '/',
+    path: '/:lang(zh-CN|en-US)?',
     name: 'HomePage',
     component: () => import(`./views/${clientType}/HomePage.vue`),
     meta: {
@@ -20,24 +20,29 @@ export const routes = [
     }
   },
   {
-    path: '/about',
+    path: '/:lang(zh-CN|en-US)/about',
     name: 'AboutUs',
     component: () => import(`./views/${clientType}/AboutUs.vue`)
   },
   {
-    path: '/education',
+    path: '/:lang(zh-CN|en-US)/education',
     name: 'EducationTeaching',
     component: () => import(`./views/${clientType}/EducationTeaching.vue`)
   },
   {
-    path: '/campus',
+    path: '/:lang(zh-CN|en-US)/campus',
     name: 'CampusLife',
     component: () => import(`./views/${clientType}/CampusLife.vue`)
   },
   {
-    path: '/join',
+    path: '/:lang(zh-CN|en-US)/join',
     name: 'JoinUs',
     component: () => import(`./views/${clientType}/JoinUs.vue`)
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import(`./views/${clientType}/NotFound.vue`)
   }
   // TODO: Add your routes here
 ]

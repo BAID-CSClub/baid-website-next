@@ -14,10 +14,17 @@
 import DesktopLayout from './layouts/DesktopLayout.vue'
 import MobileLayout from './layouts/MobileLayout.vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 const { locale } = useI18n({ useScope: 'global' })
-locale.value = localStorage.getItem('locale')
-  ? localStorage.getItem('locale')
-  : navigator.language.split('-')[0]
+// locale.value = localStorage.getItem('locale')
+//   ? localStorage.getItem('locale')
+//   : navigator.language.split('-')[0]
+const router = useRouter()
+router.beforeEach(to => {
+  const lang = to.params.lang || navigator.language
+  locale.value = lang
+  console.log(lang)
+})
 </script>
 
 <style>
