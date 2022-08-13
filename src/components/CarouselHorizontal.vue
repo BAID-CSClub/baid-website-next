@@ -15,7 +15,12 @@
         v-bind:key="img"
         :class="{ 'important-bg-white': current === index }"
         class="dot w-4 h-4 m-x-3 cursor-pointer"
-        v-on:click="current = index"
+        v-on:click="
+          () => {
+            current = index
+            resetInterval()
+          }
+        "
       ></div>
     </div>
     <div class="absolute pointer-events-none">
@@ -30,7 +35,7 @@
 
 <script setup>
 import { animate } from 'popmotion'
-import { onMounted, ref, watch } from 'vue'
+import { onUnmounted, ref, watch } from 'vue'
 
 const props = defineProps(['images'])
 
@@ -51,11 +56,20 @@ watch(current, (index) => {
   })
 })
 
-onMounted(() => {
-  setInterval(() => {
+let interval = setInterval(() => {
+  current.value = (current.value + 1) % props.images.length
+}, 5000)
+
+onUnmounted(() => {
+  clearInterval(interval)
+})
+
+function resetInterval () {
+  clearInterval(interval)
+  interval = setInterval(() => {
     current.value = (current.value + 1) % props.images.length
   }, 5000)
-})
+}
 </script>
 
 <style scoped>
