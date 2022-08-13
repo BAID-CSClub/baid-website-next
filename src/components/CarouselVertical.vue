@@ -7,8 +7,9 @@
         :src="img"
         :alt="img"
         class="h-screen w-screen brightness-80 object-cover"
-        :class="{ 'm-t--4px': index > 0 }"
+        :class="{ 'm-t--3.5px': index > 0 }"
       />
+      <!-- 微调至 3.5px 虽然不知道这个数怎么来的 -->
     </div>
     <div class="absolute right-10 bottom-10">
       <div
@@ -16,7 +17,12 @@
         v-bind:key="img"
         :class="{ 'important-bg-white': current === index }"
         class="dot w-4 h-4 m-y-3 cursor-pointer"
-        v-on:click="current = index"
+        v-on:click="
+          () => {
+            current = index
+            resetInterval()
+          }
+        "
       ></div>
     </div>
   </div>
@@ -24,7 +30,7 @@
 
 <script setup>
 import { animate } from 'popmotion'
-import { onMounted, ref, watch } from 'vue'
+import { onUnmounted, ref, watch } from 'vue'
 
 const props = defineProps(['images'])
 
@@ -45,11 +51,20 @@ watch(current, (index) => {
   })
 })
 
-onMounted(() => {
-  setInterval(() => {
+let interval = setInterval(() => {
+  current.value = (current.value + 1) % props.images.length
+}, 5000)
+
+onUnmounted(() => {
+  clearInterval(interval)
+})
+
+function resetInterval () {
+  clearInterval(interval)
+  interval = setInterval(() => {
     current.value = (current.value + 1) % props.images.length
   }, 5000)
-})
+}
 </script>
 
 <style scoped>
