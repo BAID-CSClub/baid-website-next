@@ -24,9 +24,9 @@ import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import avatar from '../../assets/images/homeBg1.jpg'
 
-import importData from '../../data'
+// import importData from '../../data'
 
-const data = importData('HomePage')
+// const data = importData('HomePage')
 
 const { locale } = useI18n({ useScope: 'global' })
 
