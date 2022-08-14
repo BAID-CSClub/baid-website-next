@@ -13,8 +13,8 @@
           v-html="$t('HomePage.AdmissionResults.content')"
         ></p>
         <router-link
-          to="about "
-          class="color-white op-70 hover:op-100 active:op-80 transition-opacity"
+          :to="`${locale}/about`"
+          class="color-white op-70 hover:op-100 active:op-80 transition-opacity font-sans"
         >
           Read More
         </router-link>
@@ -26,4 +26,7 @@
 
 <script setup>
 import FancyTitle from '../FancyTitle.vue'
+import { useI18n } from 'vue-i18n'
+
+const { locale } = useI18n({ useScope: 'global' })
 </script>

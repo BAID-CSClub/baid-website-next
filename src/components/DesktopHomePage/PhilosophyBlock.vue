@@ -4,8 +4,11 @@
     :class="{ 'bg-[var(--standard-blue)] color-white': props.blue }"
   >
     <h2 class="font-title m-l-3 text-8 font-300">{{ props.left }}</h2>
-    <hr class="m-x-2 h-70% self-center border-width-2 border-solid" />
-    <p class="self-end m-b-8">{{ props.right }}</p>
+    <hr
+      class="m-x-2 h-70% self-center border-width-2 border-solid border-color-[var(--standard-blue)]"
+      :class="{ 'border-color-white': props.blue }"
+    />
+    <p class="self-end m-b-8 font-sans">{{ props.right }}</p>
   </div>
 </template>
 

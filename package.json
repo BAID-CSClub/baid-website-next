@@ -43,7 +43,7 @@
     "@intlify/vite-plugin-vue-i18n": "^6.0.1",
     "@unocss/preset-uno": "^0.45.6",
     "@unocss/preset-web-fonts": "^0.45.6",
-    "@vitejs/plugin-vue": "^3.0.2",
+    "@vitejs/plugin-vue": "^3.0.3",
     "eslint": "^8.21.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
@@ -51,7 +51,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.3.0",
     "unocss": "^0.45.6",
-    "vite": "^3.0.6",
+    "vite": "^3.0.7",
     "vite-imagetools": "^4.0.4",
     "vue-eslint-parser": "^9.0.3"
   },

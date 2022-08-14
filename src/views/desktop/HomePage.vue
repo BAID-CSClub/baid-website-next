@@ -3,7 +3,7 @@
     <FirstSection />
     <SecondSection />
     <EducationPhilosophy />
-    <MessageFromPrincipal
+    <QuoteMessage
       author="WHO"
       content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
       :avatar="avatar"
@@ -17,7 +17,7 @@
 import FirstSection from '../../components/DesktopHomePage/FirstSection.vue'
 import SecondSection from '../../components/DesktopHomePage/SecondSection.vue'
 import EducationPhilosophy from '../../components/DesktopHomePage/EducationPhilosophy.vue'
-import MessageFromPrincipal from '../../components/DesktopHomePage/MessageFromPrincipal.vue'
+import QuoteMessage from '../../components/QuoteMessage.vue'
 import AdmissionResults from '../../components/DesktopHomePage/AdmissionResults.vue'
 import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
 import { useRoute, useRouter } from 'vue-router'

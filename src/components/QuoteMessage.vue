@@ -54,7 +54,7 @@
     <img
       :src="props.avatar"
       alt="Avatar"
-      class="object-cover md:w-30% md:m-r-30 m-t-10 w-50%"
+      class="object-cover md:w-30% md:m-r-30 md:m-t-0 m-t-10 w-1/2 min-w-50 h-50 flex-2"
     />
     <div class="absolute right-20px bottom-0">
       <svg
