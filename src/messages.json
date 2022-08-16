@@ -91,7 +91,49 @@
     "CampusLife": {
       "Title": "校园生活",
       "Activities": {
-        "Title": "学生活动"
+        "Title": "学生活动",
+        "Selected": {
+          "Title": "标题",
+          "Description": "描述"
+        },
+        "Option1": {
+          "Date": "20xx.x.x",
+          "Title": "Title"
+        },
+        "Option2": {
+          "Date": "20xx.x.x",
+          "Title": "Title"
+        },
+        "Option3": {
+          "Date": "20xx.x.x",
+          "Title": "Title"
+        },
+        "Option4": {
+          "Date": "20xx.x.x",
+          "Title": "Title"
+        }
+      },
+      "Clubs": {
+        "Title": "学生社团｜Student Clubs",
+        "Sub1": "名字",
+        "Sub2": "名字",
+        "Sub3": "名字",
+        "Sub4": "名字"
+      },
+      "Events": {
+        "Title": "特色活动",
+        "Event1":{
+          "Name": "活动名称",
+          "Description": "活动介绍"
+        },
+        "Event2":{
+          "Name": "活动名称",
+          "Description": "活动介绍"
+        },
+        "Event3":{
+          "Name": "活动名称",
+          "Description": "活动介绍"
+        }
       }
     },
     "ReadMore": "了解更多"
