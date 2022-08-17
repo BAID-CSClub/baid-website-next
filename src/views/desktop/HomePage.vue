@@ -9,7 +9,7 @@
       :avatar="avatar"
     />
     <AdmissionResults />
-    <HomeNews />
+    <HomeNews :newsList="data.news" />
   </div>
 </template>
 
@@ -23,10 +23,13 @@ import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import avatar from '../../assets/images/homeBg1.jpg'
-
-// import importData from '../../data'
-
-// const data = importData('HomePage')
+import { ref } from 'vue'
+const data = ref({
+  news: []
+})
+fetch('/data/HomePage.json').then(async (resp) => {
+  data.value = await resp.json()
+})
 
 const { locale } = useI18n({ useScope: 'global' })
 

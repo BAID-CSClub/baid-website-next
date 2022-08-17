@@ -26,8 +26,9 @@ h1 {
 }
 
 .content {
-  font-size: 1rem;
+  font-size: 18px;
   margin: 0;
+  line-height: 25px;
 }
 
 @font-face {

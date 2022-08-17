@@ -1,7 +1,9 @@
 <template>
   <div>
     <CarouselHorizontal :images="[homeBg1, homeBg2]">
-      <h1 class="text-18 font-300 font-sans color-white"> {{ $t("AboutUs.Title") }}</h1>
+      <h1 class="text-18 font-300 font-sans color-white">
+        {{ $t('AboutUs.Title') }}
+      </h1>
     </CarouselHorizontal>
     <VisionSection />
     <AlumniSection />
@@ -11,8 +13,10 @@
     <div class="bg-[var(--standard-blue)]">
       <TestCenterSection />
     </div>
-    <div :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
-      style="background-size: cover; background-position: center;">
+    <div
+      :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
+      style="background-size: cover; background-position: center"
+    >
       <FacultySection />
     </div>
     <QuoteSection />
@@ -32,6 +36,3 @@ import QuoteSection from '../../components/DesktopAboutUs/QuoteSection.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 </script>
-
-<style>
-</style>

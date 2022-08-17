@@ -1,11 +1,32 @@
 {
   "news": [
     {
-      "title":"114514",
-      "abstract": "1919810"
+      "zh-CN": {
+        "title": "题目一",
+        "abstract": "摘要一",
+        "color": "#B9C9C7",
+        "link": "/articles/YYYY/MM/dd/some-article-name"
+      },
+      "en-US": {
+        "title": "Title One",
+        "abstract": "Abstract One",
+        "color": "#B9C9C7",
+        "link": "/articles/YYYY/MM/dd/some-article-name"
+      }
     },
     {
-      
+      "zh-CN": {
+        "title": "题目二",
+        "abstract": "摘要二",
+        "color": "#F2A640",
+        "link": "/articles/YYYY/MM/dd/some-article-name"
+      },
+      "en-US": {
+        "title": "Title Two",
+        "abstract": "Abstract Two",
+        "color": "#F2A640",
+        "link": "/articles/YYYY/MM/dd/some-article-name"
+      }
     }
   ]
 }
