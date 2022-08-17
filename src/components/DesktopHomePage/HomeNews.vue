@@ -3,13 +3,13 @@
     class="contentArea flex justify-around md:flex-row flex-col min-h-180"
   >
     <NewsBlock
-      v-for="(news, i) in newsList"
-      :title="news.title"
-      :abstract="news.abstract"
+      v-for="(news, i) in props.newsList"
+      :title="news[locale].title"
+      :abstract="news[locale].abstract"
       :img="img"
-      :color="news.color"
+      :color="news[locale].color"
       :pos="{ 0: 'center', 1: 'start', 2: 'end' }[i % 3]"
-      :link="news.link"
+      :link="news[locale].link"
       :key="i"
     />
   </section>
@@ -18,25 +18,9 @@
 <script setup>
 import NewsBlock from './NewsBlock.vue'
 import img from '../../assets/images/homeBg1.jpg'
+import { useI18n } from 'vue-i18n'
 
-const newsList = [
-  {
-    title: '题目',
-    abstract: '摘要摘要摘要摘要摘要摘要摘要摘要',
-    color: '#B9C9C7',
-    link: '/114514'
-  },
-  {
-    title: '题目',
-    abstract: '摘要摘要摘要摘要摘要摘要摘要摘要',
-    color: '#F2A640',
-    link: '/114514'
-  },
-  {
-    title: '题目',
-    abstract: '摘要摘要摘要摘要摘要摘要摘要摘要',
-    color: '#B5C2A1',
-    link: '/114514'
-  }
-]
+const { locale } = useI18n({ useScope: 'global' })
+
+const props = defineProps(['newsList'])
 </script>

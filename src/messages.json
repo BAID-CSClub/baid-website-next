@@ -136,6 +136,21 @@
         }
       }
     },
+    "EducationTeaching":{
+      "Title":"教育教学",
+      "Curriculums": {
+        "Title":"课程体系"
+      },
+      "Learning":{
+        "Title":"学习方式"
+      },
+      "Student":{
+        "Title":"学生指导"
+      },
+      "WonderfulMoment":{
+        "Title":"精彩瞬间"
+      }
+    },
     "ReadMore": "了解更多"
   }
 }
