@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-blue" style="align-content:center max_width:100% max_height:268px height:268px">
+    <section id="container" style="align-content:center max_width:100% max_height:268px height:268px')">
         <h1 class="text-12 font-300 font-title color-white text-center pt-9">{{ $t("CampusLife.Clubs.Title") }}</h1>
         <div id="clubs" class="flex justify-center">
             <div id="club1" style="height:250px;width:250px;margin:20px;box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5);background-color: var(--standard-blue)">
@@ -24,10 +24,16 @@
 
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import campusBg3 from '../../assets/images/campusBg3.png?webp'
 </script>
 
 <style scoped>
     .clubimg{
         padding: 0 2.5rem;
+    }
+    #container{
+        background-image: url("../../assets/images/campusBg3.png?webp");
+        background-repeat: no-repeat;
+        background-size: 100% 600px;
     }
 </style>

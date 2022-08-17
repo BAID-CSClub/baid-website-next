@@ -1,6 +1,6 @@
 <template>
-    <section class="pt-45 pl-20 pr-20 pb-30">
-        <FancyTitle :top="$t('CampusLife.Activities.Title')" btm="Student Activities" color="red"></FancyTitle>
+    <div class="pt-45 pl-20 pr-20 pb-30 flex-col flex justify-center">
+        <FancyTitle :top="$t('CampusLife.Activities.Title')" btm="Student Activities" color="red" class="ml-9.6%"></FancyTitle>
         <div id="selector" class="flex-row flex justify-center pt-15">
             <div id="selected" style="width: 883px; height: 468px">
                 <h2 class="selectedText ml-5 font-sans color-white mt-85 text-9 mb-0">{{ $t("CampusLife.Activities.Selected.Title") }}</h2>
@@ -38,7 +38,7 @@
 
             </div>
         </div>
-    </section>
+    </div>
 </template>
 
 <script setup>
