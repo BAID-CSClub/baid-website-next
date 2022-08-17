@@ -6,7 +6,7 @@
         <div class="grid h-44vw" style="margin:1vw 8vw;grid-auto-flow: column;grid-template-columns:2.5fr 1fr;gap:4px;">
             <div style="overflow:clip">
                 <div style="position:relative">
-                    <img :src="homeBg1" style="height:45vw;object-fit: cover;position:absolute" alt="Bg" />            
+                    <img :src="homeBg1" style="height:45vw;object-fit: cover;position:absolute" alt="Bg" />
                 </div>
                 <div class="flex">
                     <div class="w-90% text-white" style="position:relative;top:30vw;left:2vw;">
@@ -32,8 +32,8 @@
 </div>
 </template>
 <script setup>
-    import FancyTitle from '../FancyTitle.vue'
-    import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import FancyTitle from '../FancyTitle.vue'
+import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
 <style scoped>
 </style>

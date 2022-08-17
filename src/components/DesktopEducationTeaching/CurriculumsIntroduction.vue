@@ -39,8 +39,8 @@
 </div>
 </template>
 <script setup>
-    import FancyTitle from '../FancyTitle.vue'
-    import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import FancyTitle from '../FancyTitle.vue'
+import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
 <style scoped>
 </style>

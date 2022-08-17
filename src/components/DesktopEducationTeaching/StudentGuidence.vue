@@ -12,7 +12,7 @@
                     </div>
                     <div class="h-100% relative" style="flex:1;">
                         <div class="absolute write-vertical-right m-l-30 m-t--10">
-                        <FancyTitle :top="$t('EducationTeaching.Student.Title')" btm="StudentGuidence" color="red"></FancyTitle>
+                        <FancyTitle :top="$t('EducationTeaching.Student.Title')" btm="Student&nbsp;Guidence" color="red"></FancyTitle>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
 </div>
 </template>
 <script setup>
-    import img1 from '../../assets/images/le1.png'
-    import FancyTitle from '../FancyTitle.vue'
-    import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import img1 from '../../assets/images/le1.png'
+import FancyTitle from '../FancyTitle.vue'
+import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
