@@ -38,8 +38,7 @@
 </template>
 
 <script setup>
-    import FancyTitle from '../../components/FancyTitle.vue'
-    import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import FancyTitle from '../../components/FancyTitle.vue'
 </script>
 
 <style scoped>

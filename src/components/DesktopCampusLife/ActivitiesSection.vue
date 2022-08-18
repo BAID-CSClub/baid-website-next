@@ -35,7 +35,6 @@
                     </div>
                     <img :src="homeBg1" class="optionImg">
                 </div>
-
             </div>
         </div>
     </div>
@@ -43,7 +42,6 @@
 
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-import campusBg2 from '../../assets/images/campusBg2.jpg?webp'
 import FancyTitle from '../../components/FancyTitle.vue'
 </script>
 
@@ -75,27 +73,25 @@ import FancyTitle from '../../components/FancyTitle.vue'
 }
 .option:hover .optionDate{
     color: white;
-    
 }
 .option:hover .optionText{
     color: white;
-    
 }
 .optionDate{
-    width:130px;
+    width: 130px;
     word-break: break-all;
     white-space: pre-line;
     letter-spacing: 2px;
     color: rgba(103, 115, 148, 1);
 }
 .optionText{
-    width:130px;
+    width: 130px;
     word-break: break-all;
     white-space: pre-line;
     letter-spacing: 2px;
 }
 .selectedText{
-    width:800px;
+    width: 800px;
     word-break: break-all;
     white-space: pre-line;
 }

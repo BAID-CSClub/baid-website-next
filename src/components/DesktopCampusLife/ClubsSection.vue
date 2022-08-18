@@ -24,7 +24,6 @@
 
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-import campusBg3 from '../../assets/images/campusBg3.png?webp'
 </script>
 
 <style scoped>
