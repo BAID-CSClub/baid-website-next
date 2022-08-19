@@ -16,7 +16,7 @@
         v-for="(img, index) in props.images"
         v-bind:key="img"
         :class="{ 'important-bg-white': current === index }"
-        class="dot w-4 h-4 m-y-3 cursor-pointer"
+        class="dot w-3 h-3 m-y-3 cursor-pointer"
         v-on:click="
           () => {
             current = index
