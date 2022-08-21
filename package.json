@@ -30,10 +30,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "eslint ./src --ext .js --ext .vue",
-    "fix": "eslint ./src --ext .js --ext .vue --fix"
+    "fix": "eslint ./src --ext .js --ext .vue --fix",
+    "format": "prettier-eslint \"src/**/*.js\" \"src/**/*.vue\" \"src/**/*.json\" --write"
   },
   "dependencies": {
-    "@vueuse/motion": "^2.0.0-beta.12",
+    "@vueuse/motion": "2.0.0-beta.12",
     "popmotion": "^11.0.5",
     "vue": "^3.2.37",
     "vue-i18n": "^9.2.2",
@@ -50,12 +51,11 @@
     "eslint-plugin-n": "^15.2.4",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "prettier-eslint-cli": "^7.0.0",
     "unocss": "^0.45.8",
     "vite": "^3.0.9",
     "vite-imagetools": "^4.0.4",
     "vue-eslint-parser": "^9.0.3"
-  },
-  "prettier": {
-    "tabWidth": 2
   }
 }

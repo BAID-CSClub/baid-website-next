@@ -4,15 +4,12 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:vue/vue3-essential',
-    'standard'
-  ],
+  extends: ['eslint:recommended', 'plugin:vue/vue3-essential', 'standard'],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
   plugins: ['vue'],
-  rules: {}
+  rules: {},
+  parser: 'vue-eslint-parser'
 }

@@ -23,9 +23,11 @@
           />
         </svg>
       </i>
-      <span class="w-max font-sans letter-spacing" :style="{ color: props.color }">{{
-        $t('ReadMore')
-      }}</span>
+      <span
+        class="w-max font-sans letter-spacing"
+        :style="{ color: props.color }"
+        >{{ $t('ReadMore') }}</span
+      >
     </div>
   </router-link>
 </template>

@@ -1,11 +1,13 @@
 <template>
-    <div>
-        <CarouselHorizontal :images="[homeBg1, homeBg2]">
-            <h1 class="text-18 font-300 font-sans color-white"> {{ $t("JoinUs.Title") }}</h1>
-        </CarouselHorizontal>
-        <JoinStudentSection />
-        <JoinFacultySection />
-    </div>
+  <div>
+    <CarouselHorizontal :images="[homeBg1, homeBg2]">
+      <h1 class="text-18 font-300 font-sans color-white">
+        {{ $t('JoinUs.Title') }}
+      </h1>
+    </CarouselHorizontal>
+    <JoinStudentSection />
+    <JoinFacultySection />
+  </div>
 </template>
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
@@ -15,5 +17,4 @@ import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import JoinStudentSection from '../../components/DesktopJoinUs/JoinStudentSection.vue'
 import JoinFacultySection from '../../components/DesktopJoinUs/JoinFacultySection.vue'
 </script>
-<style>
-</style>
+<style></style>

@@ -1,7 +1,9 @@
 <template>
   <div>
     <CarouselHorizontal :images="[homeBg1, homeBg2, homeBg3, campusBg1]">
-      <h1 class="text-18 font-300 font-sans color-white"> {{ $t("CampusLife.Title") }}</h1>
+      <h1 class="text-18 font-300 font-sans color-white">
+        {{ $t('CampusLife.Title') }}
+      </h1>
     </CarouselHorizontal>
     <ActivitiesSection />
     <ClubsSection />
@@ -20,5 +22,4 @@ import ActivitiesSection from '../../components/DesktopCampusLife/ActivitiesSect
 import EventsSection from '../../components/DesktopCampusLife/EventsSection.vue'
 </script>
 
-<style>
-</style>
+<style></style>

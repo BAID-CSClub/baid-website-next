@@ -1,13 +1,15 @@
 <template>
-    <div>
-        <CarouselHorizontal :images="[homeBg1, homeBg2]">
-            <h1 class="text-18 font-300 font-sans color-white"> {{ $t("EducationTeaching.Title") }}</h1>
-        </CarouselHorizontal>
-        <CurriculumsIntroduction />
-        <LearningMethod />
-        <StudentGuidence />
-        <WonderfulMoment />
-    </div>
+  <div>
+    <CarouselHorizontal :images="[homeBg1, homeBg2]">
+      <h1 class="text-18 font-300 font-sans color-white">
+        {{ $t('EducationTeaching.Title') }}
+      </h1>
+    </CarouselHorizontal>
+    <CurriculumsIntroduction />
+    <LearningMethod />
+    <StudentGuidence />
+    <WonderfulMoment />
+  </div>
 </template>
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
