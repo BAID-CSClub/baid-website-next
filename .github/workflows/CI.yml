@@ -16,5 +16,5 @@ jobs:
         with:
         version: 7.9.3
       - run: pnpm i
-      - run: npm test
-      - run: npm run build
+      - run: pnpm test
+      - run: pnpm run build
