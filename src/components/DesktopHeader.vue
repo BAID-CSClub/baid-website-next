@@ -1,7 +1,8 @@
 <template>
+  <div :class="{ 'h-17': fixed }"></div>
   <header
-    class="w-screen h-17 bg-white flex justify-between items-center transition-colors font-sans relative z-10"
-    :class="{ 'important-bg-transparent': transparent }"
+    class="w-screen h-17 bg-white flex justify-between items-center transition-all font-sans relative z-10"
+    :class="{ 'important-bg-transparent': transparent, 'important:fixed shadow-lg': fixed, 'op-0 top--17': fixed && !fixedShow, 'op-100 top-0': fixed && fixedShow }"
     :style="{ color }"
   >
     <div class="m-l-10">
@@ -20,11 +21,12 @@
           v-for="(route, index) in routesComputed"
           v-bind:key="route.name"
           v-on:mouseover="onHover(index)"
-          class="flex items-center justify-center w-30 h-full font-500 text-16px margin-left-right-10px"
+          class="h-full font-500 text-16px margin-left-right-10px"
         >
           <router-link
             :to="route.path"
-            class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
+            class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
+            style="line-height: 70px;"
             active-class="important-opacity-100"
             >{{ $t(`views.${route.name}`) }}
           </router-link>
@@ -59,7 +61,7 @@
 <script setup>
 import { routes } from '../router'
 import { animate } from 'popmotion'
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import SchoolLogo from './DesktopHeader/SchoolLogo.vue'
@@ -126,25 +128,50 @@ const { locale } = useI18n({ useScope: 'global' })
 const route = useRoute()
 
 const color = computed(() => {
-  if (route.meta.header && route.meta.header.color) {
+  if (route.meta.header && route.meta.header.color && !fixed.value) {
     return route.meta.header.color
   } else {
     return '#000'
   }
 })
 const lineColor = computed(() => {
-  if (route.meta.header && route.meta.header.lineColor) {
+  if (route.meta.header && route.meta.header.lineColor && !fixed.value) {
     return route.meta.header.lineColor
   } else {
     return '#103C74'
   }
 })
 const transparent = computed(() => {
-  if (route.meta.header && route.meta.header.transparent) {
+  if (route.meta.header && route.meta.header.transparent && !fixed.value) {
     return route.meta.header.transparent
   } else {
     return false
   }
+})
+
+// When scrolled distance > 100vh, the header will be fixed at the top
+const fixed = ref(false)
+const fixedShow = ref(false)
+let last = window.scrollY
+onMounted(() => {
+  window.onscroll = () => {
+    const delta = window.scrollY - last
+    if (window.scrollY > window.innerHeight) {
+      fixed.value = true
+    } else {
+      fixed.value = false
+    }
+    if (delta < 0) {
+      fixedShow.value = true
+    } else {
+      fixedShow.value = false
+    }
+    last = window.scrollY
+  }
+})
+
+onUnmounted(() => {
+  window.onscroll = null
 })
 </script>
 

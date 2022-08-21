@@ -1,7 +1,7 @@
 <template>
 <div class="m-3vw m-t--20">
-    <div class="text-10 font-700 text-right flex justify-end m-r-5vw">
-        <FancyTitle :top="$t('EducationTeaching.Learning.Title')" btm="Learning Method" color="red"></FancyTitle>
+    <div class="text-10 font-700 flex justify-end m-r-5vw">
+        <FancyTitle :top="$t('EducationTeaching.Learning.Title')" btm="Learning Method" color="red" right></FancyTitle>
     </div>
         <div class="grid h-44vw" style="margin:1vw 8vw;grid-auto-flow: column;grid-template-columns:2.5fr 1fr;gap:4px;">
             <div style="overflow:clip">

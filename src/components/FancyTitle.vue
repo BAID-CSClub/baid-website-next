@@ -1,6 +1,6 @@
 <template>
   <div class="w-max" :class="{ 'text-right': right }">
-    <h1 class="color-#122A28 m-0 text-10 font-title">
+    <h1 class="color-#122A28 m-0 text-10 font-title font-300">
       <span
         v-for="word in top"
         :key="word"
