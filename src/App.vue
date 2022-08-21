@@ -20,7 +20,7 @@ const { locale } = useI18n({ useScope: 'global' })
 //   ? localStorage.getItem('locale')
 //   : navigator.language.split('-')[0]
 const router = useRouter()
-router.beforeEach(to => {
+router.beforeEach((to) => {
   const lang = to.params.lang || navigator.language
   locale.value = lang
   console.log(lang)

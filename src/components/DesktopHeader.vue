@@ -2,7 +2,12 @@
   <div :class="{ 'h-17': fixed }"></div>
   <header
     class="w-screen h-17 bg-white flex justify-between items-center transition-all font-sans relative z-10"
-    :class="{ 'important-bg-transparent': transparent, 'important:fixed shadow-lg': fixed, 'op-0 top--17': fixed && !fixedShow, 'op-100 top-0': fixed && fixedShow }"
+    :class="{
+      'important-bg-transparent': transparent,
+      'important:fixed shadow-lg': fixed,
+      'op-0 top--17': fixed && !fixedShow,
+      'op-100 top-0': fixed && fixedShow
+    }"
     :style="{ color }"
   >
     <div class="m-l-10">
@@ -26,7 +31,7 @@
           <router-link
             :to="route.path"
             class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-            style="line-height: 70px;"
+            style="line-height: 70px"
             active-class="important-opacity-100"
             >{{ $t(`views.${route.name}`) }}
           </router-link>
@@ -50,8 +55,18 @@
         class="w-20 text-center font-500 opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer select-none"
       >
         <transition mode="out-in" name="fast-fade">
-          <router-link class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60" v-if="$i18n.locale === 'zh-CN'" :to="route.path.replace('zh-CN', 'en-US')">English</router-link>
-          <router-link class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60" v-else :to="route.path.replace('en-US', 'zh-CN')">中文</router-link>
+          <router-link
+            class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
+            v-if="$i18n.locale === 'zh-CN'"
+            :to="route.path.replace('zh-CN', 'en-US')"
+            >English</router-link
+          >
+          <router-link
+            class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
+            v-else
+            :to="route.path.replace('en-US', 'zh-CN')"
+            >中文</router-link
+          >
         </transition>
       </p>
     </div>
@@ -67,10 +82,14 @@ import { useI18n } from 'vue-i18n'
 import SchoolLogo from './DesktopHeader/SchoolLogo.vue'
 
 const routesComputed = computed(() => {
-  return routes.map(route => {
-    const path = route.path.replace(':lang(zh-CN|en-US)', locale.value).replace(':lang(zh-CN|en-US)?', locale.value)
-    return { ...route, path }
-  }).filter(route => route.name !== 'NotFound')
+  return routes
+    .map((route) => {
+      const path = route.path
+        .replace(':lang(zh-CN|en-US)', locale.value)
+        .replace(':lang(zh-CN|en-US)?', locale.value)
+      return { ...route, path }
+    })
+    .filter((route) => route.name !== 'NotFound')
 })
 
 const showBlock = ref(false)
