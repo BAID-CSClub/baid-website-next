@@ -25,7 +25,7 @@ export default defineConfig({
       ],
       rules: [
         [
-          /^letter-spacing-(\d+)$/, match => ({ padding: `${parseFloat(match[1]) / 4}rem` })
+          /^letter-spacing-(\d+)$/, match => ({ 'letter-spacing': `${parseFloat(match[1]) / 4}rem` })
         ],
         [
           'letter-spacing',
