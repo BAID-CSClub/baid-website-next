@@ -17,9 +17,10 @@ export default defineConfig({
         presetWebFonts({
           provider: 'bunny',
           fonts: {
-            sans: 'Roboto',
+            sans: ['Open Sans'],
             mono: ['Fira Code', 'Fira Mono:400,700'],
-            title: 'PangMenZhengDao'
+            title: 'PangMenZhengDao',
+            titleEn: 'Expletus Sans'
           }
         })
       ]

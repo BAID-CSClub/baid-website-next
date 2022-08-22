@@ -89,7 +89,9 @@ const routesComputed = computed(() => {
         .replace(':lang(zh-CN|en-US)?', locale.value)
       return { ...route, path }
     })
-    .filter((route) => route.name !== 'NotFound')
+    .filter(
+      (route) => route.name !== 'NotFound' && route.name !== 'ArticlePage'
+    )
 })
 
 const showBlock = ref(false)

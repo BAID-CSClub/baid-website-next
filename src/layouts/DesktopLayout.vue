@@ -1,5 +1,6 @@
 <template>
   <DesktopHeader />
+  <!-- Note: 全部页面完成后，可移除 min-h-... -->
   <main class="min-h-[calc(100vh-21.75rem)]">
     <slot></slot>
   </main>
