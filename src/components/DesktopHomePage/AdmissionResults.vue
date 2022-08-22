@@ -7,15 +7,10 @@
         <h1 class="color-white font-sans text-8 letter-spacing">
           {{ $t('HomePage.AdmissionResults.title') }}
         </h1>
-        <p
-          class="color-white letter-spacing font-sans op-90 m-b-10"
-          style="line-height: 25px"
-          v-html="$t('HomePage.AdmissionResults.content')"
-        ></p>
-        <router-link
-          :to="`${locale}/about`"
-          class="color-white op-70 hover:op-100 active:op-80 transition-opacity font-sans"
-        >
+        <p class="color-white letter-spacing font-sans op-90 m-b-10" style="line-height: 25px"
+          v-html="$t('HomePage.AdmissionResults.content')"></p>
+        <router-link :to="`${locale}/about`"
+          class="color-white op-70 hover:op-100 active:op-80 transition-opacity font-sans">
           Read More
         </router-link>
       </div>

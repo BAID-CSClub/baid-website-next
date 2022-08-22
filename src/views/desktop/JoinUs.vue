@@ -17,4 +17,5 @@ import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import JoinStudentSection from '../../components/DesktopJoinUs/JoinStudentSection.vue'
 import JoinFacultySection from '../../components/DesktopJoinUs/JoinFacultySection.vue'
 </script>
-<style></style>
+<style>
+</style>
