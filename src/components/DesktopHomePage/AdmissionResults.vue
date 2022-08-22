@@ -4,11 +4,11 @@
     <div class="flex items-center md:flex-row flex-col m-t-20">
       <div class="w-full bg-gray-300 h-60"></div>
       <div class="w-full h-max bg-[var(--standard-red)] p-8">
-        <h1 class="color-white font-sans text-8 letter-spacing">
+        <h1 class="color-white font-sans text-8 tracking-wide">
           {{ $t('HomePage.AdmissionResults.title') }}
         </h1>
         <p
-          class="color-white letter-spacing font-sans op-90 m-b-10"
+          class="color-white tracking-wide font-sans op-90 m-b-10"
           style="line-height: 25px"
           v-html="$t('HomePage.AdmissionResults.content')"
         ></p>

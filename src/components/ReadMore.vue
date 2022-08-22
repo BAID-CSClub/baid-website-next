@@ -24,7 +24,7 @@
         </svg>
       </i>
       <span
-        class="w-max font-sans letter-spacing"
+        class="w-max font-sans tracking-wide"
         :style="{ color: props.color }"
         >{{ $t('ReadMore') }}</span
       >

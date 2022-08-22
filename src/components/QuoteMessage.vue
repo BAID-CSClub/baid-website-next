@@ -48,7 +48,7 @@
       </svg>
     </div>
     <div class="m-l-30 m-r-20">
-      <h2 class="font-sans font-1000 letter-spacing">{{ props.content }}</h2>
+      <h2 class="font-sans font-1000 tracking-wide">{{ props.content }}</h2>
       <p class="w-full text-right font-title text-5">—— {{ props.author }}</p>
     </div>
     <img

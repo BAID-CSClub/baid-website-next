@@ -22,17 +22,6 @@ export default defineConfig({
             title: 'PangMenZhengDao'
           }
         })
-      ],
-      rules: [
-        [
-          /^letter-spacing-(\d+)$/, match => ({ 'letter-spacing': `${parseFloat(match[1]) / 4}rem` })
-        ],
-        [
-          'letter-spacing',
-          {
-            'letter-spacing': '1px'
-          }
-        ]
       ]
     }),
     vueI18n({
