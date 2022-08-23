@@ -17,22 +17,11 @@ export default defineConfig({
         presetWebFonts({
           provider: 'bunny',
           fonts: {
-            sans: 'Roboto',
+            sans: ['Open Sans', 'Alibaba PuHuiTi 2.0 55'],
             mono: ['Fira Code', 'Fira Mono:400,700'],
-            title: 'PangMenZhengDao'
+            title: ['Expletus Sans', 'Dianzi']
           }
         })
-      ],
-      rules: [
-        [
-          /^letter-spacing-(\d+)$/, match => ({ 'letter-spacing': `${parseFloat(match[1]) / 4}rem` })
-        ],
-        [
-          'letter-spacing',
-          {
-            'letter-spacing': '1px'
-          }
-        ]
       ]
     }),
     vueI18n({
