@@ -179,14 +179,21 @@ onMounted(() => {
     const delta = window.scrollY - last
     if (window.scrollY > window.innerHeight) {
       fixed.value = true
+
+      if (delta < 0) {
+        fixedShow.value = true
+      } else {
+        fixedShow.value = false
+      }
     } else {
-      fixed.value = false
+      if (fixed.value) {
+        fixedShow.value = false
+        setTimeout(() => {
+          fixed.value = false
+        }, 300)
+      }
     }
-    if (delta < 0) {
-      fixedShow.value = true
-    } else {
-      fixedShow.value = false
-    }
+
     last = window.scrollY
   }
 })

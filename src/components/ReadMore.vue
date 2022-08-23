@@ -1,7 +1,7 @@
 <template>
   <router-link
     :to="'/' + locale + props.to"
-    class="decoration-none font-600 op-80 hover:op-100 active:op-70 transition-opacity"
+    class="decoration-none op-80 hover:op-100 active:op-70 transition-opacity"
   >
     <div class="flex items-center w-min">
       <i class="m-r-2 flex items-center">

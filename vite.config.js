@@ -17,10 +17,9 @@ export default defineConfig({
         presetWebFonts({
           provider: 'bunny',
           fonts: {
-            sans: ['Open Sans'],
+            sans: ['Open Sans', 'Alibaba PuHuiTi 2.0 55'],
             mono: ['Fira Code', 'Fira Mono:400,700'],
-            title: 'PangMenZhengDao',
-            titleEn: 'Expletus Sans'
+            title: ['Expletus Sans', 'Dianzi']
           }
         })
       ]
