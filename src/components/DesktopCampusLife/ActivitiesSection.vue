@@ -62,8 +62,7 @@
 
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-import FancyTitle from '../../components/FancyTitle.vue'
-import NotFancyTitle from '../NotFancyTitle.vue';
+import NotFancyTitle from '../NotFancyTitle.vue'
 </script>
 
 <style scoped>

@@ -4,7 +4,7 @@
       {{ $t('CampusLife.Clubs.Title') }}
     </h1>
     <div id="clubs" class="flex justify-center">
-      <div v-for="club in clubs" class="m-5"
+      <div v-for="club in clubs" class="m-5" :key="club"
         style="height: 250px; width: 250px; box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: center; align-items: center;"
         :style="{ 'background-color': club.bgColor, 'color': club.color }">
         <div class="text-8 font-title">
