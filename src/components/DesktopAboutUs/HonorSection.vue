@@ -4,16 +4,32 @@
       <!-- <h2 class="title">
                 {{ $t("AboutUs.Honor.Title") }}
             </h2> -->
-      <FancyTitle :top="$t('AboutUs.Honor.Title')" btm="Honors" color="blue"></FancyTitle>
+      <FancyTitle
+        :top="$t('AboutUs.Honor.Title')"
+        btm="Honors"
+        color="blue"
+      ></FancyTitle>
       <div class="flex pt-10 pb-10">
         <div class="honor-small-pic">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img
+            :src="homeBg1"
+            style="max-width: 100%; max-height: 100%"
+            alt="pic1"
+          />
         </div>
         <div class="honor-small-pic">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img
+            :src="homeBg1"
+            style="max-width: 100%; max-height: 100%"
+            alt="pic1"
+          />
         </div>
         <div class="honor-small-pic">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img
+            :src="homeBg1"
+            style="max-width: 100%; max-height: 100%"
+            alt="pic1"
+          />
         </div>
       </div>
       <div class="flex items-center">
@@ -21,7 +37,11 @@
           {{ $t('AboutUs.Honor.Content') }}
         </p>
         <div style="width: 50%" class="pl-7">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img
+            :src="homeBg1"
+            style="max-width: 100%; max-height: 100%"
+            alt="pic1"
+          />
         </div>
       </div>
     </div>

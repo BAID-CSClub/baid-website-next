@@ -1,6 +1,6 @@
 <template>
   <section class="h-screen m-t-[-4.25rem] relative overflow-hidden">
-    <div class="absolute top-0 w-screen h-screen">
+    <div class="absolute top-0 w-full h-screen">
       <CarouselVertical :images="images" />
     </div>
     <div

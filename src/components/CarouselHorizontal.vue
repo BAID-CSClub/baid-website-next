@@ -1,8 +1,8 @@
 <template>
-  <div class="h-[calc(100vh-4.25rem)] w-screen overflow-hidden relative">
+  <div class="h-[calc(100vh-4.25rem)] w-full overflow-hidden relative">
     <div class="absolute flex" :style="{ left }">
       <img
-        class="h-[calc(100vh-4.25rem)] w-screen brightness-80 object-cover"
+        class="h-[calc(100vh-4.25rem)] w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"
         v-for="img in props.images"
         :src="img"
         :alt="img"
@@ -23,9 +23,9 @@
         "
       ></div>
     </div>
-    <div class="absolute pointer-events-none">
+    <div class="absolute pointer-events-none w-full">
       <div
-        class="flex justify-center items-center w-screen h-[calc(100vh-4.25rem)]"
+        class="flex justify-center items-center w-full h-[calc(100vh-4.25rem)]"
       >
         <slot></slot>
       </div>

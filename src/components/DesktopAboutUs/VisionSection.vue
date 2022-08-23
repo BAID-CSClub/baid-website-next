@@ -2,7 +2,11 @@
   <section class="section">
     <div class="flex p-y-10" id="vision">
       <div style="width: 50%" class="pr-7">
-        <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+        <img
+          :src="homeBg1"
+          style="max-width: 100%; max-height: 100%"
+          alt="pic1"
+        />
       </div>
       <div style="width: 50%" class="pl-7">
         <div class="flex justify-end m-b-10">

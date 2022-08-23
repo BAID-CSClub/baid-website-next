@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border-width-3 border-solid border-color-[var(--standard-blue)] color-[var(--standard-blue)] flex w-full md:max-w-50 max-w-70 h-75 justify-around"
+    class="border-width-3 border-solid border-color-[var(--standard-blue)] color-[var(--standard-blue)] flex w-full max-w-55 h-80 justify-around"
     :class="{ 'bg-[var(--standard-blue)] color-white': props.blue }"
   >
     <h2 class="font-dianzi m-l-3 text-8 font-300">{{ props.left }}</h2>

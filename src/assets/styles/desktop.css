@@ -104,6 +104,7 @@ pre {
 :root {
   --standard-blue: #103c74;
   --standard-red: #83050e;
+  --shrink-limit: 750px;
 }
 
 /* Note: 似乎这个class用的并不多，也许可以考虑去掉？ */

@@ -1,11 +1,19 @@
 <template>
   <section class="section">
     <div>
-      <FancyTitle :top="$t('EducationTeaching.Curriculums.Title')" btm="Curriculums Introduction" color="blue">
+      <FancyTitle
+        :top="$t('EducationTeaching.Curriculums.Title')"
+        btm="Curriculums Introduction"
+        color="blue"
+      >
       </FancyTitle>
     </div>
-    <div class="flex flex-col flex-wrap m-1vw h-58vw" style="transform: translate(2%, 2%)">
-      <div style="
+    <div
+      class="flex flex-col flex-wrap m-1vw h-58vw"
+      style="transform: translate(2%, 2%)"
+    >
+      <div
+        style="
           height: auto;
           width: 2.5px;
           background-color: black;
@@ -13,36 +21,58 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-        "></div>
+        "
+      ></div>
       <div class="w-31vw" style="margin: 2vw 5vw 0vw 5vw">
-        <div class="font-700 w-31.5vw" style="margin: 0.8vw 0vw; font-size: 1.3vw">
+        <div
+          class="font-700 w-31.5vw"
+          style="margin: 0.8vw 0vw; font-size: 1.3vw"
+        >
           教育教学是怎么回事呢？教育相信大家都很熟悉，但是教育教学是怎么回事呢，下面就让小编带大家一起了解吧。
           <br />教育教学，其实就是教学，大家可能会很惊讶教育怎么会教学呢？但事实就是这样，小编也感到非常惊讶。
           <br />这就是关于教育教学的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！
         </div>
       </div>
       <div class="bg-purple h-12vw w-32vw" style="margin: 0vw 5vw 4vw 5vw">
-        <img :src="homeBg1" style="width: 100%; height: 100%; object-fit: cover" alt="Bg" />
+        <img
+          :src="homeBg1"
+          style="width: 100%; height: 100%; object-fit: cover"
+          alt="Bg"
+        />
       </div>
       <div class="w-31vw" style="margin: 2vw 5vw 0vw 5vw">
-        <div class="font-700 w-31.5vw" style="margin: 0.8vw 0vw; font-size: 1.3vw">
+        <div
+          class="font-700 w-31.5vw"
+          style="margin: 0.8vw 0vw; font-size: 1.3vw"
+        >
           教育教学是怎么回事呢？教育相信大家都很熟悉，但是教育教学是怎么回事呢，下面就让小编带大家一起了解吧。
           <br />教育教学，其实就是教学，大家可能会很惊讶教育怎么会教学呢？但事实就是这样，小编也感到非常惊讶。
           <br />这就是关于教育教学的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！
         </div>
       </div>
       <div class="bg-purple h-12vw w-32vw" style="margin: 0vw 5vw 4vw 5vw">
-        <img :src="homeBg1" style="width: 100%; height: 100%; object-fit: cover" alt="Bg" />
+        <img
+          :src="homeBg1"
+          style="width: 100%; height: 100%; object-fit: cover"
+          alt="Bg"
+        />
       </div>
       <div class="w-31vw" style="margin: 2vw 5vw 0vw 5vw">
-        <div class="font-700 w-31.5vw" style="margin: 0.8vw 0vw; font-size: 1.3vw">
+        <div
+          class="font-700 w-31.5vw"
+          style="margin: 0.8vw 0vw; font-size: 1.3vw"
+        >
           教育教学是怎么回事呢？教育相信大家都很熟悉，但是教育教学是怎么回事呢，下面就让小编带大家一起了解吧。
           <br />教育教学，其实就是教学，大家可能会很惊讶教育怎么会教学呢？但事实就是这样，小编也感到非常惊讶。
           <br />这就是关于教育教学的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦！
         </div>
       </div>
       <div class="bg-purple h-12vw w-32vw" style="margin: 0vw 5vw 4vw 5vw">
-        <img :src="homeBg1" style="width: 100%; height: 100%; object-fit: cover" alt="Bg" />
+        <img
+          :src="homeBg1"
+          style="width: 100%; height: 100%; object-fit: cover"
+          alt="Bg"
+        />
       </div>
     </div>
   </section>
@@ -51,5 +81,4 @@
 import FancyTitle from '../FancyTitle.vue'
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
-<style scoped>
-</style>
+<style scoped></style>
