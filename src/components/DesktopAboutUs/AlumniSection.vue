@@ -1,14 +1,7 @@
 <template>
   <section class="section">
     <div id="alumni" class="p-y-10 flex-col items-center">
-      <!-- <h2 class="title">
-                {{ $t("AboutUs.Alumni.Title") }}
-            </h2> -->
-      <FancyTitle
-        :top="$t('AboutUs.Alumni.Title')"
-        btm="Alumni"
-        color="red"
-      ></FancyTitle>
+      <NotFancyTitle cn="毕业生介绍" en="Alumni" color="red"></NotFancyTitle>
       <div class="flex">
         <div style="flex: 1" class="pr-5 flex pl-8 items-center">
           <img
@@ -142,9 +135,8 @@
 </template>
 
 <script setup>
-import FancyTitle from '../FancyTitle.vue'
-
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import NotFancyTitle from '../NotFancyTitle.vue'
 
 const alumni = [
   {
