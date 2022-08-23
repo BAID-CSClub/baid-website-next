@@ -4,12 +4,27 @@
       <!-- <div class="text-9 font-700">“</div> -->
       <!-- Left top quote -->
       <div>
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.55765920826161"
-          height="53" viewBox="0 0 56.55765920826161 53" fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="56.55765920826161"
+          height="53"
+          viewBox="0 0 56.55765920826161 53"
+          fill="none"
+        >
           <defs>
-            <rect id="path_0" x="0" y="0" width="56.55765920826162" height="53" />
+            <rect
+              id="path_0"
+              x="0"
+              y="0"
+              width="56.55765920826162"
+              height="53"
+            />
           </defs>
-          <g opacity="1" transform="translate(0 0)  rotate(0 28.27882960413081 26.5)">
+          <g
+            opacity="1"
+            transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+          >
             <mask id="bg-mask-0" fill="white">
               <use xlink:href="#path_0"></use>
             </mask>
@@ -36,18 +51,37 @@
           </p>
         </div>
         <div style="flex: 1" class="flex justify-center p-5">
-          <img :src="homeBg1" style="width: 12rem; height: 12rem; object-fit: cover" alt="pic1" />
+          <img
+            :src="homeBg1"
+            style="width: 12rem; height: 12rem; object-fit: cover"
+            alt="pic1"
+          />
         </div>
       </div>
       <!-- <div class="text-9 font-700 text-right">”</div> -->
       <!-- Right bottom quote -->
       <div class="text-right">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56.55765920826161"
-          height="53" viewBox="0 0 56.55765920826161 53" fill="none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="56.55765920826161"
+          height="53"
+          viewBox="0 0 56.55765920826161 53"
+          fill="none"
+        >
           <defs>
-            <rect id="path_0" x="0" y="0" width="56.55765920826162" height="53" />
+            <rect
+              id="path_0"
+              x="0"
+              y="0"
+              width="56.55765920826162"
+              height="53"
+            />
           </defs>
-          <g opacity="1" transform="translate(0 0)  rotate(0 28.27882960413081 26.5)">
+          <g
+            opacity="1"
+            transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+          >
             <mask id="bg-mask-0" fill="white">
               <use xlink:href="#path_0"></use>
             </mask>
@@ -72,5 +106,4 @@
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 </script>
 
-<style>
-</style>
+<style></style>

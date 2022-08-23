@@ -10,11 +10,6 @@
   padding: 45px 20px;
 }
 
-:root {
-  --standard-blue: #103c74;
-  --standard-red: #83050e;
-}
-
 .content {
   font-size: 18px;
   margin: 0;
@@ -23,36 +18,36 @@
 }
 
 @font-face {
-  font-family: "Latin Modern Roman";
-  src: url("LMRoman10-Regular.woff2") format("woff2"),
-    url("LMRoman10-Regular.woff") format("woff");
+  font-family: 'Latin Modern Roman';
+  src: url('../fonts/LMRoman10-Regular.woff2') format('woff2'),
+    url('../fonts/LMRoman10-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("OpenSans-Bold.woff2") format("woff2"),
-    url("OpenSans-Bold.woff") format("woff");
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("OpenSans-Regular.woff2") format("woff2"),
-    url("OpenSans-Regular.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Dianzi";
-  src: url("IDJueJiangHei.woff2") format("woff2"),
-    url("IDJueJiangHei.woff") format("woff");
+  font-family: 'Dianzi';
+  src: url('../fonts/IDJueJiangHei.woff2') format('woff2'),
+    url('../fonts/IDJueJiangHei.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -93,4 +88,28 @@ h1 {
 h2 {
   font-family: "Alibaba PuHuiTi M", sans-serif;
   font-weight: 500;
+}
+
+h3 {
+  font-family: 'Open Sans', 'Alibaba PuHuiTi M', sans-serif;
+  font-weight: 500;
+}
+
+p,
+pre {
+  font-size: 18px;
+  margin: 0;
+  line-height: 25px;
+  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+:root {
+  --standard-blue: #103c74;
+  --standard-red: #83050e;
+  --shrink-limit: 750px;
 }

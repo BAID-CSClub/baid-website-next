@@ -4,19 +4,38 @@
       <NotFancyTitle cn="毕业生介绍" en="Alumni" color="red"></NotFancyTitle>
       <div class="flex">
         <div style="flex: 1" class="pr-5 flex pl-8 items-center">
-          <img :src="homeBg1" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover;" alt="pic1"
-            class="alumni-big-pic" />
+          <img
+            :src="homeBg1"
+            style="max-width: 100%; max-height: 100%"
+            alt="pic1"
+            class="alumni-big-pic"
+          />
         </div>
         <div style="flex: 2" class="flex-col pl-5">
           <div class="relative">
             <!-- Left top quote -->
             <div class="absolute left-20px top-0">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="56.55765920826161" height="53" viewBox="0 0 56.55765920826161 53" fill="none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="56.55765920826161"
+                height="53"
+                viewBox="0 0 56.55765920826161 53"
+                fill="none"
+              >
                 <defs>
-                  <rect id="path_0" x="0" y="0" width="56.55765920826162" height="53" />
+                  <rect
+                    id="path_0"
+                    x="0"
+                    y="0"
+                    width="56.55765920826162"
+                    height="53"
+                  />
                 </defs>
-                <g opacity="1" transform="translate(0 0)  rotate(0 28.27882960413081 26.5)">
+                <g
+                  opacity="1"
+                  transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+                >
                   <mask id="bg-mask-0" fill="white">
                     <use xlink:href="#path_0"></use>
                   </mask>
@@ -36,12 +55,27 @@
             <p class="p-20 content">{{ $t('AboutUs.Alumni.Content') }}</p>
             <!-- Right bottom quote -->
             <div class="absolute right-20px bottom-0">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="56.55765920826161" height="53" viewBox="0 0 56.55765920826161 53" fill="none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="56.55765920826161"
+                height="53"
+                viewBox="0 0 56.55765920826161 53"
+                fill="none"
+              >
                 <defs>
-                  <rect id="path_0" x="0" y="0" width="56.55765920826162" height="53" />
+                  <rect
+                    id="path_0"
+                    x="0"
+                    y="0"
+                    width="56.55765920826162"
+                    height="53"
+                  />
                 </defs>
-                <g opacity="1" transform="translate(0 0)  rotate(0 28.27882960413081 26.5)">
+                <g
+                  opacity="1"
+                  transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
+                >
                   <mask id="bg-mask-0" fill="white">
                     <use xlink:href="#path_0"></use>
                   </mask>

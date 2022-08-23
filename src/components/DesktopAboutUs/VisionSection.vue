@@ -2,11 +2,16 @@
   <section class="section">
     <div class="flex" id="vision">
       <div class="mr-7 w-1/2">
-        <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+        <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
       </div>
       <div class="ml-7 w-1/2">
         <div class="flex justify-end">
-          <NotFancyTitle cn="愿景" en="Vision" color="blue" right></NotFancyTitle>
+          <NotFancyTitle
+            cn="愿景"
+            en="Vision"
+            color="blue"
+            right
+          ></NotFancyTitle>
         </div>
         <p class="content w-90%">
           {{ $t('AboutUs.Vision.Content') }}
