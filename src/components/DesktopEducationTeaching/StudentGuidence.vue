@@ -1,7 +1,7 @@
 <template>
   <section class="section">
-    <div class="flex justify-center items-center m-t-50">
-      <div class="max-w-300 w-80vw max-h-350 h-130vw flex" style="flex-direction: column">
+    <div class="flex justify-center items-center">
+      <div class="max-w-300 w-80vw max-h-350 h-130vw flex flex-col">
         <div class="h-100% flex">
           <div class="flex justify-start items-end" style="flex: 0.8">
             <img :src="img1" style="width: 90%; box-shadow: 5px 5px 5px grey" alt="Bg" />
@@ -12,9 +12,8 @@
                 <img :src="img1" style="width: 102%; box-shadow: 5px 5px 5px grey" alt="Bg" />
               </div>
               <div class="h-100% relative" style="flex: 1">
-                <div class="absolute write-vertical-right m-l-30 m-t--10">
-                  <FancyTitle :top="$t('EducationTeaching.Student.Title')" btm="Student&nbsp;Guidence" color="red">
-                  </FancyTitle>
+                <div class="write-vertical-right m-l-30 m-t--10">
+                  <NotFancyTitle cn="学生指导" en="Student Guidance" color="red" vertical></NotFancyTitle>
                 </div>
               </div>
             </div>
@@ -78,6 +77,6 @@
 </template>
 <script setup>
 import img1 from '../../assets/images/le1.png'
-import FancyTitle from '../FancyTitle.vue'
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import NotFancyTitle from '../NotFancyTitle.vue'
 </script>

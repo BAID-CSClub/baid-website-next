@@ -70,9 +70,11 @@
               <img :src="alumnus.image" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover;" alt="pic1" />
             </div>
             <!-- arrow right -->
-            <div><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <div>
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
                 <path fill="var(--standard-red" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-              </svg></div>
+              </svg>
+            </div>
           </div>
         </div>
       </div>

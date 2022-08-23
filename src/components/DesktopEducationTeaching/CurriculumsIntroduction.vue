@@ -1,10 +1,7 @@
 <template>
   <section class="section">
-    <div>
-      <FancyTitle :top="$t('EducationTeaching.Curriculums.Title')" btm="Curriculums Introduction" color="blue">
-      </FancyTitle>
-    </div>
-    <div class="flex flex-col flex-wrap m-1vw h-58vw" style="transform: translate(2%, 2%)">
+    <NotFancyTitle cn="课程体系" en="Curriculum" color="blue"></NotFancyTitle>
+    <div class="flex flex-col flex-wrap m-1vw h-58vw">
       <div style="
           height: auto;
           width: 2.5px;
@@ -48,8 +45,8 @@
   </section>
 </template>
 <script setup>
-import FancyTitle from '../FancyTitle.vue'
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import NotFancyTitle from '../NotFancyTitle.vue'
 </script>
 <style scoped>
 </style>
