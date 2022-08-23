@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div id="honor" class="p-y-10 flex-col items-center">
+    <div id="honor" class="flex-col items-center">
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
       <div class="flex pt-10 pb-10">
         <div class="honor-small-pic">
@@ -14,10 +14,10 @@
         </div>
       </div>
       <div class="flex items-center">
-        <p class="pr-7 content w-1/2">
+        <p class="mr-7 content w-1/2">
           {{ $t('AboutUs.Honor.Content') }}
         </p>
-        <div class="pl-7 w-1/2">
+        <div class="ml-7 w-1/2">
           <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
         </div>
       </div>
