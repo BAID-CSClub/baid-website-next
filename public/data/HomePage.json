@@ -27,6 +27,20 @@
         "color": "#F2A640",
         "link": "/articles/YYYY/MM/dd/some-article-name"
       }
+    },
+    {
+      "zh-CN": {
+        "title": "题目三",
+        "abstract": "摘要三",
+        "color": "#B5C2A1",
+        "link": "/articles/YYYY/MM/dd/some-article-name"
+      },
+      "en-US": {
+        "title": "Title Three",
+        "abstract": "Abstract Three",
+        "color": "#B5C2A1",
+        "link": "/articles/YYYY/MM/dd/some-article-name"
+      }
     }
   ]
 }

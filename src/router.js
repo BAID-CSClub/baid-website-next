@@ -40,6 +40,11 @@ export const routes = [
     component: () => import(`./views/${clientType}/JoinUs.vue`)
   },
   {
+    path: '/:lang(zh-CN|en-US)/articles/:year/:month/:day/:title',
+    name: 'ArticlePage',
+    component: () => import(`./views/${clientType}/ArticlePage.vue`)
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import(`./views/${clientType}/NotFound.vue`)

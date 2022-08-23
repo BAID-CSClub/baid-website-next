@@ -1,10 +1,10 @@
 <template>
   <section class="contentArea">
-    <FancyTitle
-      top="办学理念"
-      btm="Education Philosophical"
+    <NotFancyTitle
+      cn="办学理念"
+      en="Education Philosophy"
       color="blue"
-    ></FancyTitle>
+    ></NotFancyTitle>
     <div
       class="grid md-grid-cols-[repeat(4,1fr)] sm-grid-cols-[repeat(2,1fr)] w-full m-t-10 justify-items-center gap-4"
     >
@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import FancyTitle from '../FancyTitle.vue'
+import NotFancyTitle from '../NotFancyTitle.vue'
 import PhilosophyBlock from './PhilosophyBlock.vue'
 
 const blocks = [

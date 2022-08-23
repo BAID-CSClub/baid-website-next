@@ -1,3 +1,4 @@
 <template>
-  <h1>Home</h1>
+  <h1>HomePage for Mobile devices</h1>
+  <h2>Work in progress...</h2>
 </template>

@@ -1,7 +1,3 @@
-h1 {
-  color: green;
-}
-
 .contentArea {
   max-width: 77rem;
   margin: 90px auto;
@@ -29,10 +25,78 @@ h1 {
   font-size: 18px;
   margin: 0;
   line-height: 25px;
+  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
 }
 
 @font-face {
-  font-family: 'PangMenZhengDao';
-  src: url('../fonts/PangMenZhengDaoBiaoTiTi.ttf');
+  font-family: 'Latin Modern Roman';
+  src: url('LMRoman10-Regular.woff2') format('woff2'),
+    url('LMRoman10-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('OpenSans-Bold.woff2') format('woff2'),
+    url('OpenSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('OpenSans-Regular.woff2') format('woff2'),
+    url('OpenSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dianzi';
+  src: url('IDJueJiangHei.woff2') format('woff2'),
+    url('IDJueJiangHei.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi 2.0 115';
+  src: url('../fonts/AlibabaPuHuiTi_2_115_Black.woff2') format('woff2'),
+    url('../fonts/AlibabaPuHuiTi_2_115_Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi M';
+  src: url('../fonts/Alibaba-PuHuiTi-M.woff2') format('woff2'),
+    url('../fonts/Alibaba-PuHuiTi-M.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alibaba PuHuiTi 2.0 55';
+  src: url('../fonts/AlibabaPuHuiTi_2_55_Regular.woff2') format('woff2'),
+    url('../fonts/AlibabaPuHuiTi_2_55_Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-family: 'Latin Modern Roman', 'Alibaba PuHuiTi 2.0 55', sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: 'Alibaba PuHuiTi M', sans-serif;
+  font-weight: 500;
 }
