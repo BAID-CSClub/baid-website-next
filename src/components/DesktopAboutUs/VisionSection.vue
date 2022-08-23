@@ -1,10 +1,10 @@
 <template>
   <section class="section">
-    <div class="flex p-y-10" id="vision">
-      <div class="pr-7 w-1/2">
+    <div class="flex" id="vision">
+      <div class="mr-7 w-1/2">
         <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
       </div>
-      <div class="pl-7 w-1/2">
+      <div class="ml-7 w-1/2">
         <div class="flex justify-end">
           <NotFancyTitle
             cn="愿景"

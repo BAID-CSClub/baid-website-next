@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div id="alumni" class="p-y-10 flex-col items-center">
+    <div id="alumni" class="flex-col items-center">
       <NotFancyTitle cn="毕业生介绍" en="Alumni" color="red"></NotFancyTitle>
       <div class="flex">
         <div style="flex: 1" class="pr-5 flex pl-8 items-center">
@@ -40,26 +40,13 @@
                     <use xlink:href="#path_0"></use>
                   </mask>
                   <g mask="url(#bg-mask-0)">
-                    <g
-                      opacity="1"
-                      transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
-                    >
-                      <path
-                        id="路径 1"
-                        fill-rule="evenodd"
-                        style="fill: #122a28"
-                        transform="translate(31.867098865540292 0)  rotate(0 12.345280171360663 26.5)"
-                        opacity="1"
-                        d="M0,53L8.98,53C17.66,53 24.69,46.41 24.69,38.28L24.69,27.75L12.8,27.75C13.1,19.28 19.42,11.52 24.69,9.99L24.69,0C15.06,1.8 0,11.79 0,28.72L0,53Z "
-                      />
-                      <path
-                        id="路径 2"
-                        fill-rule="evenodd"
-                        style="fill: #122a28"
-                        transform="translate(0 0)  rotate(0 12.345280171360665 26.5)"
-                        opacity="1"
-                        d="M0,53L8.83,53C17.51,53 24.54,46.41 24.54,38.28L24.54,27.75L12.8,27.75C13.1,19.28 19.42,11.52 24.69,9.99L24.69,0C15.06,1.8 0,11.79 0,28.72L0,53Z "
-                      />
+                    <g opacity="1" transform="translate(0 0)  rotate(0 28.27882960413081 26.5)">
+                      <path id="path 1" fill-rule="evenodd" style="fill: #122a28"
+                        transform="translate(31.867098865540292 0)  rotate(0 12.345280171360663 26.5)" opacity="1"
+                        d="M0,53L8.98,53C17.66,53 24.69,46.41 24.69,38.28L24.69,27.75L12.8,27.75C13.1,19.28 19.42,11.52 24.69,9.99L24.69,0C15.06,1.8 0,11.79 0,28.72L0,53Z " />
+                      <path id="path 2" fill-rule="evenodd" style="fill: #122a28"
+                        transform="translate(0 0)  rotate(0 12.345280171360665 26.5)" opacity="1"
+                        d="M0,53L8.83,53C17.51,53 24.54,46.41 24.54,38.28L24.54,27.75L12.8,27.75C13.1,19.28 19.42,11.52 24.69,9.99L24.69,0C15.06,1.8 0,11.79 0,28.72L0,53Z " />
                     </g>
                   </g>
                 </g>
@@ -93,39 +80,34 @@
                     <use xlink:href="#path_0"></use>
                   </mask>
                   <g mask="url(#bg-mask-0)">
-                    <g
-                      opacity="1"
-                      transform="translate(0 0)  rotate(0 28.27882960413081 26.5)"
-                    >
-                      <path
-                        id="路径 1"
-                        fill-rule="evenodd"
-                        style="fill: #122a28"
-                        transform="translate(0 0)  rotate(0 12.345280171360665 26.5)"
-                        opacity="1"
-                        d="M24.69,0L15.71,0C7.03,0 0,6.59 0,14.72L0,25.25L11.89,25.25C11.59,33.72 5.27,41.48 0,43.01L0,53C9.64,51.2 24.69,41.21 24.69,24.28L24.69,0Z "
-                      />
-                      <path
-                        id="路径 2"
-                        fill-rule="evenodd"
-                        style="fill: #122a28"
-                        transform="translate(31.867098865540356 0)  rotate(0 12.345280171360667 26.5)"
-                        opacity="1"
-                        d="M24.69,0L15.86,0C7.18,0 0.15,6.59 0.15,14.72L0.15,25.25L11.89,25.25C11.59,33.72 5.27,41.48 0,43.01L0,53C9.64,51.2 24.69,41.21 24.69,24.28L24.69,0Z "
-                      />
+                    <g opacity="1" transform="translate(0 0)  rotate(0 28.27882960413081 26.5)">
+                      <path id="path 1" fill-rule="evenodd" style="fill: #122a28"
+                        transform="translate(0 0)  rotate(0 12.345280171360665 26.5)" opacity="1"
+                        d="M24.69,0L15.71,0C7.03,0 0,6.59 0,14.72L0,25.25L11.89,25.25C11.59,33.72 5.27,41.48 0,43.01L0,53C9.64,51.2 24.69,41.21 24.69,24.28L24.69,0Z " />
+                      <path id="path 2" fill-rule="evenodd" style="fill: #122a28"
+                        transform="translate(31.867098865540356 0)  rotate(0 12.345280171360667 26.5)" opacity="1"
+                        d="M24.69,0L15.86,0C7.18,0 0.15,6.59 0.15,14.72L0.15,25.25L11.89,25.25C11.59,33.72 5.27,41.48 0,43.01L0,53C9.64,51.2 24.69,41.21 24.69,24.28L24.69,0Z " />
                     </g>
                   </g>
                 </g>
               </svg>
             </div>
           </div>
-          <div class="flex">
-            <div class="m-4" v-for="alumn in alumni" :key="alumn">
-              <img
-                :src="alumn.image"
-                style="max-width: 100%; max-height: 100%"
-                alt="pic1"
-              />
+          <div class="flex items-center">
+            <!-- arrow left -->
+            <div>
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="var(--standard-red)" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z" />
+              </svg>
+            </div>
+            <div class="m-4" v-for="alumnus in alumni" :key="alumnus">
+              <img :src="alumnus.image" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover;" alt="pic1" />
+            </div>
+            <!-- arrow right -->
+            <div>
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <path fill="var(--standard-red" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+              </svg>
             </div>
           </div>
         </div>
@@ -150,6 +132,13 @@ const alumni = [
     image: homeBg1,
     'zh-CN':
       '毕业生2介绍 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.',
+    'en-US':
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
+  },
+  {
+    image: homeBg1,
+    'zh-CN':
+      '毕业生3介绍 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.',
     'en-US':
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
   }

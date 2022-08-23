@@ -1,3 +1,22 @@
+.contentArea {
+  max-width: 77rem;
+  margin: 90px auto;
+  padding: 0 20px;
+}
+
+.section {
+  max-width: 77rem;
+  margin: 0 auto;
+  padding: 45px 20px;
+}
+
+.content {
+  font-size: 18px;
+  margin: 0;
+  line-height: 25px;
+  font-family: "Open Sans", "Alibaba-PuHuiTi", sans-serif;
+}
+
 @font-face {
   font-family: 'Latin Modern Roman';
   src: url('../fonts/LMRoman10-Regular.woff2') format('woff2'),
@@ -35,39 +54,39 @@
 }
 
 @font-face {
-  font-family: 'Alibaba PuHuiTi 2.0 115';
-  src: url('../fonts/AlibabaPuHuiTi_2_115_Black.woff2') format('woff2'),
-    url('../fonts/AlibabaPuHuiTi_2_115_Black.woff') format('woff');
+  font-family: "Alibaba PuHuiTi 2.0 115";
+  src: url("../fonts/AlibabaPuHuiTi_2_115_Black.woff2") format("woff2"),
+    url("../fonts/AlibabaPuHuiTi_2_115_Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Alibaba PuHuiTi M';
-  src: url('../fonts/Alibaba-PuHuiTi-M.woff2') format('woff2'),
-    url('../fonts/Alibaba-PuHuiTi-M.woff') format('woff');
+  font-family: "Alibaba PuHuiTi M";
+  src: url("../fonts/Alibaba-PuHuiTi-M.woff2") format("woff2"),
+    url("../fonts/Alibaba-PuHuiTi-M.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Alibaba PuHuiTi 2.0 55';
-  src: url('../fonts/AlibabaPuHuiTi_2_55_Regular.woff2') format('woff2'),
-    url('../fonts/AlibabaPuHuiTi_2_55_Regular.woff') format('woff');
+  font-family: "Alibaba PuHuiTi 2.0 55";
+  src: url("../fonts/AlibabaPuHuiTi_2_55_Regular.woff2") format("woff2"),
+    url("../fonts/AlibabaPuHuiTi_2_55_Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 h1 {
-  font-family: 'Latin Modern Roman', 'Alibaba PuHuiTi 2.0 55', sans-serif;
+  font-family: "Latin Modern Roman", "Alibaba PuHuiTi 2.0 55", sans-serif;
   font-weight: 500;
 }
 
 h2 {
-  font-family: 'Alibaba PuHuiTi M', sans-serif;
+  font-family: "Alibaba PuHuiTi M", sans-serif;
   font-weight: 500;
 }
 
@@ -89,27 +108,8 @@ pre {
   word-wrap: break-word;
 }
 
-.contentArea {
-  max-width: 77rem;
-  margin: 90px auto;
-  padding: 0 20px;
-}
-
-.section {
-  max-width: 77rem;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 :root {
   --standard-blue: #103c74;
   --standard-red: #83050e;
   --shrink-limit: 750px;
-}
-
-/* Note: 似乎这个class用的并不多，也许可以考虑去掉？ */
-.title {
-  font-size: 2.25rem;
-  margin: 1rem 0;
-  color: var(--standard-blue);
 }

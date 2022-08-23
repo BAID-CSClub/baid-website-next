@@ -9,12 +9,7 @@
     >
       <div class="bg-[var(--standard-red)] flex items-center justify-center">
         <div class="invert-100 contrast-1000">
-          <FancyTitle
-            :top="$t('EducationTeaching.WonderfulMoment.Title')"
-            btm="WonderfulMoment"
-            color="null"
-          >
-          </FancyTitle>
+          <NotFancyTitle cn="精彩瞬间" en="Woderful Moments" color="null"></NotFancyTitle>
         </div>
       </div>
       <div class="bg-purple opacity-50">
@@ -153,6 +148,6 @@
   </section>
 </template>
 <script setup>
-import FancyTitle from '../FancyTitle.vue'
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import NotFancyTitle from '../NotFancyTitle.vue'
 </script>

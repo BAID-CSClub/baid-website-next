@@ -1,12 +1,8 @@
 <template>
   <section class="section">
-    <div class="text-10 font-700 flex justify-end m-r-5vw">
-      <FancyTitle
-        :top="$t('EducationTeaching.Learning.Title')"
-        btm="Learning Method"
-        color="red"
-        right
-      ></FancyTitle>
+    <!-- <FancyTitle :top="$t('EducationTeaching.Learning.Title')" btm="Learning Method" color="red" right></FancyTitle> -->
+    <div class="flex justify-end">
+      <NotFancyTitle cn="学习方式" en="Learning Methods" color="red" right></NotFancyTitle>
     </div>
     <div
       class="grid h-44vw"
@@ -65,7 +61,7 @@
   </section>
 </template>
 <script setup>
-import FancyTitle from '../FancyTitle.vue'
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import NotFancyTitle from '../NotFancyTitle.vue'
 </script>
 <style scoped></style>
