@@ -4,13 +4,13 @@
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
       <div class="flex pt-10 pb-10">
         <div class="honor-small-pic">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
         </div>
         <div class="honor-small-pic">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
         </div>
         <div class="honor-small-pic">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
         </div>
       </div>
       <div class="flex items-center">
@@ -18,7 +18,7 @@
           {{ $t('AboutUs.Honor.Content') }}
         </p>
         <div class="pl-7 w-1/2">
-          <img :src="homeBg1" style="max-width: 100%; max-height: 100%" alt="pic1" />
+          <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 <template>
-  <div class="h-screen w-screen overflow-hidden relative">
+  <div class="h-screen w-full overflow-hidden relative">
     <div class="absolute" :style="{ top }">
       <img
         v-for="(img, index) in props.images"
         :key="img"
         :src="img"
         :alt="img"
-        class="h-screen w-screen brightness-80 object-cover"
+        class="h-screen w-full brightness-80 object-cover"
         :class="{ 'm-t--3.5px': index > 0 }"
       />
       <!-- 微调至 3.5px 虽然不知道这个数怎么来的 -->

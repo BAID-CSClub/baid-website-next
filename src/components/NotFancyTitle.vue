@@ -1,9 +1,14 @@
 <template>
-  <div class="w-max" :class="{ 'text-right': right }">
+  <!-- TODO: More verticle optimization -->
+  <div
+    class="w-max"
+    :class="{ 'text-right': right, 'write-vertical-left': verticle }"
+  >
     <!-- CN -->
     <h1
-      class="color-#122A28 m-0 text-10 font-title font-300"
+      class="color-#122A28 m-0 text-10 font-300"
       v-if="$i18n.locale === 'zh-CN'"
+      style="font-family: 'Open Sans Bold', 'Dianzi', sans-serif"
     >
       <span
         v-for="word in cn"
@@ -27,12 +32,7 @@
       class="color-#122A28 m-0 text-9 font-title font-light"
       :class="{ 'font-bold !text-11': $i18n.locale === 'en-US' }"
     >
-      <span
-        v-for="word in en"
-        :key="word"
-        class="m-r-3"
-        :class="{ 'important:m-r-15': right }"
-      >
+      <span v-for="word in en" :key="word">
         <span>{{ word.left }}</span>
         <span
           :class="{
@@ -62,6 +62,12 @@ const cn = computed(() => compute(props.cn))
 const en = computed(() => compute(props.en))
 const right = computed(() => {
   if (props.right === undefined) {
+    return false
+  }
+  return true
+})
+const verticle = computed(() => {
+  if (props.verticle === undefined) {
     return false
   }
   return true

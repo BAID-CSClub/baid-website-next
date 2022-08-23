@@ -22,5 +22,4 @@ import ActivitiesSection from '../../components/DesktopCampusLife/ActivitiesSect
 import EventsSection from '../../components/DesktopCampusLife/EventsSection.vue'
 </script>
 
-<style>
-</style>
+<style></style>
