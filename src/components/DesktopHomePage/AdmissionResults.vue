@@ -4,9 +4,9 @@
     <div class="flex items-center md:flex-row flex-col m-t-20">
       <div class="w-full bg-gray-300 h-60"></div>
       <div class="w-full h-max bg-[var(--standard-red)] p-8">
-        <h1 class="color-white font-sans text-8 tracking-wide">
+        <h3 class="color-white text-8">
           {{ $t('HomePage.AdmissionResults.title') }}
-        </h1>
+        </h3>
         <pre class="color-white op-90 m-b-10">{{
           $t('HomePage.AdmissionResults.content')
         }}</pre>
