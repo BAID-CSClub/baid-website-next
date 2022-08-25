@@ -21,7 +21,12 @@
               </div>
               <div class="h-100% relative" style="flex: 1">
                 <div class="write-vertical-right m-l-30 m-t--10">
-                  <NotFancyTitle cn="学生指导" en="Student Guidance" color="red" vertical></NotFancyTitle>
+                  <NotFancyTitle
+                    cn="学生指导"
+                    en="Student Guidance"
+                    color="red"
+                    vertical
+                  ></NotFancyTitle>
                 </div>
               </div>
             </div>
