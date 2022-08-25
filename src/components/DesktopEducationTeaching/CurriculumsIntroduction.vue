@@ -2,7 +2,8 @@
   <section class="section">
     <NotFancyTitle cn="课程体系" en="Curriculum" color="blue"></NotFancyTitle>
     <div class="flex flex-col flex-wrap m-1vw h-58vw">
-      <div style="
+      <div
+        style="
           height: auto;
           width: 2.5px;
           background-color: black;
