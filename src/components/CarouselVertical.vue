@@ -1,29 +1,18 @@
 <template>
   <div class="h-screen w-full overflow-hidden relative">
     <div class="absolute" :style="{ top }">
-      <img
-        v-for="(img, index) in props.images"
-        :key="img"
-        :src="img"
-        :alt="img"
-        class="h-screen w-full brightness-80 object-cover"
-        :class="{ 'm-t--3.5px': index > 0 }"
-      />
+      <img v-for="(img, index) in props.images" :key="img" :src="img" :alt="img"
+        class="h-screen w-full brightness-80 object-cover" :class="{ 'm-t--3.5px': index > 0 }" />
       <!-- 微调至 3.5px 虽然不知道这个数怎么来的 -->
     </div>
     <div class="absolute right-10 bottom-10">
-      <div
-        v-for="(img, index) in props.images"
-        v-bind:key="img"
-        :class="{ 'important-bg-white': current === index }"
-        class="dot w-3 h-3 m-y-3 cursor-pointer"
-        v-on:click="
+      <div v-for="(img, index) in props.images" v-bind:key="img" :class="{ 'important-bg-white': current === index }"
+        class="dot w-3 h-3 m-y-3 cursor-pointer" v-on:click="
           () => {
             current = index
             resetInterval()
           }
-        "
-      ></div>
+        "></div>
     </div>
   </div>
 </template>
@@ -44,7 +33,7 @@ watch(current, (index) => {
   topAnimation = animate({
     from: top.value,
     to: index * -100 + 'vh',
-    onUpdate (value) {
+    onUpdate(value) {
       top.value = value
     },
     duration: 300
@@ -59,7 +48,7 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
-function resetInterval () {
+function resetInterval() {
   clearInterval(interval)
   interval = setInterval(() => {
     current.value = (current.value + 1) % props.images.length

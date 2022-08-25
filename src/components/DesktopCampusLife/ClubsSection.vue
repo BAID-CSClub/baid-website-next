@@ -4,25 +4,16 @@
       {{ $t('CampusLife.Clubs.Title') }}
     </h1>
     <div class="flex justify-center">
-      <div
-        v-for="club in clubs"
-        class="m-5 h-220px aspect-1 items-center justify-center"
-        :key="club"
-        style="
+      <div v-for="club in clubs" class="m-5 h-220px aspect-1 items-center justify-center" :key="club" style="
           box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5);
           display: flex;
           flex-direction: column;
-        "
-        :style="{ 'background-color': club.bgColor, color: club.color }"
-      >
+        " :style="{ 'background-color': club.bgColor, color: club.color }">
         <div class="text-8 font-title m-1">
           {{ club['zh-CN'] }}
         </div>
         <div class="m-1">
-          <img
-            :src="club.image"
-            class="max-w-80px aspect-1 object-cover block"
-          />
+          <img :src="club.image" class="max-w-80px aspect-1 object-cover block" />
         </div>
       </div>
     </div>
