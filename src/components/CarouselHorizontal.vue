@@ -1,20 +1,32 @@
 <template>
   <div class="h-[calc(100vh-4.25rem)] w-full overflow-hidden relative">
     <div class="absolute flex" :style="{ left }">
-      <img class="h-[calc(100vh-4.25rem)] w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"
-        v-for="img in props.images" :src="img" :alt="img" :key="img" />
+      <img
+        class="h-[calc(100vh-4.25rem)] w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"
+        v-for="img in props.images"
+        :src="img"
+        :alt="img"
+        :key="img"
+      />
     </div>
     <div class="absolute right-10 bottom-10 flex">
-      <div v-for="(img, index) in props.images" v-bind:key="img" :class="{ 'important-bg-white': current === index }"
-        class="dot w-3 h-3 m-x-3 cursor-pointer" v-on:click="
+      <div
+        v-for="(img, index) in props.images"
+        v-bind:key="img"
+        :class="{ 'important-bg-white': current === index }"
+        class="dot w-3 h-3 m-x-3 cursor-pointer"
+        v-on:click="
           () => {
             current = index
             resetInterval()
           }
-        "></div>
+        "
+      ></div>
     </div>
     <div class="absolute pointer-events-none w-full">
-      <div class="flex justify-center items-center w-full h-[calc(100vh-4.25rem)]">
+      <div
+        class="flex justify-center items-center w-full h-[calc(100vh-4.25rem)]"
+      >
         <slot></slot>
       </div>
     </div>

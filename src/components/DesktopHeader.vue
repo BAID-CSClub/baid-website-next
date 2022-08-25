@@ -1,40 +1,72 @@
 <template>
   <div :class="{ 'h-17': fixed }"></div>
-  <header class="w-screen h-17 bg-white flex justify-between items-center transition-all font-sans relative z-10"
+  <header
+    class="w-screen h-17 bg-white flex justify-between items-center transition-all font-sans relative z-10"
     :class="{
       'important-bg-transparent': transparent,
       'important:fixed shadow-lg': fixed,
       'op-0 top--17': fixed && !fixedShow,
       'op-100 top-0': fixed && fixedShow
-    }" :style="{ color }">
+    }"
+    :style="{ color }"
+  >
     <div class="m-l-10">
-      <SchoolLogo :color="color" :logoType="route.meta.header && route.meta.header.logoType" />
+      <SchoolLogo
+        :color="color"
+        :logoType="route.meta.header && route.meta.header.logoType"
+      />
     </div>
 
     <div class="flex h-full m-r-10 items-center">
-      <div class="flex list-none p-0 relative h-full m-0" v-on:mouseleave="showBlock = false">
-        <li v-for="(route, index) in routesComputed" v-bind:key="route.name" v-on:mouseover="onHover(index)"
-          class="h-full font-500 text-16px margin-left-right-10px">
-          <router-link :to="route.path"
+      <div
+        class="flex list-none p-0 relative h-full m-0"
+        v-on:mouseleave="showBlock = false"
+      >
+        <li
+          v-for="(route, index) in routesComputed"
+          v-bind:key="route.name"
+          v-on:mouseover="onHover(index)"
+          class="h-full font-500 text-16px margin-left-right-10px"
+        >
+          <router-link
+            :to="route.path"
             class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-            style="line-height: 70px" active-class="important-opacity-100">{{ $t(`views.${route.name}`) }}
+            style="line-height: 70px"
+            active-class="important-opacity-100"
+            >{{ $t(`views.${route.name}`) }}
           </router-link>
         </li>
-        <div class="absolute w-30 h-17 bg-black opacity-0 z-10 pointer-events-none transition-opacity"
-          :class="{ 'opacity-10': showBlock }" :style="{ left: blockLeft }"></div>
-        <div class="absolute w-15 h-1 z-10 bottom-0 translate-x-1/2 transition-opacity"
-          :style="{ left: lineLeft, 'background-color': lineColor }" :class="{ 'opacity-0': !lineLeft || !showLine }">
-        </div>
+        <div
+          class="absolute w-30 h-17 bg-black opacity-0 z-10 pointer-events-none transition-opacity"
+          :class="{ 'opacity-10': showBlock }"
+          :style="{ left: blockLeft }"
+        ></div>
+        <div
+          class="absolute w-15 h-1 z-10 bottom-0 translate-x-1/2 transition-opacity"
+          :style="{ left: lineLeft, 'background-color': lineColor }"
+          :class="{ 'opacity-0': !lineLeft || !showLine }"
+        ></div>
       </div>
-      <hr class="h-7 w-3px m-y-0 m-x-5 border-none" :style="{ 'background-color': color }" />
-      <p class="w-20 text-center font-500 opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer select-none">
+      <hr
+        class="h-7 w-3px m-y-0 m-x-5 border-none"
+        :style="{ 'background-color': color }"
+      />
+      <p
+        class="w-20 text-center font-500 opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer select-none"
+      >
         <transition mode="out-in" name="fast-fade">
           <router-link
             class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-            v-if="$i18n.locale === 'zh-CN'" :to="route.path.replace('zh-CN', 'en-US')">English</router-link>
+            v-if="$i18n.locale === 'zh-CN'"
+            :to="route.path.replace('zh-CN', 'en-US')"
+            >English</router-link
+          >
           <router-link
             class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-            v-else :to="route.path.replace('en-US', 'zh-CN')">中文</router-link>
+            v-else
+            :to="route.path.replace('en-US', 'zh-CN')"
+            >中文</router-link
+          >
         </transition>
       </p>
     </div>

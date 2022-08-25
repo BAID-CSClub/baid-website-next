@@ -8,10 +8,12 @@
           {{ $t('HomePage.AdmissionResults.title') }}
         </h3>
         <pre class="color-white op-90 m-b-10">{{
-            $t('HomePage.AdmissionResults.content')
+          $t('HomePage.AdmissionResults.content')
         }}</pre>
-        <router-link :to="`${locale}/about`"
-          class="color-white op-70 hover:op-100 active:op-80 transition-opacity font-sans">
+        <router-link
+          :to="`${locale}/about`"
+          class="color-white op-70 hover:op-100 active:op-80 transition-opacity font-sans"
+        >
           Read More
         </router-link>
       </div>

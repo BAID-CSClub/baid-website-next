@@ -4,8 +4,8 @@
       <CarouselVertical :images="images" />
     </div>
     <div
-      class="absolute top-0 left-0 bg-#103C74 h-screen op-90 t-0 l-0 w-38% min-w-600px shadow shadow-lg shadow-black">
-    </div>
+      class="absolute top-0 left-0 bg-#103C74 h-screen op-90 t-0 l-0 w-38% min-w-600px shadow shadow-lg shadow-black"
+    ></div>
     <div class="absolute bottom-15% font-sans left-0 right-0">
       <div class="max-w-77rem ma p-x-20px">
         <h1 class="text-20 color-white text-shadow-lg m-0">
@@ -18,7 +18,8 @@
     </div>
     <div
       class="absolute bottom-5 left-1/2 color-white translate-x--1/2 learnMore flex flex-col cursor-pointer active:op-70 transition-opacity"
-      v-on:click="scrollTo('#secondSection')">
+      v-on:click="scrollTo('#secondSection')"
+    >
       <span class="text-6 font-sans select-none">Learn More</span>
       <div class="arrow relative w-full h-1 m-t-1 transition-all">
         <div class="middle transition-all op-0"></div>

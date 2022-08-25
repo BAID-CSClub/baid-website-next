@@ -1,14 +1,26 @@
 <template>
   <section class="section">
     <div class="flex justify-end">
-      <NotFancyTitle cn="学习方式" en="Learning Methods" color="red" right></NotFancyTitle>
+      <NotFancyTitle
+        cn="学习方式"
+        en="Learning Methods"
+        color="red"
+        right
+      ></NotFancyTitle>
     </div>
 
     <!-- 这里的逻辑现在有问题 如何实现点击小图切换大图 -->
     <div class="grid gap-1" style="grid-template-columns: 3fr 1fr">
       <div class="relative">
-        <img :src="methods[0].image" class="w-100% h-100% object-cover" alt="Bg" />
-        <div class="absolute color-white" style="bottom: 32px; left: 32px; right: 32px">
+        <img
+          :src="methods[0].image"
+          class="w-100% h-100% object-cover"
+          alt="Bg"
+        />
+        <div
+          class="absolute color-white"
+          style="bottom: 32px; left: 32px; right: 32px"
+        >
           <h3>{{ methods[0]['zh-CN'].title }}</h3>
           <p>
             {{ methods[0]['zh-CN'].content }}
@@ -17,7 +29,11 @@
       </div>
       <div class="grid gap-1">
         <div v-for="method in methods" :key="method">
-          <img :src="method.image" class="w-100% h-100% object-cover block" alt="Bg" />
+          <img
+            :src="method.image"
+            class="w-100% h-100% object-cover block"
+            alt="Bg"
+          />
         </div>
       </div>
     </div>
@@ -69,5 +85,4 @@ const methods = [
   }
 ]
 </script>
-<style scoped>
-</style>
+<style scoped></style>

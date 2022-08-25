@@ -15,44 +15,82 @@
       <div class="flex-col">
         <div id="options" class="flex-col flex">
           <div id="option1" class="option flex-row flex border b-1 bg-white">
-            <div id="option1Text" style="width: 175px; height: 115px" class="optionContainer">
-              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+            <div
+              id="option1Text"
+              style="width: 175px; height: 115px"
+              class="optionContainer"
+            >
+              <p
+                class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0"
+              >
                 {{ $t('CampusLife.Activities.Option1.Date') }}
               </p>
-              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+              <p
+                class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2"
+              >
                 {{ $t('CampusLife.Activities.Option1.Title') }}
               </p>
             </div>
             <img :src="homeBg1" class="optionImg" />
           </div>
           <div id="option2" class="option flex-row flex border b-1 bg-white">
-            <div id="option2Text" style="width: 175px; height: 115px" class="optionContainer">
-              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+            <div
+              id="option2Text"
+              style="width: 175px; height: 115px"
+              class="optionContainer"
+            >
+              <p
+                class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0"
+              >
                 {{ $t('CampusLife.Activities.Option2.Date') }}
               </p>
-              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+              <p
+                class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2"
+              >
                 {{ $t('CampusLife.Activities.Option2.Title') }}
               </p>
             </div>
             <img :src="homeBg1" class="optionImg" />
           </div>
-          <div id="option3" class="option flex-row flex border-lightblue b-1 bg-white">
-            <div id="option3Text" style="width: 175px; height: 115px" class="optionContainer">
-              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+          <div
+            id="option3"
+            class="option flex-row flex border-lightblue b-1 bg-white"
+          >
+            <div
+              id="option3Text"
+              style="width: 175px; height: 115px"
+              class="optionContainer"
+            >
+              <p
+                class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0"
+              >
                 {{ $t('CampusLife.Activities.Option3.Date') }}
               </p>
-              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+              <p
+                class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2"
+              >
                 {{ $t('CampusLife.Activities.Option3.Title') }}
               </p>
             </div>
             <img :src="homeBg1" class="optionImg" />
           </div>
-          <div id="option4" class="option flex-row flex border-lightblue b-1 bg-white">
-            <div id="option3Text" style="width: 175px; height: 115px" class="optionContainer">
-              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+          <div
+            id="option4"
+            class="option flex-row flex border-lightblue b-1 bg-white"
+          >
+            <div
+              id="option3Text"
+              style="width: 175px; height: 115px"
+              class="optionContainer"
+            >
+              <p
+                class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0"
+              >
                 {{ $t('CampusLife.Activities.Option4.Date') }}
               </p>
-              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+              <p
+                class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2"
+              >
                 {{ $t('CampusLife.Activities.Option4.Title') }}
               </p>
             </div>
@@ -130,6 +168,7 @@ import NotFancyTitle from '../NotFancyTitle.vue'
 }
 
 #selected {
-  background: url('../../assets/images/campusBg2.jpg?webp') no-repeat content-box;
+  background: url('../../assets/images/campusBg2.jpg?webp') no-repeat
+    content-box;
 }
 </style>

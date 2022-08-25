@@ -6,7 +6,12 @@
       </div>
       <div class="ml-7 w-1/2">
         <div class="flex justify-end">
-          <NotFancyTitle cn="愿景" en="Vision" color="blue" right></NotFancyTitle>
+          <NotFancyTitle
+            cn="愿景"
+            en="Vision"
+            color="blue"
+            right
+          ></NotFancyTitle>
         </div>
         <p class="content w-90%">
           {{ $t('AboutUs.Vision.Content') }}
