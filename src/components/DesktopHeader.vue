@@ -66,7 +66,7 @@ const showBlock = ref(false)
 let blockLeftAnimation
 const blockLeft = ref()
 
-function onHover(index) {
+function onHover (index) {
   if (!showBlock.value) {
     showBlock.value = true
     blockLeftAnimation = animate({

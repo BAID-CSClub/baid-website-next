@@ -31,7 +31,7 @@ import { computed } from 'vue'
 
 const props = defineProps(['top', 'btm', 'color', 'right'])
 
-function compute(string) {
+function compute (string) {
   return string.split(' ').map((word) => {
     return { left: word[0], colored: word[1], right: word.slice(2) }
   })

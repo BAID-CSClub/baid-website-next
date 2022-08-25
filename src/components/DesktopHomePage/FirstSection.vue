@@ -38,7 +38,7 @@ import CarouselVertical from '../CarouselVertical.vue'
 
 const images = [homeBg1, homeBg2, homeBg3]
 
-function scrollTo(id) {
+function scrollTo (id) {
   const element = document.querySelector(id)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth' })

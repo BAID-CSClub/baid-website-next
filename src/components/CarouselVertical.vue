@@ -33,7 +33,7 @@ watch(current, (index) => {
   topAnimation = animate({
     from: top.value,
     to: index * -100 + 'vh',
-    onUpdate(value) {
+    onUpdate (value) {
       top.value = value
     },
     duration: 300
@@ -48,7 +48,7 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
-function resetInterval() {
+function resetInterval () {
   clearInterval(interval)
   interval = setInterval(() => {
     current.value = (current.value + 1) % props.images.length

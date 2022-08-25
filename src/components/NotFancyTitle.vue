@@ -43,7 +43,7 @@ const props = defineProps([
   'noMargin'
 ])
 
-function compute(string) {
+function compute (string) {
   return string.split(' ').map((word) => {
     return { left: word[0], colored: word[1], right: word.slice(2) }
   })

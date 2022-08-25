@@ -37,7 +37,7 @@ watch(current, (index) => {
   leftAnimation = animate({
     from: left.value,
     to: index * -100 + 'vw',
-    onUpdate(value) {
+    onUpdate (value) {
       left.value = value
     },
     duration: 300
@@ -52,7 +52,7 @@ onUnmounted(() => {
   clearInterval(interval)
 })
 
-function resetInterval() {
+function resetInterval () {
   clearInterval(interval)
   interval = setInterval(() => {
     current.value = (current.value + 1) % props.images.length
