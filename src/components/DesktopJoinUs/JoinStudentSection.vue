@@ -1,6 +1,6 @@
 <template>
-  <section class="section">
-    <div class="p-y-10 font-sans flex-col">
+  <section class="section font-sans">
+    <div>
       <h3>{{ $t('JoinUs.Student.Title') }}</h3>
       <p class="content">{{ $t('JoinUs.Student.Content') }}</p>
       <div class="flex items-center justify-center text-8 m-t-10 p-y-10 bg-[var(--standard-red)] rd-5 color-white">
