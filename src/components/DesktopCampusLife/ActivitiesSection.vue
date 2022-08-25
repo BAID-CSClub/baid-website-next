@@ -1,8 +1,10 @@
 <template>
-  <div class="section flex-col flex justify-center">
+  <section class="section">
     <NotFancyTitle cn="学生活动" en="Activities" color="red"></NotFancyTitle>
-    <div id="selector" class="flex-row flex justify-center pt-15">
-      <div id="selected" style="width: 883px; height: 468px">
+
+    <!-- 这里是不是可以参考一下我改的那个 LearningMethod 但是这个悬停效果怎么做呀 -->
+    <div id="selector" class="flex justify-center">
+      <div id="selected" style="flex: 3;">
         <h2 class="selectedText ml-5 font-sans color-white mt-85 text-9 mb-0">
           {{ $t('CampusLife.Activities.Selected.Title') }}
         </h2>
@@ -10,54 +12,56 @@
           {{ $t('CampusLife.Activities.Selected.Description') }}
         </p>
       </div>
-      <div id="options" class="flex-col flex">
-        <div id="option1" class="option flex-row flex border b-1 bg-white">
-          <div id="option1Text" style="width: 175px; height: 115px" class="optionContainer">
-            <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
-              {{ $t('CampusLife.Activities.Option1.Date') }}
-            </p>
-            <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
-              {{ $t('CampusLife.Activities.Option1.Title') }}
-            </p>
+      <div class="flex-col">
+        <div id="options" class="flex-col flex">
+          <div id="option1" class="option flex-row flex border b-1 bg-white">
+            <div id="option1Text" style="width: 175px; height: 115px" class="optionContainer">
+              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+                {{ $t('CampusLife.Activities.Option1.Date') }}
+              </p>
+              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+                {{ $t('CampusLife.Activities.Option1.Title') }}
+              </p>
+            </div>
+            <img :src="homeBg1" class="optionImg" />
           </div>
-          <img :src="homeBg1" class="optionImg" />
-        </div>
-        <div id="option2" class="option flex-row flex border b-1 bg-white">
-          <div id="option2Text" style="width: 175px; height: 115px" class="optionContainer">
-            <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
-              {{ $t('CampusLife.Activities.Option2.Date') }}
-            </p>
-            <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
-              {{ $t('CampusLife.Activities.Option2.Title') }}
-            </p>
+          <div id="option2" class="option flex-row flex border b-1 bg-white">
+            <div id="option2Text" style="width: 175px; height: 115px" class="optionContainer">
+              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+                {{ $t('CampusLife.Activities.Option2.Date') }}
+              </p>
+              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+                {{ $t('CampusLife.Activities.Option2.Title') }}
+              </p>
+            </div>
+            <img :src="homeBg1" class="optionImg" />
           </div>
-          <img :src="homeBg1" class="optionImg" />
-        </div>
-        <div id="option3" class="option flex-row flex border-lightblue b-1 bg-white">
-          <div id="option3Text" style="width: 175px; height: 115px" class="optionContainer">
-            <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
-              {{ $t('CampusLife.Activities.Option3.Date') }}
-            </p>
-            <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
-              {{ $t('CampusLife.Activities.Option3.Title') }}
-            </p>
+          <div id="option3" class="option flex-row flex border-lightblue b-1 bg-white">
+            <div id="option3Text" style="width: 175px; height: 115px" class="optionContainer">
+              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+                {{ $t('CampusLife.Activities.Option3.Date') }}
+              </p>
+              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+                {{ $t('CampusLife.Activities.Option3.Title') }}
+              </p>
+            </div>
+            <img :src="homeBg1" class="optionImg" />
           </div>
-          <img :src="homeBg1" class="optionImg" />
-        </div>
-        <div id="option4" class="option flex-row flex border-lightblue b-1 bg-white">
-          <div id="option3Text" style="width: 175px; height: 115px" class="optionContainer">
-            <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
-              {{ $t('CampusLife.Activities.Option4.Date') }}
-            </p>
-            <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
-              {{ $t('CampusLife.Activities.Option4.Title') }}
-            </p>
+          <div id="option4" class="option flex-row flex border-lightblue b-1 bg-white">
+            <div id="option3Text" style="width: 175px; height: 115px" class="optionContainer">
+              <p class="optionDate ml-5 font-sans color-[var(--standard-blue)] text-6 mt-3 mb-0">
+                {{ $t('CampusLife.Activities.Option4.Date') }}
+              </p>
+              <p class="optionText ml-5 font-sans color-[var(--standard-blue)] text-6 mt-2">
+                {{ $t('CampusLife.Activities.Option4.Title') }}
+              </p>
+            </div>
+            <img :src="homeBg1" class="optionImg" />
           </div>
-          <img :src="homeBg1" class="optionImg" />
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

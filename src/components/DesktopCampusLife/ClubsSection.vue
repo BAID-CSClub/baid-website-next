@@ -1,17 +1,17 @@
 <template>
-  <section id="container">
-    <h1 class="text-12 font-300 font-title color-white text-center py-5">
+  <section id="container" class="my-10 py-5">
+    <h1 class="text-10 font-300 font-title color-white text-center">
       {{ $t('CampusLife.Clubs.Title') }}
     </h1>
-    <div id="clubs" class="flex justify-center">
-      <div v-for="club in clubs" class="m-5" :key="club"
-        style="height: 250px; width: 250px; box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column; justify-content: center; align-items: center;"
+    <div class="flex justify-center">
+      <div v-for="club in clubs" class="m-5 h-220px aspect-1 items-center justify-center" :key="club"
+        style="box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5); display: flex; flex-direction: column;"
         :style="{ 'background-color': club.bgColor, 'color': club.color }">
-        <div class="text-8 font-title">
+        <div class="text-8 font-title m-1">
           {{ club['zh-CN'] }}
         </div>
-        <div>
-          <img :src="club.image" style="max-width: 80px; max-height: 80px; aspect-ratio: 1/1; object-fit: cover;" />
+        <div class="m-1">
+          <img :src="club.image" class="max-w-80px aspect-1 object-cover block" />
         </div>
       </div>
     </div>

@@ -2,21 +2,18 @@
   <section class="section">
     <div id="honor" class="flex-col items-center">
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
-      <div class="flex my-10">
+      <div class="flex mb-10">
         <div class="mr-auto">
-          <img :src="homeBg1" style="width: 100%; max-width: 20rem; aspect-ratio: 1 / 1; object-fit: cover;"
-            alt="pic1" />
+          <img :src="homeBg1" class="w-100%, max-w-20rem object-cover block" style="aspect-ratio: 1 / 1;" alt="pic1" />
         </div>
         <div class="mx-auto">
-          <img :src="homeBg1" style="width: 100%; max-width: 20rem; aspect-ratio: 1 / 1; object-fit: cover;"
-            alt="pic1" />
+          <img :src="homeBg1" class="w-100%, max-w-20rem object-cover block" style="aspect-ratio: 1 / 1;" alt="pic1" />
         </div>
         <div class="ml-auto">
-          <img :src="homeBg1" style="width: 100%; max-width: 20rem; aspect-ratio: 1 / 1; object-fit: cover;"
-            alt="pic1" />
+          <img :src="homeBg1" class="w-100%, max-w-20rem object-cover block" style="aspect-ratio: 1 / 1;" alt="pic1" />
         </div>
       </div>
-      <div class="flex items-center">
+      <div class="flex items-center mt-10">
         <p class="mr-7 content w-1/2">
           {{ $t('AboutUs.Honor.Content') }}
         </p>
