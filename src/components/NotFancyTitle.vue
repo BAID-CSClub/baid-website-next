@@ -1,46 +1,29 @@
 <template>
   <!-- TODO: More verticle optimization -->
-  <div
-    class="w-max"
-    :class="{ 'text-right': right, 'write-vertical-left': verticle }"
-  >
+  <div class="w-max" :class="{
+    'text-right': right, 'write-vertical-left': verticle
+  }" :style="{ 'margin-bottom': (margin ? '24px' : '0px') }">
     <!-- CN -->
-    <h1
-      class="color-#122A28 m-0 text-10 font-300"
-      v-if="$i18n.locale === 'zh-CN'"
-      style="font-family: 'Open Sans Bold', 'Dianzi', sans-serif"
-    >
-      <span
-        v-for="word in cn"
-        :key="word"
-        class="m-r-5"
-        :class="{ 'important:m-r-0': right }"
-      >
+    <h1 class="color-#122A28 m-0 text-10 font-300" v-if="$i18n.locale === 'zh-CN'"
+      style="font-family: 'Open Sans Bold', 'Dianzi', sans-serif">
+      <span v-for="word in cn" :key="word" class="m-r-5" :class="{ 'important:m-r-0': right }">
         <span>{{ word.left }}</span>
-        <span
-          :class="{
-            'color-[var(--standard-blue)]': props.color === 'blue',
-            'color-[var(--standard-red)]': props.color === 'red'
-          }"
-          >{{ word.colored }}</span
-        >
+        <span :class="{
+          'color-[var(--standard-blue)]': props.color === 'blue',
+          'color-[var(--standard-red)]': props.color === 'red'
+        }">{{ word.colored }}</span>
         <span>{{ word.right }}</span>
       </span>
     </h1>
     <!-- EN -->
-    <h1
-      class="color-#122A28 m-0 text-9 font-title font-light"
-      :class="{ 'font-bold !text-11': $i18n.locale === 'en-US' }"
-    >
+    <h1 class="color-#122A28 m-0 text-9 font-title font-light"
+      :class="{ 'font-bold !text-11': $i18n.locale === 'en-US' }">
       <span v-for="word in en" :key="word">
         <span>{{ word.left }}</span>
-        <span
-          :class="{
-            'color-[var(--standard-blue)]': props.color === 'blue',
-            'color-[var(--standard-red)]': props.color === 'red'
-          }"
-          >{{ word.colored }}</span
-        >
+        <span :class="{
+          'color-[var(--standard-blue)]': props.color === 'blue',
+          'color-[var(--standard-red)]': props.color === 'red'
+        }">{{ word.colored }}</span>
         <span>{{ word.right }}</span>
       </span>
     </h1>
@@ -50,9 +33,9 @@
 <script setup>
 import { computed } from 'vue'
 
-const props = defineProps(['cn', 'en', 'color', 'right', 'verticle'])
+const props = defineProps(['cn', 'en', 'color', 'right', 'verticle', 'noMargin'])
 
-function compute (string) {
+function compute(string) {
   return string.split(' ').map((word) => {
     return { left: word[0], colored: word[1], right: word.slice(2) }
   })
@@ -71,5 +54,11 @@ const verticle = computed(() => {
     return false
   }
   return true
+})
+const margin = computed(() => {
+  if (props.noMargin === undefined) {
+    return true
+  }
+  return false
 })
 </script>

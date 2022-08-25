@@ -7,7 +7,7 @@
 .section {
   max-width: 77rem;
   margin: 0 auto;
-  padding: 45px 20px;
+  padding: 40px 20px;
 }
 
 .content {
@@ -18,36 +18,36 @@
 }
 
 @font-face {
-  font-family: 'Latin Modern Roman';
-  src: url('../fonts/LMRoman10-Regular.woff2') format('woff2'),
-    url('../fonts/LMRoman10-Regular.woff') format('woff');
+  font-family: "Latin Modern Roman";
+  src: url("../fonts/LMRoman10-Regular.woff2") format("woff2"),
+    url("../fonts/LMRoman10-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans Bold';
-  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
-    url('../fonts/OpenSans-Bold.woff') format('woff');
+  font-family: "Open Sans Bold";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-    url('../fonts/OpenSans-Regular.woff') format('woff');
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Dianzi';
-  src: url('../fonts/IDJueJiangHei.woff2') format('woff2'),
-    url('../fonts/IDJueJiangHei.woff') format('woff');
+  font-family: "Dianzi";
+  src: url("../fonts/IDJueJiangHei.woff2") format("woff2"),
+    url("../fonts/IDJueJiangHei.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -91,8 +91,10 @@ h2 {
 }
 
 h3 {
-  font-family: 'Open Sans', 'Alibaba PuHuiTi M', sans-serif;
+  font-size: 32px;
+  font-family: "Open Sans", "Alibaba PuHuiTi M", sans-serif;
   font-weight: 500;
+  margin: 16px 0;
 }
 
 p,
@@ -100,7 +102,7 @@ pre {
   font-size: 18px;
   margin: 0;
   line-height: 25px;
-  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
+  font-family: "Open Sans", "Alibaba-PuHuiTi", sans-serif;
 }
 
 pre {
