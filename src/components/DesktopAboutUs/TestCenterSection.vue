@@ -8,11 +8,7 @@
         <p class="content">{{ $t('AboutUs.TestCenter.Content') }}</p>
       </div>
       <div class="ml-7 w-1/2 flex justify-center items-center">
-        <img
-          :src="homeBg1"
-          style="max-width: 100%; max-height: 100%"
-          alt="pic1"
-        />
+        <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
       </div>
     </div>
   </section>

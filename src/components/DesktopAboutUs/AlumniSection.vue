@@ -6,7 +6,7 @@
         <div style="flex: 1" class="pr-5 flex pl-8 items-center">
           <img
             :src="homeBg1"
-            class="w-100% object-cover aspect-3/4 alumni-big-pic"
+            class="max-w-full max-h-full object-cover aspect-3/4 alumni-big-pic"
             alt="pic1"
           />
         </div>
@@ -131,7 +131,7 @@
             <div class="m-4" v-for="alumnus in alumni" :key="alumnus">
               <img
                 :src="alumnus.image"
-                class="w-100% object-cover aspect-3/4"
+                class="max-w-full max-h-full object-cover aspect-3/4"
                 alt="pic1"
               />
             </div>
