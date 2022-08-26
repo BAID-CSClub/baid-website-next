@@ -1,1 +1,0 @@
-import{_ as t,b as c,c as s,d as e}from"./index.e2b86024.js";const o={},n={class:""},_=e("br",null,null,-1),r=e("h1",null,"Article page(TODO)",-1),a=[_,r];function l(i,d){return c(),s("section",n,a)}const h=t(o,[["render",l]]);export{h as default};
