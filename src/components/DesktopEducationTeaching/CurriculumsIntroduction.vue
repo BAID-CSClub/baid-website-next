@@ -24,11 +24,7 @@
         </div>
       </div>
       <div class="bg-purple h-12vw w-32vw" style="margin: 0vw 5vw 4vw 5vw">
-        <img
-          :src="homeBg1"
-          style="width: 100%; height: 100%; object-fit: cover"
-          alt="Bg"
-        />
+        <img :src="homeBg1" class="w-full h-full object-cover" alt="Bg" />
       </div>
       <div class="w-31vw" style="margin: 2vw 5vw 0vw 5vw">
         <div
@@ -41,11 +37,7 @@
         </div>
       </div>
       <div class="bg-purple h-12vw w-32vw" style="margin: 0vw 5vw 4vw 5vw">
-        <img
-          :src="homeBg1"
-          style="width: 100%; height: 100%; object-fit: cover"
-          alt="Bg"
-        />
+        <img :src="homeBg1" class="w-full h-full object-cover" alt="Bg" />
       </div>
       <div class="w-31vw" style="margin: 2vw 5vw 0vw 5vw">
         <div
@@ -58,11 +50,7 @@
         </div>
       </div>
       <div class="bg-purple h-12vw w-32vw" style="margin: 0vw 5vw 4vw 5vw">
-        <img
-          :src="homeBg1"
-          style="width: 100%; height: 100%; object-fit: cover"
-          alt="Bg"
-        />
+        <img :src="homeBg1" class="w-full h-full object-cover" alt="Bg" />
       </div>
     </div>
   </section>

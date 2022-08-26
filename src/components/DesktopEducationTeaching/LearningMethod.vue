@@ -14,7 +14,7 @@
       <div class="relative">
         <img
           :src="methods[0].image"
-          class="w-100% h-100% object-cover"
+          class="w-full h-full object-cover"
           alt="Bg"
         />
         <div
@@ -31,7 +31,7 @@
         <div v-for="method in methods" :key="method">
           <img
             :src="method.image"
-            class="w-100% h-100% object-cover block"
+            class="w-full h-full object-cover block"
             alt="Bg"
           />
         </div>

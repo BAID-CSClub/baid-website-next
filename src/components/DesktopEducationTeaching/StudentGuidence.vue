@@ -2,7 +2,7 @@
   <section class="section">
     <div class="flex justify-center items-center">
       <div class="max-w-300 w-80vw max-h-350 h-130vw flex flex-col">
-        <div class="h-100% flex">
+        <div class="h-full flex">
           <div class="flex justify-start items-end" style="flex: 0.8">
             <img
               :src="img1"
@@ -10,16 +10,16 @@
               alt="Bg"
             />
           </div>
-          <div class="w-100% flex" style="flex: 1; flex-direction: column">
+          <div class="w-full flex" style="flex: 1; flex-direction: column">
             <div class="flex" style="flex: 2.5">
-              <div class="h-100% flex items-end" style="flex: 1.2">
+              <div class="h-full flex items-end" style="flex: 1.2">
                 <img
                   :src="img1"
                   style="width: 102%; box-shadow: 5px 5px 5px grey"
                   alt="Bg"
                 />
               </div>
-              <div class="h-100% relative" style="flex: 1">
+              <div class="h-full relative" style="flex: 1">
                 <div class="write-vertical-right m-l-30 m-t--10">
                   <NotFancyTitle
                     cn="学生指导"
@@ -39,9 +39,9 @@
             </div>
           </div>
         </div>
-        <div class="h-100% m-t-5">
+        <div class="h-full m-t-5">
           <div class="h-50% flex justify-between">
-            <div class="w-100% flex">
+            <div class="w-full flex">
               <img
                 :src="homeBg1"
                 style="

@@ -32,8 +32,8 @@
             alt="Bg"
           />
         </div>
-        <div class="bg-white w-100% flex justify-end relative" style="flex: 1">
-          <div class="bg-[var(--standard-blue)] w-30% h-100% m-r-70%"></div>
+        <div class="bg-white w-full flex justify-end relative" style="flex: 1">
+          <div class="bg-[var(--standard-blue)] w-30% h-full m-r-70%"></div>
           <img
             :src="homeBg1"
             style="
@@ -74,11 +74,11 @@
       </div>
       <div class="bg-yellow flex" style="flex-direction: row">
         <div
-          class="bg-green-900 w-100% font-title flex items-center justify-center text-8 text-white"
+          class="bg-green-900 w-full font-title flex items-center justify-center text-8 text-white"
         >
           补充说明
         </div>
-        <div class="grid w-100%">
+        <div class="grid w-full">
           <div class="bg-yellow"></div>
           <div class="bg-white"></div>
         </div>
@@ -117,7 +117,7 @@
         />
       </div>
       <div class="bg-yellow flex" style="flex-direction: row">
-        <div class="bg-white w-100%">
+        <div class="bg-white w-full">
           <img
             :src="homeBg1"
             style="width: 100%; height: 100%; object-fit: cover"
@@ -125,7 +125,7 @@
           />
         </div>
         <div
-          class="bg-[var(--standard-blue)] w-100% font-title flex items-center justify-center text-8 text-white"
+          class="bg-[var(--standard-blue)] w-full font-title flex items-center justify-center text-8 text-white"
         >
           补充说明
         </div>

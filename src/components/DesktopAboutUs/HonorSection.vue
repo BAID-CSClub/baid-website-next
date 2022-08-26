@@ -3,27 +3,24 @@
     <div id="honor" class="flex-col items-center">
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
       <div class="flex mb-10">
-        <div class="mr-auto">
+        <div class="mr-auto pr-2">
           <img
             :src="homeBg1"
-            class="w-100%, max-w-20rem object-cover block"
-            style="aspect-ratio: 1 / 1"
+            class="w-full h-full aspect-1 max-w-xs object-cover block"
             alt="pic1"
           />
         </div>
-        <div class="mx-auto">
+        <div class="mx-auto px-2">
           <img
             :src="homeBg1"
-            class="w-100%, max-w-20rem object-cover block"
-            style="aspect-ratio: 1 / 1"
+            class="w-full h-full aspect-1 max-w-xs object-cover block"
             alt="pic1"
           />
         </div>
-        <div class="ml-auto">
+        <div class="ml-auto pl-2">
           <img
             :src="homeBg1"
-            class="w-100%, max-w-20rem object-cover block"
-            style="aspect-ratio: 1 / 1"
+            class="w-full h-full aspect-1 max-w-xs object-cover block"
             alt="pic1"
           />
         </div>
@@ -35,12 +32,7 @@
         <div class="ml-7 w-1/2 flex justify-end">
           <img
             :src="homeBg1"
-            style="
-              width: 100%;
-              max-width: 30rem;
-              aspect-ratio: 1 / 1;
-              object-fit: cover;
-            "
+            class="w-full h-full max-w-lg aspect-1 object-cover"
             alt="pic1"
           />
         </div>

@@ -18,7 +18,7 @@
       <div class="relative" style="grid-row-start: span 3">
         <img
           :src="homeBg1"
-          class="block w-100% h-100% object-cover"
+          class="block w-full h-full object-cover"
           alt="Bg1"
         />
         <div
@@ -34,21 +34,21 @@
       <div class="relative">
         <img
           :src="homeBg1"
-          class="block w-100% h-100% object-cover"
+          class="block w-full h-full object-cover"
           alt="Bg1"
         />
       </div>
       <div class="relative" style="grid-row-start: span 2">
         <img
           :src="homeBg1"
-          class="block w-100% h-100% object-cover"
+          class="block w-full h-full object-cover"
           alt="Bg1"
         />
       </div>
       <div class="relative">
         <img
           :src="homeBg1"
-          class="block w-100% h-100% object-cover"
+          class="block w-full h-full object-cover"
           alt="Bg1"
         />
       </div>
@@ -58,7 +58,7 @@
       >
         <img
           :src="homeBg1"
-          class="block w-100% h-100% object-cover"
+          class="block w-full h-full object-cover"
           alt="Bg1"
         />
         <div
@@ -74,7 +74,7 @@
       <div class="relative">
         <img
           :src="homeBg1"
-          class="block w-100% h-100% object-cover"
+          class="block w-full h-full object-cover"
           alt="Bg1"
         />
         <div
