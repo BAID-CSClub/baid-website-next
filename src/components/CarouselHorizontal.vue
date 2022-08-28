@@ -1,5 +1,5 @@
 <template>
-  <div class="h-[calc(100vh-4.25rem)] w-full overflow-hidden relative">
+  <div class="h-[calc(100vh-4.25rem)] w-full overflow-hidden relative mb-45px">
     <div class="absolute flex" :style="{ left }">
       <img
         class="h-[calc(100vh-4.25rem)] w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"

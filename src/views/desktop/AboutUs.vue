@@ -7,16 +7,14 @@
     </CarouselHorizontal>
     <VisionSection />
     <AlumniSection />
-    <div class="bg-[lightgrey]">
+    <div class="bg-gray-200">
       <HonorSection />
     </div>
     <div class="bg-[var(--standard-blue)]">
       <TestCenterSection />
     </div>
-    <div
-      :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
-      style="background-size: cover; background-position: center"
-    >
+    <div :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
+      style="background-size: cover; background-position: center">
       <FacultySection />
     </div>
     <QuoteSection />
