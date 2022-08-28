@@ -14,12 +14,7 @@
       v-if="$i18n.locale === 'zh-CN'"
       style="font-family: 'Open Sans Bold', 'Dianzi', sans-serif"
     >
-      <span
-        v-for="word in cn"
-        :key="word"
-        class="m-r-5"
-        :class="{ 'i∏mportant:m-r-0': right }"
-      >
+      <span v-for="word in cn" :key="word">
         <span>{{ word.left }}</span>
         <span
           :class="{
