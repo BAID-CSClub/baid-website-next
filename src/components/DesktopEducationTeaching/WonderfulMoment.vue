@@ -74,12 +74,12 @@
       </div>
       <div class="bg-yellow flex" style="flex-direction: row">
         <div
-          class="bg-green-900 w-full font-title flex items-center justify-center text-8 text-white"
+          class="bg-#122A2B w-full font-title flex items-center justify-center text-8 text-white"
         >
           补充说明
         </div>
         <div class="grid w-full">
-          <div class="bg-yellow"></div>
+          <div class="bg-#F2A640"></div>
           <div class="bg-white"></div>
         </div>
       </div>
@@ -98,7 +98,7 @@
         <div class="bg-white"></div>
         <div class="bg-yellow"></div>
       </div>
-      <div class="bg-green-900"></div>
+      <div class="bg-#122A2B"></div>
       <div
         class="bg-white font-title flex items-center justify-center text-8 text-black"
       >
