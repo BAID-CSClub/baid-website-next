@@ -46,7 +46,9 @@
                 :src="homeBg1"
                 style="
                   width: 48vw;
+                  max-width:614.4px;
                   height: 18vw;
+                  max-height:230.4px;
                   box-shadow: 5px 5px 5px grey;
                   object-fit: cover;
                 "
@@ -58,7 +60,9 @@
                 :src="homeBg1"
                 style="
                   width: 25vw;
+                  max-width: 320px;
                   height: 25vw;
+                  max-height:320px;
                   max-width: 330px;
                   max-height: 330px;
                   box-shadow: 5px 5px 5px grey;
@@ -81,7 +85,9 @@
                 :src="homeBg1"
                 style="
                   width: 25vw;
+                  max-width:320px;
                   height: 30vw;
+                  max-height: 384px;
                   max-width: 380px;
                   max-height: 340px;
                   box-shadow: 5px 5px 5px grey;
@@ -93,7 +99,7 @@
             </div>
             <div class="flex items-end justify-end" style="flex: 1">
               <div
-                class="text-[var(--standard-red)] b-6 b-[var(--standard-red)] h-75% w-70% text-6 p-1vw font-title"
+                class="text-[var(--standard-red)] b-6 b-[var(--standard-red)] h-75% w-70% text-6 p-1vw max-p-12.8px font-title"
               >
                 简单介绍
               </div>

@@ -31,7 +31,8 @@
         <div v-for="method in methods" :key="method">
           <img
             :src="method.image"
-            class="w-full h-full object-cover block"
+            class="w-full h-full object-cover block opacity-50 hover-opacity-100 hover-scale-105%"
+            style="transition:0.8s"
             alt="Bg"
           />
         </div>
