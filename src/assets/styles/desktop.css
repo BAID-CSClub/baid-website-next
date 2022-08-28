@@ -7,92 +7,92 @@
 .section {
   max-width: 77rem;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 45px 20px;
 }
 
 .content {
   font-size: 18px;
   margin: 0;
   line-height: 25px;
-  font-family: "Open Sans", "Alibaba-PuHuiTi", sans-serif;
+  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
 }
 
 @font-face {
-  font-family: "Latin Modern Roman";
-  src: url("../fonts/LMRoman10-Regular.woff2") format("woff2"),
-    url("../fonts/LMRoman10-Regular.woff") format("woff");
+  font-family: 'Latin Modern Roman';
+  src: url('../fonts/LMRoman10-Regular.woff2') format('woff2'),
+    url('../fonts/LMRoman10-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans Bold";
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2"),
-    url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('../fonts/OpenSans-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Dianzi";
-  src: url("../fonts/IDJueJiangHei.woff2") format("woff2"),
-    url("../fonts/IDJueJiangHei.woff") format("woff");
+  font-family: 'Dianzi';
+  src: url('../fonts/IDJueJiangHei.woff2') format('woff2'),
+    url('../fonts/IDJueJiangHei.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Alibaba PuHuiTi 2.0 115";
-  src: url("../fonts/AlibabaPuHuiTi_2_115_Black.woff2") format("woff2"),
-    url("../fonts/AlibabaPuHuiTi_2_115_Black.woff") format("woff");
+  font-family: 'Alibaba PuHuiTi 2.0 115';
+  src: url('../fonts/AlibabaPuHuiTi_2_115_Black.woff2') format('woff2'),
+    url('../fonts/AlibabaPuHuiTi_2_115_Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Alibaba PuHuiTi M";
-  src: url("../fonts/Alibaba-PuHuiTi-M.woff2") format("woff2"),
-    url("../fonts/Alibaba-PuHuiTi-M.woff") format("woff");
+  font-family: 'Alibaba PuHuiTi M';
+  src: url('../fonts/Alibaba-PuHuiTi-M.woff2') format('woff2'),
+    url('../fonts/Alibaba-PuHuiTi-M.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Alibaba PuHuiTi 2.0 55";
-  src: url("../fonts/AlibabaPuHuiTi_2_55_Regular.woff2") format("woff2"),
-    url("../fonts/AlibabaPuHuiTi_2_55_Regular.woff") format("woff");
+  font-family: 'Alibaba PuHuiTi 2.0 55';
+  src: url('../fonts/AlibabaPuHuiTi_2_55_Regular.woff2') format('woff2'),
+    url('../fonts/AlibabaPuHuiTi_2_55_Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 h1 {
-  font-family: "Latin Modern Roman", "Alibaba PuHuiTi 2.0 55", sans-serif;
+  font-family: 'Latin Modern Roman', 'Alibaba PuHuiTi 2.0 55', sans-serif;
   font-weight: 500;
 }
 
 h2 {
-  font-family: "Alibaba PuHuiTi M", sans-serif;
+  font-family: 'Alibaba PuHuiTi M', sans-serif;
   font-weight: 500;
 }
 
 h3 {
   font-size: 32px;
-  font-family: "Open Sans", "Alibaba PuHuiTi M", sans-serif;
+  font-family: 'Open Sans', 'Alibaba PuHuiTi M', sans-serif;
   font-weight: 500;
   margin: 16px 0;
 }
@@ -102,7 +102,7 @@ pre {
   font-size: 18px;
   margin: 0;
   line-height: 25px;
-  font-family: "Open Sans", "Alibaba-PuHuiTi", sans-serif;
+  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
 }
 
 pre {
