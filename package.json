@@ -59,6 +59,6 @@
     "unocss": "^0.45.18",
     "vite": "^3.1.0",
     "vite-imagetools": "^4.0.9",
-    "vue-eslint-parser": "^9.0.3"
+    "vue-eslint-parser": "^9.1.0"
   }
 }
