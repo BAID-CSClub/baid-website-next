@@ -34,7 +34,9 @@
 - `pnpm run build` - 生成静态构建
 
 > 如果您是高贵的 MacOS / Linux 用户：
+>
 > 这个项目经过测试，与 [Bun Runtime](https://bun.sh/) 完全兼容
+>
 > 将上述命令替换为下面的命令，并享受bun + zig的速度
 >
 > - `pnpm i` - 备注：sharp仍需要使用传统方式安装
