@@ -28,10 +28,21 @@
 
 ## 开发时可能要用到的命令
 
-- `npm install` - 安装依赖
-- `npm run dev` - 打开开发服务器（Vite）
-- `npm test` - 检查代码有无任何不规范
-- `npm run build` - 生成静态构建
+- `pnpm install` - 安装依赖
+- `pnpm run dev` - 打开开发服务器（Vite）
+- `pnpm test` - 检查代码有无任何不规范
+- `pnpm run build` - 生成静态构建
+
+> 如果您是高贵的 MacOS / Linux 用户：
+>
+> 这个项目经过测试，与 [Bun Runtime](https://bun.sh/) 完全兼容
+>
+> 将上述命令替换为下面的命令，并享受bun + zig的速度
+>
+> - `pnpm i` - 备注：sharp仍需要使用传统方式安装
+> - `bun run dev`
+> - `bun run test`
+> - `bun run build`
 
 ## 开发时可能要用到的资料
 
