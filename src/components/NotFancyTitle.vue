@@ -1,10 +1,10 @@
 <template>
-  <!-- TODO: More verticle optimization -->
+  <!-- TODO: More vertical optimization -->
   <div
     class="w-max"
     :class="{
       'text-right': right,
-      'write-vertical-left': verticle
+      'write-vertical-right': vertical
     }"
     :style="{ 'margin-bottom': margin ? '24px' : '0px' }"
   >
@@ -54,7 +54,7 @@ const props = defineProps([
   'en',
   'color',
   'right',
-  'verticle',
+  'vertical',
   'noMargin'
 ])
 
@@ -72,8 +72,8 @@ const right = computed(() => {
   }
   return true
 })
-const verticle = computed(() => {
-  if (props.verticle === undefined) {
+const vertical = computed(() => {
+  if (props.vertical === undefined) {
     return false
   }
   return true
