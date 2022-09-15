@@ -16,76 +16,49 @@
       "
     >
       <div class="relative" style="grid-row-start: span 3">
-        <img
-          :src="homeBg1"
-          class="block w-full h-full object-cover"
-          alt="Bg1"
-        />
-        <div
-          class="absolute color-white"
-          style="bottom: 32px; left: 32px; right: 32px"
-        >
-          <h3>{{ $t('CampusLife.Events.Event1.Name') }}</h3>
-          <p>
-            {{ $t('CampusLife.Events.Event1.Name') }}
-          </p>
-        </div>
+        <EventsImg
+          :image="homeBg1"
+          :name="$t('CampusLife.Events.Event1.Name')"
+          :description="$t('CampusLife.Events.Event1.Description')"
+        ></EventsImg>
       </div>
       <div class="relative">
-        <img
-          :src="homeBg1"
-          class="block w-full h-full object-cover"
-          alt="Bg1"
-        />
+        <EventsImg
+          :image="homeBg1"
+          :name="$t('CampusLife.Events.Event1.Name')"
+          :description="$t('CampusLife.Events.Event1.Description')"
+        ></EventsImg>
       </div>
       <div class="relative" style="grid-row-start: span 2">
-        <img
-          :src="homeBg1"
-          class="block w-full h-full object-cover"
-          alt="Bg1"
-        />
+        <EventsImg
+          :image="homeBg1"
+          :name="$t('CampusLife.Events.Event1.Name')"
+          :description="$t('CampusLife.Events.Event1.Description')"
+        ></EventsImg>
       </div>
       <div class="relative">
-        <img
-          :src="homeBg1"
-          class="block w-full h-full object-cover"
-          alt="Bg1"
-        />
+        <EventsImg
+          :image="homeBg1"
+          :name="$t('CampusLife.Events.Event1.Name')"
+          :description="$t('CampusLife.Events.Event1.Description')"
+        ></EventsImg>
       </div>
       <div
         class="relative"
         style="grid-row-start: span 2; grid-column-start: span 2"
       >
-        <img
-          :src="homeBg1"
-          class="block w-full h-full object-cover"
-          alt="Bg1"
-        />
-        <div
-          class="absolute color-white"
-          style="bottom: 32px; left: 32px; right: 32px"
-        >
-          <h3>{{ $t('CampusLife.Events.Event2.Name') }}</h3>
-          <p>
-            {{ $t('CampusLife.Events.Event2.Name') }}
-          </p>
-        </div>
+        <EventsImg
+          :image="imgBZHSY"
+          :name="$t('CampusLife.Events.Event2.Name')"
+          :description="$t('CampusLife.Events.Event2.Description')"
+        ></EventsImg>
       </div>
       <div class="relative">
-        <img
-          :src="homeBg1"
-          class="block w-full h-full object-cover"
-          alt="Bg1"
-        />
-        <div
-          class="absolute color-white"
-          style="bottom: 32px; left: 32px; right: 32px"
-        >
-          <h3>{{ $t('CampusLife.Events.Event3.Name') }}</h3>
-          <p>
-            {{ $t('CampusLife.Events.Event3.Name') }}
-          </p>
-        </div>
+        <EventsImg
+          :image="homeBg1"
+          :name="$t('CampusLife.Events.Event3.Name')"
+          :description="$t('CampusLife.Events.Event3.Description')"
+        ></EventsImg>
       </div>
     </div>
   </section>
@@ -94,6 +67,9 @@
 <script setup>
 import NotFancyTitle from '../../components/NotFancyTitle.vue'
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import EventsImg from './EventsImg.vue'
+
+import imgBZHSY from '../../assets/images/CampusLife/北中好声音.jpg?webp'
 </script>
 
 <style scoped>
