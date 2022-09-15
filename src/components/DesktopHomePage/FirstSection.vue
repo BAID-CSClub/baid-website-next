@@ -31,13 +31,18 @@
 </template>
 
 <script setup>
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
-import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
+// import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+// import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
+// import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
+
+import imgSpring from '../../assets/images/HomePage/Spring.jpg?webp'
+import imgSummer from '../../assets/images/HomePage/Summer.jpg?webp'
+import imgAutumn from '../../assets/images/HomePage/Autumn.jpg?webp'
+import imgWinter from '../../assets/images/HomePage/Winter.jpg?webp'
 
 import CarouselVertical from '../CarouselVertical.vue'
 
-const images = [homeBg1, homeBg2, homeBg3]
+const images = [imgSpring, imgSummer, imgAutumn, imgWinter]
 
 function scrollTo (id) {
   const element = document.querySelector(id)
