@@ -5,21 +5,21 @@
       <div class="flex mb-10">
         <div class="mr-auto pr-2">
           <img
-            :src="homeBg1"
+            :src="imgJKY"
             class="w-full h-full aspect-1 max-w-xs object-cover block"
             alt="pic1"
           />
         </div>
         <div class="mx-auto px-2">
           <img
-            :src="homeBg1"
+            :src="imgCIS"
             class="w-full h-full aspect-1 max-w-xs object-cover block"
             alt="pic1"
           />
         </div>
         <div class="ml-auto pl-2">
           <img
-            :src="homeBg1"
+            :src="imgCambridge"
             class="w-full h-full aspect-1 max-w-xs object-cover block"
             alt="pic1"
           />
@@ -31,7 +31,7 @@
         </p>
         <div class="ml-7 w-1/2 flex justify-end">
           <img
-            :src="homeBg1"
+            :src="imgACT"
             class="w-full h-full max-w-lg aspect-1 object-cover"
             alt="pic1"
           />
@@ -42,7 +42,11 @@
 </template>
 
 <script setup>
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import imgACT from '../../assets/images/AboutUs/ACT.jpeg?webp'
+import imgCIS from '../../assets/images/AboutUs/CIS.jpeg?webp'
+import imgCambridge from '../../assets/images/AboutUs/Cambridge.jpeg?webp'
+import imgJKY from '../../assets/images/AboutUs/JKY.jpeg?webp'
+// import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
 </script>
 

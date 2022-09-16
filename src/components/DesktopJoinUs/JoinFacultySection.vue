@@ -2,7 +2,7 @@
   <section class="section font-sans">
     <div>
       <h3>{{ $t('JoinUs.Faculty.Title') }}</h3>
-      <p class="content">{{ $t('JoinUs.Faculty.Content') }}</p>
+      <pre class="content">{{ $t('JoinUs.Faculty.Content') }}</pre>
       <div
         class="flex items-center justify-center text-8 m-t-10 p-y-10 bg-[var(--standard-blue)] rd-5 color-white"
       >

@@ -13,11 +13,19 @@
     <div class="bg-[var(--standard-blue)]">
       <TestCenterSection />
     </div>
+    <div class="section important:p-b-0">
+      <NotFancyTitle cn="师资" en="Faculty" color="blue"></NotFancyTitle>
+    </div>
     <div
       :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
       style="background-size: cover; background-position: center"
     >
-      <FacultySection />
+      <div
+        class="text-white h-80 flex justify-center items-center"
+        style="background-color: rgba(0, 0, 0, 0.5)"
+      >
+        <FacultySection />
+      </div>
     </div>
     <QuoteMessage
       author="WHO"
@@ -41,4 +49,5 @@ import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
 import QuoteMessage from '../../components/QuoteMessage.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
+import NotFancyTitle from '../../components/NotFancyTitle.vue'
 </script>
