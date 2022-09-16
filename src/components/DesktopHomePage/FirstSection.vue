@@ -35,14 +35,16 @@
 // import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 // import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
 
-import imgSpring from '../../assets/images/HomePage/Spring.jpg?webp'
+// import imgSpring from '../../assets/images/HomePage/Spring.jpg?webp'
 import imgSummer from '../../assets/images/HomePage/Summer.jpg?webp'
 import imgAutumn from '../../assets/images/HomePage/Autumn.jpg?webp'
-import imgWinter from '../../assets/images/HomePage/Winter.jpg?webp'
+// import imgWinter from '../../assets/images/HomePage/Winter.jpg?webp'
+import imgDongba1 from '../../assets/images/HomePage/Dongba1.jpg?webp'
+import imgDongba2 from '../../assets/images/HomePage/Dongba2.jpg?webp'
 
 import CarouselVertical from '../CarouselVertical.vue'
 
-const images = [imgSpring, imgSummer, imgAutumn, imgWinter]
+const images = [imgDongba1, imgSummer, imgDongba2, imgAutumn]
 
 function scrollTo (id) {
   const element = document.querySelector(id)
