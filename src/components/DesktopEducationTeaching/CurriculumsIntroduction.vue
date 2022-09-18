@@ -1,6 +1,11 @@
 <template>
   <section class="section">
-    <NotFancyTitle cn="课程体系" en="Curriculum" color="blue" style="margin-left:3em"></NotFancyTitle>
+    <NotFancyTitle
+      cn="课程体系"
+      en="Curriculum"
+      color="blue"
+      style="margin-left: 3em"
+    ></NotFancyTitle>
     <div class="flex gap-18 p-15 p-t-0">
       <div class="w-100%">
         <img :src="number1" class="w-18 m-l--5 m-b--1" alt="Bg" />
@@ -36,5 +41,4 @@ import number1 from '../../assets/images/标题序号1.svg'
 import number2 from '../../assets/images/标题序号2.svg'
 import number3 from '../../assets/images/标题序号3.svg'
 </script>
-<style scoped>
-</style>
+<style scoped></style>
