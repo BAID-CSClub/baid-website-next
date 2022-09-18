@@ -1,0 +1,1 @@
+import{_ as o,b as s,c,F as n,d as e}from"./index.17a49be9.js";const r={},t=e("h1",null,"HomePage for Mobile devices",-1),a=e("h2",null,"Work in progress...",-1);function _(l,d){return s(),c(n,null,[t,a],64)}const f=o(r,[["render",_]]);export{f as default};
