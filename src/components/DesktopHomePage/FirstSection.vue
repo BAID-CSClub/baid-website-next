@@ -1,11 +1,15 @@
 <template>
   <section class="h-screen m-t-[-4.25rem] relative overflow-hidden">
+    <!-- Carousel part -->
     <div class="absolute top-0 w-full h-screen">
       <CarouselVertical :images="images" />
     </div>
+    <!-- Left blue block -->
     <div
       class="absolute top-0 left-0 bg-#103C74 h-screen op-90 t-0 l-0 w-38% min-w-600px shadow shadow-lg shadow-black"
     ></div>
+
+    <!-- Text / content -->
     <div class="absolute bottom-15% font-sans left-0 right-0">
       <div class="max-w-77rem ma p-x-20px">
         <h1 class="text-20 color-white text-shadow-lg m-0">

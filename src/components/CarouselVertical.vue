@@ -1,15 +1,13 @@
 <template>
   <div class="h-screen w-full overflow-hidden relative">
-    <div class="absolute" :style="{ top }">
+    <div class="absolute flex flex-col w-full" :style="{ top }">
       <img
-        v-for="(img, index) in props.images"
+        v-for="img in props.images"
         :key="img"
         :src="img"
         :alt="img"
-        class="h-screen w-full brightness-80 object-cover"
-        :class="{ 'm-t--3.5px': index > 0 }"
+        class="h-screen w-full dimmer object-cover"
       />
-      <!-- 微调至 3.5px 虽然不知道这个数怎么来的 -->
     </div>
     <div class="absolute right-10 bottom-10">
       <div
@@ -73,5 +71,19 @@ function resetInterval () {
   background-color: transparent;
   border-radius: 50%;
   /* margin-right: 10px; */
+}
+
+@keyframes dim {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(70%);
+  }
+}
+
+/* Make images dimmer after time */
+.dimmer {
+  animation: dim 5s forwards;
 }
 </style>
