@@ -3,11 +3,7 @@
     <img :src="img1" alt="" class="w-40% object-cover" />
     <div class="h-full m-x-10 w-40%">
       <img :src="img1" alt="" class="w-full m-b-10 m-t--10 object-cover" />
-      <IntroductionBlock
-        content="Introduction goes here!
-Another line"
-        class="w-full"
-      />
+      <IntroductionBlock :content="dummyContent" class="w-full" />
     </div>
     <NotFancyTitle
       cn="学生指导"
@@ -22,4 +18,5 @@ Another line"
 import NotFancyTitle from '../NotFancyTitle.vue'
 import img1 from '../../assets/images/le1.png?webp'
 import IntroductionBlock from './IntroductionBlock.vue'
+const dummyContent = 'Introduction goes here!\nAnother line'
 </script>
