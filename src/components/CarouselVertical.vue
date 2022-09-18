@@ -6,7 +6,7 @@
         :key="img"
         :src="img"
         :alt="img"
-        class="h-screen w-full brightness-80 object-cover"
+        class="h-screen w-full dimmer object-cover"
       />
     </div>
     <div class="absolute right-10 bottom-10">
@@ -71,5 +71,19 @@ function resetInterval () {
   background-color: transparent;
   border-radius: 50%;
   /* margin-right: 10px; */
+}
+
+@keyframes dim {
+  from {
+    filter: brightness(100%);
+  }
+  to {
+    filter: brightness(70%);
+  }
+}
+
+/* Make images dimmer after time */
+.dimmer {
+  animation: dim 5s forwards;
 }
 </style>
