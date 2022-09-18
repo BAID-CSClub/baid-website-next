@@ -30,6 +30,7 @@
               current === index && !transition
           }"
           v-for="(activity, index) in activities"
+          :key="index"
           v-on:click="change(index)"
         >
           <div class="w-50% pl-3">
