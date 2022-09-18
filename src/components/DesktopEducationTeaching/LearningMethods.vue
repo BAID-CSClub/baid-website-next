@@ -20,9 +20,9 @@
           class="absolute bottom-0 pa-10 color-white special-bg transition-opacity-300"
           :class="{ 'op-0': transition }"
         >
-          <h3>{{ methods[current]['zh-CN'].title }}</h3>
+          <h3>{{ methods[current][$i18n.locale].title }}</h3>
           <p>
-            {{ methods[current]['zh-CN'].content }}
+            {{ methods[current][$i18n.locale].content }}
           </p>
         </div>
       </div>
