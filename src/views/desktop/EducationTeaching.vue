@@ -6,7 +6,7 @@
       </h1>
     </CarouselHorizontal>
     <CurriculumsIntroduction />
-    <LearningMethod />
+    <LearningMethods />
     <StudentGuidence />
     <WonderfulMoment />
   </div>
@@ -17,7 +17,7 @@ import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 
 import CurriculumsIntroduction from '../../components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
-import LearningMethod from '../../components/DesktopEducationTeaching/LearningMethod.vue'
+import LearningMethods from '../../components/DesktopEducationTeaching/LearningMethods.vue'
 import StudentGuidence from '../../components/DesktopEducationTeaching/StudentGuidence.vue'
 import WonderfulMoment from '../../components/DesktopEducationTeaching/WonderfulMoment.vue'
 </script>
