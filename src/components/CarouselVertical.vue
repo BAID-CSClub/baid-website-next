@@ -2,7 +2,7 @@
   <div class="h-screen w-full overflow-hidden relative">
     <div class="absolute flex flex-col w-full" :style="{ top }">
       <img
-        v-for="(img, index) in props.images"
+        v-for="img in props.images"
         :key="img"
         :src="img"
         :alt="img"
