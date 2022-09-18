@@ -135,6 +135,8 @@ router.beforeResolve((to, from) => {
   }, 300) // Wait for the line fadeout animation to finish
 })
 
+let headerCooling = false
+
 router.afterEach((to) => {
   const index = routesComputed.value.findIndex((item) => item.name === to.name)
   if (index !== -1) {
@@ -142,6 +144,7 @@ router.afterEach((to) => {
       showLine.value = true
     }, 300)
   }
+  headerCooling = true
 })
 
 const { locale } = useI18n({ useScope: 'global' })
@@ -178,14 +181,22 @@ onMounted(() => {
   window.onscroll = () => {
     const delta = window.scrollY - last
     if (window.scrollY > window.innerHeight) {
+      // After 100vh: fixed
       fixed.value = true
 
       if (delta < 0) {
         fixedShow.value = true
       } else {
-        fixedShow.value = false
+        // Scroll down: hide
+        // If during route change: ignore
+        if (headerCooling) {
+          headerCooling = false
+        } else {
+          fixedShow.value = false
+        }
       }
     } else {
+      // Before 100vh
       if (fixed.value) {
         fixedShow.value = false
         setTimeout(() => {
