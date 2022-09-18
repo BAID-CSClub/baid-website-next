@@ -60,7 +60,7 @@ const props = defineProps([
 
 function compute (string) {
   return string.split(' ').map((word) => {
-    return { left: word[0], colored: word[1], right: word.slice(2) }
+    return { left: word[0], colored: word[1], right: word.slice(2) + ' ' }
   })
 }
 
