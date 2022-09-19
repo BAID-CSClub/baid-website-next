@@ -7,26 +7,29 @@
     </CarouselHorizontal>
     <VisionSection />
     <AlumniSection />
-    <div class="bg-gray-200">
+    <section class="bg-gray-200">
       <HonorSection />
-    </div>
-    <div class="bg-[var(--standard-blue)]">
+    </section>
+    <section class="bg-[var(--standard-blue)]">
       <TestCenterSection />
-    </div>
-    <div class="section important:p-b-0">
-      <NotFancyTitle cn="师资" en="Faculty" color="blue"></NotFancyTitle>
-    </div>
-    <div
-      :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
-      style="background-size: cover; background-position: center"
-    >
-      <div
-        class="text-white h-80 flex justify-center items-center"
-        style="background-color: rgba(0, 0, 0, 0.5)"
-      >
-        <FacultySection />
+    </section>
+    <section>
+      <div class="section important:p-b-0">
+        <NotFancyTitle cn="师资" en="Faculty" color="blue"></NotFancyTitle>
       </div>
-    </div>
+      <div
+        :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
+        style="background-size: cover; background-position: center"
+      >
+        <div
+          class="text-white h-80 flex justify-center items-center"
+          style="background-color: rgba(0, 0, 0, 0.5)"
+        >
+          <FacultySection />
+        </div>
+      </div>
+    </section>
+
     <QuoteMessage
       author="WHO"
       content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"

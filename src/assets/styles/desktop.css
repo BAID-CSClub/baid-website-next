@@ -110,6 +110,16 @@ pre {
   word-wrap: break-word;
 }
 
+/* trying to get some snap effect but failed */
+/* main {
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+} */
+
 :root {
   --standard-blue: #103c74;
   --standard-red: #83050e;

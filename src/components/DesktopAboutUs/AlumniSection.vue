@@ -4,11 +4,14 @@
       <NotFancyTitle cn="毕业生介绍" en="Alumni" color="red"></NotFancyTitle>
       <div class="flex">
         <div style="flex: 1" class="pr-5 flex pl-8 items-center">
-          <img
-            :src="homeBg1"
-            class="max-w-full max-h-full object-cover aspect-3/4 alumni-big-pic"
-            alt="pic1"
-          />
+          <div class="alumni-big-pic-box">
+            <img
+              :src="alumni[current].image"
+              class="w-full object-cover aspect-3/4 transition-opacity-300 block alumni-big-pic"
+              :class="{ 'op-0': transition }"
+              alt="pic1"
+            />
+          </div>
         </div>
         <div style="flex: 2" class="flex-col pl-5">
           <div class="relative">
@@ -64,7 +67,12 @@
                 </g>
               </svg>
             </div>
-            <p class="p-20 content">{{ $t('AboutUs.Alumni.Content') }}</p>
+            <p
+              class="p-20 content transition-opacity-300"
+              :class="{ 'op-0': transition }"
+            >
+              {{ alumni[current][$i18n.locale] }}
+            </p>
             <!-- Right bottom quote -->
             <div class="absolute right-20px bottom-0">
               <svg
@@ -128,10 +136,20 @@
                 />
               </svg>
             </div>
-            <div class="m-4" v-for="alumnus in alumni" :key="alumnus">
+            <div
+              class="m-4 flex-1"
+              v-for="(alumnus, index) in alumni"
+              :key="alumnus"
+            >
               <img
                 :src="alumnus.image"
-                class="max-w-full max-h-full object-cover aspect-3/4"
+                class="w-full object-cover aspect-3/4 opacity-60 transition-all"
+                :class="{
+                  '!opacity-100': current === index,
+                  'hover:opacity-100 active:brightness-90':
+                    current !== index && !transition
+                }"
+                v-on:click="change(index)"
                 alt="pic1"
               />
             </div>
@@ -153,7 +171,11 @@
 
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
+import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
+
+import { ref } from 'vue'
 
 const alumni = [
   {
@@ -164,24 +186,38 @@ const alumni = [
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
   },
   {
-    image: homeBg1,
+    image: homeBg2,
     'zh-CN':
       '毕业生2介绍 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.',
     'en-US':
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
   },
   {
-    image: homeBg1,
+    image: homeBg3,
     'zh-CN':
       '毕业生3介绍 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.',
     'en-US':
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
   }
 ]
+
+const current = ref(0)
+const transition = ref(false)
+
+function change (index) {
+  if (index === current.value || transition.value) return
+  transition.value = true
+  setTimeout(() => {
+    current.value = index
+    setTimeout(() => {
+      transition.value = false
+    }, 150)
+  }, 300)
+}
 </script>
 
 <style>
-.alumni-big-pic {
+.alumni-big-pic-box {
   box-shadow: -2rem 2rem var(--standard-red), -0.25rem 0.25rem 0.25rem grey;
 }
 </style>

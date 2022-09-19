@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <div id="honor" class="flex-col items-center">
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
       <div class="flex mb-10">
@@ -38,7 +38,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
