@@ -8,7 +8,7 @@
     <div
       class="absolute bottom-0 bg-dark/30 h-full w-full hover:op-100 op-0 transition-opacity-500 flex items-end"
     >
-      <div class="color-white m-10">
+      <div class="color-white pa-10">
         <h3>{{ props.name }}</h3>
         <p>
           {{ props.description }}

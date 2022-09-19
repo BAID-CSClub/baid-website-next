@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <div id="faculty" class="flex-col items-center">
       <!-- <div
         :style="{ backgroundImage: 'url(' + homeBg1 + ')' }"
@@ -14,7 +14,7 @@
       </div>
     </div>
     <!-- </div> -->
-  </section>
+  </div>
 </template>
 
 <script setup>

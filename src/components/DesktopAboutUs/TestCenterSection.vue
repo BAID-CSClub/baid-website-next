@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <div id="test-center" class="font-sans flex">
       <div class="text-white flex-col w-1/2 mr-7">
         <h3 class="color-white">
@@ -11,7 +11,7 @@
         <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
