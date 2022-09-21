@@ -29,13 +29,6 @@
         </div>
       </div>
     </section>
-    <section id="quote">
-      <QuoteMessage
-        author="WHO"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
-        :avatar="avatar"
-      />
-    </section>
   </div>
 </template>
 
@@ -43,14 +36,11 @@
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 
-import avatar from '../../assets/images/homeBg1.jpg'
-
 import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import HonorSection from '../../components/DesktopAboutUs/HonorSection.vue'
 import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
 import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
-import QuoteMessage from '../../components/QuoteMessage.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import NotFancyTitle from '../../components/NotFancyTitle.vue'

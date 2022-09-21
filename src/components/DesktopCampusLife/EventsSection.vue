@@ -2,8 +2,8 @@
   <section class="section">
     <div class="flex justify-end">
       <NotFancyTitle
-        cn="特色活动"
-        en="Special Events"
+        cn="活动"
+        en="Activities"
         color="red"
         right
       ></NotFancyTitle>
