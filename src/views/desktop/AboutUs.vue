@@ -9,9 +9,9 @@
     <section id="alumni"><AlumniSection /></section>
     <section id="honor" class="bg-gray-200">
       <HonorSection />
-    </section>
-    <section id="testCenter" class="bg-[var(--standard-blue)]">
-      <TestCenterSection />
+      <div class="bg-[var(--standard-blue)]">
+        <TestCenterSection />
+      </div>
     </section>
     <section id="faculty">
       <div class="section important:p-b-0">
