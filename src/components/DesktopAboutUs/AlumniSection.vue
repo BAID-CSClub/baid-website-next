@@ -191,22 +191,37 @@ const alumni = [
       quote:
         '因为结缘北中，我找到了我自己的人生价值所在，确定未来专业方向——工程。目前，我已经申请到了令我满意的大学；将来，我会为工程这个专业倾注我所有的努力，刻苦钻研，为人类社会做出力所能及的贡献，如校训说的“世界因我更美好”。'
     },
-    'en-US':
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
+    'en-US': {
+      name: '田学长',
+      quote:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
+    }
   },
   {
     image: homeBg2,
-    'zh-CN':
-      '毕业生2介绍 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.',
-    'en-US':
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
+    'zh-CN': {
+      name: '田学长',
+      quote:
+        '因为结缘北中，我找到了我自己的人生价值所在，确定未来专业方向——工程。目前，我已经申请到了令我满意的大学；将来，我会为工程这个专业倾注我所有的努力，刻苦钻研，为人类社会做出力所能及的贡献，如校训说的“世界因我更美好”。'
+    },
+    'en-US': {
+      name: '田学长',
+      quote:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
+    }
   },
   {
     image: homeBg3,
-    'zh-CN':
-      '毕业生3介绍 Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.',
-    'en-US':
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
+    'zh-CN': {
+      name: '田学长',
+      quote:
+        '因为结缘北中，我找到了我自己的人生价值所在，确定未来专业方向——工程。目前，我已经申请到了令我满意的大学；将来，我会为工程这个专业倾注我所有的努力，刻苦钻研，为人类社会做出力所能及的贡献，如校训说的“世界因我更美好”。'
+    },
+    'en-US': {
+      name: '田学长',
+      quote:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dolor ipsam tenetur officia, quod incidunt ad beatae nemo consequatur ullam esse doloribus minus molestias a laudantium excepturi accusamus voluptatem reiciendis.'
+    }
   }
 ]
 
