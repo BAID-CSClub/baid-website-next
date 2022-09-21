@@ -6,7 +6,7 @@
       </h2>
       <pre>{{ $t('HomePage.SecondSection.Content') }}</pre>
       <div class="flex justify-end m-t-5">
-        <ReadMore to="/about" />
+        <ReadMore to="/about#vision" />
       </div>
     </div>
   </section>

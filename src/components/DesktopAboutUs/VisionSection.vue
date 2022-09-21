@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <div class="flex" id="vision">
       <div class="mr-7 w-1/2">
         <img :src="homeBg1" class="max-w-full max-h-full" alt="pic1" />
@@ -18,7 +18,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

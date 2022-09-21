@@ -5,15 +5,15 @@
         {{ $t('AboutUs.Title') }}
       </h1>
     </CarouselHorizontal>
-    <VisionSection />
-    <AlumniSection />
-    <section class="bg-gray-200">
+    <section id="vision"><VisionSection /></section>
+    <section id="alumni"><AlumniSection /></section>
+    <section id="honor" class="bg-gray-200">
       <HonorSection />
     </section>
-    <section class="bg-[var(--standard-blue)]">
+    <section id="testCenter" class="bg-[var(--standard-blue)]">
       <TestCenterSection />
     </section>
-    <section>
+    <section id="faculty">
       <div class="section important:p-b-0">
         <NotFancyTitle cn="师资" en="Faculty" color="blue"></NotFancyTitle>
       </div>
@@ -29,12 +29,13 @@
         </div>
       </div>
     </section>
-
-    <QuoteMessage
-      author="WHO"
-      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
-      :avatar="avatar"
-    />
+    <section id="quote">
+      <QuoteMessage
+        author="WHO"
+        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
+        :avatar="avatar"
+      />
+    </section>
   </div>
 </template>
 
