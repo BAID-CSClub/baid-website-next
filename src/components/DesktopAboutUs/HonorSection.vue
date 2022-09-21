@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <div id="honor" class="flex-col items-center">
+    <div class="flex-col items-center">
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
       <div class="flex mb-10">
         <div class="mr-auto pr-2">
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="flex items-center mt-10">
-        <p class="mr-7 content w-1/2">
+        <p class="mr-7 w-1/2">
           {{ $t('AboutUs.Honor.Content') }}
         </p>
         <div class="ml-7 w-1/2 flex justify-end">

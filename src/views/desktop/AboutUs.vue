@@ -5,7 +5,7 @@
         {{ $t('AboutUs.Title') }}
       </h1>
     </CarouselHorizontal>
-    <section id="vision"><VisionSection /></section>
+    <section id="overview"><OverviewSection /></section>
     <section id="alumni"><AlumniSection /></section>
     <section id="honor" class="bg-gray-200">
       <HonorSection />
@@ -22,7 +22,7 @@
         style="background-size: cover; background-position: center"
       >
         <div
-          class="text-white h-80 flex justify-center items-center"
+          class="text-white h-90 flex items-center"
           style="background-color: rgba(0, 0, 0, 0.5)"
         >
           <FacultySection />
@@ -45,7 +45,7 @@ import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 
 import avatar from '../../assets/images/homeBg1.jpg'
 
-import VisionSection from '../../components/DesktopAboutUs/VisionSection.vue'
+import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import HonorSection from '../../components/DesktopAboutUs/HonorSection.vue'
 import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'

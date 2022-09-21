@@ -68,9 +68,8 @@
               </svg>
             </div>
             <div
-              class="p-20 transition-opacity-300 h-40 justify-center"
+              class="p-20 transition-opacity-300 h-40 justify-center flex flex-col"
               :class="{ 'op-0': transition }"
-              style="display: flex; flex-direction: column"
             >
               <p>
                 {{ alumni[current][$i18n.locale].quote }}

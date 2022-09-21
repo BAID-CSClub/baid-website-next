@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <div id="quote" class="flex-col items-center">
+    <div class="flex-col items-center">
       <!-- <div class="text-9 font-700">“</div> -->
       <!-- Left top quote -->
       <div>
