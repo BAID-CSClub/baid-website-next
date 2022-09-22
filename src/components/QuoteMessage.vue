@@ -1,5 +1,5 @@
 <template>
-  <section
+  <div
     class="relative flex contentArea important:p-y-20 md:flex-row flex-col items-center"
   >
     <div class="absolute left-20px top-0">
@@ -101,7 +101,7 @@
         </g>
       </svg>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

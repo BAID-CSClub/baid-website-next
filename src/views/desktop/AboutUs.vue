@@ -5,15 +5,15 @@
         {{ $t('AboutUs.Title') }}
       </h1>
     </CarouselHorizontal>
-    <VisionSection />
-    <AlumniSection />
-    <section class="bg-gray-200">
+    <section id="overview"><OverviewSection /></section>
+    <section id="alumni"><AlumniSection /></section>
+    <section id="honor" class="bg-gray-200">
       <HonorSection />
+      <div class="bg-[var(--standard-blue)]">
+        <TestCenterSection />
+      </div>
     </section>
-    <section class="bg-[var(--standard-blue)]">
-      <TestCenterSection />
-    </section>
-    <section>
+    <section id="faculty">
       <div class="section important:p-b-0">
         <NotFancyTitle cn="师资" en="Faculty" color="blue"></NotFancyTitle>
       </div>
@@ -22,19 +22,13 @@
         style="background-size: cover; background-position: center"
       >
         <div
-          class="text-white h-80 flex justify-center items-center"
+          class="text-white h-90 flex items-center"
           style="background-color: rgba(0, 0, 0, 0.5)"
         >
           <FacultySection />
         </div>
       </div>
     </section>
-
-    <QuoteMessage
-      author="WHO"
-      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
-      :avatar="avatar"
-    />
   </div>
 </template>
 
@@ -42,14 +36,11 @@
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 
-import avatar from '../../assets/images/homeBg1.jpg'
-
-import VisionSection from '../../components/DesktopAboutUs/VisionSection.vue'
+import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import HonorSection from '../../components/DesktopAboutUs/HonorSection.vue'
 import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
 import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
-import QuoteMessage from '../../components/QuoteMessage.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import NotFancyTitle from '../../components/NotFancyTitle.vue'

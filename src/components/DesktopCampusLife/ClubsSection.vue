@@ -6,13 +6,9 @@
     <div class="flex justify-center">
       <div
         v-for="club in clubs"
-        class="m-5 h-220px aspect-1 items-center justify-center"
+        class="m-5 h-220px aspect-1 items-center justify-center flex flex-col"
         :key="club"
-        style="
-          box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5);
-          display: flex;
-          flex-direction: column;
-        "
+        style="box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5)"
         :style="{ 'background-color': club.bgColor, color: club.color }"
       >
         <div class="text-8 font-title m-1">
