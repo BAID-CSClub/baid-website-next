@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <div class="flex justify-end">
       <NotFancyTitle
         cn="学习方式"
@@ -42,7 +42,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 <script setup>
 import { ref } from 'vue'

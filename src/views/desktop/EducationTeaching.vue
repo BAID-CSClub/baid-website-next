@@ -7,10 +7,18 @@
         {{ $t('EducationTeaching.Title') }}
       </h1>
     </CarouselHorizontal>
-    <CurriculumsIntroduction />
-    <LearningMethods />
-    <StudentGuidence />
-    <WonderfulMoment />
+    <section id="curriculum">
+      <CurriculumsIntroduction />
+    </section>
+    <section id="learningMethods">
+      <LearningMethods />
+    </section>
+    <section id="studentGuidence">
+      <StudentGuidence />
+    </section>
+    <section id="wonderfulMoments">
+      <WonderfulMoment />
+    </section>
   </div>
 </template>
 <script setup>
