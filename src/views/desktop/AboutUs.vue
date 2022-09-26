@@ -9,9 +9,9 @@
     <section id="alumni"><AlumniSection /></section>
     <section id="honor" class="bg-gray-200">
       <HonorSection />
-      <div class="bg-[var(--standard-blue)]">
+      <!-- <div class="bg-[var(--standard-blue)]">
         <TestCenterSection />
-      </div>
+      </div> -->
     </section>
     <section id="faculty">
       <div class="section important:p-b-0">
@@ -39,7 +39,7 @@ import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import HonorSection from '../../components/DesktopAboutUs/HonorSection.vue'
-import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
+// import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
 import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'

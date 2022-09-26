@@ -1,6 +1,8 @@
 <template>
   <div>
-    <CarouselHorizontal :images="[homeBg1, homeBg2]">
+    <CarouselHorizontal
+      :images="[imgHeader1, imgHeader2, imgHeader3, imgHeader4]"
+    >
       <h1 class="text-18 font-300 font-sans color-white">
         {{ $t('EducationTeaching.Title') }}
       </h1>
@@ -12,9 +14,11 @@
   </div>
 </template>
 <script setup>
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
+import imgHeader1 from '../../assets/images/EducationTeaching/Header 1.jpg?webp'
+import imgHeader2 from '../../assets/images/EducationTeaching/Header 2.jpg?webp'
+import imgHeader3 from '../../assets/images/EducationTeaching/Header 3.jpg?webp'
+import imgHeader4 from '../../assets/images/EducationTeaching/Header 4.jpg?webp'
 
 import CurriculumsIntroduction from '../../components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
 import LearningMethods from '../../components/DesktopEducationTeaching/LearningMethods.vue'

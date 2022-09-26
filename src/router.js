@@ -30,9 +30,9 @@ export const routes = [
     component: () => import(`./views/${clientType}/EducationTeaching.vue`)
   },
   {
-    path: '/:lang(zh-CN|en-US)/campus',
-    name: 'CampusLife',
-    component: () => import(`./views/${clientType}/CampusLife.vue`)
+    path: '/:lang(zh-CN|en-US)/studentLife',
+    name: 'StudentLife',
+    component: () => import(`./views/${clientType}/StudentLife.vue`)
   },
   {
     path: '/:lang(zh-CN|en-US)/join',

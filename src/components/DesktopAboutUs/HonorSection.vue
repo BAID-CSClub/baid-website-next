@@ -2,7 +2,8 @@
   <div class="section">
     <div class="flex-col items-center">
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
-      <div class="flex mb-10">
+      UNDER CONSTRUCTION
+      <!-- <div class="flex mb-10">
         <div class="mr-auto pr-2">
           <img
             :src="imgJKY"
@@ -36,7 +37,7 @@
             alt="pic1"
           />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

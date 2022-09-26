@@ -4,7 +4,7 @@
       "HomePage": "Home",
       "AboutUs": "About",
       "EducationTeaching": "Education",
-      "CampusLife": "Life",
+      "StudentLife": "Student Life",
       "JoinUs": "Join Us"
     },
     "HomePage": {},
@@ -18,7 +18,7 @@
       "HomePage": "首页",
       "AboutUs": "关于我们",
       "EducationTeaching": "教育教学",
-      "CampusLife": "校园生活",
+      "StudentLife": "学生生活",
       "JoinUs": "加入我们"
     },
     "HomePage": {
@@ -91,8 +91,8 @@
         "Join": "教师申请入口"
       }
     },
-    "CampusLife": {
-      "Title": "校园生活",
+    "StudentLife": {
+      "Title": "学生生活",
       "Activities": {
         "Title": "学生活动",
         "Selected": {
@@ -117,11 +117,7 @@
         }
       },
       "Clubs": {
-        "Title": "学生社团｜Student Clubs",
-        "Sub1": "名字",
-        "Sub2": "名字",
-        "Sub3": "名字",
-        "Sub4": "名字"
+        "Title": "学生社团｜Student Clubs"
       },
       "Events": {
         "Title": "特色活动",
