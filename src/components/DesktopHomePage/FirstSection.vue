@@ -16,7 +16,7 @@
           欢迎来到北京中学国际部！
         </h1>
         <p class="text-7 color-white">
-          Welcome to Beijing Academy International Department (BAID)!
+          Welcome to Beijing Academy International Division (BAID)!
         </p>
       </div>
     </div>

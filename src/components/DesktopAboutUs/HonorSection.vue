@@ -43,10 +43,10 @@
 </template>
 
 <script setup>
-import imgACT from '../../assets/images/AboutUs/ACT.jpeg?webp'
-import imgCIS from '../../assets/images/AboutUs/CIS.jpeg?webp'
-import imgCambridge from '../../assets/images/AboutUs/Cambridge.jpeg?webp'
-import imgJKY from '../../assets/images/AboutUs/JKY.jpeg?webp'
+// import imgACT from '../../assets/images/AboutUs/ACT.jpeg?webp'
+// import imgCIS from '../../assets/images/AboutUs/CIS.jpeg?webp'
+// import imgCambridge from '../../assets/images/AboutUs/Cambridge.jpeg?webp'
+// import imgJKY from '../../assets/images/AboutUs/JKY.jpeg?webp'
 // import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
 </script>
