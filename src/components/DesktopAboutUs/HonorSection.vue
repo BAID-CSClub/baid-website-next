@@ -2,7 +2,8 @@
   <div class="section">
     <div class="flex-col items-center">
       <NotFancyTitle cn="学校荣誉" en="Honors" color="blue"></NotFancyTitle>
-      <div class="flex mb-10">
+      UNDER CONSTRUCTION
+      <!-- <div class="flex mb-10">
         <div class="mr-auto pr-2">
           <img
             :src="imgJKY"
@@ -36,16 +37,16 @@
             alt="pic1"
           />
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script setup>
-import imgACT from '../../assets/images/AboutUs/ACT.jpeg?webp'
-import imgCIS from '../../assets/images/AboutUs/CIS.jpeg?webp'
-import imgCambridge from '../../assets/images/AboutUs/Cambridge.jpeg?webp'
-import imgJKY from '../../assets/images/AboutUs/JKY.jpeg?webp'
+// import imgACT from '../../assets/images/AboutUs/ACT.jpeg?webp'
+// import imgCIS from '../../assets/images/AboutUs/CIS.jpeg?webp'
+// import imgCambridge from '../../assets/images/AboutUs/Cambridge.jpeg?webp'
+// import imgJKY from '../../assets/images/AboutUs/JKY.jpeg?webp'
 // import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
 </script>

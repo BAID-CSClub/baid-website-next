@@ -1,5 +1,5 @@
 <template>
-  <section class="section font-sans">
+  <div class="section font-sans">
     <div>
       <h3>{{ $t('JoinUs.Student.Title') }}</h3>
       <pre>{{ $t('JoinUs.Student.Content') }}</pre>
@@ -26,6 +26,6 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 <script setup></script>

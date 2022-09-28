@@ -1,5 +1,5 @@
 <template>
-  <section class="contentArea">
+  <div class="contentArea">
     <NotFancyTitle
       cn="办学理念"
       en="Education Philosophy"
@@ -17,7 +17,7 @@
         :class="{ 'm-t-8': index % 3 !== 0 }"
       />
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

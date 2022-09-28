@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <NotFancyTitle
       cn="课程体系"
       en="Curriculum"
@@ -32,7 +32,7 @@
         <img :src="homeBg1" class="w-full h-12vw max-h-153.6px" alt="Bg" />
       </div>
     </div>
-  </section>
+  </div>
 </template>
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'

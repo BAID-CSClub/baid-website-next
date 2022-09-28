@@ -5,8 +5,12 @@
         {{ $t('JoinUs.Title') }}
       </h1>
     </CarouselHorizontal>
-    <JoinStudentSection />
-    <JoinFacultySection />
+    <section id="joinStudent">
+      <JoinStudentSection />
+    </section>
+    <section id="joinFaculty">
+      <JoinFacultySection />
+    </section>
   </div>
 </template>
 <script setup>
