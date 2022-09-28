@@ -1,5 +1,5 @@
 <template>
-  <section class="h-screen m-t-[-4.25rem] relative overflow-hidden">
+  <div class="h-screen m-t-[-4.25rem] relative overflow-hidden">
     <!-- Carousel part -->
     <div class="absolute top-0 w-full h-screen">
       <CarouselVertical :images="images" />
@@ -16,7 +16,7 @@
           欢迎来到北京中学国际部！
         </h1>
         <p class="text-7 color-white">
-          Welcome to Beijing Academy International Department (BAID)!
+          Welcome to Beijing Academy International Division (BAID)!
         </p>
       </div>
     </div>
@@ -31,18 +31,12 @@
         <div class="right transition-all"></div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
-// import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-// import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
-// import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
-
-// import imgSpring from '../../assets/images/HomePage/Spring.jpg?webp'
 import imgSummer from '../../assets/images/HomePage/Summer.jpg?webp'
 import imgAutumn from '../../assets/images/HomePage/Autumn.jpg?webp'
-// import imgWinter from '../../assets/images/HomePage/Winter.jpg?webp'
 import imgDongba1 from '../../assets/images/HomePage/Dongba1.jpg?webp'
 import imgDongba2 from '../../assets/images/HomePage/Dongba2.jpg?webp'
 

@@ -1,15 +1,28 @@
 <template>
   <div>
-    <FirstSection />
-    <SecondSection />
-    <EducationPhilosophy />
-    <QuoteMessage
-      author="WHO"
-      content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
-      :avatar="avatar"
-    />
-    <AdmissionResults />
-    <HomeNews :newsList="data.news" />
+    <section id="firstSection">
+      <FirstSection />
+    </section>
+    <section id="secondSection">
+      <SecondSection />
+    </section>
+    <section id="educationPhilosophy">
+      <EducationPhilosophy />
+    </section>
+    <section id="quote">
+      <QuoteMessage
+        author="WHO"
+        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
+        :avatar="avatar"
+      />
+    </section>
+    <section id="admissionResults">
+      <AdmissionResults />
+    </section>
+    <section id="homeNews">
+      <!-- <HomeNews :newsList="data.news" /> -->
+      <HomeNews :newsList="data.news" />
+    </section>
   </div>
 </template>
 

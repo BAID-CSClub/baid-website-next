@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CarouselHorizontal :images="[homeBg1, homeBg2]">
+    <CarouselHorizontal :images="[imgHeader1]">
       <h1 class="text-18 color-white">
         {{ $t('AboutUs.Title') }}
       </h1>
@@ -9,16 +9,16 @@
     <section id="alumni"><AlumniSection /></section>
     <section id="honor" class="bg-gray-200">
       <HonorSection />
-      <div class="bg-[var(--standard-blue)]">
+      <!-- <div class="bg-[var(--standard-blue)]">
         <TestCenterSection />
-      </div>
+      </div> -->
     </section>
     <section id="faculty">
       <div class="section important:p-b-0">
         <NotFancyTitle cn="师资" en="Faculty" color="blue"></NotFancyTitle>
       </div>
       <div
-        :style="{ backgroundImage: 'url(' + homeBg2 + ')' }"
+        :style="{ backgroundImage: 'url(' + imgHeader1 + ')' }"
         style="background-size: cover; background-position: center"
       >
         <div
@@ -33,13 +33,13 @@
 </template>
 
 <script setup>
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
+import imgHeader1 from '../../assets/images/AboutUs/Header 1.jpg?webp'
+// import imgHeader2 from '../../assets/images/AboutUs/Header 2.jpg?webp'
 
 import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import HonorSection from '../../components/DesktopAboutUs/HonorSection.vue'
-import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
+// import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
 import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'

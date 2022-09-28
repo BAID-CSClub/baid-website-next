@@ -1,5 +1,5 @@
 <template>
-  <section class="seciton">
+  <div class="seciton">
     <div
       class="bg-white h-54vw grid m-t-50"
       style="
@@ -150,7 +150,7 @@
         补充说明
       </div>
     </div>
-  </section>
+  </div>
 </template>
 <script setup>
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
