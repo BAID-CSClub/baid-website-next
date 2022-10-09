@@ -14,7 +14,7 @@
         :left="$t(key + '.left')"
         :right="$t(key + '.right')"
         :blue="index % 2 === 0"
-        :class="{ 'm-t-8': index % 3 !== 0 }"
+        :class="{ 'm-t-8': index % 2 !== 0 }"
       />
     </div>
   </div>

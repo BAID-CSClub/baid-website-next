@@ -1,14 +1,19 @@
 <template>
   <div
-    class="border-width-3 border-solid border-color-[var(--standard-blue)] color-[var(--standard-blue)] flex w-full max-w-55 h-80 justify-around"
+    class="border-width-3 border-solid border-color-[var(--standard-blue)] color-[var(--standard-blue)] flex w-full max-w-52 h-80 justify-around p-x-3 p-y-6 m-x-4"
     :class="{ 'bg-[var(--standard-blue)] color-white': props.blue }"
   >
-    <h2 class="font-dianzi m-l-3 text-8 font-300">{{ props.left }}</h2>
+    <h2 class="text-9 !m-0 write-vertical-left tracking-wider">
+      {{ props.left }}
+    </h2>
     <hr
-      class="m-x-2 h-70% self-center border-width-2 border-solid border-color-[var(--standard-blue)]"
+      class="m-x-2 h-75% self-center border-width-2 border-solid border-color-[var(--standard-blue)]"
       :class="{ 'border-color-white': props.blue }"
     />
-    <p class="self-end content !m-b-8 m-r-3">{{ props.right }}</p>
+    <pre
+      class="self-end write-vertical-left text-6 leading-normal text-right min-w-120px m-y-4"
+      >{{ props.right }}</pre
+    >
   </div>
 </template>
 
