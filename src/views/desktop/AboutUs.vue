@@ -7,8 +7,8 @@
     </CarouselHorizontal>
     <section id="overview"><OverviewSection /></section>
     <section id="alumni"><AlumniSection /></section>
-    <section id="honor" class="bg-gray-200">
-      <HonorSection />
+    <section id="accreditation" class="bg-gray-200">
+      <AccreditationSection />
       <!-- <div class="bg-[var(--standard-blue)]">
         <TestCenterSection />
       </div> -->
@@ -34,12 +34,10 @@
 
 <script setup>
 import imgHeader1 from '../../assets/images/AboutUs/Header 1.jpg?webp'
-// import imgHeader2 from '../../assets/images/AboutUs/Header 2.jpg?webp'
 
 import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
-import HonorSection from '../../components/DesktopAboutUs/HonorSection.vue'
-// import TestCenterSection from '../../components/DesktopAboutUs/TestCenterSection.vue'
+import AccreditationSection from '../../components/DesktopAboutUs/AccreditationSection.vue'
 import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
