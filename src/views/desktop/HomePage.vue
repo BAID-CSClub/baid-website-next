@@ -20,7 +20,6 @@
       <AdmissionResults />
     </section>
     <section id="homeNews">
-      <!-- <HomeNews :newsList="data.news" /> -->
       <HomeNews :newsList="data.news" />
     </section>
   </div>

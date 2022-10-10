@@ -1,6 +1,6 @@
 <template>
-  <div class="p-y-90px">
-    <div class="section">
+  <div class="">
+    <div class="contentArea">
       <div class="flex">
         <div class="flex-1 mr-4">
           <h2 class="color-[var(--standard-blue)] text-9 m-t-0">
