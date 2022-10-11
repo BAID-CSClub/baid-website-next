@@ -5,14 +5,21 @@
       en="Accreditation"
       color="blue"
     ></NotFancyTitle>
-    <p>{{ $t('AboutUs.Accreditation.Content') }}</p>
-    <div class="flex items-center justify-center m-t-6">
+    <div class="grid grid-cols-4 grid-rows-2 m-t-6">
+      <p class="col-span-2">{{ $t('AboutUs.Accreditation.Content') }}</p>
+      <div></div>
       <div
         v-for="acc in accs"
         :key="acc"
-        class="flex flex-col items-center justify-center m-x-auto"
+        class="flex flex-col items-center justify-center m-auto h-40"
       >
-        <img :src="acc.image" :alt="acc.title" class="h-16 m-4" />
+        <div class="p-4">
+          <img
+            :src="acc.image"
+            :alt="acc.title"
+            class="max-h-14 min-h-12 block"
+          />
+        </div>
         <p>{{ acc[$i18n.locale].name }}</p>
       </div>
     </div>
@@ -24,6 +31,7 @@ import imgACT from '../../assets/images/AboutUs/ACT.svg'
 import imgAP from '../../assets/images/AboutUs/AP.svg'
 import imgCIS from '../../assets/images/AboutUs/CIS.png?webp'
 import imgApple from '../../assets/images/AboutUs/Apple.svg'
+import imgCam from '../../assets/images/AboutUs/Cambridge.png?webp'
 
 import NotFancyTitle from '../NotFancyTitle.vue'
 
@@ -63,11 +71,15 @@ const accs = [
     'en-US': {
       name: 'Apple Distinguished School'
     }
+  },
+  {
+    image: imgCam,
+    'zh-CN': {
+      name: '剑桥国际学校'
+    },
+    'en-US': {
+      name: 'Cambridge International School'
+    }
   }
 ]
 </script>
-
-<style></style>
-
-}, 'ACT': { name: 'ACT GAC授权校' }, 'CIS': { name: 'CIS认证校' }, 'Apple': {
-name: 'Apple杰出学校' },
