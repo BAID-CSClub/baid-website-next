@@ -1,8 +1,8 @@
 <template>
   <div>
     <CarouselHorizontal :images="[imgHeader1, imgHeader2, imgHeader3]">
-      <h1 class="text-18 font-300 font-sans color-white">
-        {{ $t('EducationTeaching.Title') }}
+      <h1 class="text-18 font-sans color-white">
+        {{ $t('views.EducationTeaching') }}
       </h1>
     </CarouselHorizontal>
     <section id="curriculum">

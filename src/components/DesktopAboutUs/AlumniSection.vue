@@ -1,7 +1,11 @@
 <template>
   <div class="section">
     <div id="alumni" class="flex-col items-center">
-      <NotFancyTitle cn="毕业生介绍" en="Alumni" color="red"></NotFancyTitle>
+      <NotFancyTitle
+        :cn="$t('AboutUs.Alumni.Title')"
+        en="Alumni"
+        color="red"
+      ></NotFancyTitle>
       <div class="flex">
         <div style="flex: 1" class="pr-5 flex pl-8 items-center">
           <div class="alumni-big-pic-box">

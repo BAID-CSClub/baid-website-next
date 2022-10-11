@@ -1,8 +1,8 @@
 <template>
   <div>
     <CarouselHorizontal :images="[imgHeader1, imgHeader2]">
-      <h1 class="text-18 font-300 font-sans color-white">
-        {{ $t('StudentLife.Title') }}
+      <h1 class="text-18 font-sans color-white">
+        {{ $t('views.StudentLife') }}
       </h1>
     </CarouselHorizontal>
     <section id="activities">
@@ -22,5 +22,3 @@ import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import ClubsSection from '../../components/DesktopStudentLife/ClubsSection.vue'
 import ActivitiesSection from '../../components/DesktopStudentLife/ActivitiesSection.vue'
 </script>
-
-<style></style>
