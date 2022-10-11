@@ -1,8 +1,8 @@
 <template>
   <div>
     <CarouselHorizontal :images="[imgHeader1]">
-      <h1 class="text-18 color-white">
-        {{ $t('AboutUs.Title') }}
+      <h1 class="text-18 font-sans color-white">
+        {{ $t('views.AboutUs') }}
       </h1>
     </CarouselHorizontal>
     <section id="overview"><OverviewSection /></section>
@@ -13,9 +13,13 @@
         <TestCenterSection />
       </div> -->
     </section>
-    <section id="faculty">
+    <section id="data">
       <div class="section important:p-b-0">
-        <NotFancyTitle cn="师资" en="Faculty" color="blue"></NotFancyTitle>
+        <NotFancyTitle
+          :cn="$t('AboutUs.Data.Title')"
+          en="Data"
+          color="blue"
+        ></NotFancyTitle>
       </div>
       <div
         :style="{ backgroundImage: 'url(' + imgHeader1 + ')' }"
@@ -25,7 +29,7 @@
           class="text-white h-90 flex items-center"
           style="background-color: rgba(0, 0, 0, 0.5)"
         >
-          <FacultySection />
+          <DataSection />
         </div>
       </div>
     </section>
@@ -38,7 +42,7 @@ import imgHeader1 from '../../assets/images/AboutUs/Header 1.jpg?webp'
 import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import AccreditationSection from '../../components/DesktopAboutUs/AccreditationSection.vue'
-import FacultySection from '../../components/DesktopAboutUs/FacultySection.vue'
+import DataSection from '../../components/DesktopAboutUs/DataSection.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import NotFancyTitle from '../../components/NotFancyTitle.vue'
