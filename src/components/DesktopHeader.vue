@@ -41,8 +41,9 @@
           :class="{ 'opacity-10': showBlock }"
           :style="{ left: blockLeft }"
         ></div>
+        <!-- Line -->
         <div
-          class="absolute w-15 h-1 z-10 bottom-0 translate-x-1/2 transition-opacity"
+          class="absolute w-15 h-1 z-10 bottom--0.5px translate-x-1/2 transition-opacity"
           :style="{ left: lineLeft, 'background-color': lineColor }"
           :class="{ 'opacity-0': !lineLeft || !showLine }"
         ></div>
