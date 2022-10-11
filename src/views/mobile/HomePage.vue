@@ -1,4 +1,10 @@
 <template>
-  <h1>HomePage for Mobile devices</h1>
-  <h2>Work in progress...</h2>
+  <div>
+    <!-- BG -->
+    <HomeBackground />
+  </div>
 </template>
+
+<script setup>
+import HomeBackground from '../../components/MobileHomePage/HomeBackground.vue'
+</script>
