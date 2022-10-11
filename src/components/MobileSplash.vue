@@ -17,11 +17,12 @@ import MobileLogo from './MobileLogo.vue'
   }
   to {
     opacity: 0%;
+    pointer-events: none;
   }
 }
 
 .splash-bg {
-  /* animation: fade 0.3s forwards ease-out; */
+  animation: fade 0.3s forwards ease-out;
   animation-delay: 1s;
 }
 </style>
