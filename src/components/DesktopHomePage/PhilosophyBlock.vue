@@ -11,7 +11,7 @@
       :class="{ 'border-color-white': props.blue }"
     />
     <pre
-      class="self-end write-vertical-left text-6 leading-normal text-right min-w-120px m-y-4"
+      class="self-end write-vertical-left text-6 leading-normal text-right min-w-120px"
       >{{ props.right }}</pre
     >
   </div>

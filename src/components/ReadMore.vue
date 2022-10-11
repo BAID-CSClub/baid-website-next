@@ -26,7 +26,7 @@
       <span
         class="w-max font-sans tracking-wide"
         :style="{ color: props.color }"
-        >{{ $t('ReadMore') }}</span
+        >{{ $t('HomePage.ReadMore') }}</span
       >
     </div>
   </router-link>

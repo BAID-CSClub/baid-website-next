@@ -1,6 +1,10 @@
 <template>
   <div class="section">
-    <NotFancyTitle cn="学校概况" en="Overview" color="blue"></NotFancyTitle>
+    <NotFancyTitle
+      :cn="$t('AboutUs.Overview.Title')"
+      en="Overview"
+      color="blue"
+    ></NotFancyTitle>
     <pre
       >{{ $t('AboutUs.Overview.Content') }}
     </pre>

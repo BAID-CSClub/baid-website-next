@@ -2,7 +2,7 @@
   <div class="section">
     <div class="flex justify-end">
       <NotFancyTitle
-        cn="活动"
+        :cn="$t('StudentLife.Activities.Title')"
         en="Activities"
         color="red"
         right
@@ -18,29 +18,29 @@
       <div class="relative" style="grid-row-start: span 3">
         <EventsImg
           :image="homeBg1"
-          :name="$t('StudentLife.Events.Event1.Name')"
-          :description="$t('StudentLife.Events.Event1.Description')"
+          :name="$t('StudentLife.Activities.Event1.Name')"
+          :description="$t('StudentLife.Activities.Event1.Description')"
         ></EventsImg>
       </div>
       <div class="relative">
         <EventsImg
           :image="homeBg1"
-          :name="$t('StudentLife.Events.Event1.Name')"
-          :description="$t('StudentLife.Events.Event1.Description')"
+          :name="$t('StudentLife.Activities.Event1.Name')"
+          :description="$t('StudentLife.Activities.Event1.Description')"
         ></EventsImg>
       </div>
       <div class="relative" style="grid-row-start: span 2">
         <EventsImg
           :image="homeBg1"
-          :name="$t('StudentLife.Events.Event1.Name')"
-          :description="$t('StudentLife.Events.Event1.Description')"
+          :name="$t('StudentLife.Activities.Event1.Name')"
+          :description="$t('StudentLife.Activities.Event1.Description')"
         ></EventsImg>
       </div>
       <div class="relative">
         <EventsImg
           :image="homeBg1"
-          :name="$t('StudentLife.Events.Event1.Name')"
-          :description="$t('StudentLife.Events.Event1.Description')"
+          :name="$t('StudentLife.Activities.Event1.Name')"
+          :description="$t('StudentLife.Activities.Event1.Description')"
         ></EventsImg>
       </div>
       <div
@@ -49,15 +49,15 @@
       >
         <EventsImg
           :image="imgBZHSY"
-          :name="$t('StudentLife.Events.Event2.Name')"
-          :description="$t('StudentLife.Events.Event2.Description')"
+          :name="$t('StudentLife.Activities.Event2.Name')"
+          :description="$t('StudentLife.Activities.Event2.Description')"
         ></EventsImg>
       </div>
       <div class="relative">
         <EventsImg
           :image="homeBg1"
-          :name="$t('StudentLife.Events.Event3.Name')"
-          :description="$t('StudentLife.Events.Event3.Description')"
+          :name="$t('StudentLife.Activities.Event3.Name')"
+          :description="$t('StudentLife.Activities.Event3.Description')"
         ></EventsImg>
       </div>
     </div>
