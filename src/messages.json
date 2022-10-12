@@ -118,13 +118,11 @@
       "Accreditation": {
         "Title": "认证",
         "Content": "需不需要一段文字介绍？",
-        "Accs": {
-          "AP": "AP 授权校",
-          "ACT": "ACT GAC 授权校",
-          "CIS": "CIS 认证校",
-          "Cambridge": "剑桥国际学校",
-          "Apple": "Apple 杰出学校"
-        }
+        "AP": "AP 授权校",
+        "ACT": "ACT GAC 授权校",
+        "CIS": "CIS 认证校",
+        "Cambridge": "剑桥国际学校",
+        "Apple": "Apple 杰出学校"
       },
       "Data": {
         "Title": "数据一览",
