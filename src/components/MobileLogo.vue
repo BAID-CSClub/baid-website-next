@@ -3,7 +3,7 @@ import { computed, ref } from 'vue';
   <div
     class="flex items-center justify-center pointer-events-none z-3"
     :class="{
-      'absolute transition-all-500 w-full': animate,
+      'fixed transition-all-500 w-full': animate,
       'top-50% m-t--12.5 h-25': stage < 2,
       'top-2.5': stage === 2,
       '!z-13': !dive
@@ -18,10 +18,10 @@ import { computed, ref } from 'vue';
 
     <div
       class="whitespace-nowrap truncate transition-all-500 w-40"
-      :class="{ '!w-0': stage < 1, '!w-60': stage === 1 }"
+      :class="{ '!w-0': stage < 1, '!w-60': stage === 1, '!text-white': white }"
     >
       <h1
-        class="text-black text-6 m-0 transition-all-300"
+        class="text-6 m-0 transition-all-300"
         :class="{ '!text-3.5': stage === 2 }"
       >
         北京中学国际部
@@ -50,13 +50,25 @@ const dive = ref(false)
 const animate = computed(() => props.animate !== undefined)
 if (!animate.value) stage.value = 2 // 非动画模式直接跳过
 
+const white = ref(false)
+
+function onScroll () {
+  if (window.scrollY > 200) {
+    white.value = false
+  } else {
+    white.value = true
+  }
+}
+
 onMounted(() => {
+  window.addEventListener('scroll', onScroll)
   setTimeout(() => {
     stage.value = 1
     setTimeout(() => {
       stage.value = 2
       setTimeout(() => {
         dive.value = true
+        onScroll()
       }, 300)
     }, 500)
   }, 300)

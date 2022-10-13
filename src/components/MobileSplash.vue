@@ -2,7 +2,7 @@
   <div>
     <slot></slot>
     <MobileLogo animate />
-    <div class="z-10 absolute top-0 splash-bg bg-white h-screen w-screen"></div>
+    <div class="z-10 fixed top-0 splash-bg bg-white h-screen w-screen"></div>
   </div>
 </template>
 
