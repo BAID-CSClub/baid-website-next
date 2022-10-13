@@ -53,7 +53,7 @@ if (!animate.value) stage.value = 2 // 非动画模式直接跳过
 const white = ref(false)
 
 function onScroll () {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 170) {
     white.value = false
   } else {
     white.value = true

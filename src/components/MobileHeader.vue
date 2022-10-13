@@ -3,7 +3,7 @@
     <NavMenu :show="showMenu" @close="showMenu = !showMenu" />
     <!-- BG -->
     <div
-      class="fixed w-screen h-20 transition-colors"
+      class="fixed z-3 w-screen h-20 transition-colors"
       :class="{
         'bg-white shadow-md': bgWhite
       }"
@@ -31,7 +31,7 @@
       </div>
 
       <div
-        class="right-5 top-7.5 fixed w-7 h-7"
+        class="right-5 top-7.5 fixed w-7 h-7 z-3"
         :class="{ '!color-white': !bgWhite }"
       >
         <svg
@@ -65,7 +65,7 @@ const showMenu = ref(false)
 const bgWhite = ref(false)
 
 function onScroll () {
-  if (window.scrollY > 200) {
+  if (window.scrollY > 170) {
     bgWhite.value = true
   } else {
     bgWhite.value = false
