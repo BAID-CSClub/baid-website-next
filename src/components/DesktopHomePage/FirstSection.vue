@@ -10,7 +10,9 @@
     ></div>
 
     <!-- Text / content -->
-    <div class="absolute bottom-15% font-sans left-0 right-0">
+    <div
+      class="absolute bottom-15% font-sans left-0 right-0 pointer-events-none"
+    >
       <div class="max-w-77rem ma p-x-20px">
         <h1 class="text-20 color-white text-shadow-lg m-0">
           欢迎来到北京中学国际部！

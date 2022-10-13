@@ -1,3 +1,4 @@
-h1 {
-  color: red;
+:root {
+  --standard-blue: #103c74;
+  --standard-red: #83050e;
 }
