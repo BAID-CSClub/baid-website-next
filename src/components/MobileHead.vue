@@ -1,15 +1,14 @@
-import { onMounted, onUnmounted, ref } from 'vue';
 <template>
   <section class="w-full relative z-0 h-260px overflow-hidden">
     <div
-      class="absolute w-full h-full flex items-center justify-center"
+      class="absolute w-full h-full flex items-center justify-center bg-cover bg-center"
       :style="{
         'background-image': `url(${props.img})`,
         height: containerHeight + 'px',
         top: top + 'px'
       }"
     >
-      <h1 class="color-white text-12">
+      <h1 class="color-white text-12 font-sans">
         <slot></slot>
       </h1>
     </div>

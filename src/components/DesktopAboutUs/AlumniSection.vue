@@ -177,7 +177,7 @@
 </template>
 
 <script setup>
-import imgAlum1 from '../../assets/images/AboutUs/Alumni/alum1.jpeg'
+import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum 1.jpeg'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'

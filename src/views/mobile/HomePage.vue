@@ -2,7 +2,7 @@
   <div>
     <!-- BG -->
     <HomeBackground />
-    <MobileHead :img="firstImg">首页</MobileHead>
+    <MobileHead :img="firstImg"> {{ $t('views.HomePage') }}</MobileHead>
     <section class="p-3">
       <MobileCard> </MobileCard>
       <MobileCard> </MobileCard>
