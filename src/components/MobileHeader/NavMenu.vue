@@ -99,3 +99,18 @@ const { locale } = useI18n({ useScope: 'global' })
 
 const route = useRoute()
 </script>
+
+<style>
+.fast-fade-enter-active,
+.fast-fade-leave-active {
+  /* transition: opacity 0.5s ease; */
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.fast-fade-enter-from,
+.fast-fade-leave-to {
+  opacity: 0;
+}
+</style>
