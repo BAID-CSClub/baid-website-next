@@ -3,8 +3,10 @@
     class="fixed top-0 w-full h-full transition-all-300 flex z-4"
     :class="{ 'left-0': props.show, '-left-100%': !props.show }"
   >
-    <div class="bg-[var(--standard-blue)] w-70%">
-      <div class="m-y-20 m-x-12">
+    <div
+      class="bg-[var(--standard-blue)] w-70% flex flex-col justify-between p-y-20 p-x-12"
+    >
+      <div class="h-full">
         <li
           v-for="route in routesComputed"
           v-bind:key="route.name"
@@ -17,6 +19,8 @@
             >{{ $t(`views.${route.name}`) }}
           </router-link>
         </li>
+      </div>
+      <div>
         <transition mode="out-in" name="fast-fade">
           <router-link
             class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"
