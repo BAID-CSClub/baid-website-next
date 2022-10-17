@@ -20,7 +20,7 @@
             class="max-h-14 min-h-12 block"
           />
         </div>
-        <p>{{ acc[$i18n.locale].name }}</p>
+        <p>{{ $t(acc.name) }}</p>
       </div>
     </div>
   </div>
@@ -38,48 +38,23 @@ import NotFancyTitle from '../NotFancyTitle.vue'
 const accs = [
   {
     image: imgAP,
-    'zh-CN': {
-      name: 'AP 授权校'
-    },
-    'en-US': {
-      name: 'AP Authorized'
-    }
+    name: 'AboutUs.Accreditation.AP'
   },
   {
     image: imgACT,
-    'zh-CN': {
-      name: 'ACT GAC 授权校'
-    },
-    'en-US': {
-      name: 'ACT GAC Authorized'
-    }
+    name: 'AboutUs.Accreditation.ACT'
   },
   {
     image: imgCIS,
-    'zh-CN': {
-      name: 'CIS 认证校'
-    },
-    'en-US': {
-      name: 'CIS Accredited'
-    }
-  },
-  {
-    image: imgApple,
-    'zh-CN': {
-      name: 'Apple 杰出学校'
-    },
-    'en-US': {
-      name: 'Apple Distinguished School'
-    }
+    name: 'AboutUs.Accreditation.CIS'
   },
   {
     image: imgCam,
-    'zh-CN': {
-      name: '剑桥国际学校'
-    },
-    'en-US': {
-      name: 'Cambridge International School'
-    }
+    name: 'AboutUs.Accreditation.Cambridge'
+  },
+  {
+    image: imgApple,
+    name: 'AboutUs.Accreditation.Apple'
   }
 ]
 </script>
