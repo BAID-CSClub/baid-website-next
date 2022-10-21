@@ -11,24 +11,24 @@
       "ReadMore": "Read More",
       "SecondSection": {
         "Title": "我们是北京中学国际部",
-        "Content": "这有个稍微简单点的介绍"
+        "Content": "北京中学位于北京市朝阳区东坝，是北京市发展最快的地区之一，拥有100余所小学、70余所中学和20余所高中。学校被广泛认为是最有声望和发展最快的高中之一。\n\n东坝一带经济基础多元化，被指定为北京第四个使馆区。北京中学强调高标准，并期望学校中的每个人都为一个更美好的世界而努力。"
       },
       "EducationPhilosophy": {
         "1": {
-          "left": "Motto",
-          "right": "Better Me, Better World."
+          "top": "Motto",
+          "bottom": "Better Me, Better World."
         },
         "2": {
-          "left": "Spirit",
-          "right": "Embrace the harmony and differences."
+          "top": "Spirit",
+          "bottom": "Embrace the harmony and differences."
         },
         "3": {
-          "left": "Key Competency",
-          "right": "Benevolence / Wisdom \n Bravery / Happiness"
+          "top": "Key Competency",
+          "bottom": "Benevolence / Wisdom \nBravery / Happiness"
         },
         "4": {
-          "left": "Cultivation",
-          "right": "To Learn / To Cooperate \n To Live / To Innovate"
+          "top": "Cultivation",
+          "bottom": "To Learn / To Cooperate \nTo Live / To Innovate"
         }
       }
     },
@@ -69,24 +69,24 @@
       "ReadMore": "了解更多",
       "SecondSection": {
         "Title": "我们是北京中学国际部",
-        "Content": "这有个稍微简单点的介绍"
+        "Content": "北京中学位于北京市朝阳区东坝，是北京市发展最快的地区之一，拥有100余所小学、70余所中学和20余所高中。学校被广泛认为是最有声望和发展最快的高中之一。\n\n东坝一带经济基础多元化，被指定为北京第四个使馆区。北京中学强调高标准，并期望学校中的每个人都为一个更美好的世界而努力。"
       },
       "EducationPhilosophy": {
         "1": {
-          "left": "校训",
-          "right": "世界因我更美好\t"
+          "top": "校训",
+          "bottom": "世界因我更美好"
         },
         "2": {
-          "left": "校风",
-          "right": "和而不同\t\t\n乐在其中"
+          "top": "校风",
+          "bottom": "和而不同        \n乐在其中"
         },
         "3": {
-          "left": "核心素养",
-          "right": "仁 / 智 / 勇 / 乐\t"
+          "top": "核心素养",
+          "bottom": "仁 / 智 / 勇 / 乐"
         },
         "4": {
-          "left": "培养路径",
-          "right": "学会学习 / 学会共处\t\n学会生活 / 学会创新"
+          "top": "培养路径",
+          "bottom": "学会学习 / 学会共处        \n学会生活 / 学会创新"
         }
       },
       "AdmissionResults": {

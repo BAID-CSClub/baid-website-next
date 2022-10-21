@@ -1,13 +1,13 @@
 <template>
   <div class="section">
-    <div id="alumni" class="flex-col items-center">
+    <div id="alumni" class="items-center">
       <NotFancyTitle
         :cn="$t('AboutUs.Alumni.Title')"
         en="Alumni"
         color="red"
       ></NotFancyTitle>
       <div class="flex">
-        <div style="flex: 1" class="pr-5 flex pl-8 items-center">
+        <div style="flex: 1" class="mr-5 flex pl-8 items-center">
           <div class="alumni-big-pic-box">
             <img
               :src="alumni[current].image"
@@ -17,9 +17,8 @@
             />
           </div>
         </div>
-        <div style="flex: 2" class="flex-col pl-5">
-          <div class="relative">
-            <!-- Left top quote -->
+        <div style="flex: 2" class="ml-5 swiper-container">
+          <div class="relative mb-10">
             <div class="absolute left-20px top-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +79,6 @@
               </p>
               <p class="text-right">——{{ $t(alumni[current].name) }}</p>
             </div>
-            <!-- Right bottom quote -->
             <div class="absolute right-20px bottom-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -133,39 +131,53 @@
               </svg>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center mt-10">
             <!-- arrow left -->
-            <div>
-              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <div @click="prev">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                width="48"
+                class="block"
+              >
                 <path
                   fill="var(--standard-red)"
-                  d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"
+                  d="m32.75 44-20-20 20-20 2.8 2.85L18.4 24l17.15 17.15Z"
                 />
               </svg>
             </div>
-            <div
-              class="m-4 flex-1"
-              v-for="(alumnus, index) in alumni"
-              :key="alumnus"
+            <Swiper
+              :modules="modules"
+              :loop="true"
+              :slides-per-view="3"
+              :space-between="10"
+              ref="swiper"
+              @swiper="getRef"
             >
-              <img
-                :src="alumnus.image"
-                class="w-full object-cover aspect-3/4 opacity-60 transition-all"
-                :class="{
-                  '!opacity-100': current === index,
-                  'hover:opacity-100 active:brightness-90':
-                    current !== index && !transition
-                }"
-                v-on:click="change(index)"
-                alt="pic1"
-              />
-            </div>
+              <swiper-slide v-for="(alumnus, index) in alumni" :key="alumnus"
+                ><img
+                  :src="alumnus.image"
+                  class="w-full object-cover aspect-3/4 opacity-60 transition-all"
+                  :class="{
+                    '!opacity-100': current === index,
+                    'hover:opacity-100 active:brightness-90':
+                      current !== index && !transition
+                  }"
+                  v-on:click="change(index)"
+                  alt="pic1"
+              /></swiper-slide>
+            </Swiper>
             <!-- arrow right -->
-            <div>
-              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+            <div @click="next">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="48"
+                width="48"
+                class="block"
+              >
                 <path
                   fill="var(--standard-red"
-                  d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                  d="m15.2 43.9-2.8-2.85L29.55 23.9 12.4 6.75l2.8-2.85 20 20Z"
                 />
               </svg>
             </div>
@@ -181,8 +193,15 @@ import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum 1.jpeg'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
-
 import { ref } from 'vue'
+
+import { Navigation, A11y } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+
+import 'swiper/css'
+import 'swiper/css/navigation'
+
+const modules = [Navigation, A11y]
 
 const alumni = [
   {
@@ -215,10 +234,29 @@ function change (index) {
     }, 150)
   }, 300)
 }
+
+const swiper = ref(null)
+function getRef (swiperInstance) {
+  swiper.value = swiperInstance
+}
+
+function prev () {
+  swiper.value.slidePrev()
+}
+function next () {
+  swiper.value.slideNext()
+}
 </script>
 
 <style>
 .alumni-big-pic-box {
   box-shadow: -2rem 2rem var(--standard-red), -0.25rem 0.25rem 0.25rem grey;
+}
+.swiper-container {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
 }
 </style>
