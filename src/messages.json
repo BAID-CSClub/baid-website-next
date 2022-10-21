@@ -15,20 +15,20 @@
       },
       "EducationPhilosophy": {
         "1": {
-          "left": "Motto",
-          "right": "Better Me, Better World."
+          "top": "Motto",
+          "bottom": "Better Me, Better World."
         },
         "2": {
-          "left": "Spirit",
-          "right": "Embrace the harmony and differences."
+          "top": "Spirit",
+          "bottom": "Embrace the harmony and differences."
         },
         "3": {
-          "left": "Key Competency",
-          "right": "Benevolence / Wisdom \nBravery / Happiness"
+          "top": "Key Competency",
+          "bottom": "Benevolence / Wisdom \nBravery / Happiness"
         },
         "4": {
-          "left": "Cultivation",
-          "right": "To Learn / To Cooperate \nTo Live / To Innovate"
+          "top": "Cultivation",
+          "bottom": "To Learn / To Cooperate \nTo Live / To Innovate"
         }
       }
     },
@@ -73,20 +73,20 @@
       },
       "EducationPhilosophy": {
         "1": {
-          "left": "校训",
-          "right": "世界因我更美好"
+          "top": "校训",
+          "bottom": "世界因我更美好"
         },
         "2": {
-          "left": "校风",
-          "right": "和而不同        \n乐在其中"
+          "top": "校风",
+          "bottom": "和而不同        \n乐在其中"
         },
         "3": {
-          "left": "核心素养",
-          "right": "仁 / 智 / 勇 / 乐"
+          "top": "核心素养",
+          "bottom": "仁 / 智 / 勇 / 乐"
         },
         "4": {
-          "left": "培养路径",
-          "right": "学会学习 / 学会共处        \n学会生活 / 学会创新"
+          "top": "培养路径",
+          "bottom": "学会学习 / 学会共处        \n学会生活 / 学会创新"
         }
       },
       "AdmissionResults": {
