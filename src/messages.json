@@ -24,11 +24,11 @@
         },
         "3": {
           "left": "Key Competency",
-          "right": "Benevolence / Wisdom \n Bravery / Happiness"
+          "right": "Benevolence / Wisdom \nBravery / Happiness"
         },
         "4": {
           "left": "Cultivation",
-          "right": "To Learn / To Cooperate \n To Live / To Innovate"
+          "right": "To Learn / To Cooperate \nTo Live / To Innovate"
         }
       }
     },
@@ -74,19 +74,19 @@
       "EducationPhilosophy": {
         "1": {
           "left": "校训",
-          "right": "世界因我更美好\t"
+          "right": "世界因我更美好"
         },
         "2": {
           "left": "校风",
-          "right": "和而不同\t\t\n乐在其中"
+          "right": "和而不同        \n乐在其中"
         },
         "3": {
           "left": "核心素养",
-          "right": "仁 / 智 / 勇 / 乐\t"
+          "right": "仁 / 智 / 勇 / 乐"
         },
         "4": {
           "left": "培养路径",
-          "right": "学会学习 / 学会共处\t\n学会生活 / 学会创新"
+          "right": "学会学习 / 学会共处        \n学会生活 / 学会创新"
         }
       },
       "AdmissionResults": {
