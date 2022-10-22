@@ -7,6 +7,7 @@
         color="red"
       ></NotFancyTitle>
       <div class="flex">
+        <!-- alumnus big pic -->
         <div style="flex: 1" class="mr-5 flex pl-8 items-center">
           <div class="alumni-big-pic-box">
             <img
@@ -189,9 +190,9 @@
 </template>
 
 <script setup>
-import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum 1.jpeg'
+import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum 1.jpeg?webp'
+import imgAlum3 from '../../assets/images/AboutUs/Alumni/Alum 3.jpeg?webp'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
-import homeBg3 from '../../assets/images/homeBg3.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import { ref } from 'vue'
 
@@ -215,7 +216,7 @@ const alumni = [
     quote: 'AboutUs.Alumni.2.Quote'
   },
   {
-    image: homeBg3,
+    image: imgAlum3,
     name: 'AboutUs.Alumni.3.Name',
     quote: 'AboutUs.Alumni.3.Quote'
   }

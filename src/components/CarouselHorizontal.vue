@@ -9,7 +9,10 @@
         :key="img"
       />
     </div>
-    <div class="absolute right-10 bottom-10 flex">
+    <div
+      v-if="props.images.length > 1"
+      class="absolute right-10 bottom-10 flex"
+    >
       <div
         v-for="(img, index) in props.images"
         v-bind:key="img"
