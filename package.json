@@ -1,5 +1,5 @@
 {
-  "name": "BAID Website",
+  "name": "baid_website",
   "private": true,
   "version": "0.0.0",
   "homepage": "preivew.beijing.academy",
@@ -21,6 +21,16 @@
     },
     {
       "name": "Mufeng Li",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Harry Wu",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Muchen Xu",
       "email": "",
       "url": ""
     }
@@ -48,7 +58,7 @@
     "@unocss/preset-uno": "^0.45.30",
     "@unocss/preset-web-fonts": "^0.45.30",
     "@vitejs/plugin-vue": "^3.1.2",
-    "eslint": "^8.25.0",
+    "eslint": "^8.26.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.3.0",
