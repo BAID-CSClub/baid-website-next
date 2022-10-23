@@ -154,8 +154,8 @@
 </template>
 
 <script setup>
-import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum 1.jpeg?webp'
-import imgAlum3 from '../../assets/images/AboutUs/Alumni/Alum 3.jpeg?webp'
+import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum_1.jpeg?webp'
+import imgAlum3 from '../../assets/images/AboutUs/Alumni/Alum_3.jpeg?webp'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import DesktopSwiper from '../DesktopSwiper.vue'

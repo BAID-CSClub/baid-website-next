@@ -15,8 +15,8 @@
 </template>
 
 <script setup>
-import imgHeader1 from '../../assets/images/StudentLife/Header 1.jpg?webp'
-import imgHeader2 from '../../assets/images/StudentLife/Header 2.jpg?webp'
+import imgHeader1 from '../../assets/images/StudentLife/Header_1.jpg?webp'
+import imgHeader2 from '../../assets/images/StudentLife/Header_2.jpg?webp'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import ClubsSection from '../../components/DesktopStudentLife/ClubsSection.vue'

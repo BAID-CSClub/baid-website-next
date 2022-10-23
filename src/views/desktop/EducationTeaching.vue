@@ -21,9 +21,9 @@
 </template>
 <script setup>
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
-import imgHeader1 from '../../assets/images/EducationTeaching/Header 1.jpg?webp'
-import imgHeader2 from '../../assets/images/EducationTeaching/Header 2.jpg?webp'
-import imgHeader3 from '../../assets/images/EducationTeaching/Header 3.jpg?webp'
+import imgHeader1 from '../../assets/images/EducationTeaching/Header_1.jpg?webp'
+import imgHeader2 from '../../assets/images/EducationTeaching/Header_2.jpg?webp'
+import imgHeader3 from '../../assets/images/EducationTeaching/Header_3.jpg?webp'
 
 import CurriculumsIntroduction from '../../components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
 import LearningMethods from '../../components/DesktopEducationTeaching/LearningMethods.vue'

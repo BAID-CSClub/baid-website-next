@@ -39,8 +39,8 @@
 <script setup>
 import imgSummer from '../../assets/images/HomePage/Summer.jpg?webp'
 import imgAutumn from '../../assets/images/HomePage/Autumn.jpg?webp'
-import imgDongba1 from '../../assets/images/HomePage/Dongba1.jpg?webp'
-import imgDongba2 from '../../assets/images/HomePage/Dongba2.jpg?webp'
+import imgDongba1 from '../../assets/images/HomePage/Dongba_1.jpg?webp'
+import imgDongba2 from '../../assets/images/HomePage/Dongba_2.jpg?webp'
 
 import CarouselVertical from '../CarouselVertical.vue'
 
