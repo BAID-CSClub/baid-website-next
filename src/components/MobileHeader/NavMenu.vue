@@ -4,7 +4,7 @@
     :class="{ 'left-0': props.show, '-left-100%': !props.show }"
   >
     <div
-      class="bg-[var(--standard-blue)] w-70% flex flex-col justify-between p-y-20 p-x-12"
+      class="bg-[var(--standard-blue)] w-70% flex flex-col justify-between py-20 px-12"
     >
       <div class="h-full">
         <li

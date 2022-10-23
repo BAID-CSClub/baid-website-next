@@ -7,28 +7,7 @@
       {{ $t('StudentLife.Clubs.Title') }}
     </h1>
     <div class="flex justify-center items-center w-274">
-      <!-- arrow left -->
-      <div @click="prev">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          width="48"
-          class="block"
-        >
-          <path
-            fill="var(--standard-red)"
-            d="m32.75 44-20-20 20-20 2.8 2.85L18.4 24l17.15 17.15Z"
-          />
-        </svg>
-      </div>
-      <Swiper
-        :modules="modules"
-        :loop="true"
-        :slides-per-view="4"
-        :space-between="10"
-        ref="swiper"
-        @swiper="getRef"
-      >
+      <DesktopSwiper slides="4">
         <swiper-slide
           v-for="club in clubs"
           :key="club"
@@ -38,7 +17,7 @@
               (clubImgs = club.images),
               (showInfo = true)
           "
-          class="flex justify-center p-y-3"
+          class="flex justify-center py-3"
         >
           <div
             class="h-220px aspect-1 items-center justify-center flex flex-col"
@@ -56,28 +35,16 @@
             </div>
           </div>
         </swiper-slide>
-      </Swiper>
-      <!-- arrow right -->
-      <div @click="next">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="48"
-          width="48"
-          class="block"
-        >
-          <path
-            fill="var(--standard-red"
-            d="m15.2 43.9-2.8-2.85L29.55 23.9 12.4 6.75l2.8-2.85 20 20Z"
-          />
-        </svg>
-      </div>
-      <ClubInfo
-        v-if="showInfo"
-        @close="showInfo = false"
-        :name="clubName"
-        :description="clubDescription"
-        :images="clubImgs"
-      ></ClubInfo>
+      </DesktopSwiper>
+      <Transition>
+        <ClubInfo
+          v-if="showInfo"
+          @close="showInfo = false"
+          :name="clubName"
+          :description="clubDescription"
+          :images="clubImgs"
+        ></ClubInfo
+      ></Transition>
     </div>
   </div>
 </template>
@@ -92,30 +59,17 @@ import imgSLSD2 from '../../assets/images/StudentLife/Clubs/SLSD/2.jpeg?webp'
 import imgSLSD3 from '../../assets/images/StudentLife/Clubs/SLSD/3.jpeg?webp'
 import imgSLSD4 from '../../assets/images/StudentLife/Clubs/SLSD/4.jpeg?webp'
 
+import imgXHXC from '../../assets/images/StudentLife/Clubs/XHXC/XHXC.png?webp'
+// import imgFrench1 from '../../assets/images/StudentLife/Clubs/French/1.jpeg?webp'
+// import imgFrench2 from '../../assets/images/StudentLife/Clubs/French/2.png?webp'
+
+import imgNS from '../../assets/images/StudentLife/Clubs/NS/NS.png?webp'
+
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import ClubInfo from './ClubInfo.vue'
+import DesktopSwiper from '../DesktopSwiper.vue'
 import { ref } from 'vue'
-
-import { Navigation, A11y } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-
-const modules = [Navigation, A11y]
-const swiper = ref(null)
-
-function getRef (swiperInstance) {
-  swiper.value = swiperInstance
-}
-
-function prev () {
-  swiper.value.slidePrev()
-}
-function next () {
-  swiper.value.slideNext()
-}
+import { SwiperSlide } from 'swiper/vue'
 
 const showInfo = ref(false)
 const clubName = ref(null)
@@ -151,11 +105,19 @@ const clubs = [
     images: frenchImgs
   },
   {
-    logo: homeBg1,
-    bgColor: 'rgba(131, 5, 14, 1)',
+    logo: imgXHXC,
+    bgColor: 'var(--standard-red)',
     color: 'white',
     name: 'StudentLife.Clubs.Club4.Name',
     description: 'StudentLife.Clubs.Club4.Description',
+    images: frenchImgs
+  },
+  {
+    logo: imgNS,
+    bgColor: 'rgba(255, 195, 0, 1)',
+    color: 'white',
+    name: 'StudentLife.Clubs.Club5.Name',
+    description: 'StudentLife.Clubs.Club5.Description',
     images: frenchImgs
   }
 ]
@@ -167,11 +129,20 @@ const clubs = [
   background-repeat: no-repeat;
   background-size: 100% 600px;
 }
-.swiper-container {
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  min-height: 0;
-  min-width: 0;
+.v-enter-active {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.v-leave-active {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }
 </style>

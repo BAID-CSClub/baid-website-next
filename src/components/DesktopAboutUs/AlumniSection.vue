@@ -12,7 +12,7 @@
           <div class="alumni-big-pic-box">
             <img
               :src="alumni[current].image"
-              class="w-full object-cover aspect-3/4 transition-opacity-300 block alumni-big-pic"
+              class="w-full object-cover aspect-3/4 transition-all-300 block alumni-big-pic"
               :class="{ 'op-0': transition }"
               alt="pic1"
             />
@@ -72,7 +72,7 @@
               </svg>
             </div>
             <div
-              class="p-20 transition-opacity-300 h-40 justify-center flex flex-col"
+              class="p-20 transition-all-300 h-40 justify-center flex flex-col"
               :class="{ 'op-0': transition }"
             >
               <p>
@@ -133,29 +133,8 @@
             </div>
           </div>
           <div class="flex items-center mt-10">
-            <!-- arrow left -->
-            <div @click="prev">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="48"
-                width="48"
-                class="block"
-              >
-                <path
-                  fill="var(--standard-red)"
-                  d="m32.75 44-20-20 20-20 2.8 2.85L18.4 24l17.15 17.15Z"
-                />
-              </svg>
-            </div>
-            <Swiper
-              :modules="modules"
-              :loop="true"
-              :slides-per-view="3"
-              :space-between="10"
-              ref="swiper"
-              @swiper="getRef"
-            >
-              <swiper-slide v-for="(alumnus, index) in alumni" :key="alumnus"
+            <DesktopSwiper slides="3"
+              ><swiper-slide v-for="(alumnus, index) in alumni" :key="alumnus"
                 ><img
                   :src="alumnus.image"
                   class="w-full object-cover aspect-3/4 opacity-60 transition-all"
@@ -165,23 +144,8 @@
                       current !== index && !transition
                   }"
                   v-on:click="change(index)"
-                  alt="pic1"
-              /></swiper-slide>
-            </Swiper>
-            <!-- arrow right -->
-            <div @click="next">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="48"
-                width="48"
-                class="block"
-              >
-                <path
-                  fill="var(--standard-red"
-                  d="m15.2 43.9-2.8-2.85L29.55 23.9 12.4 6.75l2.8-2.85 20 20Z"
-                />
-              </svg>
-            </div>
+                  alt="pic1" /></swiper-slide
+            ></DesktopSwiper>
           </div>
         </div>
       </div>
@@ -194,15 +158,10 @@ import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum 1.jpeg?webp'
 import imgAlum3 from '../../assets/images/AboutUs/Alumni/Alum 3.jpeg?webp'
 import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
+import DesktopSwiper from '../DesktopSwiper.vue'
+
 import { ref } from 'vue'
-
-import { Navigation, A11y } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/vue'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-
-const modules = [Navigation, A11y]
+import { SwiperSlide } from 'swiper/vue'
 
 const alumni = [
   {
@@ -235,29 +194,10 @@ function change (index) {
     }, 150)
   }, 300)
 }
-
-const swiper = ref(null)
-function getRef (swiperInstance) {
-  swiper.value = swiperInstance
-}
-
-function prev () {
-  swiper.value.slidePrev()
-}
-function next () {
-  swiper.value.slideNext()
-}
 </script>
 
-<style>
+<style scoped>
 .alumni-big-pic-box {
   box-shadow: -2rem 2rem var(--standard-red), -0.25rem 0.25rem 0.25rem grey;
-}
-.swiper-container {
-  width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  min-height: 0;
-  min-width: 0;
 }
 </style>

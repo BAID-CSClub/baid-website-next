@@ -1,22 +1,15 @@
-.contentArea {
-  max-width: 77rem;
-  margin: 90px auto;
-  padding: 0 20px;
-}
-
 .section {
   max-width: 77rem;
   margin: 0 auto;
   padding: 45px 20px;
 }
-
-.content {
-  font-size: 18px;
-  margin: 0;
-  line-height: 25px;
-  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
+.swiper-container {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
 }
-
 @font-face {
   font-family: 'Latin Modern Roman';
   src: url('../fonts/LMRoman10-Regular.woff2') format('woff2'),
@@ -101,7 +94,7 @@ p,
 pre {
   font-size: 18px;
   margin: 0;
-  line-height: 25px;
+  line-height: 1.5;
   font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
 }
 
@@ -110,18 +103,9 @@ pre {
   word-wrap: break-word;
 }
 
-/* trying to get some snap effect but failed */
-/* main {
-  overflow: scroll;
-  scroll-snap-type: y mandatory;
-}
-
-section {
-  scroll-snap-align: start;
-} */
-
 :root {
   --standard-blue: #103c74;
   --standard-red: #83050e;
+  --swiper-theme-color: #83050e !important;
   --shrink-limit: 750px;
 }

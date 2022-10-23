@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative p-t-4 md:w-min w-full m-y-5"
+    class="relative p-t-4 md:w-min w-full my-5"
     :style="{ 'align-self': props.pos }"
   >
     <h1 class="absolute top-0 left-10 m-0 color-black font-500 font-sans">

@@ -49,7 +49,7 @@
         ></div>
       </div>
       <hr
-        class="h-7 w-3px m-y-0 m-x-5 border-none"
+        class="h-7 w-3px my-0 mx-5 border-none"
         :style="{ 'background-color': color }"
       />
       <p

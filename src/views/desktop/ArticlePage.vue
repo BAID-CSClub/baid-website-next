@@ -17,7 +17,7 @@ import { useRoute, useRouter } from 'vue-router';
             </h1>
           </CarouselHorizontal>
         </section>
-        <section class="contentArea">
+        <section class="section">
           <h1 class="text-10">{{ content?.title }}</h1>
           <p>也许还需要更多的内容，如作者 / 创作时间等？</p>
           <br />

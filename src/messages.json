@@ -55,6 +55,11 @@
         "Title": "Data",
         "Ratio": "1:6"
       }
+    },
+    "StudentLife": {
+      "Clubs": {
+        "Title": "Student Clubs"
+      }
     }
   },
   "zh-CN": {
@@ -117,7 +122,7 @@
       },
       "Accreditation": {
         "Title": "认证",
-        "Content": "需不需要一段文字介绍？",
+        "Content": "北京中学国际部获得美国College Board认证成为AP课程学校；是中国第一家获得CIS认证校资格的公立中学；授权为全球ACT-GAC官方教学及考试中心；是剑桥课程授权学校；被苹果授予“苹果杰出学校”称号。",
         "AP": "AP 授权校",
         "ACT": "ACT GAC 授权校",
         "CIS": "CIS 认证校",
@@ -158,23 +163,39 @@
           "Description": "BA Times，由Livia和Yimo创办的英文创意写作社团。目前以New York Times比赛为框架，带领社员游走在文字、情感、逻辑与想象力共同组成的海洋。开放兼包、表达和松弛是我们的关键词。"
         },
         "Club4": {
-          "Name": "日语社",
-          "Description": ""
+          "Name": "小花小草",
+          "Description": "小花小草由国际部高瑞韩同学和张礼涵同学发起，秉承爱护植物、科普植物的原则，为北京中学植物挂牌。项目旨在帮助广大学生群体和老师群体更深一步了解校园植物，欣赏大自然的美丽与和谐。 本项目另有制作中的植物纪念册，保存北中人的珍贵记忆。"
+        },
+        "Club5": {
+          "Name": "神经科学社",
+          "Description": "北京中学神经科学社是由国际部高瑞韩同学创办的学生自主社团，秉承着互帮互助、深入探索的原则，为对生物/心理学感兴趣的同学们培养神经科学领域的入门知识。社团主要以社长/学生授课、实验室解剖、案例学习以及视频诊断等形式活动，保证每个社员的高参与度以及思维训练。"
         }
       },
       "Activities": {
         "Title": "活动",
         "Event1": {
-          "Name": "活动名称1",
-          "Description": "活动介绍1"
+          "Name": "英文戏剧节",
+          "Description": "英文戏剧节介绍"
         },
         "Event2": {
-          "Name": "北中好声音",
-          "Description": "北中好声音介绍"
+          "Name": "露营",
+          "Description": "露营介绍"
         },
         "Event3": {
-          "Name": "活动名称3",
-          "Description": "活动介绍3"
+          "Name": "“北中杯”",
+          "Description": "“北中杯”介绍"
+        },
+        "Event4": {
+          "Name": "自我挑战营",
+          "Description": "自我挑战营介绍"
+        },
+        "Event5": {
+          "Name": "国际风情周",
+          "Description": "国际风情周介绍"
+        },
+        "Event6": {
+          "Name": "北中好声音",
+          "Description": "北中好声音介绍"
         }
       }
     },
