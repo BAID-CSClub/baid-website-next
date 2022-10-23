@@ -1,7 +1,7 @@
 <template>
-  <div class="h-screen m-t-[-4.25rem] relative overflow-hidden">
+  <div class="h-screen m-t-[-4.25rem] relative overflow-hidden mb-45px">
     <!-- Carousel part -->
-    <div class="absolute top-0 w-full h-screen">
+    <div class="absolute w-full h-screen">
       <CarouselVertical :images="images" />
     </div>
     <!-- Left blue block -->
@@ -13,7 +13,7 @@
     <div
       class="absolute bottom-15% font-sans left-0 right-0 pointer-events-none"
     >
-      <div class="max-w-77rem ma p-x-20px">
+      <div class="max-w-77rem ma px-20px">
         <h1 class="text-20 color-white text-shadow-lg m-0">
           欢迎来到北京中学国际部！
         </h1>

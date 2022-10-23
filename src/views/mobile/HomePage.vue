@@ -19,5 +19,5 @@ import HomeBackground from '../../components/MobileHomePage/HomeBackground.vue'
 import MobileCard from '../../components/MobileCard.vue'
 import MobileHead from '../../components/MobileHead.vue'
 
-import firstImg from '../../assets/images/HomePage/Autumn.jpg'
+import firstImg from '../../assets/images/HomePage/Autumn.jpg?webp'
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="contentArea">
+  <div class="section">
     <NotFancyTitle cn="遇见BAID" en="Meet BAID" color="red" />
     <div class="flex items-center md:flex-row flex-col m-t-20">
       <div class="w-full bg-gray-300 h-60"></div>

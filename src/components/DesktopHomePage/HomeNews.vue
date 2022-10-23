@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <div class="section">
     <div class="flex justify-end">
       <NotFancyTitle cn="新闻" en="News" right color="blue"></NotFancyTitle>
     </div>
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

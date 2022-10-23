@@ -1,7 +1,7 @@
 <template>
-  <div class="seciton">
+  <div>
     <div
-      class="bg-white h-54vw grid m-t-50"
+      class="bg-white h-54vw grid"
       style="
         grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
         grid-template-rows: 1fr 0.7fr 1fr 0.7fr;

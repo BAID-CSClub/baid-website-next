@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="w-full bg-black h-70"
+    class="w-full bg-black h-70 mt-45px"
     :style="{ 'background-image': 'url(' + imgFooter + ')' }"
   >
     <div class="cover w-full h-full">

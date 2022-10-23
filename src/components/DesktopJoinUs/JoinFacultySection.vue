@@ -4,7 +4,7 @@
       <h3>{{ $t('JoinUs.Faculty.Title') }}</h3>
       <pre>{{ $t('JoinUs.Faculty.Content') }}</pre>
       <div
-        class="flex items-center justify-center text-8 m-t-10 p-y-10 bg-[var(--standard-blue)] rd-5 color-white"
+        class="flex items-center justify-center text-8 m-t-10 py-10 bg-[var(--standard-blue)] rd-5 color-white"
       >
         <div style="flex: 3" class="text-center">{{ $t('JoinUs.Join') }}</div>
         <div style="flex: 1" class="text-center">
