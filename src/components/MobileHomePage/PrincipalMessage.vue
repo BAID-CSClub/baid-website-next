@@ -102,6 +102,5 @@
 </template>
 
 <script setup>
-import MobileCard from '../MobileCard.vue'
 import image from '../../assets/images/HomePage/Autumn.jpg'
 </script>
