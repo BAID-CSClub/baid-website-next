@@ -68,6 +68,7 @@ const left = ref(0)
 const leftPx = ref(0)
 
 const emit = defineEmits(['change'])
+
 function change (index) {
   if (current.value !== index && index < props.items.length && index >= 0) {
     current.value = index
@@ -83,7 +84,13 @@ function onTouchStart (e) {
   leftPx.value = 0
 }
 function onTouchMove (e) {
-  leftPx.value = e.touches[0].clientX - startX
+  const left = e.touches[0].clientX - startX
+  if (current.value === 0 && left > 0) return
+  if (current.value === props.items.length - 1 && left < 0) return
+  leftPx.value = Math.min(
+    Math.max(left, -window.innerWidth / 1.5),
+    window.innerWidth / 1.5
+  )
 }
 function onTouchEnd () {
   console.log(leftPx.value, window.innerWidth)

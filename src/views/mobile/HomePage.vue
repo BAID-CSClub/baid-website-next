@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <HomeSplash>
     <!-- BG -->
     <HomeBackground />
     <MobileHead :img="firstImg"> {{ $t('views.HomePage') }}</MobileHead>
@@ -50,7 +50,7 @@
     </section>
     <PrincipalMessage></PrincipalMessage>
     <NewsSection></NewsSection>
-  </div>
+  </HomeSplash>
 </template>
 
 <script setup>
@@ -64,6 +64,7 @@ import MobileTitle from '../../components/MobileTitle.vue'
 import { ref } from 'vue'
 import NewsSection from '../../components/MobileHomePage/NewsSection.vue'
 import PrincipalMessage from '../../components/MobileHomePage/PrincipalMessage.vue'
+import HomeSplash from '../../components/MobileHomePage/HomeSplash.vue'
 
 const swiperBg = ref('white')
 </script>
