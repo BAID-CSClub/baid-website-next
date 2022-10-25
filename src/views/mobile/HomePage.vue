@@ -4,16 +4,28 @@
     <HomeBackground />
     <MobileHead :img="firstImg"> {{ $t('views.HomePage') }}</MobileHead>
     <section class="section">
-      <MobileTitle>欢迎来到北京中学国际部</MobileTitle>
+      <MobileTitle> {{ $t('HomePage.SecondSection.Title') }}</MobileTitle>
       <VideoCard :cover="firstImg"></VideoCard>
       <br />
-      <MobileTitle>办学理念</MobileTitle>
+      <MobileTitle>{{ $t('HomePage.EducationPhilosophy.Title') }}</MobileTitle>
       <MobileCard
         :items="[
-          { title: '校训', content: '一些文字介绍' },
-          { title: '教风', content: '一些文字介绍' },
-          { title: '教风', content: '一些文字介绍' },
-          { title: '教风', content: '一些文字介绍' }
+          {
+            title: $t('HomePage.EducationPhilosophy.1.Top'),
+            content: $t('HomePage.EducationPhilosophy.1.Bottom')
+          },
+          {
+            title: $t('HomePage.EducationPhilosophy.2.Top'),
+            content: $t('HomePage.EducationPhilosophy.2.Bottom')
+          },
+          {
+            title: $t('HomePage.EducationPhilosophy.3.Top'),
+            content: $t('HomePage.EducationPhilosophy.3.Bottom')
+          },
+          {
+            title: $t('HomePage.EducationPhilosophy.4.Top'),
+            content: $t('HomePage.EducationPhilosophy.4.Bottom')
+          }
         ]"
         :bg="swiperBg"
         @change="swiperBg = swiperBg === 'white' ? 'blue' : 'white'"
