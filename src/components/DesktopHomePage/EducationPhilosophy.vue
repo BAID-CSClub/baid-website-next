@@ -11,8 +11,8 @@
       <PhilosophyBlock
         v-for="(key, index) in blocks"
         :key="key"
-        :top="$t(key + '.top')"
-        :bottom="$t(key + '.bottom')"
+        :top="$t(key + '.Top')"
+        :bottom="$t(key + '.Bottom')"
         :blue="index % 2 === 0"
         :class="{ 'm-t-6': index % 2 !== 0, 'm-l-8': index >= 2 }"
       />
