@@ -3,7 +3,7 @@
     <!-- BG -->
     <HomeBackground />
     <MobileHead :img="firstImg"> {{ $t('views.HomePage') }}</MobileHead>
-    <section>
+    <section class="section">
       <MobileTitle>欢迎来到北京中学国际部</MobileTitle>
       <VideoCard :cover="firstImg"></VideoCard>
       <br />
@@ -42,7 +42,11 @@
         </template>
       </MobileCard>
       <MobileTitle>遇见BAID</MobileTitle>
-      <MobileCard>内容存疑</MobileCard>
+      <MobileCard
+        ><div class="flex h-full justify-center items-center text-6">
+          内容存疑
+        </div></MobileCard
+      >
     </section>
     <PrincipalMessage></PrincipalMessage>
     <NewsSection></NewsSection>

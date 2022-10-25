@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="section">
     <MobileTitle>新闻</MobileTitle>
   </section>
 </template>
