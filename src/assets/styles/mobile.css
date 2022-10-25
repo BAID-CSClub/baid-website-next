@@ -2,3 +2,6 @@
   --standard-blue: #103c74;
   --standard-red: #83050e;
 }
+.section {
+  padding: 0.75rem;
+}
