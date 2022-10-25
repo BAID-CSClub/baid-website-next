@@ -154,9 +154,9 @@
 </template>
 
 <script setup>
-import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum 1.jpeg?webp'
-import imgAlum3 from '../../assets/images/AboutUs/Alumni/Alum 3.jpeg?webp'
-import homeBg2 from '../../assets/images/homeBg2.jpg?webp'
+import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum_1.jpeg?webp'
+import imgAlum2 from '../../assets/images/AboutUs/Alumni/Alum_2.jpeg?webp'
+import imgAlum3 from '../../assets/images/AboutUs/Alumni/Alum_3.jpeg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import DesktopSwiper from '../DesktopSwiper.vue'
 
@@ -170,7 +170,7 @@ const alumni = [
     quote: 'AboutUs.Alumni.1.Quote'
   },
   {
-    image: homeBg2,
+    image: imgAlum2,
     name: 'AboutUs.Alumni.2.Name',
     quote: 'AboutUs.Alumni.2.Quote'
   },

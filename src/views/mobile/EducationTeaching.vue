@@ -11,5 +11,5 @@
 <script setup>
 import MobileHead from '../../components/MobileHead.vue'
 
-import imgHeader1 from '../../assets/images/EducationTeaching/Header 1.jpg?webp'
+import imgHeader1 from '../../assets/images/EducationTeaching/Header_1.jpg?webp'
 </script>

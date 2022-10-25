@@ -50,6 +50,12 @@
 </template>
 
 <script setup>
+import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import ClubInfo from './ClubInfo.vue'
+import DesktopSwiper from '../DesktopSwiper.vue'
+import { ref } from 'vue'
+import { SwiperSlide } from 'swiper/vue'
+
 import imgFrenchLogo from '../../assets/images/StudentLife/Clubs/French/French.svg'
 import imgFrench1 from '../../assets/images/StudentLife/Clubs/French/1.jpeg?webp'
 import imgFrench2 from '../../assets/images/StudentLife/Clubs/French/2.png?webp'
@@ -60,16 +66,8 @@ import imgSLSD3 from '../../assets/images/StudentLife/Clubs/SLSD/3.jpeg?webp'
 import imgSLSD4 from '../../assets/images/StudentLife/Clubs/SLSD/4.jpeg?webp'
 
 import imgXHXC from '../../assets/images/StudentLife/Clubs/XHXC/XHXC.png?webp'
-// import imgFrench1 from '../../assets/images/StudentLife/Clubs/French/1.jpeg?webp'
-// import imgFrench2 from '../../assets/images/StudentLife/Clubs/French/2.png?webp'
 
 import imgNS from '../../assets/images/StudentLife/Clubs/NS/NS.png?webp'
-
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
-import ClubInfo from './ClubInfo.vue'
-import DesktopSwiper from '../DesktopSwiper.vue'
-import { ref } from 'vue'
-import { SwiperSlide } from 'swiper/vue'
 
 const showInfo = ref(false)
 const clubName = ref(null)
@@ -118,6 +116,14 @@ const clubs = [
     color: 'white',
     name: 'StudentLife.Clubs.Club5.Name',
     description: 'StudentLife.Clubs.Club5.Description',
+    images: frenchImgs
+  },
+  {
+    logo: homeBg1,
+    bgColor: 'rgba(255,251,243,1)',
+    color: 'rgba(18,42,43,1)',
+    name: 'StudentLife.Clubs.Club6.Name',
+    description: 'StudentLife.Clubs.Club6.Description',
     images: frenchImgs
   }
 ]
