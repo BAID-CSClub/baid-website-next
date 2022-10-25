@@ -1,9 +1,10 @@
 <template>
   <div
-    class="rounded-4 h-35 w-full shadow-lg box-border overflow-hidden relative transition-colors m-y-3"
+    class="rounded-4 min-h-35 w-full shadow-lg box-border overflow-hidden relative transition-colors m-y-3"
     :class="{
-      'bg-[var(--standard-blue)]': props.bg === 'blue',
-      'bg-white  border-[var(--standard-blue)]': props.bg === 'white',
+      'bg-[var(--standard-blue)] color-white': props.bg === 'blue',
+      'bg-white color-[var(--standard-blue)] border-[var(--standard-blue)]':
+        props.bg === 'white',
       'border-solid': props.border
     }"
   >

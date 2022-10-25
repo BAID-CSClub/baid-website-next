@@ -1,7 +1,7 @@
 <template>
   <MobileCard :border="false">
     <div
-      class="flex items-center justify-center w-full h-full"
+      class="flex items-center justify-center w-full h-35"
       :style="{ background: `url(${props.cover})` }"
     >
       <div class="w-20 h-20 color-white">

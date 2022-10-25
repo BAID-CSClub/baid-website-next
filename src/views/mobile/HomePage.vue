@@ -43,7 +43,7 @@
       </MobileCard>
       <MobileTitle>遇见BAID</MobileTitle>
       <MobileCard
-        ><div class="flex h-full justify-center items-center text-6">
+        ><div class="flex h-35 justify-center items-center text-6">
           内容存疑
         </div></MobileCard
       >
