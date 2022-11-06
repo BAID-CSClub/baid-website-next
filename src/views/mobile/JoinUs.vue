@@ -1,5 +1,5 @@
 <template>
-  <section class="section snap-y snap-mandatory h-screen overflow-scroll">
+  <section class="section h-screen">
     <!-- <MobileHead :img="imgHeader1"> {{ $t('views.JoinUs') }}</MobileHead> -->
     <!-- <section class="p-3">TO-DO: Content Here</section> -->
     <div class="flex flex-col justify-center items-center h-screen snap-start">
