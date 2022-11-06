@@ -3,5 +3,23 @@
   --standard-red: #83050e;
 }
 .section {
-  padding: 0.75rem;
+  padding: 1rem;
+}
+
+h2 {
+  font-family: 'Alibaba PuHuiTi M', sans-serif;
+  font-weight: 500;
+}
+
+p,
+pre {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }

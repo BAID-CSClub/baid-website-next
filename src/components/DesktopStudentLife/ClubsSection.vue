@@ -69,6 +69,8 @@ import imgXHXC from '../../assets/images/StudentLife/Clubs/XHXC/XHXC.png?webp'
 
 import imgNS from '../../assets/images/StudentLife/Clubs/NS/NS.png?webp'
 
+import imgLY from '../../assets/images/StudentLife/Clubs/LY/LY.png?webp'
+
 const showInfo = ref(false)
 const clubName = ref(null)
 const clubDescription = ref(null)
@@ -119,7 +121,7 @@ const clubs = [
     images: frenchImgs
   },
   {
-    logo: homeBg1,
+    logo: imgLY,
     bgColor: 'rgba(255,251,243,1)',
     color: 'rgba(18,42,43,1)',
     name: 'StudentLife.Clubs.Club6.Name',
