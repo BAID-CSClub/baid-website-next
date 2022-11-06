@@ -17,7 +17,7 @@
       <div class="section important:p-b-0">
         <NotFancyTitle
           :cn="$t('AboutUs.Data.Title')"
-          en="Data"
+          :en="$t({ key: 'AboutUs.Data.Title', locale: 'en-US' })"
           color="blue"
         ></NotFancyTitle>
       </div>
