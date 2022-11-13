@@ -3,5 +3,35 @@
   --standard-red: #83050e;
 }
 .section {
-  padding: 0.75rem;
+  padding: 1rem;
+}
+
+h1 {
+  font-family: 'Latin Modern Roman', 'Alibaba PuHuiTi 2.0 55', sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-family: 'Alibaba PuHuiTi M', sans-serif;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: 'Open Sans', 'Alibaba PuHuiTi M', sans-serif;
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+p,
+pre {
+  font-size: 18px;
+  margin: 0;
+  line-height: 1.5;
+  font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
