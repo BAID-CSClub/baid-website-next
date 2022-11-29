@@ -9,15 +9,12 @@
     <section id="alumni"><AlumniSection /></section>
     <section id="accreditation" class="bg-gray-200">
       <AccreditationSection />
-      <!-- <div class="bg-[var(--standard-blue)]">
-        <TestCenterSection />
-      </div> -->
     </section>
     <section id="data">
       <div class="section important:p-b-0">
         <NotFancyTitle
           :cn="$t('AboutUs.Data.Title')"
-          :en="$t({ key: 'AboutUs.Data.Title', locale: 'en-US' })"
+          en="Data"
           color="blue"
         ></NotFancyTitle>
       </div>
