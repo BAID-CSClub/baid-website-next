@@ -13,7 +13,7 @@
 
 <script setup>
 import open from '../../components/MobileEducationTeaching/EducationTeachingOpen.vue'
-import Curriculums from '../../components/MobileEducationTeaching/Curriculums.vue'
+import Curriculums from '../../components/MobileEducationTeaching/CurriculumsInroduction.vue'
 import LearningMethod from '../../components/MobileEducationTeaching/LearningMethod.vue'
 import StudentGuidence from '../../components/MobileEducationTeaching/StudentGuidence.vue'
 import WonderfulMoment from '../../components/MobileEducationTeaching/Wonderful moment.vue'
