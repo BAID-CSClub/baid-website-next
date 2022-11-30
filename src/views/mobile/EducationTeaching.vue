@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <open class="absolute"></open>
     <section class="p-3 snap-y snap-proximity overflow-y-scroll">
