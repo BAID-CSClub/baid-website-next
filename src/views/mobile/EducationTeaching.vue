@@ -16,5 +16,5 @@ import open from '../../components/MobileEducationTeaching/EducationTeachingOpen
 import Curriculums from '../../components/MobileEducationTeaching/CurriculumsInroduction.vue'
 import LearningMethod from '../../components/MobileEducationTeaching/LearningMethod.vue'
 import StudentGuidence from '../../components/MobileEducationTeaching/StudentGuidence.vue'
-import WonderfulMoment from '../../components/MobileEducationTeaching/Wonderful moment.vue'
+import WonderfulMoment from '../../components/MobileEducationTeaching/WonderfulMoment.vue'
 </script>
