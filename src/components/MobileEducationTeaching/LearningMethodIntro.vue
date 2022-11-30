@@ -15,4 +15,5 @@
 <script setup>
 import { defineProps } from 'vue'
 const props = defineProps(['description', 'bigtitle', 'display', 'image'])
+console.log(props)
 </script>
