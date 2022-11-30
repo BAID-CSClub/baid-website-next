@@ -9,9 +9,9 @@
       </div>
     </div>
     <div class="text-4  w-90% p-t-4 m-t--4 overflow-y-clip" :class="{'h-85vh CollapseOut':IsCollapse,'h-60vh CollapseIn':!IsCollapse}">
-      <div class="absolute h-60vh w-95vw bg-gradient-to-b from-transparent to-white translate-y-1 z-1"  
-        :class="{'overflow-y-clip h-80vh CollapseOut':IsCollapse,'h-60vh CollapseIn':!IsCollapse}" v-if="IsCollapse"></div>      
-      <div class="flex m-b-10" 
+      <div class="absolute h-60vh w-95vw bg-gradient-to-b from-transparent to-white translate-y-1 z-1"
+        :class="{'overflow-y-clip h-80vh CollapseOut':IsCollapse,'h-60vh CollapseIn':!IsCollapse}" v-if="IsCollapse"></div>
+      <div class="flex m-b-10"
       v-for = "items in Curriculums"
       :key = "items">
         <div class="w-20%">
@@ -25,7 +25,7 @@
     <div class="w-full flex justify-center m-t--10">
       <img :src="arrow" class="z-2" :class="{'scale-y--100':!IsCollapse}" alt="Bg" @click="IsCollapse=!IsCollapse" />
     </div>
-    
+
   </div>
 </template>
 
@@ -60,9 +60,8 @@ import number2 from '../../assets/images/标题序号2.svg'
 import number3 from '../../assets/images/标题序号3.svg'
 import arrow from '../../assets/images/arrow.svg'
 
-import { ref } from "vue";
-let IsCollapse=ref(true)
-let CollapseHeight=ref(70)
+import { ref } from 'vue'
+const IsCollapse = ref(true)
 
 const Curriculums = [
   {
@@ -85,4 +84,3 @@ const Curriculums = [
   }
 ]
 </script>
-

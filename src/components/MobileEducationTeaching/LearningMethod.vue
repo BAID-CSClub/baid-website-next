@@ -9,16 +9,16 @@
       </div>
     </div>
     <div class="grid grid-flow-row grid-cols-2 grid-rows-2 ">
-        <div class="b-4 b-[var(--standard-red)] b-rd-4 w-95% text-10 font-1000 text-white m-1.5 text-center box-border block p-l-9 p-r-9" 
-        style="background:url(https://img.js.design/assets/publicImg/256D963A1093758.png);background-size:cover;" 
+        <div class="b-4 b-[var(--standard-red)] b-rd-4 w-95% text-10 font-1000 text-white m-1.5 text-center box-border block p-l-9 p-r-9"
+        style="background:url(https://img.js.design/assets/publicImg/256D963A1093758.png);background-size:cover;"
         @click="bigtitle=passage.bigtitle;description=passage.description;images=passage.images;introdisplay=true"
-        v-for="passage in LeaningMethods" 
+        v-for="passage in LeaningMethods"
         :key="passage">
           {{passage.title}}
         </div>
     </div>
-    <Intro 
-    :description='description' 
+    <Intro
+    :description='description'
     :bigtitle="bigtitle"
     :display="introdisplay"
     :image="images"
@@ -31,10 +31,10 @@ import { ref } from 'vue'
 import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import Intro from './LearningMethodIntro.vue'
 
-let bigtitle=ref("标题")
-let description=ref("默认介绍")
-let images=ref('https://img.js.design/assets/smartFill/img322164da746310.jpg')
-let introdisplay=ref(false)
+const bigtitle = ref('标题')
+const description = ref('默认介绍')
+const images = ref('https://img.js.design/assets/smartFill/img322164da746310.jpg')
+const introdisplay = ref(false)
 const LeaningMethods = [
   {
     title: '标一\
@@ -70,4 +70,3 @@ const LeaningMethods = [
   }
 ]
 </script>
-

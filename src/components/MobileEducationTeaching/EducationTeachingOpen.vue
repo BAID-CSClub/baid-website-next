@@ -6,6 +6,6 @@
 </template>
 
 <script setup>
-  import { ref } from "vue";
-  let display=ref(true)
+import { ref } from 'vue'
+const display = ref(true)
 </script>
