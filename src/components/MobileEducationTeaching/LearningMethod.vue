@@ -37,33 +37,25 @@ const images = ref('https://img.js.design/assets/smartFill/img322164da746310.jpg
 const introdisplay = ref(false)
 const LeaningMethods = [
   {
-    title: '标一\
-            标一\
-            标一',
+    title: '标一标一标一',
     bigtitle: '大标题一大标题大标题大标题',
     description: '水水水水水水水水水水水水水水水水水水水',
     images: homeBg1
   },
   {
-    title: '表二\
-            表二\
-            表二',
+    title: '表二表二表二',
     bigtitle: '大标题二大标题大标题大标题',
     description: '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
     images: 'https://img.js.design/assets/smartFill/img322164da746310.jpg'
   },
   {
-    title: '表三\
-            表三\
-            表三',
+    title: '表三表三表三',
     bigtitle: '大标题三大标题大标题大标题',
     description: '吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼',
     images: 'https://img.js.design/assets/publicImg/256D963A1093758.png'
   },
   {
-    title: '标识\
-            标识\
-            标识',
+    title: '标识标识标识',
     bigtitle: '大标题四大标题大标题大标题',
     description: '你你你你你你你你你你你你你',
     images: homeBg1
