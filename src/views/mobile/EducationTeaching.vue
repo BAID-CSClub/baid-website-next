@@ -17,7 +17,7 @@ import open from '../../components/MobileEducationTeaching/EducationTeachingOpen
 import Curriculums from '../../components/MobileEducationTeaching/Curriculums.vue'
 import LearningMethod from '../../components/MobileEducationTeaching/LearningMethod.vue'
 import StudentGuidence from '../../components/MobileEducationTeaching/StudentGuidence.vue'
-import WonderfulMoment from '../../components/MobileEducationTeaching/Wonderful moment.vue'
+import WonderfulMoment from '../../components/MobileEducationTeaching/WonderfulMoment.vue'
 import MobileCard from '../../components/MobileCard.vue'
 import MobileHead from '../../components/MobileHead.vue'
 import firstImg from '../../assets/images/HomePage/Autumn.jpg'
