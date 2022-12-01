@@ -44,7 +44,12 @@ export const routes = [
   {
     path: '/:lang(zh-CN|en-US)/join',
     name: 'JoinUs',
-    component: () => import(`./views/${clientType}/JoinUs.vue`)
+    component: () => import(`./views/${clientType}/JoinUs.vue`),
+    meta: {
+      header: {
+        alwaysFill: true
+      }
+    }
   },
   {
     path: '/:lang(zh-CN|en-US)/articles/:year/:month/:day/:title',

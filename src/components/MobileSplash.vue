@@ -1,7 +1,7 @@
 <template>
   <div>
     <slot></slot>
-    <MobileLogo :animate="false" />
+    <MobileLogo :animate="show" />
     <div
       v-if="show"
       class="z-4 fixed top-0 splash-bg bg-white h-screen w-screen"

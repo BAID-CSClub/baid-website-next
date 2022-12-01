@@ -1,6 +1,5 @@
 <template>
   <div class="w-full max-h-screen">
-    <HomeBackground />
     <MobileHead :img="imgHeader1"> {{ $t('views.StudentLife') }}</MobileHead>
     <section class="w-full h-[calc(100vh-260px)]">
       <div

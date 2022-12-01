@@ -1,32 +1,47 @@
 <template>
   <div
-    class="flex items-center justify-center pointer-events-none z-3 fixed w-full transition-all-500"
+    class="flex items-center justify-center pointer-events-none z-3 fixed w-full"
     :class="{
       'top-50% m-t--12.5 h-25': stage < 2,
       'top-2.5': stage === 2,
-      '!z-13': !dive
+      '!z-13': !dive,
+      'transition-all-500': props.animate
     }"
   >
     <img
       src="../assets/images/logoNormal.png?webp"
       alt=""
-      class="w-25 h-25 transition-all-500"
-      :class="{ '!w-15 !h-15': stage === 2 }"
+      class="w-25 h-25"
+      :class="{
+        '!w-15 !h-15': stage === 2,
+        'transition-all-500': props.animate
+      }"
     />
 
     <div
-      class="whitespace-nowrap truncate transition-all-500 w-40"
-      :class="{ '!w-0': stage < 1, '!w-60': stage === 1, '!text-white': white }"
+      class="whitespace-nowrap truncate w-40"
+      :class="{
+        '!w-0': stage < 1,
+        '!w-60': stage === 1,
+        '!text-white': white,
+        'transition-all-500': props.animate
+      }"
     >
       <h1
-        class="text-6 m-0 transition-all-300"
-        :class="{ '!text-3.5': stage === 2 }"
+        class="text-6 m-0"
+        :class="{
+          '!text-3.5': stage === 2,
+          'transition-all-500': props.animate
+        }"
       >
         北京中学国际部
       </h1>
       <p
-        class="font-sans transition-all-300 text-3 m-b-0 m-t-1"
-        :class="{ '!text-2 !m-t-0.5': stage === 2 }"
+        class="font-sans text-3 m-b-0 m-t-1"
+        :class="{
+          '!text-2 !m-t-0.5': stage === 2,
+          'transition-all-500': props.animate
+        }"
       >
         Beijing Academy International Department
       </p>
@@ -48,13 +63,6 @@ const stage = ref(0)
 const dive = ref(false)
 // dive: z-13 => z-3
 
-if (!props.animate) {
-  stage.value = 2
-  dive.value = true
-} // 非动画模式直接跳过
-
-console.log('props.animate', props.animate)
-
 const white = ref(false)
 
 function onScroll () {
@@ -70,8 +78,11 @@ function onScroll () {
 }
 router.afterEach(onScroll)
 
-onMounted(() => {
+onMounted(async () => {
   window.addEventListener('scroll', onScroll)
+  // Wait for router
+  await router.isReady()
+  console.log('router.isReady', 'animate', props.animate)
   if (props.animate) {
     setTimeout(() => {
       stage.value = 1
@@ -83,6 +94,9 @@ onMounted(() => {
         }, 300)
       }, 500)
     }, 300)
+  } else {
+    stage.value = 2
+    dive.value = true
   }
 })
 </script>
