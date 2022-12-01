@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-[calc(100vh-5rem)] mt-20">
-    <SplashBlock title="学生社团" href="#" :image="camping"></SplashBlock>
-    <SplashBlock title="特色活动" href="#" :image="archery"></SplashBlock>
+    <SplashBlock title="学生社团" :image="camping"></SplashBlock>
+    <SplashBlock title="特色活动" :image="archery"></SplashBlock>
   </div>
 </template>
 

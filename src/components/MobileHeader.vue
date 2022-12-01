@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="ready">
     <NavMenu :show="showMenu" @close="showMenu = !showMenu" />
     <!-- BG -->
     <div
@@ -65,6 +65,7 @@ import NavMenu from './MobileHeader/NavMenu.vue'
 const route = useRoute()
 const router = useRouter()
 
+const ready = ref(false)
 const showMenu = ref(false)
 
 const bgWhite = ref(false)
@@ -80,8 +81,12 @@ function onScroll () {
   }
 }
 router.afterEach(onScroll)
-onMounted(() => {
+onMounted(async () => {
   window.addEventListener('scroll', onScroll)
+  await router.isReady()
+  setTimeout(() => {
+    ready.value = true
+  }, 500) // Fine, a stupid and dirty hack. But it works.
 })
 </script>
 

@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="ready"
     class="flex items-center justify-center pointer-events-none z-3 fixed w-full"
     :class="{
       'top-50% m-t--12.5 h-25': stage < 2,
@@ -55,6 +56,8 @@ import { useRoute, useRouter } from 'vue-router'
 const route = useRoute()
 const router = useRouter()
 const props = defineProps(['animate'])
+const ready = ref(false)
+
 const stage = ref(0)
 // 0: 仅logo 中心
 // 1: logo + 文字 中心
@@ -84,6 +87,7 @@ onMounted(async () => {
   await router.isReady()
   console.log('router.isReady', 'animate', props.animate)
   if (props.animate) {
+    ready.value = true
     setTimeout(() => {
       stage.value = 1
       setTimeout(() => {
@@ -97,6 +101,9 @@ onMounted(async () => {
   } else {
     stage.value = 2
     dive.value = true
+    setTimeout(() => {
+      ready.value = true
+    }, 500) // Similar to header
   }
 })
 </script>

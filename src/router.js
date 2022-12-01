@@ -66,7 +66,6 @@ export const routes = [
     name: 'NotFound',
     component: () => import(`./views/${clientType}/NotFound.vue`)
   }
-  // TODO: Add your routes here
 ]
 
 export default createRouter({
