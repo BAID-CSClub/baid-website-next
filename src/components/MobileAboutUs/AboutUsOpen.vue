@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed bg-[var(--standard-red)] w-100vw h-100vh z-100 text-white transition-4 v-motion-fade top-0 z--1"
+    class="fixed bg-[var(--standard-blue)] w-100vw h-100vh z-100 text-white transition-4 v-motion-fade top-0 z--1"
     v-show="display"
   >
     <div
@@ -12,7 +12,7 @@
         text-stroke: 2vw white;
       "
     >
-      教育<br />教学
+      关于<br />我们
     </div>
     <div
       class="absolute b-1.5 p-3 left-50% translate--50% bottom-15 animate-pulse"
