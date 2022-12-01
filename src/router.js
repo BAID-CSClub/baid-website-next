@@ -39,7 +39,12 @@ export const routes = [
   {
     path: '/:lang(zh-CN|en-US)/studentLife',
     name: 'StudentLife',
-    component: () => import(`./views/${clientType}/StudentLife.vue`)
+    component: () => import(`./views/${clientType}/StudentLife.vue`),
+    meta: {
+      header: {
+        alwaysFill: true
+      }
+    }
   },
   {
     path: '/:lang(zh-CN|en-US)/join',

@@ -3,7 +3,7 @@
     <NavMenu :show="showMenu" @close="showMenu = !showMenu" />
     <!-- BG -->
     <div
-      class="fixed z-3 w-screen h-20 transition-colors"
+      class="fixed z-3 top-0 w-screen h-20 transition-colors"
       :class="{
         'bg-white shadow-md': bgWhite
       }"
