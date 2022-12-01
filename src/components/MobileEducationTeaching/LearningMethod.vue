@@ -4,25 +4,38 @@
       <div class="text-[var(--standard-red)] font-black text-14">
         自主探索<br />多样的<br />学习方式
       </div>
-      <div class="font-black text-gray-300 text-8 absolute top-12 z--1 lh-16 text-black">
+      <div
+        class="font-black text-gray-300 text-8 absolute top-12 z--1 lh-16 text-black"
+      >
         Learning<br />Method
       </div>
     </div>
-    <div class="grid grid-flow-row grid-cols-2 grid-rows-2 ">
-        <div class="b-4 b-[var(--standard-red)] b-rd-4 w-95% text-10 font-1000 text-white m-1.5 text-center box-border block p-l-9 p-r-9"
-        style="background:url(https://img.js.design/assets/publicImg/256D963A1093758.png);background-size:cover;"
-        @click="bigtitle=passage.bigtitle;description=passage.description;images=passage.images;introdisplay=true"
+    <div class="grid grid-flow-row grid-cols-2 grid-rows-2">
+      <div
+        class="b-4 b-[var(--standard-red)] b-rd-4 w-95% text-10 font-1000 text-white m-1.5 text-center box-border block p-l-9 p-r-9"
+        style="
+          background: url(https://img.js.design/assets/publicImg/256D963A1093758.png);
+          background-size: cover;
+        "
+        @click="
+          ;(bigtitle = passage.bigtitle),
+            (description = passage.description),
+            (images = passage.images),
+            (introdisplay = true)
+        "
         v-for="passage in LeaningMethods"
-        :key="passage">
-          {{passage.title}}
-        </div>
+        :key="passage"
+      >
+        {{ passage.title }}
+      </div>
     </div>
     <Intro
-    :description='description'
-    :bigtitle="bigtitle"
-    :display="introdisplay"
-    :image="images"
-    @onExit="introdisplay = false"></Intro>
+      :description="description"
+      :bigtitle="bigtitle"
+      :display="introdisplay"
+      :image="images"
+      @onExit="introdisplay = false"
+    ></Intro>
   </div>
 </template>
 
@@ -33,7 +46,9 @@ import Intro from './LearningMethodIntro.vue'
 
 const bigtitle = ref('标题')
 const description = ref('默认介绍')
-const images = ref('https://img.js.design/assets/smartFill/img322164da746310.jpg')
+const images = ref(
+  'https://img.js.design/assets/smartFill/img322164da746310.jpg'
+)
 const introdisplay = ref(false)
 const LeaningMethods = [
   {
