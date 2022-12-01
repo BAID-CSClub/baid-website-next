@@ -1,6 +1,5 @@
 <template>
   <div>
-    <HomeBackground />
     <MobileHead :img="imgHeader1"> {{ $t('views.AboutUs') }}</MobileHead>
     <section class="section">
       <MobileTitle>学校概括</MobileTitle>
@@ -202,4 +201,7 @@ import MobileHead from '../../components/MobileHead.vue'
 import MobileCard from '../../components/MobileCard.vue'
 import MobileTitle from '../../components/MobileTitle.vue'
 import imgHeader1 from '../../assets/images/AboutUs/Header_1.jpg?webp'
+
+import { ref } from 'vue'
+const swiperBg = ref('white')
 </script>

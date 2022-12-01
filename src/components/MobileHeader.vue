@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div v-if="ready">
     <NavMenu :show="showMenu" @close="showMenu = !showMenu" />
     <!-- BG -->
     <div
-      class="fixed z-3 w-screen h-20 transition-colors"
+      class="fixed z-3 top-0 w-screen h-20 transition-colors"
       :class="{
         'bg-white shadow-md': bgWhite
       }"
@@ -13,7 +13,7 @@
         <div
           class="line"
           :class="{
-            'rotate-45 translate-y-1.8 !bg-white': showMenu,
+            'rotate-45 translate-y-2 !bg-white': showMenu,
             '!bg-white': !bgWhite
           }"
         ></div>
@@ -24,7 +24,7 @@
         <div
           class="line"
           :class="{
-            'rotate--45 translate-y--1.8 !bg-white': showMenu,
+            'rotate--45 translate-y--2 !bg-white': showMenu,
             '!bg-white': !bgWhite
           }"
         ></div>
@@ -59,21 +59,34 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import NavMenu from './MobileHeader/NavMenu.vue'
+
+const route = useRoute()
+const router = useRouter()
+
+const ready = ref(false)
 const showMenu = ref(false)
 
 const bgWhite = ref(false)
-
 function onScroll () {
+  if (route.meta.header?.alwaysFill) {
+    bgWhite.value = true
+    return
+  }
   if (window.scrollY > 170) {
     bgWhite.value = true
   } else {
     bgWhite.value = false
   }
 }
-
-onMounted(() => {
+router.afterEach(onScroll)
+onMounted(async () => {
   window.addEventListener('scroll', onScroll)
+  await router.isReady()
+  setTimeout(() => {
+    ready.value = true
+  }, 500) // Fine, a stupid and dirty hack. But it works.
 })
 </script>
 

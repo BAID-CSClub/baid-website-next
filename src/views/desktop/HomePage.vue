@@ -26,22 +26,19 @@
 </template>
 
 <script setup>
+// Modules
+import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+// Components
 import FirstSection from '../../components/DesktopHomePage/FirstSection.vue'
 import SecondSection from '../../components/DesktopHomePage/SecondSection.vue'
 import EducationPhilosophy from '../../components/DesktopHomePage/EducationPhilosophy.vue'
 import QuoteMessage from '../../components/QuoteMessage.vue'
 import AdmissionResults from '../../components/DesktopHomePage/AdmissionResults.vue'
 import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
-import { useRoute, useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
+// Assets
 import avatar from '../../assets/images/homeBg1.jpg'
-import { ref } from 'vue'
-const data = ref({
-  news: []
-})
-fetch('/data/HomePage.json').then(async (resp) => {
-  data.value = await resp.json()
-})
+import data from '../../data/HomePage'
 
 const { locale } = useI18n({ useScope: 'global' })
 

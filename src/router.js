@@ -27,17 +27,34 @@ export const routes = [
   {
     path: '/:lang(zh-CN|en-US)/education',
     name: 'EducationTeaching',
-    component: () => import(`./views/${clientType}/EducationTeaching.vue`)
+    component: () => import(`./views/${clientType}/EducationTeaching.vue`),
+    meta: {
+      // No thing to do with header
+      noSplash: true,
+      header: {
+        alwaysFill: true
+      }
+    }
   },
   {
     path: '/:lang(zh-CN|en-US)/studentLife',
     name: 'StudentLife',
-    component: () => import(`./views/${clientType}/StudentLife.vue`)
+    component: () => import(`./views/${clientType}/StudentLife.vue`),
+    meta: {
+      header: {
+        alwaysFill: true
+      }
+    }
   },
   {
     path: '/:lang(zh-CN|en-US)/join',
     name: 'JoinUs',
-    component: () => import(`./views/${clientType}/JoinUs.vue`)
+    component: () => import(`./views/${clientType}/JoinUs.vue`),
+    meta: {
+      header: {
+        alwaysFill: true
+      }
+    }
   },
   {
     path: '/:lang(zh-CN|en-US)/articles/:year/:month/:day/:title',
@@ -49,7 +66,6 @@ export const routes = [
     name: 'NotFound',
     component: () => import(`./views/${clientType}/NotFound.vue`)
   }
-  // TODO: Add your routes here
 ]
 
 export default createRouter({
