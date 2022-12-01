@@ -1,10 +1,10 @@
 <template>
   <div>
     <slot></slot>
-    <MobileLogo :animate="show" />
+    <MobileLogo :animate="false" />
     <div
       v-if="show"
-      class="z-10 fixed top-0 splash-bg bg-white h-screen w-screen"
+      class="z-4 fixed top-0 splash-bg bg-white h-screen w-screen"
     ></div>
   </div>
 </template>
@@ -23,10 +23,7 @@ router.beforeEach((to) => {
   } else {
     show.value = true
   }
-  console.log('show', show.value)
-})`
-I think it is good practice to take photos at important events. Obviously, the photos left at gatherings help us to remember these meaningful moments. Some people may prefer to rely on their own memories, but at least for me, I think taking pictures makes it better to keep these great moments alive.``
-Whenever I get together with my family or friends, I take the initiative to invite everyone to take a group photo. Even though I graduated from elementary school a long time ago, when I see the group photo of the class reunion, I feel like I'm back to that day.`
+})
 </script>
 
 <style>

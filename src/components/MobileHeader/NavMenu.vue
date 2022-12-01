@@ -16,6 +16,7 @@
             :to="route.path"
             class="inline-block decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60 leading-16"
             active-class="important-opacity-100"
+            @click="emit('close')"
             >{{ $t(`views.${route.name}`) }}
           </router-link>
         </li>

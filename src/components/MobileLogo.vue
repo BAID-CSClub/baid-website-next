@@ -36,6 +36,9 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+const route = useRoute()
+const router = useRouter()
 const props = defineProps(['animate'])
 const stage = ref(0)
 // 0: 仅logo 中心
@@ -45,19 +48,27 @@ const stage = ref(0)
 const dive = ref(false)
 // dive: z-13 => z-3
 
-if (!props.animate) stage.value = 2 // 非动画模式直接跳过
+if (!props.animate) {
+  stage.value = 2
+  dive.value = true
+} // 非动画模式直接跳过
 
 console.log('props.animate', props.animate)
 
 const white = ref(false)
 
 function onScroll () {
+  if (route.meta.header?.alwaysFill) {
+    white.value = false
+    return
+  }
   if (window.scrollY > 170) {
     white.value = false
   } else {
     white.value = true
   }
 }
+router.afterEach(onScroll)
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll)

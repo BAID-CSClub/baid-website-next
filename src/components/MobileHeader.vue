@@ -59,19 +59,27 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import NavMenu from './MobileHeader/NavMenu.vue'
+
+const route = useRoute()
+const router = useRouter()
+
 const showMenu = ref(false)
 
 const bgWhite = ref(false)
-
 function onScroll () {
+  if (route.meta.header?.alwaysFill) {
+    bgWhite.value = true
+    return
+  }
   if (window.scrollY > 170) {
     bgWhite.value = true
   } else {
     bgWhite.value = false
   }
 }
-
+router.afterEach(onScroll)
 onMounted(() => {
   window.addEventListener('scroll', onScroll)
 })

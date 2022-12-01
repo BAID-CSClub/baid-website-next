@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-3 bg-[var(--standard-red)] w-100vw h-100vh text-white top-0"
+    class="fixed z-10 bg-[var(--standard-red)] w-100vw h-100vh text-white top-0"
     v-show="display"
   >
     <div

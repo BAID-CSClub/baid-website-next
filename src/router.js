@@ -30,7 +30,10 @@ export const routes = [
     component: () => import(`./views/${clientType}/EducationTeaching.vue`),
     meta: {
       // No thing to do with header
-      noSplash: true
+      noSplash: true,
+      header: {
+        alwaysFill: true
+      }
     }
   },
   {
