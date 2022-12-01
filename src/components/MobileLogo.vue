@@ -1,9 +1,7 @@
-import { computed, ref } from 'vue';
 <template>
   <div
-    class="flex items-center justify-center pointer-events-none z-3"
+    class="flex items-center justify-center pointer-events-none z-3 fixed w-full transition-all-500"
     :class="{
-      'fixed transition-all-500 w-full': animate,
       'top-50% m-t--12.5 h-25': stage < 2,
       'top-2.5': stage === 2,
       '!z-13': !dive
@@ -37,7 +35,7 @@ import { computed, ref } from 'vue';
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 const props = defineProps(['animate'])
 const stage = ref(0)
 // 0: 仅logo 中心
@@ -47,8 +45,9 @@ const stage = ref(0)
 const dive = ref(false)
 // dive: z-13 => z-3
 
-const animate = computed(() => props.animate !== undefined)
-if (!animate.value) stage.value = 2 // 非动画模式直接跳过
+if (!props.animate) stage.value = 2 // 非动画模式直接跳过
+
+console.log('props.animate', props.animate)
 
 const white = ref(false)
 
@@ -62,15 +61,17 @@ function onScroll () {
 
 onMounted(() => {
   window.addEventListener('scroll', onScroll)
-  setTimeout(() => {
-    stage.value = 1
+  if (props.animate) {
     setTimeout(() => {
-      stage.value = 2
+      stage.value = 1
       setTimeout(() => {
-        dive.value = true
-        onScroll()
-      }, 300)
-    }, 500)
-  }, 300)
+        stage.value = 2
+        setTimeout(() => {
+          dive.value = true
+          onScroll()
+        }, 300)
+      }, 500)
+    }, 300)
+  }
 })
 </script>

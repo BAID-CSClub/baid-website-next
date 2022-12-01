@@ -1,7 +1,6 @@
 <template>
-
   <div>
-    <open class="absolute"></open>
+    <Splash></Splash>
     <section class="p-3 snap-y snap-proximity overflow-y-scroll">
       <Curriculums class="snap-start"></Curriculums>
       <LearningMethod class="snap-start"></LearningMethod>
@@ -12,7 +11,7 @@
 </template>
 
 <script setup>
-import open from '../../components/MobileEducationTeaching/EducationTeachingOpen.vue'
+import Splash from '../../components/MobileEducationTeaching/EducationTeachingSplash.vue'
 import Curriculums from '../../components/MobileEducationTeaching/CurriculumsIntroduction.vue'
 import LearningMethod from '../../components/MobileEducationTeaching/LearningMethod.vue'
 import StudentGuidence from '../../components/MobileEducationTeaching/StudentGuidence.vue'

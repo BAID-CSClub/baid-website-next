@@ -27,7 +27,11 @@ export const routes = [
   {
     path: '/:lang(zh-CN|en-US)/education',
     name: 'EducationTeaching',
-    component: () => import(`./views/${clientType}/EducationTeaching.vue`)
+    component: () => import(`./views/${clientType}/EducationTeaching.vue`),
+    meta: {
+      // No thing to do with header
+      noSplash: true
+    }
   },
   {
     path: '/:lang(zh-CN|en-US)/studentLife',

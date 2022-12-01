@@ -13,7 +13,7 @@
         <div
           class="line"
           :class="{
-            'rotate-45 translate-y-1.8 !bg-white': showMenu,
+            'rotate-45 translate-y-2 !bg-white': showMenu,
             '!bg-white': !bgWhite
           }"
         ></div>
@@ -24,7 +24,7 @@
         <div
           class="line"
           :class="{
-            'rotate--45 translate-y--1.8 !bg-white': showMenu,
+            'rotate--45 translate-y--2 !bg-white': showMenu,
             '!bg-white': !bgWhite
           }"
         ></div>
