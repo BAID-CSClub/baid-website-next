@@ -41,8 +41,6 @@ const content = ref('')
 const join = ref('')
 
 const isNav = ref(true)
-const student = ref(false)
-const faculty = ref(false)
 </script>
 
 <style>
