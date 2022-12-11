@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-col justify-center items-center h-screen snap-start">
+  <div
+    class="flex flex-col justify-center items-center h-screen snap-start box-border"
+  >
     <div>
       <img
         :src="imgHeader1"
@@ -11,17 +13,15 @@
     <p class="text-[var(--standard-blue)] tracking-widest text-center">BAID</p>
     <h2 class="m-0! text-9 font-600 text-center">北京中学国际部</h2>
     <div class="grid m-y-2 grid-cols-2 gap-6">
-      <a
+      <span
         class="decoration-none text-blue font-sans"
-        href="#joinStudent"
         @click="$emit('student')"
-        >学生申请></a
+        >学生申请></span
       >
-      <a
+      <span
         class="decoration-none text-blue font-sans"
-        href="#joinFaculty"
         @click="$emit('faculty')"
-        >师资招聘></a
+        >师资招聘></span
       >
     </div>
   </div>
