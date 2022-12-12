@@ -1,4 +1,6 @@
 <template>
+  <div></div>
+<!--
   <div
     class="flex justify-center items-center flex-col h-50% w-full bg-cover overflow-scroll"
     :style="{
@@ -65,24 +67,25 @@
           </swiper-slide>
         </swiper>
       </div>
-      <!-- Pop window div -->
+
     </div>
   </div>
+  -->
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import clubData from './clubData.json'
+// import { ref } from 'vue'
+// import clubData from './clubData.json'
 /* initializing_swiper */
 // import Swiper core and required modules
 
 // Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue'
+// import { Swiper, SwiperSlide } from 'swiper/vue'
 
 // Import Swiper styles
-import 'swiper/css'
-import 'swiper/css/pagination'
+// import 'swiper/css'
+// import 'swiper/css/pagination'
 
-const props = defineProps(['title', 'image']) // TODO: More about dialog
-const showPop = ref(false)
+// const props = defineProps(['title', 'image']) // TODO: More about dialog
+// const showPop = ref(false)
 </script>
