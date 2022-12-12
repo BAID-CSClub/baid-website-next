@@ -266,7 +266,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import clubData from 'src/components/MobileStudentLife/clubData.json'
+// import clubData from 'src/components/MobileStudentLife/clubData.json'
 /* initializing_swiper */
 // import Swiper core and required modules
 
