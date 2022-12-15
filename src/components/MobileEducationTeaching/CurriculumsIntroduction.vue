@@ -24,7 +24,7 @@
           <img :src="items.icon" class="w-16 m-l-3 m-t--4 scale-80" alt="Bg" />
         </div>
         <div class="w-80% tracking-widest whitespace-pre-wrap break-all">
-          {{ items.description }}
+          {{ $t(items.description) }}
         </div>
       </div>
     </div>
@@ -77,17 +77,17 @@ const IsCollapse = ref(true)
 const Curriculums = [
   {
     description:
-      '教育教学是怎么回事呢?教育相信大家都很熟悉，但是教育教学是怎么回事呢，下面就让小编带大家一起了解吧。教育教学，其实就是教学，大家可能会很惊讶教育怎么会教学呢?但事实就是这样，小编也感到非常惊讶这就是关于教育教学的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦!',
+      'EducationTeaching.Curriculums.Description1',
     icon: number1
   },
   {
     description:
-      '教育教学是怎么回事呢?教育相信大家都很熟悉，但是教育教学是怎么回事呢，下面就让小编带大家一起了解吧。教育教学，其实就是教学，大家可能会很惊讶教育怎么会教学呢?但事实就是这样，小编也感到非常惊讶这就是关于教育教学的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦!',
+      'EducationTeaching.Curriculums.Description2',
     icon: number2
   },
   {
     description:
-      '教育教学是怎么回事呢?教育相信大家都很熟悉，但是教育教学是怎么回事呢，下面就让小编带大家一起了解吧。教育教学，其实就是教学，大家可能会很惊讶教育怎么会教学呢?但事实就是这样，小编也感到非常惊讶。这就是关于教育教学的事情了，大家有什么想法呢，欢迎在评论区告诉小编一起讨论哦!',
+      'EducationTeaching.Curriculums.Description3',
     icon: number3
   }
 ]
