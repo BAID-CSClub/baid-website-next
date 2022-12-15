@@ -14,19 +14,19 @@
       <div
         class="b-4 b-[var(--standard-red)] b-rd-4 w-95% text-10 font-1000 text-white m-1.5 text-center box-border block p-l-9 p-r-9"
         style="
-          background: url(https://img.js.design/assets/publicImg/256D963A1093758.png);
+          background: url(https://images.unsplash.com/photo-1560785496-3c9d27877182?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
           background-size: cover;
         "
         @click="
-          ;(bigtitle = passage.bigtitle),
-            (description = passage.description),
+          ;(bigtitle = $t(passage.bigtitle)),
+            (description = $t(passage.description)),
             (images = passage.images),
             (introdisplay = true)
         "
         v-for="passage in LeaningMethods"
         :key="passage"
       >
-        {{ passage.title }}
+        {{ $t(passage.title) }}
       </div>
     </div>
     <Intro
@@ -47,32 +47,32 @@ import Intro from './LearningMethodIntro.vue'
 const bigtitle = ref('标题')
 const description = ref('默认介绍')
 const images = ref(
-  'https://img.js.design/assets/smartFill/img322164da746310.jpg'
+  'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
 )
 const introdisplay = ref(false)
 const LeaningMethods = [
   {
-    title: '标一标一标一',
-    bigtitle: '大标题一大标题大标题大标题',
-    description: '水水水水水水水水水水水水水水水水水水水',
+    title: 'EducationTeaching.Learning.Method1.Title',
+    bigtitle: 'EducationTeaching.Learning.Method1.BigTitle',
+    description: 'EducationTeaching.Learning.Method1.Description',
     images: homeBg1
   },
   {
-    title: '表二表二表二',
-    bigtitle: '大标题二大标题大标题大标题',
-    description: '哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈',
-    images: 'https://img.js.design/assets/smartFill/img322164da746310.jpg'
+    title: 'EducationTeaching.Learning.Method2.Title',
+    bigtitle: 'EducationTeaching.Learning.Method2.BigTitle',
+    description: 'EducationTeaching.Learning.Method2.Description',
+    images: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
   },
   {
-    title: '表三表三表三',
-    bigtitle: '大标题三大标题大标题大标题',
-    description: '吼吼吼吼吼吼吼吼吼吼吼吼吼吼吼',
-    images: 'https://img.js.design/assets/publicImg/256D963A1093758.png'
+    title: 'EducationTeaching.Learning.Method3.Title',
+    bigtitle: 'EducationTeaching.Learning.Method3.BigTitle',
+    description: 'EducationTeaching.Learning.Method3.Description',
+    images: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
   },
   {
-    title: '标识标识标识',
-    bigtitle: '大标题四大标题大标题大标题',
-    description: '你你你你你你你你你你你你你',
+    title: 'EducationTeaching.Learning.Method4.Title',
+    bigtitle: 'EducationTeaching.Learning.Method4.BigTitle',
+    description: 'EducationTeaching.Learning.Method4.Description',
     images: homeBg1
   }
 ]
