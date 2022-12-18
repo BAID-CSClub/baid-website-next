@@ -1,11 +1,11 @@
 <template>
-  <div class="p-l-2">
-    <div class="relative font-black m-t-10vh h-10vh max-h-15vh text-center">
+  <div>
+    <div class="relative font-black m-t-20 text-center">
       <div class="text-8 tracking-5">课程体系</div>
       <div class="text-4 tracking-wider text-gray-300 m-t--2">Curriculums</div>
     </div>
     <div
-      class="text-4 w-90% p-t-4 m-t--4 overflow-y-clip"
+      class="text-4 m-t-4 overflow-y-clip"
       :class="{
         'h-85vh CollapseOut': IsCollapse,
         'h-60vh CollapseIn': !IsCollapse
@@ -19,12 +19,15 @@
         }"
         v-if="IsCollapse"
       ></div>
-      <div class="flex m-b-10" v-for="items in Curriculums" :key="items">
-        <div class="w-20%">
-          <img :src="items.icon" class="w-16 m-l-3 m-t--4 scale-80" alt="Bg" />
-        </div>
-        <div class="w-80% tracking-widest whitespace-pre-wrap break-all">
-          {{ $t(items.description) }}
+      <div class="m-x-2" v-for="item in curriculums" :key="item">
+        <div class="m-y-2">
+          <div class="flex items-center">
+            <img :src="item.icon" class="w-18 block" />
+            <h3 class="m-x-2 text-6">{{ $t(item.title) }}</h3>
+          </div>
+          <div class="flex flex-col items-center m-y-2">
+            <pre class="m-x-4">{{ $t(item.description) }}</pre>
+          </div>
         </div>
       </div>
     </div>
@@ -66,28 +69,28 @@
 </style>
 
 <script setup>
-import number1 from '../../assets/images/标题序号1.svg'
-import number2 from '../../assets/images/标题序号2.svg'
-import number3 from '../../assets/images/标题序号3.svg'
+import number1 from '../../assets/images/Number_1.svg'
+import number2 from '../../assets/images/Number_2.svg'
+import number3 from '../../assets/images/Number_3.svg'
 import arrow from '../../assets/images/arrow.svg'
 
 import { ref } from 'vue'
 const IsCollapse = ref(true)
 
-const Curriculums = [
+const curriculums = [
   {
-    description:
-      'EducationTeaching.Curriculums.Description1',
+    title: 'EducationTeaching.Curriculums.1.Title',
+    description: 'EducationTeaching.Curriculums.1.Description',
     icon: number1
   },
   {
-    description:
-      'EducationTeaching.Curriculums.Description2',
+    title: 'EducationTeaching.Curriculums.2.Title',
+    description: 'EducationTeaching.Curriculums.2.Description',
     icon: number2
   },
   {
-    description:
-      'EducationTeaching.Curriculums.Description3',
+    title: 'EducationTeaching.Curriculums.3.Title',
+    description: 'EducationTeaching.Curriculums.3.Description',
     icon: number3
   }
 ]
