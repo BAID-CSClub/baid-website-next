@@ -18,10 +18,12 @@
           background-size: cover;
         "
         @click="
-          ;(bigtitle = passage.bigtitle),
-            (description = passage.description),
-            (images = passage.images),
-            (introdisplay = true)
+          () => {
+            bigtitle = passage.bigtitle
+            description = passage.description
+            images = passage.images
+            introdisplay = true
+          }
         "
         v-for="passage in LeaningMethods"
         :key="passage"
