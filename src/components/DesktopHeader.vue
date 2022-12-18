@@ -25,7 +25,7 @@
         <li
           v-for="(route, index) in routesComputed"
           v-bind:key="route.name"
-          v-on:mouseover="onHover(index)"
+          v-on:mouseover="onHover(index, route.name)"
           class="h-full font-500 text-16px margin-left-right-10px"
         >
           <router-link
@@ -36,6 +36,7 @@
             >{{ $t(`views.${route.name}`) }}
           </router-link>
         </li>
+        <!-- Block -->
         <div
           class="absolute w-30 h-17 bg-black opacity-0 z-10 pointer-events-none transition-opacity"
           :class="{ 'opacity-10': showBlock }"
@@ -47,6 +48,20 @@
           :style="{ left: lineLeft, 'background-color': lineColor }"
           :class="{ 'opacity-0': !lineLeft || !showLine }"
         ></div>
+        <!-- SubMenu -->
+        <div
+          class="absolute top-17 w-60 bg-white opacity-0 z-10 transition-opacity shadow-lg"
+          :class="{ '!opacity-100': showBlock }"
+          :style="{ left: blockLeft }"
+        >
+          <a
+            v-for="(subRoute, index) in subRoutes[hover]"
+            :key="index"
+            :href="subRoute.path"
+            class="h-13 w-full color-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
+            >{{ $t(subRoute.name) }}</a
+          >
+        </div>
       </div>
       <hr
         class="h-7 w-3px my-0 mx-5 border-none"
@@ -82,6 +97,27 @@ import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import SchoolLogo from './DesktopHeader/SchoolLogo.vue'
 
+const subRoutes = computed(() => ({
+  HomePage: [
+    {
+      path: '/' + locale.value + '#educationPhilosophy',
+      name: 'HomePage.EducationPhilosophy.Title'
+    },
+    {
+      path: '/' + locale.value + '#admissionResults',
+      name: 'HomePage.AdmissionResults.Title'
+    }
+    // TODO: More
+  ],
+  AboutUs: [
+    {
+      path: '/' + locale.value + '/about#overview',
+      name: 'AboutPage.Overview.Title'
+    }
+  ]
+  // TODO: More
+}))
+
 const routesComputed = computed(() => {
   return routes
     .map((route) => {
@@ -99,7 +135,12 @@ const showBlock = ref(false)
 let blockLeftAnimation
 const blockLeft = ref()
 
-function onHover (index) {
+// const showSubmenu = ref(false)
+// let submenuLeftAnimation
+const hover = ref()
+
+function onHover (index, name) {
+  // OnHover: Block animation, Submenu animation
   if (!showBlock.value) {
     showBlock.value = true
     blockLeftAnimation = animate({
@@ -119,6 +160,7 @@ function onHover (index) {
       }
     })
   }
+  hover.value = name
 }
 
 const router = useRouter()
@@ -146,6 +188,15 @@ router.afterEach((to) => {
     }, 300)
   }
   headerCooling = true
+  // Process anchor (#...)
+  router.isReady().then(() => {
+    if (to.hash) {
+      const anchor = document.querySelector(to.hash)
+      if (anchor) {
+        anchor.scrollIntoView()
+      }
+    }
+  })
 })
 
 const { locale } = useI18n({ useScope: 'global' })
