@@ -50,7 +50,6 @@
 </template>
 
 <script setup>
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import ClubInfo from './ClubInfo.vue'
 import DesktopSwiper from '../DesktopSwiper.vue'
 import { ref } from 'vue'
