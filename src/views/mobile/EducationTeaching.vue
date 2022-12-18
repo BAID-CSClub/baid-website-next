@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <Splash></Splash>
+  <div class="font-sans">
+    <Splash />
     <section class="p-3 snap-y snap-proximity overflow-y-scroll">
       <Curriculums class="snap-start"></Curriculums>
       <LearningMethod class="snap-start"></LearningMethod>

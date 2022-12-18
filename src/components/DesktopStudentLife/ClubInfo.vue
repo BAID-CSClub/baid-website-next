@@ -16,11 +16,6 @@
             ><img
               :src="img"
               class="w-full object-cover transition-all aspect-3/2 object-cover"
-              :class="{
-                '!opacity-100': current === index,
-                'hover:opacity-100 active:brightness-90':
-                  current !== index && !transition
-              }"
               v-on:click="change(index)"
               alt="pic1" /></swiper-slide
         ></DesktopSwiper>
