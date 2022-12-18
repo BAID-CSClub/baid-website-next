@@ -11,7 +11,7 @@
       <div
         class="bg-pink w-full h-55vw rd-5 m-t-5 shadow-xl"
         style="
-          background: url(https://img.js.design/assets/smartFill/img347164da74c4b8.jpg);
+          background: url(https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
           background-size: cover;
         "
       ></div>
@@ -21,13 +21,13 @@
       <div
         class="bg-purple w-full h-55vw rd-5 m-t-5 shadow-xl flex flex-col justify-end overflow-clip p-3 box-border"
         style="
-          background: url(https://img.js.design/assets/smartFill/img359164da74c4b8.jpg);
+          background: url(https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
           background-size: cover;
         "
       >
-        <div class="text-6 font-black">标题</div>
+        <div class="text-6 font-black">{{ $t('EducationTeaching.Student.Content.Title') }}</div>
         <div class="m-l-2">
-          蚊子蚊子蚊子蚊子蚊子蚊子蚊子蚊子蚊子蚊子蚊子蚊子蚊子蚊子
+          {{ $t('EducationTeaching.Student.Content.Description') }}
         </div>
       </div>
     </div>

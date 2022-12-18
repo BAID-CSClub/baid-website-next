@@ -19,15 +19,15 @@
         v-for="items in Slides"
         :key="items"
       >
-        <img :src="items.background" class="absolute w-full z--2" />
+        <img :src="items.background" class="absolute w-full z-1" />
         <div
-          class="absolute h-full w-full bg-gradient-to-lb from-white to-transparent via-transparent z--1"
+          class="absolute h-full w-full bg-gradient-to-lb from-white to-transparent via-transparent z-2"
         ></div>
-        <div class="font-black text-6">
-          {{ items.title }}
+        <div class="font-black text-6 z-3">
+          {{ $t(items.title) }}
         </div>
-        <div class="max-w-50%">
-          {{ items.description }}
+        <div class="max-w-50% z-3">
+          {{ $t(items.description) }}
         </div>
       </swiper-slide>
     </swiper>
@@ -67,7 +67,7 @@
       <swiper-slide
         class="w-full h-full bg-pink flex flex-col items-end justify-end overflow-hidden"
         style="
-          background: url(https://img.js.design/assets/smartFill/img357164da74c4b8.jpg);
+          background: url(https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80);
           background-size: cover;
         "
         v-for="items in Images"
@@ -97,30 +97,30 @@ const onSlideChange = () => {
 }
 const Slides = [
   {
-    title: '标题1',
-    description: '介绍介绍介绍1',
-    background: 'https://img.js.design/assets/smartFill/img357164da74c4b8.jpg'
+    title: 'EducationTeaching.WonderfulMoment.Slides.Slide1.Title',
+    description: 'EducationTeaching.WonderfulMoment.Slides.Slide1.Description',
+    background: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   },
   {
-    title: '标题2',
-    description: '介绍介绍介绍2',
-    background: 'https://img.js.design/assets/smartFill/img357164da74c4b8.jpg'
+    title: 'EducationTeaching.WonderfulMoment.Slides.Slide2.Title',
+    description: 'EducationTeaching.WonderfulMoment.Slides.Slide2.Description',
+    background: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   },
   {
-    title: '标题3',
-    description: '介绍介绍介绍3',
-    background: 'https://img.js.design/assets/smartFill/img357164da74c4b8.jpg'
+    title: 'EducationTeaching.WonderfulMoment.Slides.Slide3.Title',
+    description: 'EducationTeaching.WonderfulMoment.Slides.Slide3.Description',
+    background: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   }
 ]
 const Images = [
   {
-    background: 'https://img.js.design/assets/smartFill/img357164da74c4b8.jpg'
+    background: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   },
   {
-    background: 'https://img.js.design/assets/smartFill/img357164da74c4b8.jpg'
+    background: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   },
   {
-    background: 'https://img.js.design/assets/smartFill/img357164da74c4b8.jpg'
+    background: 'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   }
 ]
 </script>
