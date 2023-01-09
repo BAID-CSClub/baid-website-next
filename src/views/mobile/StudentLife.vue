@@ -11,6 +11,6 @@
 <script setup>
 import camping from '../../assets/images/StudentLife/Activities/Camping.jpg?webp'
 import archery from '../../assets/images/StudentLife/Activities/ZWTZY.jpg?webp'
-import SplashBlockClubs from '../../components/MobileStudentLife/SplashBlockClubsWithoutJson.vue'
+import SplashBlockClubs from '../../components/MobileStudentLife/SplashBlockClubs.vue'
 import SplashBlockActivities from '../../components/MobileStudentLife/SplashBlockActivities.vue'
 </script>
