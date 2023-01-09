@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a9e9e0ef-d63e-48e9-8fe1-dc1c9777d805" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/MobileStudentLife/SplashBlockClubsWithJson.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MobileStudentLife/SplashBlockClubsWithJson.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileStudentLife/SplashBlockClubsWithoutJson.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MobileStudentLife/clubData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/mobile/StudentLife.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/mobile/StudentLife.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/components/MobileStudentLife/SplashBlockClubsWithJson.vue" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2IMgsEwtr7YdFFzxsACqZOr7dqy" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sheldon_wu2006/Documents/GitHub/baid-website-next/src/components/MobileStudentLife&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/sheldon_wu2006/Documents/GitHub/baid-website-next/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/MobileStudentLife" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9e9e0ef-d63e-48e9-8fe1-dc1c9777d805" name="Changes" comment="" />
+      <created>1669997070827</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669997070827</updated>
+      <workItem from="1669997073888" duration="596000" />
+      <workItem from="1669997717041" duration="104000" />
+      <workItem from="1670405989773" duration="318000" />
+      <workItem from="1670591996395" duration="563000" />
+      <workItem from="1670592567603" duration="5407000" />
+      <workItem from="1670664896551" duration="32635000" />
+      <workItem from="1670857796283" duration="2476000" />
+      <workItem from="1671031401027" duration="293000" />
+      <workItem from="1671435045505" duration="16028000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
