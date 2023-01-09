@@ -1,6 +1,4 @@
 <template>
-  <div></div>
-<!--
   <div
     class="flex justify-center items-center flex-col h-50% w-full bg-cover overflow-scroll"
     :style="{
@@ -24,10 +22,11 @@
       }"
     >
       <div
-        class="bg-white rounded-xl p-10 w-75% overflow-scroll"
+        class="bg-white rounded-xl p-10 max-h-screen overflow-scroll"
         id="clubsPopWindow"
       >
         <h1 class="m0 mb-5">学生社团</h1>
+        <h4 class="m0 mb-5">(左右滑动查看更多内容)</h4>
         <swiper
           :modules="modules"
           :slides-per-view="1"
@@ -36,14 +35,16 @@
           @swiper="onSwiper"
           @slideChange="onSlideChange"
           autoHeight
-          overflow-scroll
-          v-for="data in clubData"
-          :key="data"
+          class="overflow-scroll"
         >
-          <swiper-slide class="overflow-scroll">
-            <h2>{{ data.club }}</h2>
+          <swiper-slide
+            class="overflow-scroll"
+            v-for="club in clubs"
+            :key="club"
+          >
+            <h2>{{ $t(club.name) }}</h2>
             <p>
-              {{ data.intr }}
+              {{ $t(club.description) }}
             </p>
             <swiper
               :modules="modules"
@@ -52,40 +53,30 @@
               :pagination="{ clickable: true }"
               @swiper="onSwiper"
               @slideChange="onSlideChange"
-              autoHeight
-              overflow-scroll
-              v-for="data in clubData"
-              :key="data"
+              class="overflow-scroll"
             >
-              <swiper-slide class="overflow-scroll">
-                <img src="{{data.img0}}" class="h-37% w-100%" alt="" />
-              </swiper-slide>
-              <swiper-slide class="overflow-scroll">
-                <img src="{{data.img1}}" class="h-37% w-100%" alt="" />
+              <swiper-slide v-for="img in club.images" :key="img">
+                <img :src="img" alt="" class="h-45 w-100% object-cover" />
               </swiper-slide>
             </swiper>
           </swiper-slide>
         </swiper>
       </div>
-
     </div>
   </div>
-  -->
 </template>
 
 <script setup>
-// import { ref } from 'vue'
-// import clubData from './clubData.json'
+import { ref } from 'vue'
+import { clubs } from '../../data/Clubs.js'
 /* initializing_swiper */
-// import Swiper core and required modules
 
 // Import Swiper Vue.js components
-// import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 
-// Import Swiper styles
-// import 'swiper/css'
-// import 'swiper/css/pagination'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
-// const props = defineProps(['title', 'image']) // TODO: More about dialog
-// const showPop = ref(false)
+const props = defineProps(['title', 'image']) // TODO: More about dialog
+const showPop = ref(false)
 </script>
