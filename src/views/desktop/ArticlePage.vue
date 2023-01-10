@@ -1,4 +1,3 @@
-import { useRoute, useRouter } from 'vue-router';
 <template>
   <!-- 加载时，隐藏下面的一切内容 -->
   <div :class="{ 'overflow-hidden w-full h-[calc(100vh-4.25rem)]': loading }">
@@ -34,13 +33,12 @@ import { useRoute, useRouter } from 'vue-router';
 </template>
 
 <script setup>
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { computed, ref, watch, onMounted } from 'vue'
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 
 const debug = true
 const route = useRoute()
-const router = useRouter()
 
 const contentPath = computed(() => {
   if (
