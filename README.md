@@ -33,10 +33,12 @@
 
 ## 开发时可能要用到的命令
 
-- `pnpm install` - 安装依赖
-- `pnpm run dev` - 打开开发服务器（Vite）
-- `pnpm test` - 检查代码有无任何不规范
-- `pnpm run build` - 生成静态构建
+注意，目前`pnpm`已经不再推荐，请使用`yarn`或`npm`。
+
+- `yarn` - 安装依赖
+- `yarn dev` - 打开开发服务器（Vite）
+- `yarn test` - 检查代码有无任何不规范
+- `yarn build` - 生成静态构建
 
 ## 开发时可能要用到的资料
 

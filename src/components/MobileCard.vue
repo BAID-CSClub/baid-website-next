@@ -9,25 +9,15 @@
     }"
   >
     <slot v-if="!items"></slot>
-    <div
+    <Swiper
       v-else
-      class="h-full flex transition-all"
-      :style="{
-        width: 100 * props.items.length + '%',
-        marginLeft: 'calc(' + leftPx + 'px - ' + left + '%)'
-      }"
-      @touchstart="onTouchStart"
-      @touchmove="onTouchMove"
-      @touchend="onTouchEnd"
+      :slides-per-view="1"
+      @slide-change="(e) => change(e.activeIndex)"
     >
-      <div
-        v-for="(item, index) in props.items"
-        :key="index"
-        class="w-full h-full"
-      >
+      <SwiperSlide v-for="(item, index) in props.items" :key="index">
         <slot name="item" v-bind="item"></slot>
-      </div>
-    </div>
+      </SwiperSlide>
+    </Swiper>
     <div class="absolute bottom-3 flex left-50% translate-x--50%" v-if="items">
       <!-- DOTS -->
       <div
@@ -48,6 +38,8 @@
 
 <script setup>
 import { ref } from 'vue'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import 'swiper/css'
 
 const props = defineProps({
   bg: {
@@ -64,42 +56,12 @@ const props = defineProps({
 })
 
 const current = ref(0)
-const left = ref(0)
-const leftPx = ref(0)
-
 const emit = defineEmits(['change'])
 
 function change (index) {
   if (current.value !== index && index < props.items.length && index >= 0) {
     current.value = index
-    left.value = current.value * 100
     emit('change')
   }
-}
-
-let startX = 0
-
-function onTouchStart (e) {
-  startX = e.touches[0].clientX
-  leftPx.value = 0
-}
-function onTouchMove (e) {
-  const left = e.touches[0].clientX - startX
-  if (current.value === 0 && left > 0) return
-  if (current.value === props.items.length - 1 && left < 0) return
-  leftPx.value = Math.min(
-    Math.max(left, -window.innerWidth / 1.5),
-    window.innerWidth / 1.5
-  )
-}
-function onTouchEnd () {
-  console.log(leftPx.value, window.innerWidth)
-  if (-leftPx.value > window.innerWidth / 2) {
-    change(current.value + 1)
-  }
-  if (leftPx.value > window.innerWidth / 2) {
-    change(current.value - 1)
-  }
-  leftPx.value = 0
 }
 </script>
