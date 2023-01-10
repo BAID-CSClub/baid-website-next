@@ -26,4 +26,5 @@ pnpm-lock.yaml
 bun.lockb
 
 # Articles
-articles
+public/en-US
+public/zh-CN
