@@ -63,13 +63,15 @@ const LeaningMethods = [
     title: 'EducationTeaching.Learning.Method2.Title',
     bigtitle: 'EducationTeaching.Learning.Method2.BigTitle',
     description: 'EducationTeaching.Learning.Method2.Description',
-    images: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
+    images:
+      'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
   },
   {
     title: 'EducationTeaching.Learning.Method3.Title',
     bigtitle: 'EducationTeaching.Learning.Method3.BigTitle',
     description: 'EducationTeaching.Learning.Method3.Description',
-    images: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
+    images:
+      'https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
   },
   {
     title: 'EducationTeaching.Learning.Method4.Title',

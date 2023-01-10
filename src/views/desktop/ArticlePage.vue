@@ -1,4 +1,3 @@
-import { useRoute, useRouter } from 'vue-router';
 <template>
   <!-- 加载时，隐藏下面的一切内容 -->
   <div :class="{ 'overflow-hidden w-full h-[calc(100vh-4.25rem)]': loading }">
@@ -7,7 +6,7 @@ import { useRoute, useRouter } from 'vue-router';
         v-if="loading"
         class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center"
       >
-        <h1>TODO: Design.... LOADING</h1>
+        <h1>Loading...</h1>
       </div>
       <div v-else>
         <section>
@@ -35,39 +34,50 @@ import { useRoute, useRouter } from 'vue-router';
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { computed, ref, watch } from 'vue'
+import { computed, ref, watch, onMounted } from 'vue'
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 
 const debug = true
 const route = useRoute()
 
 const contentPath = computed(() => {
-  return `/${route.params.lang}/articles/${route.params.year}/${route.params.month}/${route.params.day}/${route.params.title}/content.json`
+  if (
+    route.params.lang &&
+    route.params.year &&
+    route.params.month &&
+    route.params.day &&
+    route.params.title
+  ) {
+    return `/${route.params.lang}/articles/${route.params.year}/${route.params.month}/${route.params.day}/${route.params.title}.json`
+  } else {
+    return false
+  }
 })
 
 const content = ref(null)
 const loading = ref(true)
 
-watch(
-  contentPath,
-  (path) => {
-    loading.value = true
-    fetch(path)
-      .then((res) => {
-        if (debug) {
-          setTimeout(() => (loading.value = false), 1000)
-        } else {
-          loading.value = false
-        }
+onMounted(async () => {
+  watch(
+    contentPath,
+    async (path) => {
+      if (!path) return
+      loading.value = true
 
-        return res.json()
-      })
-
-      .then((data) => {
-        content.value = data
-        console.log(data)
-      })
-  },
-  { immediate: true }
-)
+      const res = await fetch(path)
+      console.log('Response', res)
+      if (debug) {
+        setTimeout(() => (loading.value = false), 1000)
+      } else {
+        loading.value = false
+      }
+      if (res.status === 200) {
+        content.value = await res.json()
+      } else {
+        location.href = `/${route.params.lang}/404`
+      }
+    },
+    { immediate: true }
+  )
+})
 </script>

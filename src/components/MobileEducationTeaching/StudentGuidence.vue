@@ -1,5 +1,5 @@
 <template>
-  <div class="h-100vh">
+  <div class="mb-10">
     <div class="font-black">
       <div class="text-10 font-black text-[var(--standard-red)] tracking--0.8">
         全面的学生指导
@@ -25,7 +25,9 @@
           background-size: cover;
         "
       >
-        <div class="text-6 font-black">{{ $t('EducationTeaching.Student.Content.Title') }}</div>
+        <div class="text-6 font-black">
+          {{ $t('EducationTeaching.Student.Content.Title') }}
+        </div>
         <div class="m-l-2">
           {{ $t('EducationTeaching.Student.Content.Description') }}
         </div>
