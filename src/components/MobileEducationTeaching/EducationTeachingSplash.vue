@@ -16,7 +16,11 @@
     </div>
     <div
       class="absolute b-1.5 p-3 left-50% translate--50% bottom-15 animate-pulse"
-      @click="display = !display"
+      @click="
+      ()=>{
+        display = !display
+        $emit('clip')
+      }"
     >
       了解更多>>>
     </div>
