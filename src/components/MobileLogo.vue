@@ -32,7 +32,8 @@
         class="text-6 m-0"
         :class="{
           '!text-3.5': stage === 2,
-          'transition-all-500': props.animate
+          'transition-all-500': props.animate && stage !== 2,
+          'transition-all-25': stage === 2
         }"
       >
         北京中学国际部
@@ -41,7 +42,8 @@
         class="font-sans text-3 m-b-0 m-t-1"
         :class="{
           '!text-2 !m-t-0.5': stage === 2,
-          'transition-all-500': props.animate
+          'transition-all-500': props.animate && stage !== 2,
+          'transition-all-25': stage === 2
         }"
       >
         Beijing Academy International Department
