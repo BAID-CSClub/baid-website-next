@@ -54,7 +54,6 @@ onMounted(async () => {
       loading.value = true
 
       const res = await fetch(path)
-      console.log('Response', res)
       if (debug) {
         setTimeout(() => (loading.value = false), 1000)
       } else {
