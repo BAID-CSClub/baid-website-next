@@ -1,10 +1,10 @@
 <template>
   <div class="bg-gray-1 p-t-1 m-t-20 p-b-1">
     <div class="section">
-      <GuidenceFirst></GuidenceFirst>
+      <GuidanceFirst></GuidanceFirst>
     </div>
   </div>
 </template>
 <script setup>
-import GuidenceFirst from './GuidenceFirst.vue'
+import GuidanceFirst from './GuidanceFirst.vue'
 </script>

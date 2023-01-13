@@ -1,32 +1,30 @@
 <template>
   <div>
-    <CarouselHorizontal :images="[imgHeader1, imgHeader2, imgHeader3]">
+    <CarouselHorizontal :images="[imgHeader1]">
       <h1 class="text-18 font-sans color-white">
         {{ $t('views.EducationTeaching') }}
       </h1>
     </CarouselHorizontal>
-    <section id="curriculum">
+    <section id="curriculums">
       <CurriculumsIntroduction />
     </section>
     <section id="learningMethods">
       <LearningMethods />
     </section>
-    <section id="studentGuidence">
-      <StudentGuidence />
+    <section id="studentGuidance">
+      <StudentGuidance />
     </section>
     <section id="wonderfulMoments">
-      <WonderfulMoment />
+      <WonderfulMoments />
     </section>
   </div>
 </template>
 <script setup>
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import imgHeader1 from '../../assets/images/EducationTeaching/Header_1.jpg?webp'
-import imgHeader2 from '../../assets/images/EducationTeaching/Header_2.jpg?webp'
-import imgHeader3 from '../../assets/images/EducationTeaching/Header_3.jpg?webp'
 
 import CurriculumsIntroduction from '../../components/DesktopEducationTeaching/CurriculumsIntroduction.vue'
 import LearningMethods from '../../components/DesktopEducationTeaching/LearningMethods.vue'
-import StudentGuidence from '../../components/DesktopEducationTeaching/StudentGuidence.vue'
-import WonderfulMoment from '../../components/DesktopEducationTeaching/WonderfulMoment.vue'
+import StudentGuidance from '../../components/DesktopEducationTeaching/StudentGuidance.vue'
+import WonderfulMoments from '../../components/DesktopEducationTeaching/WonderfulMoments.vue'
 </script>

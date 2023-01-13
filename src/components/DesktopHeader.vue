@@ -106,16 +106,58 @@ const subRoutes = computed(() => ({
     {
       path: '/' + locale.value + '#admissionResults',
       name: 'HomePage.AdmissionResults.Title'
+    },
+    {
+      path: '/' + locale.value + '#news',
+      name: 'HomePage.News.Title'
     }
-    // TODO: More
   ],
   AboutUs: [
     {
       path: '/' + locale.value + '/about#overview',
-      name: 'AboutPage.Overview.Title'
+      name: 'AboutUs.Overview.Title'
+    },
+    {
+      path: '/' + locale.value + '/about#alumni',
+      name: 'AboutUs.Alumni.Title'
+    },
+    {
+      path: '/' + locale.value + '/about#accreditation',
+      name: 'AboutUs.Accreditation.Title'
+    },
+    {
+      path: '/' + locale.value + '/about#data',
+      name: 'AboutUs.Data.Title'
+    }
+  ],
+  EducationTeaching: [
+    {
+      path: '/' + locale.value + '/education#curriculum',
+      name: 'EducationTeaching.Curriculums.Title'
+    },
+    {
+      path: '/' + locale.value + '/education#learningMethods',
+      name: 'EducationTeaching.LearningMethods.Title'
+    },
+    {
+      path: '/' + locale.value + '/education#studentGuidance',
+      name: 'EducationTeaching.StudentGuidance.Title'
+    },
+    {
+      path: '/' + locale.value + '/education#wonderfulMoments',
+      name: 'EducationTeaching.WonderfulMoments.Title'
+    }
+  ],
+  StudentLife: [
+    {
+      path: '/' + locale.value + '/studentLife#activities',
+      name: 'StudentLife.Activities.Title'
+    },
+    {
+      path: '/' + locale.value + '/studentLife#clubs',
+      name: 'StudentLife.Clubs.Title'
     }
   ]
-  // TODO: More
 }))
 
 const routesComputed = computed(() => {
