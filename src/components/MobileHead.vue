@@ -7,11 +7,7 @@
         height: containerHeight + 'px',
         top: top + 'px'
       }"
-    >
-      <h1 class="color-white text-12 font-sans">
-        <slot></slot>
-      </h1>
-    </div>
+    ></div>
   </section>
 </template>
 
