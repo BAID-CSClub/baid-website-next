@@ -19,7 +19,7 @@
     <section id="admissionResults">
       <AdmissionResults />
     </section>
-    <section id="homeNews">
+    <section id="news">
       <HomeNews :newsList="data.news" />
     </section>
   </div>

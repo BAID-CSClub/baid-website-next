@@ -1,10 +1,10 @@
 <template>
-  <div class="mb-10">
+  <div class="h-100vh">
     <div class="font-black">
       <div class="text-10 font-black text-[var(--standard-red)] tracking--0.8">
         全面的学生指导
       </div>
-      <div class="text-gray-400 m-t--2.5 text-4.5">Student Guidence</div>
+      <div class="text-gray-400 m-t--2.5 text-4.5">Student Guidance</div>
     </div>
     <div>
       <div class="m-t-8 text-6 tracking-wider">>>>心理指导</div>
@@ -26,10 +26,10 @@
         "
       >
         <div class="text-6 font-black">
-          {{ $t('EducationTeaching.Student.Content.Title') }}
+          {{ $t('EducationTeaching.StudentGuidance.Content.Title') }}
         </div>
         <div class="m-l-2">
-          {{ $t('EducationTeaching.Student.Content.Description') }}
+          {{ $t('EducationTeaching.StudentGuidance.Content.Description') }}
         </div>
       </div>
     </div>
