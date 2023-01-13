@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-    <NotFancyTitle cn="课程体系" en="Curriculum" color="blue"></NotFancyTitle>
+    <NotFancyTitle cn="课程体系" en="Curriculums" color="blue"></NotFancyTitle>
     <div class="flex gap-16">
       <div class="w-full">
         <CurriculumBlock

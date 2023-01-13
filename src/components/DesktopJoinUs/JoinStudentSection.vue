@@ -1,7 +1,7 @@
 <template>
   <div class="section font-sans">
     <div>
-      <h3>{{ $t('JoinUs.Student.Title') }}</h3>
+      <h3 class="text-8">{{ $t('JoinUs.Student.Title') }}</h3>
       <pre>{{ $t('JoinUs.Student.Content') }}</pre>
       <div
         class="flex items-center justify-center text-8 m-t-10 py-10 bg-[var(--standard-red)] rd-5 color-white"
