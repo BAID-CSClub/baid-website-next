@@ -83,6 +83,18 @@ function onScroll () {
 }
 router.afterEach(onScroll)
 
+router.beforeEach(() => {
+  ready.value = false
+})
+
+router.afterEach(() => {
+  router.isReady().then(() => {
+    setTimeout(() => {
+      ready.value = true
+    }, 1000)
+  })
+})
+
 onMounted(async () => {
   window.addEventListener('scroll', onScroll)
   // Wait for router
@@ -103,9 +115,9 @@ onMounted(async () => {
   } else {
     stage.value = 2
     dive.value = true
-    setTimeout(() => {
-      ready.value = true
-    }, 500) // Similar to header
+    // setTimeout(() => {
+    //   ready.value = true
+    // }, 500) // Similar to header
   }
 })
 </script>

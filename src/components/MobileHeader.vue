@@ -135,12 +135,25 @@ function onScroll () {
   }
 }
 router.afterEach(onScroll)
+
+router.beforeEach(() => {
+  ready.value = false
+})
+
+router.afterEach(() => {
+  router.isReady().then(() => {
+    setTimeout(() => {
+      ready.value = true
+    }, 1000)
+  })
+})
+
 onMounted(async () => {
   window.addEventListener('scroll', onScroll)
-  await router.isReady()
-  setTimeout(() => {
-    ready.value = true
-  }, 500) // Fine, a stupid and dirty hack. But it works.
+  // await router.isReady()
+  // setTimeout(() => {
+  //   ready.value = true
+  // }, 500) // Fine, a stupid and dirty hack. But it works.
 })
 </script>
 

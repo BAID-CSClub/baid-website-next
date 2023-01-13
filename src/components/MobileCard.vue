@@ -13,6 +13,7 @@
       v-else
       :slides-per-view="1"
       @slide-change="(e) => change(e.activeIndex)"
+      :loop="true"
     >
       <SwiperSlide v-for="(item, index) in props.items" :key="index">
         <slot name="item" v-bind="item"></slot>
@@ -27,10 +28,9 @@
         :class="{
           'bg-[var(--standard-blue)]': props.bg === 'white',
           'bg-white': props.bg === 'blue',
-          'w-6': current === index,
-          'w-2 op-70': current != index
+          'w-6': current % props.items.length === index,
+          'w-2 op-70': current % props.items.length != index
         }"
-        @click="change(index)"
       ></div>
     </div>
   </div>
@@ -59,7 +59,8 @@ const current = ref(0)
 const emit = defineEmits(['change'])
 
 function change (index) {
-  if (current.value !== index && index < props.items.length && index >= 0) {
+  console.log(index)
+  if (current.value !== index) {
     current.value = index
     emit('change')
   }
