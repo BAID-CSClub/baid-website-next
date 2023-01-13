@@ -85,6 +85,11 @@
           >
         </transition>
       </p>
+      <hr
+        class="h-7 w-3px my-0 mx-5 border-none"
+        :style="{ 'background-color': color }"
+      />
+      <SearchBox :color="color"></SearchBox>
     </div>
   </header>
 </template>
@@ -96,6 +101,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import SchoolLogo from './DesktopHeader/SchoolLogo.vue'
+import SearchBox from './DesktopHeader/SearchBox.vue'
 
 const subRoutes = computed(() => ({
   HomePage: [

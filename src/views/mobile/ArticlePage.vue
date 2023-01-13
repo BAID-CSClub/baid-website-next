@@ -1,36 +1,30 @@
 <template>
-  <!-- 加载时，隐藏下面的一切内容 -->
-  <div :class="{ 'overflow-hidden w-full h-[calc(100vh-4.25rem)]': loading }">
-    <transition name="fade" mode="out-in">
-      <div
-        v-if="loading"
-        class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center"
-      >
-        <h1>Loading...</h1>
-      </div>
-      <div v-else>
-        <!-- <section>
-          <CarouselHorizontal :images="content?.images">
-            <h1 class="text-18 color-white">
-              {{ content?.title }}
-            </h1>
-          </CarouselHorizontal>
-        </section> -->
-        <section class="section">
-          <h1 class="text-10">{{ content?.title }}</h1>
-          <p>也许还需要更多的内容，如作者 / 创作时间等？</p>
-          <br />
+  <div>
+    <MobileHead :img="img"></MobileHead>
 
-          <article v-html="content?.body"></article>
-        </section>
-      </div>
-    </transition>
+    <section class="section">
+      <h1>Todo: Mobile Article Page</h1>
+      <h2>Assigned to lihe07</h2>
+      <h3 v-if="loading">Now loading...</h3>
+      <article v-else v-html="content?.body"></article>
+    </section>
   </div>
 </template>
 
+<style>
+article img {
+  width: 100%;
+}
+</style>
+
 <script setup>
+import MobileHead from '../../components/MobileHead.vue'
+
+import img from '../../assets/images/HomePage/Dongba_1.jpg'
+
 import { useRoute } from 'vue-router'
 import { computed, ref, watch, onMounted } from 'vue'
+// import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 
 const debug = true
 const route = useRoute()

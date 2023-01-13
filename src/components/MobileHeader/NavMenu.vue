@@ -1,7 +1,7 @@
 <template>
   <div
     class="fixed top-0 w-full h-full transition-all-300 flex z-4"
-    :class="{ 'left-0': props.show, '-left-100%': !props.show }"
+    :class="{ 'left-0': props.show, 'left--100%': !props.show }"
   >
     <div
       class="bg-[var(--standard-blue)] w-70% flex flex-col justify-between py-20 px-12"

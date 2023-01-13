@@ -36,7 +36,7 @@
     }
   ],
   "scripts": {
-    "dev": "node ./scripts/pre.js && vite && node ./scripts/post.js",
+    "dev": "node ./scripts/pre.js && vite",
     "build": "node ./scripts/pre.js && vite build && node ./scripts/post.js",
     "test": "eslint ./src --ext .js --ext .vue",
     "fix": "eslint ./src --ext .js --ext .vue --fix",
@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "@intlify/vite-plugin-vue-i18n": "^6.0.3",
+    "@node-rs/jieba": "^1.6.2",
     "@unocss/preset-uno": "^0.46.5",
     "@unocss/preset-web-fonts": "^0.46.5",
     "@vitejs/plugin-vue": "^3.2.0",
@@ -56,6 +57,7 @@
     "eslint-plugin-vue": "^9.8.0",
     "js-yaml": "^4.1.0",
     "lunr": "^2.3.9",
+    "lunr-languages": "^1.10.0",
     "markdown-it": "^13.0.1",
     "popmotion": "^11.0.5",
     "prettier": "^2.8.0",
