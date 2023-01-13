@@ -2,18 +2,18 @@
   <div>
     <open class="absolute"></open>
     <section>
-      <Curriculums></Curriculums>
-      <LearningMethod></LearningMethod>
-      <WonderfulMoment></WonderfulMoment>
-      <StudentGuidence></StudentGuidence>
+      <AboutUsIntroduction></AboutUsIntroduction>
+      <AboutUsAlumni></AboutUsAlumni>
+      <AboutUsBlock></AboutUsBlock>
+      <AboutUsCompare></AboutUsCompare>
     </section>
   </div>
 </template>
 
 <script setup>
 import open from '../../components/MobileAboutUs/AboutUsOpen.vue'
-import Curriculums from '../../components/MobileAboutUs/AboutUsIntroduction.vue'
-import LearningMethod from '../../components/MobileAboutUs/AboutUsAlumni.vue'
-import StudentGuidence from '../../components/MobileAboutUs/AboutUsCompare.vue'
-import WonderfulMoment from '../../components/MobileAboutUs/AboutUsBlock.vue'
+import AboutUsIntroduction from '../../components/MobileAboutUs/AboutUsIntroduction.vue'
+import AboutUsAlumni from '../../components/MobileAboutUs/AboutUsAlumni.vue'
+import AboutUsCompare from '../../components/MobileAboutUs/AboutUsCompare.vue'
+import AboutUsBlock from '../../components/MobileAboutUs/AboutUsBlock.vue'
 </script>
