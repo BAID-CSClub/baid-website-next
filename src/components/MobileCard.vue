@@ -19,12 +19,15 @@
         <slot name="item" v-bind="item"></slot>
       </SwiperSlide>
     </Swiper>
-    <div class="absolute bottom-3 flex left-50% translate-x--50%" v-if="items">
+    <div
+      class="absolute bottom-3 flex left-50% translate-x--50% z-1"
+      v-if="items"
+    >
       <!-- DOTS -->
       <div
         v-for="(_, index) in props.items"
         :key="index"
-        class="h-2 m-x-1 rounded-1 transition-all"
+        class="h-2 m-x-1 rounded-1 transition-all z-1"
         :class="{
           'bg-[var(--standard-blue)]': props.bg === 'white',
           'bg-white': props.bg === 'blue',
