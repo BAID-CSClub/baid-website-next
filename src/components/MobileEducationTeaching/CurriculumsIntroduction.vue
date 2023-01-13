@@ -5,19 +5,15 @@
       <div class="text-4 tracking-wider text-gray-300 m-t--2">Curriculums</div>
     </div>
     <div
+      id="box"
       class="text-4 m-t-4 overflow-y-clip"
-      :class="{
-        'h-85vh CollapseOut': IsCollapse,
-        'h-60vh CollapseIn': !IsCollapse
-      }"
+      :style="{ 'max-height': myheight+ 'px' }"
+      style="transition-property: max-height;transition-duration:1s;transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);"
     >
       <div
-        class="absolute h-60vh w-95vw bg-gradient-to-b from-transparent to-white translate-y-1 z-1"
-        :class="{
-          'overflow-y-clip h-80vh CollapseOut': IsCollapse,
-          'h-60vh CollapseIn': !IsCollapse
-        }"
-        v-if="IsCollapse"
+        class="absolute w-95vw bg-gradient-to-b from-transparent to-white translate-y-1 z-1"
+        :style="{ 'height': myheight+ 'px','opacity':opacity+'%'}"
+        style="transition-property:height,opacity;transition-duration:1s;transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);"
       ></div>
       <div class="m-x-2" v-for="item in curriculums" :key="item">
         <div class="m-y-2">
@@ -31,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="w-full flex justify-center m-t--10">
+    <div class="w-full flex justify-center m-t--5">
       <img
         :src="arrow"
         class="z-2"
@@ -43,39 +39,38 @@
   </div>
 </template>
 
-<style>
-@keyframes CollapseIn {
-  0% {
-    height: 60vh;
-  }
-  100% {
-    height: 85vh;
-  }
-}
-@keyframes CollapseOut {
-  0% {
-    height: 85vh;
-  }
-  100% {
-    height: 60vh;
-  }
-}
-.CollapseIn {
-  animation: CollapseIn 1s ease forwards;
-}
-.CollapseOut {
-  animation: CollapseOut 1s ease forwards;
-}
-</style>
-
 <script setup>
 import number1 from '../../assets/images/Number_1.svg'
 import number2 from '../../assets/images/Number_2.svg'
 import number3 from '../../assets/images/Number_3.svg'
 import arrow from '../../assets/images/arrow.svg'
 
-import { ref } from 'vue'
-const IsCollapse = ref(true)
+import { ref,onMounted,watch } from 'vue'
+
+const IsCollapse = ref(false)
+
+let myheight=ref(114514)
+let opacity=ref(100)
+let OutH=ref(1919810)
+let InH=ref(10086)
+
+onMounted(()=>{
+  OutH.value=document.getElementById("box").offsetHeight
+  InH.value=OutH.value/2
+  IsCollapse.value=true;
+}) 
+
+watch(IsCollapse, (colla) => {
+  if(colla){
+    myheight.value=InH.value;
+    opacity.value=100;
+  }
+  else{
+    myheight.value=OutH.value;
+    opacity.value=0;
+  }
+  console.log(myheight.value)
+})
 
 const curriculums = [
   {
