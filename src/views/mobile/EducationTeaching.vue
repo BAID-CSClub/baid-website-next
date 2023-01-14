@@ -18,5 +18,5 @@ import StudentGuidance from '../../components/MobileEducationTeaching/StudentGui
 import WonderfulMoment from '../../components/MobileEducationTeaching/WonderfulMoments.vue'
 
 import { ref } from 'vue'
-let clip=ref(true);
+const clip = ref(true)
 </script>
