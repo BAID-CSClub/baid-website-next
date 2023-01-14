@@ -45,31 +45,30 @@ import number2 from '../../assets/images/Number_2.svg'
 import number3 from '../../assets/images/Number_3.svg'
 import arrow from '../../assets/images/arrow.svg'
 
-import { ref,onMounted,watch } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 
 const IsCollapse = ref(false)
 
-let myheight=ref(114514)
-let opacity=ref(100)
-let OutH=ref(1919810)
-let InH=ref(10086)
+const myheight=ref(114514)
+const opacity=ref(100)
+const OutH=ref(1919810)
+const InH=ref(10086)
 
-onMounted(()=>{
-  OutH.value=document.getElementById("box").offsetHeight
+onMounted(() => {
+  OutH.value=document.getElementById('box').offsetHeight
   InH.value=OutH.value/2
-  IsCollapse.value=true;
+  IsCollapse.value=true
 }) 
 
 watch(IsCollapse, (colla) => {
-  if(colla){
-    myheight.value=InH.value;
-    opacity.value=100;
+  if (colla){
+    myheight.value = InH.value
+    opacity.value = 100
   }
-  else{
-    myheight.value=OutH.value;
-    opacity.value=0;
+  else {
+    myheight.value = OutH.value
+    opacity.value = 0
   }
-  console.log(myheight.value)
 })
 
 const curriculums = [
