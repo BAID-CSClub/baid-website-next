@@ -64,8 +64,7 @@ watch(IsCollapse, (colla) => {
   if (colla) {
     myheight.value = InH.value
     opacity.value = 100
-  }
-  else {
+  } else {
     myheight.value = OutH.value
     opacity.value = 0
   }
