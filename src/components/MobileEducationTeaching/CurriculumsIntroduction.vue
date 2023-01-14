@@ -49,19 +49,19 @@ import { ref, onMounted, watch } from 'vue'
 
 const IsCollapse = ref(false)
 
-const myheight=ref(114514)
-const opacity=ref(100)
-const OutH=ref(1919810)
-const InH=ref(10086)
+const myheight = ref(114514)
+const opacity = ref(100)
+const OutH = ref(1919810)
+const InH = ref(10086)
 
 onMounted(() => {
-  OutH.value=document.getElementById('box').offsetHeight
-  InH.value=OutH.value/2
-  IsCollapse.value=true
-}) 
+  OutH.value = document.getElementById('box').offsetHeight
+  InH.value = OutH.value / 2
+  IsCollapse.value = true
+})
 
 watch(IsCollapse, (colla) => {
-  if (colla){
+  if (colla) {
     myheight.value = InH.value
     opacity.value = 100
   }
