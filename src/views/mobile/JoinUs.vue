@@ -1,5 +1,6 @@
 <template>
   <section>
+    <div class="h-20"></div>
     <Transition name="fade" mode="out-in">
       <JoinNav
         v-if="isNav"

@@ -1,11 +1,11 @@
 <template>
-  <div class="font-sans" :class="{'overflow-y-clip h-100vh':clip}">
-    <Splash @clip="clip=false"/>
-    <section class="p-3 snap-y snap-proximity overflow-y-scroll">
-      <Curriculums class="snap-start"></Curriculums>
-      <LearningMethod class="snap-start"></LearningMethod>
-      <StudentGuidance class="snap-start"></StudentGuidance>
-      <WonderfulMoment class="snap-start"></WonderfulMoment>
+  <div class="font-sans">
+    <Splash />
+    <section class="section">
+      <Curriculums></Curriculums>
+      <LearningMethod></LearningMethod>
+      <StudentGuidance></StudentGuidance>
+      <WonderfulMoment></WonderfulMoment>
     </section>
   </div>
 </template>
@@ -16,7 +16,4 @@ import Curriculums from '../../components/MobileEducationTeaching/CurriculumsInt
 import LearningMethod from '../../components/MobileEducationTeaching/LearningMethod.vue'
 import StudentGuidance from '../../components/MobileEducationTeaching/StudentGuidance.vue'
 import WonderfulMoment from '../../components/MobileEducationTeaching/WonderfulMoments.vue'
-
-import { ref } from 'vue'
-const clip = ref(true)
 </script>
