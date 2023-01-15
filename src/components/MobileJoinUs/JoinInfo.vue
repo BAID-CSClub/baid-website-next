@@ -1,23 +1,15 @@
 <template>
-  <div
-    class="h-screen"
-    style="
-      overflow: auto;
-      -webkit-scroll-snap-type: y mandatory;
-      -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-    "
-  >
-    <div class="snap-start min-h-screen">
-      <div class="py-20! section">
+  <div class="h-[calc(100vh-5rem)]">
+    <div class="min-h-[calc(100vh-5rem)]">
+      <div class="section">
         <h2 class="font-600 text-center">{{ props.title }}</h2>
         <pre>{{ props.content }}</pre>
       </div>
     </div>
     <div
-      class="snap-start h-full bg-[var(--standard-red)] font-sans font-900 flex justify-center items-center leading-tight"
+      class="h-full bg-[var(--standard-red)] font-sans font-900 flex justify-center items-center leading-tight"
     >
-      <div class="flex flex-col justify-center pt-20!">
+      <div class="flex flex-col justify-center">
         <div class="text-white" style="font-size: min(4.8rem, 20vw)">
           欢迎加入
         </div>
