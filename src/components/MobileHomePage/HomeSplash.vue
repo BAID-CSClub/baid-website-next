@@ -12,6 +12,7 @@
           class="h-full brightness-80"
           @slide-change="change($event.activeIndex)"
           @swiper="swiper = $event"
+          :resistance-ratio="0"
         >
           <SwiperSlide v-for="img in images" :key="img">
             <img
