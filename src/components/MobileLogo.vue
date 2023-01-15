@@ -32,8 +32,8 @@
         class="text-6 m-0"
         :class="{
           '!text-3.5': stage === 2,
-          'transition-all-500': props.animate && stage !== 2,
-          'transition-all-25': stage === 2
+          'transition-all-500': props.animate && !dive,
+          'transition-all-25': dive
         }"
       >
         北京中学国际部
@@ -42,8 +42,8 @@
         class="font-sans text-3 m-b-0 m-t-1"
         :class="{
           '!text-2 !m-t-0.5': stage === 2,
-          'transition-all-500': props.animate && stage !== 2,
-          'transition-all-25': stage === 2
+          'transition-all-500': props.animate && !dive,
+          'transition-all-25': dive
         }"
       >
         Beijing Academy International Department
@@ -83,15 +83,24 @@ function onScroll () {
 }
 router.afterEach(onScroll)
 
-router.beforeEach(() => {
-  ready.value = false
+router.beforeEach((e) => {
+  if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
+    setTimeout(() => {
+      ready.value = false
+    }, 300)
+  }
 })
 
-router.afterEach(() => {
+router.afterEach((e) => {
   router.isReady().then(() => {
-    setTimeout(() => {
+    if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
+      console.log('Wait')
+      setTimeout(() => {
+        ready.value = true
+      }, 1000)
+    } else {
       ready.value = true
-    }, 1000)
+    }
   })
 })
 
@@ -115,9 +124,6 @@ onMounted(async () => {
   } else {
     stage.value = 2
     dive.value = true
-    // setTimeout(() => {
-    //   ready.value = true
-    // }, 500) // Similar to header
   }
 })
 </script>
