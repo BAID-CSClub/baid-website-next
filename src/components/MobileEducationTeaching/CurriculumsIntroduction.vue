@@ -55,7 +55,7 @@ const OutH = ref(1919810)
 const InH = ref(10086)
 
 onMounted(() => {
-  OutH.value = document.getElementById('box').offsetHeight + 20
+  OutH.value = document.getElementById('box').offsetHeight * 1.2
   InH.value = OutH.value / 2
   IsCollapse.value = true
 })
