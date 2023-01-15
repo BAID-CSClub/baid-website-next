@@ -94,7 +94,6 @@ router.beforeEach((e) => {
 router.afterEach((e) => {
   router.isReady().then(() => {
     if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
-      console.log('Wait')
       setTimeout(() => {
         ready.value = true
       }, 1000)
@@ -108,7 +107,6 @@ onMounted(async () => {
   window.addEventListener('scroll', onScroll)
   // Wait for router
   await router.isReady()
-  console.log('router.isReady', 'animate', props.animate)
   if (props.animate) {
     ready.value = true
     setTimeout(() => {

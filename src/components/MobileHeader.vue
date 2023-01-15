@@ -147,7 +147,6 @@ router.beforeEach((e) => {
 router.afterEach((e) => {
   router.isReady().then(() => {
     if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
-      console.log('Wait')
       setTimeout(() => {
         ready.value = true
       }, 1000)
