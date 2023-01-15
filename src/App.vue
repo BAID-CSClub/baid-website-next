@@ -26,7 +26,10 @@ router.beforeEach((to) => {
   // Set title
   const title = t('views.' + to.name)
   document.title = title
-  console.log(lang, title)
+
+  if (!to.params.lang) {
+    return { path: '/' + lang + to.path }
+  }
 })
 </script>
 

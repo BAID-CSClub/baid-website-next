@@ -15,13 +15,4 @@ app.use(i18n)
 app.use(MotionPlugin)
 app.mount('#app')
 
-// Remove SEO Links
-document.querySelectorAll('body > a').forEach((a) => {
-  a.style.position = 'absolute'
-  a.style.zIndex = '-1'
-  a.style.width = '0'
-  a.style.height = '0'
-  a.style.marginTop = '-10px'
-})
-
 import(`./assets/styles/${app.config.globalProperties.$clientType}.css`)

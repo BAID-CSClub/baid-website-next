@@ -136,15 +136,23 @@ function onScroll () {
 }
 router.afterEach(onScroll)
 
-router.beforeEach(() => {
-  ready.value = false
+router.beforeEach((e) => {
+  if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
+    setTimeout(() => {
+      ready.value = false
+    }, 300)
+  }
 })
 
-router.afterEach(() => {
+router.afterEach((e) => {
   router.isReady().then(() => {
-    setTimeout(() => {
+    if (e.name === 'AboutUs' || e.name === 'EducationTeaching') {
+      setTimeout(() => {
+        ready.value = true
+      }, 1000)
+    } else {
       ready.value = true
-    }, 1000)
+    }
   })
 })
 
