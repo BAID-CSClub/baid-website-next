@@ -36,7 +36,7 @@
           </div>
         </swiper-slide>
       </DesktopSwiper>
-      <Transition>
+      <Transition name="fade">
         <ClubInfo
           v-if="showInfo"
           @close="showInfo = false"
@@ -67,21 +67,5 @@ const clubImgs = ref(null)
   background-image: url('../../assets/images/campusBg3.png?webp');
   background-repeat: no-repeat;
   background-size: 100% 600px;
-}
-.v-enter-active {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 200ms;
-}
-
-.v-leave-active {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
 }
 </style>

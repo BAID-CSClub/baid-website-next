@@ -15,7 +15,7 @@
           ><swiper-slide v-for="(img, index) in props.images" :key="img"
             ><img
               :src="img"
-              class="w-full object-cover transition-all aspect-3/2 object-cover"
+              class="w-full object-cover aspect-3/2"
               v-on:click="change(index)"
               alt="pic1" /></swiper-slide
         ></DesktopSwiper>
