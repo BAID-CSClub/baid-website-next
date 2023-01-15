@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col justify-center items-center h-screen snap-start box-border"
+    class="flex flex-col justify-center items-center h-[calc(100vh-5rem)] snap-start box-border"
   >
     <div>
       <img

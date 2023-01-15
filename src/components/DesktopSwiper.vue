@@ -57,8 +57,6 @@ const modules = props.pagination
   ? [Navigation, Pagination, A11y]
   : [Navigation, A11y]
 
-console.log(props.pagination)
-console.log(modules)
 const swiper = ref(null)
 
 function getRef (swiperInstance) {

@@ -21,7 +21,7 @@
       >
         >
         <div
-          class="bg-white rounded-3xl p-8 w-80vw h-60vh box-border overflow-auto"
+          class="bg-white rounded-3xl p-8 w-80vw h-70vh box-border overflow-auto"
           id="clubsPopWindow"
         >
           <h2 class="m-t-0 m-b-4">学生社团</h2>
@@ -83,7 +83,7 @@ const showPop = ref(false)
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  z-index: 1;
+  z-index: 20;
   backdrop-filter: blur(3px);
 }
 </style>
