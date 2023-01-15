@@ -5,11 +5,11 @@
       'background-image': `url(${props.image})`
     }"
   >
-    <h1 class="color-white font-title text-10">
+    <h2 class="color-white font-title text-10">
       <span>{{ props.title[0] }}</span>
       <span class="color-yellow">{{ props.title[1] }}</span>
       <span>{{ props.title.substr(2) }}</span>
-    </h1>
+    </h2>
     <span class="decoration-none color-yellow" @click="showPop = true"
       >了解更多</span
     >

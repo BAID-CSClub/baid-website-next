@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[calc(100vh-5rem)] mt-20">
+  <div class="w-screen h-[calc(100vh-5rem)] mt-20 font-sans">
     <SplashBlockClubs title="学生社团" :image="camping"></SplashBlockClubs>
     <SplashBlockActivities
       title="特色活动"
