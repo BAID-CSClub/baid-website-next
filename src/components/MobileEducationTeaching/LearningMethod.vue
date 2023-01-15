@@ -1,5 +1,5 @@
 <template>
-  <div class="max-h-100vh h-100vh">
+  <div>
     <div class="relative m-b-6vh m-t-10vh">
       <div class="text-[var(--standard-red)] font-black text-14">
         自主探索<br />多样的<br />学习方式

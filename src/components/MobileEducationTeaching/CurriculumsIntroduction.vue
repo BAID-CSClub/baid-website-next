@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="relative font-black m-t-20 text-center">
-      <div class="text-8 tracking-5">课程体系</div>
-      <div class="text-4 tracking-wider text-gray-300 m-t--2">Curriculums</div>
+    <div class="relative font-black text-center">
+      <h2 class="text-8 tracking-5 m-0!">课程体系</h2>
+      <h2 class="text-4 tracking-wider text-gray-300 m-0!">Curriculums</h2>
     </div>
     <swiper
       :slides-per-view="1"
@@ -13,12 +13,17 @@
       class="m-b-2"
     >
       <swiper-slide v-for="item in curriculums" :key="item">
-        <div class="flex items-center">
-          <img :src="item.icon" class="w-18 block" />
-          <h3 class="m-x-2 text-6">{{ $t(item.title) }}</h3>
-        </div>
-        <div class="flex flex-col items-center m-y-2">
-          <pre class="m-x-4">{{ $t(item.description) }}</pre>
+        <div
+          class="rounded-3xl border border-gray-500"
+          style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
+        >
+          <div class="flex items-center">
+            <img :src="item.icon" class="w-18 block" />
+            <h3 class="m-x-2 text-6">{{ $t(item.title) }}</h3>
+          </div>
+          <div class="flex flex-col items-center m-y-2">
+            <pre class="m-x-4">{{ $t(item.description) }}</pre>
+          </div>
         </div>
       </swiper-slide></swiper
     >
@@ -57,7 +62,7 @@ const curriculums = [
 ]
 </script>
 <style scoped>
-.swiper-pagination {
-  top: 2px;
+.swiper {
+  padding-bottom: 2rem !important;
 }
 </style>
