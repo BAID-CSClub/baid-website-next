@@ -3,6 +3,7 @@ date: 2022-12-01 # yyyy-MM-dd
 time: 17:06:00+08:00 # hh-mm-ss+hh-mm
 description: 站点生成器的一个测试页面
 title: 天地，好在否！
+cover: ./hello-world/image.jpg
 ---
 
 这是个测试页面。

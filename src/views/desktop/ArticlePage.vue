@@ -9,18 +9,18 @@
         <h1>Loading...</h1>
       </div>
       <div v-else>
-        <!-- <section>
-          <CarouselHorizontal :images="content?.images">
+        <section>
+          <CarouselHorizontal :images="[content?.cover]">
             <h1 class="text-18 color-white">
               {{ content?.title }}
             </h1>
           </CarouselHorizontal>
-        </section> -->
+        </section>
         <section class="section">
-          <h1 class="text-10">{{ content?.title }}</h1>
-          <p>也许还需要更多的内容，如作者 / 创作时间等？</p>
-          <br />
-
+          <article>
+            <h1>{{ content?.title }}</h1>
+            <p></p>
+          </article>
           <article v-html="content?.body"></article>
         </section>
       </div>
@@ -31,6 +31,9 @@
 <script setup>
 import { useRoute } from 'vue-router'
 import { computed, ref, watch, onMounted } from 'vue'
+import '../../assets/styles/article.css'
+
+import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 
 const debug = true
 const route = useRoute()

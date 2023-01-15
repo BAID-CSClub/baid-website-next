@@ -1,12 +1,16 @@
 <template>
   <div>
-    <MobileHead :img="img"></MobileHead>
+    <MobileHead :img="content?.cover"></MobileHead>
 
     <section class="section">
-      <h1>Todo: Mobile Article Page</h1>
-      <h2>Assigned to lihe07</h2>
       <h3 v-if="loading">Now loading...</h3>
-      <article v-else v-html="content?.body"></article>
+      <div v-else>
+        <article>
+          <h1>{{ content.title }}</h1>
+          <p></p>
+        </article>
+        <article v-html="content.body"></article>
+      </div>
     </section>
   </div>
 </template>
@@ -20,8 +24,7 @@ article img {
 <script setup>
 import MobileHead from '../../components/MobileHead.vue'
 
-import img from '../../assets/images/HomePage/Dongba_1.jpg'
-
+import '../../assets/styles/article.css'
 import { useRoute } from 'vue-router'
 import { computed, ref, watch, onMounted } from 'vue'
 // import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
