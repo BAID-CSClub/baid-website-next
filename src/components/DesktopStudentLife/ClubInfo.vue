@@ -4,7 +4,7 @@
     @click.self="$emit('close')"
   >
     <div
-      class="w-full max-w-50vw max-h-80vh bg-white rounded-3xl p-12 box-border overflow-auto"
+      class="w-full max-w-50vw max-h-80vh bg-white rd-5 p-12 box-border overflow-auto"
     >
       <h3 class="text-8">
         {{ props.name }}

@@ -6,17 +6,14 @@
     </div>
     <swiper
       :slides-per-view="1"
+      :space-between="10"
       :modules="modules"
       :pagination="{ clickable: true }"
       :loop="true"
       :autoHeight="true"
-      class="m-b-2"
     >
       <swiper-slide v-for="item in curriculums" :key="item">
-        <div
-          class="rounded-3xl border border-gray-500"
-          style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-        >
+        <div class="rd-5 box-border m-2 drop-shadow">
           <div class="flex items-center">
             <img :src="item.icon" class="w-18 block" />
             <h3 class="m-x-2 text-6">{{ $t(item.title) }}</h3>

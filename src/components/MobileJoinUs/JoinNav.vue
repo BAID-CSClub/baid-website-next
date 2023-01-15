@@ -6,7 +6,7 @@
       <img
         :src="imgHeader1"
         alt=""
-        class="inline h-50vh max-h-100 aspect-3/4 object-cover rounded-3xl"
+        class="inline h-50vh max-h-100 aspect-3/4 object-cover rd-5"
       />
     </div>
     <p class="text-6 text-gray600 text-center">欢迎加入</p>

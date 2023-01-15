@@ -1,35 +1,31 @@
 <template>
   <div>
-    <div class="relative m-b-6vh m-t-10vh">
-      <div class="text-[var(--standard-red)] font-black text-14">
+    <div class="relative">
+      <h2 class="text-[var(--standard-red)] font-black! text-8 m-y-8">
         自主探索<br />多样的<br />学习方式
-      </div>
-      <div
-        class="font-black text-gray-300 text-8 absolute top-12 z--1 lh-16 text-black"
-      >
+      </h2>
+      <!-- <h2 class="font-black text-gray-300 text-6 absolute top-8 z--1 lh-8 m-0!">
         Learning<br />Method
-      </div>
+      </h2> -->
     </div>
-    <div class="grid grid-flow-row grid-cols-2 grid-rows-2">
-      <div
-        class="b-4 b-[var(--standard-red)] b-rd-4 w-95% text-10 font-1000 text-white m-1.5 text-center box-border block p-l-9 p-r-9"
-        style="
-          background: url(https://images.unsplash.com/photo-1560785496-3c9d27877182?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
-          background-size: cover;
-        "
-        @click="
-          () => {
-            bigtitle = passage.bigtitle
-            description = passage.description
-            images = passage.images
-            introdisplay = true
-          }
-        "
-        v-for="passage in LeaningMethods"
-        :key="passage"
-      >
-        {{ $t(passage.title) }}
-      </div>
+    <div
+      class="rd-5 text-8 text-white m-y-6 text-center drop-shadow h-40"
+      style="
+        background: url(https://images.unsplash.com/photo-1560785496-3c9d27877182?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+        background-size: cover;
+      "
+      @click="
+        () => {
+          bigtitle = passage.bigtitle
+          description = passage.description
+          images = passage.images
+          introdisplay = true
+        }
+      "
+      v-for="passage in LeaningMethods"
+      :key="passage"
+    >
+      {{ $t(passage.title) }}
     </div>
     <Intro
       :description="description"
