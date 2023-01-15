@@ -158,10 +158,6 @@ router.afterEach((e) => {
 
 onMounted(async () => {
   window.addEventListener('scroll', onScroll)
-  // await router.isReady()
-  // setTimeout(() => {
-  //   ready.value = true
-  // }, 500) // Fine, a stupid and dirty hack. But it works.
 })
 </script>
 
