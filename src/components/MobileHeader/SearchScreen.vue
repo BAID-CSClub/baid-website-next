@@ -15,9 +15,9 @@
 
     <Transition mode="out-in" name="fade">
       <div class="mt-15 color-white transition-opacity" v-if="results.length">
-        <h2>关键词 {{ text }} 的搜索结果</h2>
+        <h2 class="truncate">关键词 {{ text }} 的搜索结果</h2>
         <RouterLink
-          class="block bg-white bg-op-10 w-full rounded-xl pa-5 box-border decoration-none"
+          class="block bg-white bg-op-10 w-full rounded-xl pa-5 box-border !decoration-none"
           @click="emit('close')"
           v-for="result in results"
           :key="result.ref"
@@ -28,7 +28,7 @@
         </RouterLink>
       </div>
       <div class="color-white mt-15" v-else-if="text.length">
-        <h2>找不到 {{ text }}</h2>
+        <h2 class="truncate">找不到 {{ text }}</h2>
         <p class="op-80">
           可以看看
           <a href="https://www.bilibili.com/video/BV1GJ411x7h7">百度站内搜索</a>
@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 input {
   outline: 3px solid rgba(255, 255, 255, 0.1);
 }
@@ -51,7 +51,7 @@ input:focus {
   outline: 3px solid rgba(255, 255, 255, 0.3);
 }
 a {
-  color: white;
+  color: white !important;
   text-decoration: underline;
 }
 </style>

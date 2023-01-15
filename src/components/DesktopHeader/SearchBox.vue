@@ -1,22 +1,41 @@
 <template>
-  <div>
+  <div class="relative">
     <input
       type="text"
       placeholder="Search"
       v-model="text"
-      class="w-35 h-7 outline-none border-none bg-white bg-op-30 px-3"
+      class="w-35 h-7 !outline-none border-none bg-white bg-op-30 px-3 placeholder-white"
       :style="{ color: props.color }"
     />
-    <div class="absolute bg-white w-41" v-show="text.length > 0">
+    <div class="absolute bg-white w-70 right-0 p-3" v-show="text.length > 0">
       <RouterLink
-        v-for="result in results"
+        v-for="(result, index) in results"
         :key="result.ref"
         :to="db[locale][result.ref].href"
-        >{{ db[locale][result.ref].title }}</RouterLink
+        class="color-black decoration-none op-80 hover:op-100 transition"
       >
+        <h3 class="m0">{{ db[locale][result.ref].title }}</h3>
+        <p class="mt-1 op-80" :class="{ 'mb-3': index + 1 !== results.length }">
+          {{ db[locale][result.ref].description }}
+        </p>
+      </RouterLink>
+      <div class="color-black" v-if="!results.length">
+        <h3 class="m0 truncate">找不到 {{ text }}</h3>
+        <p class="op-80">
+          可以看看 <a href="">百度站内搜索</a> 或者
+          <a href="">Google Insite</a>
+          如何评价
+        </p>
+      </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+a {
+  color: black;
+}
+</style>
 
 <script setup>
 import { watch, ref } from 'vue'
