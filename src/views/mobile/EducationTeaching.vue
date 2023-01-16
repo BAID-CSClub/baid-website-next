@@ -1,7 +1,7 @@
 <template>
   <div class="font-sans">
     <Splash />
-    <div class="h-20"></div>
+    <div class="placeholder"></div>
     <section class="section">
       <Curriculums></Curriculums>
       <LearningMethod></LearningMethod>

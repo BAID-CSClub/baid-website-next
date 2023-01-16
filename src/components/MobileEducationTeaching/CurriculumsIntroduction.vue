@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="relative font-black text-center">
-      <h2 class="text-8 tracking-5 m-0!">课程体系</h2>
-      <h2 class="text-4 tracking-wider text-gray-300 m-0!">Curriculums</h2>
+      <h2 class="text-8 tracking-5 m-y-4">课程体系</h2>
+      <!-- <h2 class="text-4 tracking-wider text-gray-300 m-0!">Curriculums</h2> -->
     </div>
     <swiper
       :slides-per-view="1"
@@ -13,7 +13,7 @@
       :autoHeight="true"
     >
       <swiper-slide v-for="item in curriculums" :key="item">
-        <div class="rd-5 box-border m-2 drop-shadow">
+        <div class="rd-5 box-border m-2 drop-shadow p-2">
           <div class="flex items-center">
             <img :src="item.icon" class="w-18 block" />
             <h3 class="m-x-2 text-6">{{ $t(item.title) }}</h3>
