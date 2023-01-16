@@ -61,7 +61,7 @@
 import { ref } from 'vue'
 import { clubs } from '../../data/Clubs.js'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Autoplay, A11y, Pagination } from 'swiper'
+import { Autoplay, A11y } from 'swiper'
 
 import MobilePopup from '../MobilePopup.vue'
 
