@@ -14,32 +14,24 @@
       >了解更多</span
     >
     <Transition name="fade" mode="out-in">
-      <div
-        class="backdrop flex justify-center items-center"
-        @click="showPop = false"
-        v-if="showPop"
-      >
-        >
-        <div
-          class="bg-white rounded-3xl p-8 w-80vw h-70vh box-border overflow-auto"
-          id="clubsPopWindow"
-        >
-          <h2 class="m-t-0 m-b-4">学生社团</h2>
-          <span>(左右滑动查看更多内容)</span>
+      <MobilePopup v-if="showPop" @close="showPop = false">
+        <template v-slot:content>
           <swiper
-            :modules="[Navigation, A11y]"
+            :modules="[A11y]"
             :slides-per-view="1"
+            :space-between="10"
             :loop="true"
             :autoHeight="true"
           >
             <swiper-slide v-for="club in clubs" :key="club">
-              <h3>{{ $t(club.name) }}</h3>
+              <h3 class="text-6">{{ $t(club.name) }}</h3>
               <p class="my-4">
                 {{ $t(club.description) }}
               </p>
               <swiper
                 :modules="[Autoplay, A11y]"
                 :slides-per-view="1"
+                :space-between="10"
                 :autoplay="{
                   delay: 2500,
                   disableOnInteraction: false
@@ -55,8 +47,12 @@
               </swiper>
             </swiper-slide>
           </swiper>
-        </div>
-      </div>
+        </template>
+        <!-- <div></div> -->
+        <template v-slot:description>
+          <span class="text-white m-4">(左右滑动查看更多内容)</span>
+        </template>
+      </MobilePopup>
     </Transition>
   </div>
 </template>
@@ -64,11 +60,10 @@
 <script setup>
 import { ref } from 'vue'
 import { clubs } from '../../data/Clubs.js'
-/* initializing_swiper */
-
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation, Autoplay, A11y } from 'swiper'
+import { Autoplay, A11y } from 'swiper'
+
+import MobilePopup from '../MobilePopup.vue'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -76,14 +71,3 @@ import 'swiper/css/pagination'
 const props = defineProps(['title', 'image']) // TODO: More about dialog
 const showPop = ref(false)
 </script>
-<style scoped>
-.backdrop {
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  z-index: 20;
-  backdrop-filter: blur(3px);
-}
-</style>

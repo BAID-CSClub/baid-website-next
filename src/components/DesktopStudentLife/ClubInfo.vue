@@ -4,7 +4,7 @@
     @click.self="$emit('close')"
   >
     <div
-      class="w-full max-w-50vw max-h-80vh bg-white rounded-3xl p-12 box-border overflow-auto"
+      class="w-full max-w-50vw max-h-80vh bg-white rd-5 p-12 box-border overflow-auto"
     >
       <h3 class="text-8">
         {{ props.name }}
@@ -36,7 +36,7 @@ const props = defineProps(['name', 'description', 'images'])
   top: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 1;
   backdrop-filter: blur(3px);

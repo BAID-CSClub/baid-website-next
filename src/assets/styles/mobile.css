@@ -7,6 +7,12 @@
   padding: 1rem;
 }
 
+.drop-shadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.placeholder {
+  height: 80px;
+}
 h1 {
   font-family: 'Latin Modern Roman', 'Alibaba PuHuiTi 2.0 55', sans-serif;
   font-weight: 500;
