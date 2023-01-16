@@ -19,7 +19,7 @@
     </h2>
     <div>
       <swiper
-        :modules="[Pagination, A11y]"
+        :modules="[Autoplay, Pagination, A11y]"
         :slides-per-view="1"
         :space-between="10"
         :autoplay="{

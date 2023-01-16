@@ -13,24 +13,19 @@
     <span class="decoration-none color-yellow" @click="showPop = true"
       >了解更多</span
     >
-    <div
-      class="fixed top-0 bg-black bg-op-70 w-full h-screen flex justify-center items-center"
-      @click="showPop = false"
-      :class="{
-        'z-20 op-100': showPop,
-        'z-0 op-0 pointer-events-none': !showPop
-      }"
+    <MobilePopup v-if="showPop" @close="showPop = false">
+      <template v-slot:content>
+        <div>
+          <h2 class="m0 mb-5">Wow a pop dialog</h2>
+          <p>Activities</p>
+        </div>
+      </template></MobilePopup
     >
-      <div class="bg-white rounded-xl p-10">
-        <h2 class="m0 mb-5">Wow a pop dialog</h2>
-        <p>Activities</p>
-      </div>
-      <!-- Pop window -->
-    </div>
   </div>
 </template>
 <script setup>
 import { ref } from 'vue'
+import MobilePopup from '../MobilePopup.vue'
 
 const props = defineProps(['title', 'image']) // TODO: More about dialog
 

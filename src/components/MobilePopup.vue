@@ -19,7 +19,7 @@
   right: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 20;
   backdrop-filter: blur(3px);
