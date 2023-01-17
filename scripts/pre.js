@@ -3,6 +3,7 @@
 import yaml from 'js-yaml'
 import fs from 'fs/promises'
 import { existsSync } from 'fs'
+import { spawn } from 'child_process'
 import path from 'path'
 import markdownIt from 'markdown-it'
 import lunr from 'lunr'
@@ -32,6 +33,38 @@ async function copyRecursive (src, dest) {
     })
   } else {
     await fs.copyFile(src, dest)
+  }
+}
+
+if (!existsSync('./articles')) {
+  console.log('Cloning articles...')
+  // Clone https://github.com/BAID-CSClub/articles to ./articles
+  try {
+    await new Promise((resolve, reject) => {
+      const child = spawn(
+        'git',
+        [
+          'clone',
+          '--depth',
+          '1',
+          'https://github.com/BAID-CSClub/articles',
+          './articles'
+        ],
+        {
+          stdio: 'inherit'
+        }
+      )
+      child.on('close', (code) => {
+        if (code === 0) {
+          resolve()
+        } else {
+          reject(new Error('Failed to clone articles'))
+        }
+      })
+    })
+  } catch (e) {
+    console.error('Failed to clone articles, please check your network.')
+    process.exit(1)
   }
 }
 
