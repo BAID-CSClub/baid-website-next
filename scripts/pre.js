@@ -36,34 +36,38 @@ async function copyRecursive (src, dest) {
   }
 }
 
-console.log('Cloning articles...')
-// Clone https://github.com/BAID-CSClub/articles to ./articles
-try {
-  await new Promise((resolve, reject) => {
-    const child = spawn(
-      'git',
-      [
-        'clone',
-        '--depth',
-        '1',
-        'https://github.com/BAID-CSClub/articles',
-        './articles'
-      ],
-      {
+if (!existsSync('./articles')) {
+  console.log('Cloning articles...')
+  // Clone https://github.com/BAID-CSClub/articles to ./articles
+  try {
+    const args = ['clone', '--depth', '1']
+
+    // Check if has ACCESS_TOKEN env
+    if (process.env.ACCESS_TOKEN) {
+      args.push(
+        `https://${process.env.ACCESS_TOKEN}@github.com/BAID-CSClub/articles`
+      )
+    } else {
+      args.push('https://github.com/BAID-CSClub/articles')
+    }
+    args.push('./articles')
+
+    await new Promise((resolve, reject) => {
+      const child = spawn('git', args, {
         stdio: 'inherit'
-      }
-    )
-    child.on('close', (code) => {
-      if (code === 0) {
-        resolve()
-      } else {
-        reject(new Error('Failed to clone articles'))
-      }
+      })
+      child.on('close', (code) => {
+        if (code === 0) {
+          resolve()
+        } else {
+          reject(new Error('Failed to clone articles'))
+        }
+      })
     })
-  })
-} catch (e) {
-  console.error('Failed to clone articles, please check your network.')
-  process.exit(1)
+  } catch (e) {
+    console.error('Failed to clone articles, please check your network.')
+    process.exit(1)
+  }
 }
 
 console.log('Building articles...')
