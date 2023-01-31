@@ -67,28 +67,30 @@
         class="h-7 w-3px my-0 mx-5 border-none"
         :style="{ 'background-color': color }"
       />
-      <p
-        class="w-20 text-center font-500 opacity-50 hover:opacity-100 active:opacity-60 cursor-pointer select-none"
-      >
-        <transition mode="out-in" name="fast-fade">
-          <router-link
-            class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-            v-if="$i18n.locale === 'zh-CN'"
-            :to="route.path.replace('zh-CN', 'en-US')"
-            >English</router-link
+      <p class="w-7 text-center">
+        <router-link
+          class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-80"
+          :to="
+            route.path.replace(
+              $i18n.locale,
+              $i18n.locale === 'zh-CN' ? 'en-US' : 'zh-CN'
+            )
+          "
+        >
+          <svg
+            class="w-6 h-10"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 18"
           >
-          <router-link
-            class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-            v-else
-            :to="route.path.replace('en-US', 'zh-CN')"
-            >中文</router-link
-          >
-        </transition>
+            <path
+              fill="currentColor"
+              d="m12.87 15.07l-2.54-2.51l.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5l3.11 3.11l.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7l1.62-4.33L19.12 17h-3.24Z"
+            />
+          </svg>
+        </router-link>
       </p>
-      <hr
-        class="h-7 w-3px my-0 mx-5 border-none"
-        :style="{ 'background-color': color }"
-      />
       <SearchBox :color="color"></SearchBox>
     </div>
   </header>

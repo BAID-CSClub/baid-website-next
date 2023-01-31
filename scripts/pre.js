@@ -101,13 +101,17 @@ for (const file of await fs.readdir('./articles')) {
       date.getMonth() + 1
     }/${date.getDate()}/`
 
+    const href = `/${lang}/articles` + datePath + id
     // Add to documents
     documents[lang].push({
       id,
-      href: `/${lang}/articles` + datePath + id,
+      href,
       title: frontMatter.title,
       description: frontMatter.description,
-      body: content.split('---')[2]
+      body: content.split('---')[2],
+      date: frontMatter.date,
+      time: frontMatter.time,
+      cover: href + frontMatter.cover.replace('./' + id, '')
     })
     // Write the file
     const dir = `./public/${lang}/articles` + datePath
