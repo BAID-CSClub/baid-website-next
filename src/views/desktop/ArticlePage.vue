@@ -4,21 +4,21 @@
     <transition name="fade" mode="out-in">
       <div
         v-if="loading"
-        class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center"
+        class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center font-sans"
       >
-        <h1>Loading...</h1>
+        <h1 class="font-sans">Loading...</h1>
       </div>
       <div v-else>
         <section>
           <CarouselHorizontal :images="[content?.cover]">
-            <h1 class="text-18 color-white">
+            <h1 class="text-16 color-white font-sans">
               {{ content?.title }}
             </h1>
           </CarouselHorizontal>
         </section>
         <section class="section">
           <article>
-            <h1>{{ content?.title }}</h1>
+            <h1 class="font-sans">{{ content?.title }}</h1>
             <p></p>
           </article>
           <article v-html="content?.body"></article>
