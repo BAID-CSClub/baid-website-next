@@ -15,6 +15,8 @@ import MobileCard from '../MobileCard.vue'
 
 const imgs = [
   { url: 'https://img.js.design/assets/smartFill/img347164da74c4b8.jpg' },
+  { url: 'https://img.js.design/assets/smartFill/img347164da74c4b8.jpg' },
+  { url: 'https://img.js.design/assets/smartFill/img347164da74c4b8.jpg' },
   { url: 'https://img.js.design/assets/smartFill/img347164da74c4b8.jpg' }
 ]
 </script>
