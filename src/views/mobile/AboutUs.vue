@@ -1,17 +1,16 @@
 <template>
-  <div>
-    <open class="absolute"></open>
+  <AboutUsSplash>
     <section>
       <AboutUsIntroduction></AboutUsIntroduction>
       <AboutUsAlumni></AboutUsAlumni>
       <AboutUsBlock></AboutUsBlock>
       <AboutUsCompare></AboutUsCompare>
     </section>
-  </div>
+  </AboutUsSplash>
 </template>
 
 <script setup>
-import open from '../../components/MobileAboutUs/AboutUsOpen.vue'
+import AboutUsSplash from '../../components/MobileAboutUs/AboutUsSplash.vue'
 import AboutUsIntroduction from '../../components/MobileAboutUs/AboutUsIntroduction.vue'
 import AboutUsAlumni from '../../components/MobileAboutUs/AboutUsAlumni.vue'
 import AboutUsCompare from '../../components/MobileAboutUs/AboutUsCompare.vue'

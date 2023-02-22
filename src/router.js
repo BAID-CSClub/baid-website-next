@@ -24,7 +24,11 @@ export const routes = [
   {
     path: langPrefix + '/about',
     name: 'AboutUs',
-    component: () => import(`./views/${clientType}/AboutUs.vue`)
+    component: () => import(`./views/${clientType}/AboutUs.vue`),
+    meta: {
+      // No thing to do with header
+      noSplash: true
+    }
   },
   {
     path: langPrefix + '/education',

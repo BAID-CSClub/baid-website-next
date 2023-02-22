@@ -1,9 +1,6 @@
 <template>
   <div class="section">
-    <div class="relative font-black m-t-10vh h-10vh max-h-15vh text-left">
-      <div class="text-6 tracking-1">毕业生介绍</div>
-      <div class="text-4 tracking-wider text-black-300 m-t--2">Alumni</div>
-    </div>
+    <MobileTitle>{{ $t('AboutUs.Alumni.Title') }}</MobileTitle>
     <div
       class="flex m-b-10 w-full gap-3"
       v-for="items in Curriculums"
@@ -36,6 +33,7 @@ import MobileCard from '../MobileCard.vue'
 import a from '../../assets/images/AboutUs/Alumni/Alum_1.jpeg'
 import b from '../../assets/images/AboutUs/Alumni/Alum_2.jpeg'
 import c from '../../assets/images/AboutUs/Alumni/Alum_3.jpeg'
+import MobileTitle from '../MobileTitle.vue'
 const Curriculums = [
   {
     description:
