@@ -1,13 +1,14 @@
 <template>
   <div class="font-sans">
-    <Splash />
-    <div class="placeholder"></div>
-    <section class="section">
-      <Curriculums></Curriculums>
-      <LearningMethod></LearningMethod>
-      <StudentGuidance></StudentGuidance>
-      <WonderfulMoment></WonderfulMoment>
-    </section>
+    <Splash>
+      <div class="placeholder"></div>
+      <section class="section">
+        <Curriculums></Curriculums>
+        <LearningMethod></LearningMethod>
+        <StudentGuidance></StudentGuidance>
+        <WonderfulMoment></WonderfulMoment>
+      </section>
+    </Splash>
   </div>
 </template>
 

@@ -10,9 +10,8 @@
   >
     <!-- CN -->
     <h1
-      class="color-#122A28 m-0 text-10 font-300"
+      class="color-#122A28 m-0 text-10 font-300 font-title"
       v-if="$i18n.locale === 'zh-CN'"
-      style="font-family: 'Open Sans Bold', 'Dianzi', sans-serif"
     >
       <span v-for="word in cn" :key="word">
         <span>{{ word.left }}</span>
