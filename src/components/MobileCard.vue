@@ -14,6 +14,7 @@
       :slides-per-view="1"
       @slide-change="(e) => change(e.activeIndex)"
       :loop="true"
+      :auto-height="true"
     >
       <SwiperSlide v-for="(item, index) in props.items" :key="index">
         <slot name="item" v-bind="item"></slot>

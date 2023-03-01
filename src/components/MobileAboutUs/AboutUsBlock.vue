@@ -1,5 +1,5 @@
 <template>
-  <div class="p-l-2">
+  <section class="section mb-4">
     <MobileCard :items="imgs" :border="false">
       <template #item="{ url }">
         <div class="bg-yellow flex justify-center items-center h-45">
@@ -7,7 +7,7 @@
         </div>
       </template>
     </MobileCard>
-  </div>
+  </section>
 </template>
 
 <script setup>
