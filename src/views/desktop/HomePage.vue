@@ -19,8 +19,8 @@
     <section id="admissionResults">
       <AdmissionResults />
     </section>
-    <section id="news">
-      <HomeNews :newsList="data.news" />
+    <section id="news" v-if="news.length">
+      <HomeNews :newsList="news" />
     </section>
   </div>
 </template>
@@ -29,6 +29,7 @@
 // Modules
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { ref, watchEffect } from 'vue'
 // Components
 import FirstSection from '../../components/DesktopHomePage/FirstSection.vue'
 import SecondSection from '../../components/DesktopHomePage/SecondSection.vue'
@@ -38,7 +39,7 @@ import AdmissionResults from '../../components/DesktopHomePage/AdmissionResults.
 import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
 // Assets
 import avatar from '../../assets/images/homeBg1.jpg'
-import data from '../../data/HomePage'
+// import data from '../../data/HomePage'
 
 const { locale } = useI18n({ useScope: 'global' })
 
@@ -46,4 +47,22 @@ const route = useRoute()
 const router = useRouter()
 
 if (!route.params.lang) router.push('/' + locale.value)
+
+const news = ref([])
+
+watchEffect(() => {
+  fetch(`/${route.params.lang}/db.json`).then((res) => {
+    if (res.status === 200) {
+      res.json().then((data) => {
+        data = Object.values(data)
+        // Sort by date
+        data.sort((a, b) => {
+          return new Date(b.date) - new Date(a.date)
+        })
+        news.value = data
+        console.log('data', data)
+      })
+    }
+  })
+})
 </script>

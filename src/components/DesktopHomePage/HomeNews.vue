@@ -1,21 +1,26 @@
 <template>
   <div class="section">
-    <div class="flex justify-end">
-      <NotFancyTitle cn="新闻" en="News" right color="blue"></NotFancyTitle>
-    </div>
+    <NotFancyTitle cn="新闻" en="News" color="blue"></NotFancyTitle>
     <div class="flex h-130">
-      <div class="flex-1 relative">
-        <img :src="img" alt="" class="w-full h-full object-cover" />
+      <div class="flex-1 relative border-1">
         <div
-          class="absolute bottom-0 w-full special-bg transition-opacity-300"
+          class="transition-opacity-300 h-full cursor-pointer"
           :class="{ 'op-0': transition }"
+          @click="router.push(props.newsList[current].href)"
         >
-          <h2 class="font-sans color-white text-9 mb-2 ml-10">
-            {{ props.newsList[current][locale].title }}
-          </h2>
-          <p class="font-sans color-white text-7 mb-10 ml-10">
-            {{ props.newsList[current][locale].abstract }}
-          </p>
+          <img
+            :src="props.newsList[current].cover"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-0 w-full special-bg">
+            <h2 class="font-sans color-white text-9 mb-2 ml-10">
+              {{ props.newsList[current].title }}
+            </h2>
+            <p class="font-sans color-white text-7 mb-10 ml-10">
+              {{ props.newsList[current].abstract }}
+            </p>
+          </div>
         </div>
       </div>
 
@@ -26,7 +31,7 @@
             'scale-107 shadow-lg !bg-[var(--standard-red)] border-color-[var(--standard-red)]':
               current === index && !transition
           }"
-          v-for="(news, index) in props.newsList"
+          v-for="(news, index) in props.newsList.slice(0, 4)"
           :key="index"
           v-on:click="change(index)"
         >
@@ -35,17 +40,22 @@
               class="font-sans color-gray-8 text-4 mt-3 mb-0 transition-color-300"
               :class="{ '!color-gray-2': current === index && !transition }"
             >
-              {{ news.date }}
+              {{ news.date.toLocaleString().substring(0, 10) }}
             </p>
             <p
-              class="font-sans color-[var(--standard-blue)] text-6 transition-color-300"
+              class="font-sans color-[var(--standard-blue)] text-6 transition-color-300 h-20 overflow-hidden"
+              style="text-overflow: ellipsis; white-space: pre-wrap"
               :class="{ 'color-white': current === index && !transition }"
             >
-              {{ news[locale].title }}
+              {{
+                news.title.length > 15
+                  ? news.title.substring(0, 15) + '...'
+                  : news.title
+              }}
             </p>
           </div>
           <img
-            :src="img"
+            :src="news.cover"
             class="w-50% transition-all-300 object-cover"
             :class="{ 'm-2': current === index && !transition }"
           />
@@ -59,11 +69,9 @@
 import { ref } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 
-import img from '../../assets/images/homeBg1.jpg'
-import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
-const { locale } = useI18n({ useScope: 'global' })
-
+const router = useRouter()
 const props = defineProps(['newsList'])
 
 const current = ref(0)

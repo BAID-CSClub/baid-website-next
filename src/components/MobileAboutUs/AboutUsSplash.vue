@@ -7,7 +7,7 @@
       :class="{ 'op-0 pointer-events-none': !show }"
     >
       <div
-        class="text-55vw absolute scale-110 left-46% translate--50% w-100vw top-68"
+        class="font-sans text-55vw absolute scale-110 left-46% translate--50% w-100vw top-68"
         style="letter-spacing: -5vw; line-height: 50vw; text-stroke: 2vw white"
       >
         关于<br />我们
