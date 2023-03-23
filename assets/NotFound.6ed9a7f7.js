@@ -1,0 +1,1 @@
+import{_ as e,b as t,c,d as o}from"./index.49a72840.js";const s={},n={class:"bg-black h-screen color-white"},r=o("h3",{class:"m0 pt-20 text-center"},"TODO: NOT Found",-1),_=[r];function a(d,i){return t(),c("div",n,_)}const h=e(s,[["render",a]]);export{h as default};
