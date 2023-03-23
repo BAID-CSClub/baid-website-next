@@ -1,9 +1,13 @@
 import { createI18n } from 'vue-i18n'
-import messages from './messages.json'
+import messagesEN from './messages.en.json'
+import messagesZH from './messages.zh.json'
 
 export default createI18n({
   fallbackLocale: 'zh-CN',
   legacy: false,
   globalInjection: true,
-  messages
+  messages: {
+    'en-US': messagesEN,
+    'zh-CN': messagesZH
+  }
 })

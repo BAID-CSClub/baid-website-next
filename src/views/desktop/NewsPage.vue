@@ -4,10 +4,11 @@
     <div
       v-for="(item, index) in news"
       :key="item.id"
-      class="w-full border-solid border-[var(--standard-red)] flex h-70 my-10"
+      class="w-full border-solid border-[var(--standard-red)] flex h-70 my-10 cursor-pointer op-100 hover:op-90 active:op-70 transition"
       :class="{
         'flex-row-reverse !border-[var(--standard-blue)]': index % 2
       }"
+      @click="router.push(item.href)"
     >
       <img :src="item.cover" alt="" class="w-50% h-full object-cover" />
       <div class="p-10 flex-1 flex flex-col">
@@ -28,8 +29,9 @@
               <path
                 fill="currentColor"
                 d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6zm11-3v9l-3.794-3.793l-5.999 6l-1.414-1.414l5.999-6L12 3h9z"
-              /></svg
-          ></a>
+              />
+            </svg>
+          </a>
         </div>
         <p class="op-80">{{ item.description }}</p>
         <div class="flex-1"></div>
@@ -45,10 +47,11 @@
 
 <script setup>
 import { ref, watchEffect } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import NotFancyTitle from '../../components/NotFancyTitle.vue'
 
 const route = useRoute()
+const router = useRouter()
 
 const news = ref([])
 
