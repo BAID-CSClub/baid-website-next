@@ -2,7 +2,7 @@
   <div class="section">
     <NotFancyTitle cn="新闻" en="News" color="blue"></NotFancyTitle>
     <div class="flex h-130">
-      <div class="flex-1 relative border-1">
+      <div class="flex-1 relative b-1 b-r-0 m-t--1px m-b--1px">
         <div
           class="transition-opacity-300 h-full cursor-pointer"
           :class="{ 'op-0': transition }"
@@ -24,9 +24,9 @@
         </div>
       </div>
 
-      <div class="w-80">
+      <div class="w-85 flex flex-col">
         <div
-          class="flex-row flex b-1 h-32 transition-all-300 bg-white"
+          class="h-25% flex b-1 transition-all-300 bg-white m-t--1px m-b--1px"
           :class="{
             'scale-107 shadow-lg !bg-[var(--standard-red)] border-color-[var(--standard-red)]':
               current === index && !transition
@@ -35,28 +35,30 @@
           :key="index"
           v-on:click="change(index)"
         >
-          <div class="w-50% pl-3">
+          <div class="w-50% ml-3 mt-3">
             <p
-              class="font-sans color-gray-8 text-4 mt-3 mb-0 transition-color-300"
+              class="font-sans color-gray-8 text-4 mb-0 transition-color-300"
               :class="{ '!color-gray-2': current === index && !transition }"
             >
               {{ news.date.toLocaleString().substring(0, 10) }}
             </p>
-            <p
-              class="font-sans color-[var(--standard-blue)] text-6 transition-color-300 h-20 overflow-hidden"
-              style="text-overflow: ellipsis; white-space: pre-wrap"
+            <h3
+              class="my-1 font-sans color-[var(--standard-blue)] text-6 transition-color-300"
+              style="
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                white-space: pre-wrap;
+              "
               :class="{ 'color-white': current === index && !transition }"
             >
-              {{
-                news.title.length > 15
-                  ? news.title.substring(0, 15) + '...'
-                  : news.title
-              }}
-            </p>
+              {{ news.title }}
+            </h3>
           </div>
           <img
             :src="news.cover"
-            class="w-50% transition-all-300 object-cover"
+            class="w-50% transition-all-300 object-cover aspect-4/3"
             :class="{ 'm-2': current === index && !transition }"
           />
         </div>

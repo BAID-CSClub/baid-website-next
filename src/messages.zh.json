@@ -8,6 +8,7 @@
     "NewsPage": "新闻"
   },
   "HomePage": {
+    "Title": "首页",
     "ReadMore": "了解更多",
     "SecondSection": {
       "Title": "我们是北京中学国际部",
@@ -82,6 +83,7 @@
     }
   },
   "JoinUs": {
+    "Title": "加入我们",
     "Join": "加入就现在",
     "Student": {
       "Title": "北京中学国际部招生要求",
@@ -95,6 +97,7 @@
     }
   },
   "EducationTeaching": {
+    "Title": "教育教学",
     "Splash": {
       "Top": "教育",
       "Bottom": "教学"
@@ -163,6 +166,7 @@
     }
   },
   "StudentLife": {
+    "Title": "学生生活",
     "Clubs": {
       "Title": "学生社团",
       "Club1": {

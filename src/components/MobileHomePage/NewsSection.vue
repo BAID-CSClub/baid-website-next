@@ -7,8 +7,12 @@
       :bg="index % 2 === 0 ? 'blue' : 'white'"
       @click="router.push(item.href)"
     >
-      <div class="flex items-center justify-between m-4 min-h-35">
-        <img :src="item.cover" class="rounded-xl w-45% h-35" alt="" />
+      <div class="flex items-center justify-between m-4">
+        <img
+          :src="item.cover"
+          class="rounded-xl w-45% h-35 object-cover"
+          alt=""
+        />
         <div class="w-45%">
           <h3 class="m-0">{{ item.title }}</h3>
         </div>

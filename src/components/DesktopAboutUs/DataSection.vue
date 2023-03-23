@@ -6,7 +6,7 @@
         :key="datum"
         class="text-center flex flex-col m-16"
       >
-        <span class="text-28 font-bold">
+        <span class="text-28 font-bold font-sans">
           {{ datum.number }}
         </span>
         <p class="text-8">{{ datum[$i18n.locale].name }}</p>
