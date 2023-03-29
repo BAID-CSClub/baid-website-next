@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-4 min-h-35 w-full shadow-lg box-border overflow-hidden relative transition-colors m-y-3"
+    class="rounded-4 min-h-35 w-full shadow-lg box-border overflow-hidden relative transition-colors m-y-5"
     :class="{
       'bg-[var(--standard-blue)] color-white': props.bg === 'blue',
       'bg-white color-[var(--standard-blue)] border-[var(--standard-blue)]':

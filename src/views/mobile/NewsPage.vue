@@ -5,23 +5,36 @@
       <MobileTitle>新闻</MobileTitle>
 
       <div v-for="item in news" :key="item.id">
-        <MobileCard>
+        <MobileCard :border="false">
           <div
             class="w-full h-38 bg-cover"
             :style="{ backgroundImage: 'url(' + item.cover + ')' }"
           >
-            <div class="w-full h-full bg-black bg-op-30 p-5 box-border">
+            <div class="w-full h-full bg-black bg-op-60 p-5 box-border">
               <h2 class="m0 text-white truncate">{{ item.title }}</h2>
               <p class="mt-1 color-white op-80">
                 {{ item.description }}
               </p>
               <p class="op-50 color-white">
-                发布于 {{ item.date.split('T')[0] }}
-                {{ item.time.split(':').slice(0, 2).join(':') }}
+                {{ $t('NewsPage.Publish') }} {{ item.date.split('T')[0] }}
+                <!-- {{ item.time.split(':').slice(0, 2).join(':') }} -->
               </p>
-              <p class="">
-                <RouterLink class="color-sky" :to="item.href">
-                  阅读更多
+              <p class="text-right">
+                <RouterLink
+                  class="color-sky-1 op-80 decoration-none"
+                  :to="item.href"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="25"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M6.25 4.5A1.75 1.75 0 0 0 4.5 6.25v7.5c0 .966.784 1.75 1.75 1.75h7.5a1.75 1.75 0 0 0 1.75-1.75v-2a.75.75 0 0 1 1.5 0v2A3.25 3.25 0 0 1 13.75 17h-7.5A3.25 3.25 0 0 1 3 13.75v-7.5A3.25 3.25 0 0 1 6.25 3h2a.75.75 0 0 1 0 1.5h-2Zm4.25-.75a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 .75.75v5a.75.75 0 0 1-1.5 0V5.56l-3.72 3.72a.75.75 0 1 1-1.06-1.06l3.72-3.72h-3.19a.75.75 0 0 1-.75-.75Z"
+                    />
+                  </svg>
                 </RouterLink>
               </p>
             </div>

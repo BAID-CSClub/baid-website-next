@@ -192,5 +192,8 @@
         "Description": "北中好声音介绍"
       }
     }
+  },
+  "NewsPage": {
+    "Publish": "Published at"
   }
 }
