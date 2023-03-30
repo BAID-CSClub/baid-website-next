@@ -91,7 +91,6 @@ import { ref } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 
 import { useRouter } from 'vue-router'
-import ReadMore from '../ReadMore.vue'
 
 const router = useRouter()
 const props = defineProps(['newsList'])
