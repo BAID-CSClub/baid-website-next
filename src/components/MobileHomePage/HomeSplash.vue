@@ -6,7 +6,11 @@
       :class="{ 'op-0 pointer-events-none': !show }"
     >
       <!-- Foreground -->
-      <div class="w-full h-90% relative">
+      <div
+        class="w-full h-90% relative"
+        @touchmove="onMove"
+        @touchstart="onStart"
+      >
         <!-- BG -->
         <Swiper
           class="h-full brightness-80"
@@ -91,6 +95,20 @@ function change (index) {
   if (current.value !== index && index < images.length && index >= 0) {
     current.value = index
     swiper.slideTo(index)
+  }
+}
+
+let startY = 0
+
+function onStart (e) {
+  startY = e.touches[0].clientY
+}
+
+function onMove (e) {
+  const deltaY = e.touches[0].clientY - startY
+
+  if (deltaY < -100) {
+    show.value = false
   }
 }
 </script>
