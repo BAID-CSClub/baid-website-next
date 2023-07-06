@@ -29,7 +29,7 @@
 // Modules
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
-import { ref, watchEffect } from 'vue'
+import { computed, provide, ref, watchEffect } from 'vue'
 // Components
 import FirstSection from '../../components/DesktopHomePage/FirstSection.vue'
 import SecondSection from '../../components/DesktopHomePage/SecondSection.vue'
@@ -39,9 +39,17 @@ import AdmissionResults from '../../components/DesktopHomePage/AdmissionResults.
 import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
 // Assets
 import avatar from '../../assets/images/homeBg1.jpg'
-// import data from '../../data/HomePage'
+// Data
+import dbZH from '@data/zh-CN/db.json'
+import dbEN from '@data/en-US/db.json'
+import dataZH from '@data/zh-CN/Home.json'
+import dataEN from '@data/en-US/Home.json'
 
 const { locale } = useI18n({ useScope: 'global' })
+
+// Provide page data
+const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
+provide('data', data)
 
 const route = useRoute()
 const router = useRouter()
@@ -51,18 +59,17 @@ if (!route.params.lang) router.push('/' + locale.value)
 const news = ref([])
 
 watchEffect(() => {
-  fetch(`/${route.params.lang}/db.json`).then((res) => {
-    if (res.status === 200) {
-      res.json().then((data) => {
-        data = Object.values(data)
-        // Sort by date
-        data.sort((a, b) => {
-          return new Date(b.date) - new Date(a.date)
-        })
-        news.value = data
-        console.log('data', data)
-      })
-    }
+  let data
+  if (route.params.lang === 'zh-CN') {
+    data = Object.values(dbZH)
+  } else {
+    data = Object.values(dbEN)
+  }
+
+  // Sort by date
+  data.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date)
   })
+  news.value = data
 })
 </script>

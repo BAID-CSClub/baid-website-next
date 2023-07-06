@@ -4,8 +4,6 @@
   >
     <div class="absolute left-20px top-0">
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
         width="56.55765920826161"
         height="53"
         viewBox="0 0 56.55765920826161 53"
@@ -47,19 +45,21 @@
         </g>
       </svg>
     </div>
-    <div class="m-l-30 m-r-20">
-      <h2 class="tracking-wide">{{ props.content }}</h2>
-      <p class="w-full text-right font-title text-5">—— {{ props.author }}</p>
+    <div class="m-l-30 m-r-20 flex-1">
+      <h2 class="tracking-wide">
+        <pre v-html="pageData.principal_message"></pre>
+      </h2>
+      <p class="w-full text-right font-title text-5">
+        —— {{ pageData.principal_name }}
+      </p>
     </div>
     <img
-      :src="props.avatar"
+      :src="pageData.principal_avatar"
       alt="Avatar"
       class="object-cover md:w-30% md:m-r-30 md:m-t-0 m-t-10 w-1/2 min-w-50 h-50 flex-2"
     />
     <div class="absolute right-20px bottom-0">
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
         width="56.55765920826161"
         height="53"
         viewBox="0 0 56.55765920826161 53"
@@ -105,5 +105,7 @@
 </template>
 
 <script setup>
-const props = defineProps(['author', 'content', 'avatar'])
+import { inject } from 'vue'
+
+const pageData = inject('data')
 </script>

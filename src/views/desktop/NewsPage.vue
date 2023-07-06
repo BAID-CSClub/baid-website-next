@@ -33,13 +33,10 @@
             </svg>
           </a>
         </div>
-        <p class="op-80">{{ item.description }}</p>
+        <p class="op-80">{{ item.intro }}</p>
         <div class="flex-1"></div>
 
-        <p class="op-50">
-          发布于 {{ item.date.split('T')[0] }}
-          {{ item.time.split(':').slice(0, 2).join(':') }}
-        </p>
+        <p class="op-50">发布于 {{ item.date }}</p>
       </div>
     </div>
   </section>
@@ -49,6 +46,8 @@
 import { ref, watchEffect } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import NotFancyTitle from '../../components/NotFancyTitle.vue'
+import dataZH from '../../../data/zh-CN/db.json'
+import dataEN from '../../../data/en-US/db.json'
 
 const route = useRoute()
 const router = useRouter()
@@ -56,17 +55,17 @@ const router = useRouter()
 const news = ref([])
 
 watchEffect(() => {
-  fetch(`/${route.params.lang}/db.json`).then((res) => {
-    if (res.status === 200) {
-      res.json().then((data) => {
-        data = Object.values(data)
-        // Sort by date
-        data.sort((a, b) => {
-          return new Date(b.date) - new Date(a.date)
-        })
-        news.value = data
-      })
-    }
+  let data
+  if (route.params.lang === 'zh-CN') {
+    data = Object.values(dataZH)
+  } else {
+    data = Object.values(dataEN)
+  }
+
+  // Sort by date
+  data.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date)
   })
+  news.value = data
 })
 </script>

@@ -30,51 +30,24 @@
 
 <script setup>
 import { useRoute } from 'vue-router'
-import { computed, ref, watch, onMounted } from 'vue'
+import { watchEffect, ref } from 'vue'
 import '../../assets/styles/article.css'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 
-const debug = true
 const route = useRoute()
-
-const contentPath = computed(() => {
-  if (
-    route.params.lang &&
-    route.params.year &&
-    route.params.month &&
-    route.params.day &&
-    route.params.title
-  ) {
-    return `/${route.params.lang}/articles/${route.params.year}/${route.params.month}/${route.params.day}/${route.params.title}.json`
-  } else {
-    return false
-  }
-})
 
 const content = ref(null)
 const loading = ref(true)
 
-onMounted(async () => {
-  watch(
-    contentPath,
-    async (path) => {
-      if (!path) return
-      loading.value = true
+watchEffect(async () => {
+  loading.value = true
+  content.value = (
+    await import(
+      `../../../data/${route.params.lang}/News-${route.params.title}.json`
+    )
+  ).default
 
-      const res = await fetch(path)
-      if (debug) {
-        setTimeout(() => (loading.value = false), 1000)
-      } else {
-        loading.value = false
-      }
-      if (res.status === 200) {
-        content.value = await res.json()
-      } else {
-        location.href = `/${route.params.lang}/404`
-      }
-    },
-    { immediate: true }
-  )
+  loading.value = false
 })
 </script>

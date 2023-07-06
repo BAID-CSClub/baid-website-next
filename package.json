@@ -37,7 +37,7 @@
   ],
   "scripts": {
     "dev": "node ./scripts/pre.js && vite",
-    "build": "node ./scripts/pre.js && vite build && node ./scripts/post.js",
+    "build": "node ./scripts/pre.js && vite build",
     "test": "eslint ./src --ext .js --ext .vue",
     "fix": "eslint ./src --ext .js --ext .vue --fix",
     "format": "prettier-eslint \"src/**/*.js\" \"src/**/*.vue\" \"src/**/*.json\" --write"

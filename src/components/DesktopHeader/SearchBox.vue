@@ -52,7 +52,7 @@
               class="mt-1 op-80"
               :class="{ 'mb-3': index + 1 !== results.length }"
             >
-              {{ db[locale][result.ref].description }}
+              {{ db[locale][result.ref].intro }}
             </p>
           </RouterLink>
           <div class="color-black" v-if="!results.length">
@@ -90,8 +90,9 @@ const idx = {}
 async function loadIndex (lang) {
   if (!idx[lang]) {
     // Load search index
-    const url = '/' + lang + '/search.json'
-    idx[lang] = lunr.Index.load(await (await fetch(url)).json())
+    idx[lang] = lunr.Index.load(
+      await import(`../../../data/${lang}/search.json`)
+    )
     console.log('Loaded index for', lang)
   }
 }
@@ -101,8 +102,7 @@ const db = {}
 async function loadDb (lang) {
   if (!db[lang]) {
     // Load search index
-    const url = '/' + lang + '/db.json'
-    db[lang] = await (await fetch(url)).json()
+    db[lang] = (await import(`../../../data/${lang}/db.json`)).default
     console.log('Loaded db for', lang)
   }
 }

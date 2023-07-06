@@ -4,9 +4,9 @@
       <div class="flex">
         <div class="flex-1 mr-4">
           <h2 class="color-[var(--standard-blue)] text-9 m-t-0">
-            {{ $t('HomePage.SecondSection.Title') }}
+            {{ pageData.introduction_title }}
           </h2>
-          <pre>{{ $t('HomePage.SecondSection.Content') }}</pre>
+          <pre v-html="pageData.introduction"></pre>
           <div class="flex justify-end m-t-5">
             <ReadMore to="/about#overview" />
           </div>
@@ -25,4 +25,7 @@
 <script setup>
 import ReadMore from '../ReadMore.vue'
 import vidOverview from '../../assets/videos/sample_video.mp4'
+import { inject } from 'vue'
+
+const pageData = inject('data')
 </script>

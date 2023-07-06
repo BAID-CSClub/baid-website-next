@@ -15,7 +15,7 @@
     >
       <div class="max-w-77rem ma px-20px">
         <h1 class="text-20 color-white text-shadow-lg m-0">
-          欢迎来到北京中学国际部！
+          {{ pageData.head }}
         </h1>
         <p class="text-7 color-white">
           Welcome to Beijing Academy International Division (BAID)!
@@ -37,13 +37,17 @@
 </template>
 
 <script setup>
+// Images
 import imgSummer from '../../assets/images/HomePage/Summer.jpg?webp'
 import imgAutumn from '../../assets/images/HomePage/Autumn.jpg?webp'
 import imgDongba1 from '../../assets/images/HomePage/Dongba_1.jpg?webp'
 import imgDongba2 from '../../assets/images/HomePage/Dongba_2.jpg?webp'
 
 import CarouselVertical from '../CarouselVertical.vue'
+import { inject } from 'vue'
 
+// Data
+const pageData = inject('data')
 const images = [imgDongba1, imgSummer, imgDongba2, imgAutumn]
 
 function scrollTo (id) {

@@ -11,8 +11,8 @@
       <PhilosophyBlock
         v-for="(key, index) in blocks"
         :key="key"
-        :top="$t(key + '.Top')"
-        :bottom="$t(key + '.Bottom')"
+        :top="pageData[key + '_title']"
+        :bottom="pageData[key + '_content']"
         :blue="index % 2 === 0"
         :class="{ 'm-t-6': index % 2 !== 0, 'm-l-8': index >= 2 }"
       />
@@ -21,13 +21,10 @@
 </template>
 
 <script setup>
+import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import PhilosophyBlock from './PhilosophyBlock.vue'
 
-const blocks = [
-  'HomePage.EducationPhilosophy.1',
-  'HomePage.EducationPhilosophy.2',
-  'HomePage.EducationPhilosophy.3',
-  'HomePage.EducationPhilosophy.4'
-]
+const pageData = inject('data')
+const blocks = ['motto', 'spirit', 'key_competency', 'cultivation']
 </script>

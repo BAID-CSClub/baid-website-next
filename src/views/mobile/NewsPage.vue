@@ -16,7 +16,7 @@
                 {{ item.description }}
               </p>
               <p class="op-50 color-white">
-                {{ $t('NewsPage.Publish') }} {{ item.date.split('T')[0] }}
+                {{ $t('NewsPage.Publish') }} {{ item.date }}
                 <!-- {{ item.time.split(':').slice(0, 2).join(':') }} -->
               </p>
               <p class="text-right">
@@ -52,22 +52,25 @@ import { useRoute, RouterLink } from 'vue-router'
 import MobileTitle from '../../components/MobileTitle.vue'
 import MobileCard from '../../components/MobileCard.vue'
 
+import dataZH from '../../../data/zh-CN/db.json'
+import dataEN from '../../../data/en-US/db.json'
+
 const route = useRoute()
 
 const news = ref([])
 
 watchEffect(() => {
-  fetch(`/${route.params.lang}/db.json`).then((res) => {
-    if (res.status === 200) {
-      res.json().then((data) => {
-        data = Object.values(data)
-        // Sort by date
-        data.sort((a, b) => {
-          return new Date(b.date) - new Date(a.date)
-        })
-        news.value = data
-      })
-    }
+  let data
+  if (route.params.lang === 'zh-CN') {
+    data = Object.values(dataZH)
+  } else {
+    data = Object.values(dataEN)
+  }
+
+  // Sort by date
+  data.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date)
   })
+  news.value = data
 })
 </script>
