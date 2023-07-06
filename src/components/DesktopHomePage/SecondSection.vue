@@ -23,9 +23,9 @@
 </template>
 
 <script setup>
-import ReadMore from "../ReadMore.vue";
-import vidOverview from "../../assets/videos/sample_video.mp4";
-import { inject } from "vue";
+import ReadMore from '../ReadMore.vue'
+import vidOverview from '../../assets/videos/sample_video.mp4'
+import { inject } from 'vue'
 
-const pageData = inject("data");
+const pageData = inject('data')
 </script>

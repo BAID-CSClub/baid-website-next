@@ -2,7 +2,10 @@
   <!-- 加载时，隐藏下面的一切内容 -->
   <div :class="{ 'overflow-hidden w-full h-[calc(100vh-4.25rem)]': loading }">
     <transition name="fade" mode="out-in">
-      <div v-if="loading" class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center font-sans">
+      <div
+        v-if="loading"
+        class="w-full h-[calc(100vh-4.25rem)] flex items-center justify-center font-sans"
+      >
         <h1 class="font-sans">Loading...</h1>
       </div>
       <div v-else>
@@ -26,25 +29,25 @@
 </template>
 
 <script setup>
-import { useRoute } from "vue-router";
-import { watchEffect, ref } from "vue";
-import "../../assets/styles/article.css";
+import { useRoute } from 'vue-router'
+import { watchEffect, ref } from 'vue'
+import '../../assets/styles/article.css'
 
-import CarouselHorizontal from "../../components/CarouselHorizontal.vue";
+import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 
-const route = useRoute();
+const route = useRoute()
 
-const content = ref(null);
-const loading = ref(true);
+const content = ref(null)
+const loading = ref(true)
 
 watchEffect(async () => {
-  loading.value = true;
+  loading.value = true
   content.value = (
     await import(
       `../../../data/${route.params.lang}/News-${route.params.title}.json`
     )
-  ).default;
+  ).default
 
-  loading.value = false;
-});
+  loading.value = false
+})
 </script>
