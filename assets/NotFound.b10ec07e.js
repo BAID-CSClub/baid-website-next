@@ -1,0 +1,1 @@
+import{_ as e,b as o,c as t,d as c}from"./index.539548a1.js";const n={},s=c("h1",null,"Not Found!!",-1),_=[s];function r(a,d){return o(),t("div",null,_)}const u=e(n,[["render",r]]);export{u as default};
