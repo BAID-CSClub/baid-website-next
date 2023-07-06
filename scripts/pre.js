@@ -1,159 +1,117 @@
-// Generate /public/${lang}/articles/${year}/${month}/${date}/${title}.json
+import lunr from "lunr";
+import lunrStemmer from "lunr-languages/lunr.stemmer.support.js";
+import lunrZh from "lunr-languages/lunr.zh.js";
+import { existsSync } from "fs";
+import fs from "fs/promises";
 
-import yaml from 'js-yaml'
-import fs from 'fs/promises'
-import { existsSync } from 'fs'
-import { spawn } from 'child_process'
-import path from 'path'
-import markdownIt from 'markdown-it'
-import lunr from 'lunr'
-import lunrStemmer from 'lunr-languages/lunr.stemmer.support.js'
-import lunrZh from 'lunr-languages/lunr.zh.js'
+const { log } = console;
+lunrStemmer(lunr);
+lunrZh(lunr);
 
-lunrStemmer(lunr)
-lunrZh(lunr)
+// Freeze API responses
+let wagtail_base = process.env["WAGTAIL_BASE"] || "http://127.0.0.1:8000/";
 
-if (existsSync('./public/zh-CN')) {
-  await fs.rm('./public/zh-CN', { recursive: true })
-}
-if (existsSync('./public/en-US')) {
-  await fs.rm('./public/en-US', { recursive: true })
+if (!wagtail_base.endsWith("/")) {
+  wagtail_base = wagtail_base + "/";
 }
 
-async function copyRecursive (src, dest) {
-  const stats = await fs.stat(src)
-  const isDirectory = stats.isDirectory()
-  if (isDirectory) {
-    await fs.mkdir(dest, { recursive: true })
-    ;(await fs.readdir(src)).forEach(async function (childItemName) {
-      await copyRecursive(
-        path.join(src, childItemName),
-        path.join(dest, childItemName)
-      )
-    })
-  } else {
-    await fs.copyFile(src, dest)
+const locales = ["zh-CN", "en-US"];
+
+if (existsSync("./data/")) {
+  await fs.rm("./data/", { recursive: true });
+}
+await fs.mkdir("./data");
+
+// locales.forEach((l) => fs.mkdir("./data/" + l));
+
+for (const locale of locales) {
+  await fs.mkdir("./data/" + locale);
+}
+
+async function get(path) {
+  const res = await fetch(wagtail_base + "api/v2/" + path);
+
+  if (res.error) {
+    console.error("Wagtail Error:", res.error);
+    process.exit(1);
   }
+
+  return await res.json();
 }
 
-if (!existsSync('./articles')) {
-  console.log('Cloning articles...')
-  // Clone https://github.com/BAID-CSClub/articles to ./articles
-  try {
-    await new Promise((resolve, reject) => {
-      const child = spawn(
-        'git',
-        [
-          'clone',
-          '--depth',
-          '1',
-          'https://github.com/BAID-CSClub/articles',
-          './articles'
-        ],
-        {
-          stdio: 'inherit'
-        }
-      )
-      child.on('close', (code) => {
-        if (code === 0) {
-          resolve()
-        } else {
-          reject(new Error('Failed to clone articles'))
-        }
-      })
-    })
-  } catch (e) {
-    console.error('Failed to clone articles, please check your network.')
-    process.exit(1)
-  }
+function fullLang(lang) {
+  return lang === "zh" ? "zh-CN" : "en-US";
 }
 
-console.log('Building articles...')
+log("== API Freeze");
+log(" - wagtail_base: ", wagtail_base);
+log(" - search backend: lunr");
+
+const pages = await get("pages/");
+
+log(" - total pages: ", pages.meta.total_count);
+
+log(":: Processing Pages...");
 
 const documents = {
-  'zh-CN': [],
-  'en-US': []
-}
+  "zh-CN": [],
+  "en-US": [],
+};
 
-// For every .md file in ./articles
-for (const file of await fs.readdir('./articles')) {
-  // if is .md
-  if (file.endsWith('.md')) {
-    // Read the file
-    const content = await fs.readFile(`./articles/${file}`, 'utf-8')
-    const id = file.split('.')[0]
-    // Parse the file
-    const parsed = markdownIt({
-      html: true
-    }).render(content.split('---')[2])
-    // Parse yaml front matter
-    const frontMatter = yaml.load(content.split('---')[1])
-    const date = new Date(frontMatter.date)
-    const json = {
-      id,
-      ...frontMatter,
-      body: parsed
-    }
-    // Check out language
-    const lang = file.endsWith('zh.md') ? 'zh-CN' : 'en-US'
-
-    const datePath = `/${date.getFullYear()}/${
-      date.getMonth() + 1
-    }/${date.getDate()}/`
-
-    const href = `/${lang}/articles` + datePath + id
-    // Add to documents
-    documents[lang].push({
-      id,
-      href,
-      title: frontMatter.title,
-      description: frontMatter.description,
-      body: content.split('---')[2],
-      date: frontMatter.date,
-      time: frontMatter.time,
-      cover: href + frontMatter.cover.replace('./' + id, '')
-    })
-    // Write the file
-    const dir = `./public/${lang}/articles` + datePath
-
-    await fs.mkdir(dir, { recursive: true })
-    await fs.writeFile(dir + id + '.json', JSON.stringify(json))
-
-    // Find its dependencies
-    if ((await fs.stat(`./articles/${id}`)).isDirectory()) {
-      // Copy it to both zh-CN and en-US
-      await copyRecursive(`./articles/${id}`, dir + id)
-    }
+for (let page of pages.items) {
+  if (page.meta.type === "base.Base" || page.meta.type === "news.NewsIndex") {
+    continue;
   }
+
+  page = await get("pages/" + page.id);
+
+  if (page.meta.type === "news.News") {
+    page.href =
+      "/" +
+      fullLang(page.meta.locale) +
+      "/articles/" +
+      page.date.replaceAll("-", "/") +
+      "/" +
+      page.meta.slug;
+    documents[fullLang(page.meta.locale)].push(page);
+
+    await fs.writeFile(
+      `./data/${fullLang(page.meta.locale)}/News-${page.meta.slug}.json`,
+      JSON.stringify(page)
+    );
+  }
+
+  await fs.writeFile(
+    `./data/${fullLang(page.meta.locale)}/${page.meta.type.split(".")[1]}.json`,
+    JSON.stringify(page)
+  );
 }
 
-console.log('Building search index...')
-
-// Build lunr index using documents
-for (const lang of ['zh-CN', 'en-US']) {
-  const idx = lunr(function () {
-    if (lang === 'zh-CN') {
-      this.use(lunr.zh)
+log(":: Building Search Index...");
+for (const lang of locales) {
+  const idx = lunr(function() {
+    if (lang === "zh-CN") {
+      this.use(lunr.zh);
     }
-    this.ref('id')
-    this.field('title')
-    this.field('description')
-    this.field('body')
+    this.ref("id");
+    this.field("title");
+    this.field("intro");
+    this.field("body");
     // Href is not indexed but used for search result
-    this.metadataWhitelist = ['position']
-    documents[lang].forEach(function (doc) {
-      this.add(doc)
-    }, this)
-  })
-  await fs.writeFile(`./public/${lang}/search.json`, JSON.stringify(idx))
+    this.metadataWhitelist = ["position"];
+    documents[lang].forEach(function(doc) {
+      this.add(doc);
+    }, this);
+  });
+  await fs.writeFile(`./data/${lang}/search.json`, JSON.stringify(idx));
 
   const db = documents[lang].reduce((acc, cur) => {
     // Remove body
-    cur.body = undefined
-    acc[cur.id] = cur
-    return acc
-  }, {})
-  await fs.writeFile(`./public/${lang}/db.json`, JSON.stringify(db))
+    cur.body = undefined;
+    acc[cur.id] = cur;
+    return acc;
+  }, {});
+  await fs.writeFile(`./data/${lang}/db.json`, JSON.stringify(db));
 }
 
-console.log('Done, now welcome vite:')
+log("Done.");

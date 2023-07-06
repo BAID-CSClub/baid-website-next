@@ -10,11 +10,9 @@
       <EducationPhilosophy />
     </section>
     <section id="quote">
-      <QuoteMessage
-        author="WHO"
+      <QuoteMessage author="WHO"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
-        :avatar="avatar"
-      />
+        :avatar="avatar" />
     </section>
     <section id="admissionResults">
       <AdmissionResults />
@@ -27,42 +25,49 @@
 
 <script setup>
 // Modules
-import { useRoute, useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
-import { ref, watchEffect } from 'vue'
+import { useRoute, useRouter } from "vue-router";
+import { useI18n } from "vue-i18n";
+import { computed, provide, ref, watchEffect } from "vue";
 // Components
-import FirstSection from '../../components/DesktopHomePage/FirstSection.vue'
-import SecondSection from '../../components/DesktopHomePage/SecondSection.vue'
-import EducationPhilosophy from '../../components/DesktopHomePage/EducationPhilosophy.vue'
-import QuoteMessage from '../../components/QuoteMessage.vue'
-import AdmissionResults from '../../components/DesktopHomePage/AdmissionResults.vue'
-import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
+import FirstSection from "../../components/DesktopHomePage/FirstSection.vue";
+import SecondSection from "../../components/DesktopHomePage/SecondSection.vue";
+import EducationPhilosophy from "../../components/DesktopHomePage/EducationPhilosophy.vue";
+import QuoteMessage from "../../components/QuoteMessage.vue";
+import AdmissionResults from "../../components/DesktopHomePage/AdmissionResults.vue";
+import HomeNews from "../../components/DesktopHomePage/HomeNews.vue";
 // Assets
-import avatar from '../../assets/images/homeBg1.jpg'
-// import data from '../../data/HomePage'
+import avatar from "../../assets/images/homeBg1.jpg";
+// Data
+import dbZH from "@data/zh-CN/db.json";
+import dbEN from "@data/en-US/db.json";
+import dataZH from "@data/zh-CN/Home.json";
+import dataEN from "@data/en-US/Home.json";
 
-const { locale } = useI18n({ useScope: 'global' })
+const { locale } = useI18n({ useScope: "global" });
 
-const route = useRoute()
-const router = useRouter()
+// Provide page data
+const data = computed(() => (locale.value === "zh-CN" ? dataZH : dataEN));
+provide("data", data);
 
-if (!route.params.lang) router.push('/' + locale.value)
+const route = useRoute();
+const router = useRouter();
 
-const news = ref([])
+if (!route.params.lang) router.push("/" + locale.value);
+
+const news = ref([]);
 
 watchEffect(() => {
-  fetch(`/${route.params.lang}/db.json`).then((res) => {
-    if (res.status === 200) {
-      res.json().then((data) => {
-        data = Object.values(data)
-        // Sort by date
-        data.sort((a, b) => {
-          return new Date(b.date) - new Date(a.date)
-        })
-        news.value = data
-        console.log('data', data)
-      })
-    }
-  })
-})
+  let data;
+  if (route.params.lang === "zh-CN") {
+    data = Object.values(dbZH);
+  } else {
+    data = Object.values(dbEN);
+  }
+
+  // Sort by date
+  data.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date);
+  });
+  news.value = data;
+});
 </script>
