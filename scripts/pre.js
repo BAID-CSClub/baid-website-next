@@ -9,7 +9,7 @@ lunrStemmer(lunr);
 lunrZh(lunr);
 
 // Freeze API responses
-let wagtail_base = process.env["WAGTAIL_BASE"] || "http://127.0.0.1:8000/";
+let wagtail_base = process.env["WAGTAIL_BASE"] || "http://139.217.97.80:8000/";
 
 if (!wagtail_base.endsWith("/")) {
   wagtail_base = wagtail_base + "/";
@@ -89,7 +89,7 @@ for (let page of pages.items) {
 
 log(":: Building Search Index...");
 for (const lang of locales) {
-  const idx = lunr(function() {
+  const idx = lunr(function () {
     if (lang === "zh-CN") {
       this.use(lunr.zh);
     }
@@ -99,7 +99,7 @@ for (const lang of locales) {
     this.field("body");
     // Href is not indexed but used for search result
     this.metadataWhitelist = ["position"];
-    documents[lang].forEach(function(doc) {
+    documents[lang].forEach(function (doc) {
       this.add(doc);
     }, this);
   });
