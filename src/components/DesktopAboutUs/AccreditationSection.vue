@@ -6,7 +6,7 @@
       color="blue"
     ></NotFancyTitle>
     <div class="grid grid-cols-4 grid-rows-2 m-t-6">
-      <p class="col-span-2">{{ $t('AboutUs.Accreditation.Content') }}</p>
+      <p class="col-span-2" v-html="pageData.accreditation"></p>
       <div></div>
       <div
         v-for="acc in accs"
@@ -34,6 +34,9 @@ import imgApple from '../../assets/images/AboutUs/Apple.svg'
 import imgCam from '../../assets/images/AboutUs/Cambridge.png?webp'
 
 import NotFancyTitle from '../NotFancyTitle.vue'
+import { inject } from 'vue'
+
+const pageData = inject('data')
 
 const accs = [
   {

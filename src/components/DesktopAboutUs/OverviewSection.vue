@@ -5,12 +5,13 @@
       en="Overview"
       color="blue"
     ></NotFancyTitle>
-    <pre
-      >{{ $t('AboutUs.Overview.Content') }}
-    </pre>
+    <pre v-html="pageData.overview"></pre>
   </div>
 </template>
 
 <script setup>
 import NotFancyTitle from '../NotFancyTitle.vue'
+import { inject } from 'vue'
+
+const pageData = inject('data')
 </script>

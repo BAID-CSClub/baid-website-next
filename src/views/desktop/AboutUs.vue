@@ -43,4 +43,17 @@ import DataSection from '../../components/DesktopAboutUs/DataSection.vue'
 
 import CarouselHorizontal from '../../components/CarouselHorizontal.vue'
 import NotFancyTitle from '../../components/NotFancyTitle.vue'
+
+// Data
+import dataZH from '@data/zh-CN/AboutUs.json'
+import dataEN from '@data/en-US/AboutUs.json'
+
+import { useI18n } from 'vue-i18n'
+import { computed, provide } from 'vue'
+
+const { locale } = useI18n({ useScope: 'global' })
+
+// Provide page data
+const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
+provide('data', data)
 </script>
