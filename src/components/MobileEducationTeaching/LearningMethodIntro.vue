@@ -17,6 +17,4 @@
 </template>
 <script setup>
 const props = defineProps(['description', 'bigtitle', 'display', 'image'])
-
-console.log(props.description)
 </script>
