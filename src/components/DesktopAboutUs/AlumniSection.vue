@@ -11,7 +11,7 @@
         <div style="flex: 1" class="mr-5 flex pl-8 items-center">
           <div class="alumni-big-pic-box">
             <img
-              :src="alumni[current].image"
+              :src="pageData.alumni[current].image"
               class="w-full object-cover aspect-3/4 transition-all-300 block alumni-big-pic"
               :class="{ 'op-0': transition }"
               alt="pic1"
@@ -75,10 +75,8 @@
               class="p-20 transition-all-300 h-40 justify-center flex flex-col"
               :class="{ 'op-0': transition }"
             >
-              <p>
-                {{ $t(alumni[current].quote) }}
-              </p>
-              <p class="text-right">——{{ $t(alumni[current].name) }}</p>
+              <p v-html="pageData.alumni[current].content"></p>
+              <p class="text-right">——{{ pageData.alumni[current].name }}</p>
             </div>
             <div class="absolute right-20px bottom-0">
               <svg
@@ -133,8 +131,10 @@
             </div>
           </div>
           <div class="flex items-center mt-10">
-            <DesktopSwiper slides="3"
-              ><swiper-slide v-for="(alumnus, index) in alumni" :key="alumnus"
+            <DesktopSwiper slides="2"
+              ><swiper-slide
+                v-for="(alumnus, index) in pageData.alumni"
+                :key="alumnus"
                 ><img
                   :src="alumnus.image"
                   class="w-full object-cover aspect-3/4 opacity-60 transition-all"
@@ -154,32 +154,13 @@
 </template>
 
 <script setup>
-import imgAlum1 from '../../assets/images/AboutUs/Alumni/Alum_1.jpeg?webp'
-import imgAlum2 from '../../assets/images/AboutUs/Alumni/Alum_2.jpeg?webp'
-import imgAlum3 from '../../assets/images/AboutUs/Alumni/Alum_3.jpeg?webp'
 import NotFancyTitle from '../NotFancyTitle.vue'
 import DesktopSwiper from '../DesktopSwiper.vue'
 
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 import { SwiperSlide } from 'swiper/vue'
 
-const alumni = [
-  {
-    image: imgAlum1,
-    name: 'AboutUs.Alumni.1.Name',
-    quote: 'AboutUs.Alumni.1.Quote'
-  },
-  {
-    image: imgAlum2,
-    name: 'AboutUs.Alumni.2.Name',
-    quote: 'AboutUs.Alumni.2.Quote'
-  },
-  {
-    image: imgAlum3,
-    name: 'AboutUs.Alumni.3.Name',
-    quote: 'AboutUs.Alumni.3.Quote'
-  }
-]
+const pageData = inject('data')
 
 const current = ref(0)
 const transition = ref(false)
