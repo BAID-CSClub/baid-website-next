@@ -63,17 +63,10 @@
 
 <script setup>
 import NotFancyTitle from '../../components/NotFancyTitle.vue'
-import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
 import EventsImg from './EventsImg.vue'
-import {inject} from 'vue'
+import { inject } from 'vue'
 
-const pageData = inject("data");
-
-import imgBZHSY from '../../assets/images/StudentLife/Activities/BZHSY.jpg?webp'
-import imgZWTZY from '../../assets/images/StudentLife/Activities/ZWTZY.jpg?webp'
-import imgCamping from '../../assets/images/StudentLife/Activities/Camping.jpg?webp'
-import imgBZB from '../../assets/images/StudentLife/Activities/BZB.jpg?webp'
-import imgED from '../../assets/images/StudentLife/Activities/ED.jpg?webp'
+const pageData = inject('data')
 </script>
 
 <style scoped>

@@ -43,8 +43,8 @@
           :name="clubName"
           :description="clubDescription"
           :images="clubImgs"
-        ></ClubInfo
-      ></Transition>
+        ></ClubInfo>
+      </Transition>
     </div>
   </div>
 </template>
@@ -52,12 +52,10 @@
 <script setup>
 import ClubInfo from './ClubInfo.vue'
 import DesktopSwiper from '../DesktopSwiper.vue'
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 import { SwiperSlide } from 'swiper/vue'
-import { clubs } from '../../data/Clubs.js'
-import {inject} from 'vue'
 
-const pageData = inject("data")
+const pageData = inject('data')
 
 const showInfo = ref(false)
 const clubName = ref(null)
