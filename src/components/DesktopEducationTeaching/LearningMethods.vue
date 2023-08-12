@@ -32,7 +32,7 @@
             :class="{
               '!opacity-100': current === index,
               'hover:opacity-100 active:brightness-90':
-                current !== index && !transition,
+                current !== index && !transition
             }"
             v-on:click="change(index)"
             alt="Bg"
@@ -43,24 +43,24 @@
   </div>
 </template>
 <script setup>
-import { inject, ref } from "vue";
+import { inject, ref } from 'vue'
 
-import NotFancyTitle from "../NotFancyTitle.vue";
+import NotFancyTitle from '../NotFancyTitle.vue'
 
-const pageData = inject("data");
+const pageData = inject('data')
 
-const current = ref(0);
-const transition = ref(false);
+const current = ref(0)
+const transition = ref(false)
 
-function change(index) {
-  if (index === current.value || transition.value) return;
-  transition.value = true;
+function change (index) {
+  if (index === current.value || transition.value) return
+  transition.value = true
   setTimeout(() => {
-    current.value = index;
+    current.value = index
     setTimeout(() => {
-      transition.value = false;
-    }, 150);
-  }, 300);
+      transition.value = false
+    }, 150)
+  }, 300)
 }
 </script>
 <style scoped>
