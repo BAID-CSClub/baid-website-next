@@ -9,7 +9,7 @@
       <h3 class="text-8">
         {{ props.name }}
       </h3>
-      <pre class="my-4">{{ props.description }}</pre>
+      <pre class="my-4" v-html="props.description"></pre>
       <div class="flex items-center px-4">
         <DesktopSwiper pagination
           ><swiper-slide v-for="(img, index) in props.images" :key="img"

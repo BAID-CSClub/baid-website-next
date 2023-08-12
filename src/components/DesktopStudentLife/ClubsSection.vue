@@ -9,11 +9,11 @@
     <div class="flex justify-center items-center w-274">
       <DesktopSwiper slides="4">
         <swiper-slide
-          v-for="club in clubs"
+          v-for="club in pageData.clubs"
           :key="club"
           @click="
-            ;(clubName = $t(club.name)),
-              (clubDescription = $t(club.description)),
+            ;(clubName = club.name),
+              (clubDescription = club.content),
               (clubImgs = club.images),
               (showInfo = true)
           "
@@ -25,11 +25,11 @@
             :style="{ 'background-color': club.bgColor, color: club.color }"
           >
             <div class="text-8 font-title m-1">
-              {{ $t(club.name) }}
+              {{ club.name }}
             </div>
             <div class="m-1">
               <img
-                :src="club.logo"
+                :src="club.icon"
                 class="w-80px aspect-1 object-cover block"
               />
             </div>
@@ -55,6 +55,9 @@ import DesktopSwiper from '../DesktopSwiper.vue'
 import { ref } from 'vue'
 import { SwiperSlide } from 'swiper/vue'
 import { clubs } from '../../data/Clubs.js'
+import {inject} from 'vue'
+
+const pageData = inject("data")
 
 const showInfo = ref(false)
 const clubName = ref(null)

@@ -10,8 +10,8 @@
     >
       <div class="color-white pa-10">
         <h3 class="text-8">{{ props.name }}</h3>
-        <p>
-          {{ props.description }}
+        <p v-html="props.description">
+          
         </p>
       </div>
     </div>
