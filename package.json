@@ -1,75 +1,76 @@
 {
-  "name": "baid_website",
-  "private": true,
-  "version": "0.0.0",
-  "homepage": "preivew.beijing.academy",
-  "maintainers": [
-    {
-      "name": "He Li",
-      "email": "li@imlihe.com",
-      "url": "https://imlihe.com"
-    },
-    {
-      "name": "Henry Wang",
-      "email": "henrywang3510@gmail.com",
-      "url": "https://henry3510.com"
-    },
-    {
-      "name": "Kevin Zhao",
-      "email": "",
-      "url": ""
-    },
-    {
-      "name": "Mufeng Li",
-      "email": "",
-      "url": ""
-    },
-    {
-      "name": "Harry Wu",
-      "email": "",
-      "url": ""
-    },
-    {
-      "name": "Muchen Xu",
-      "email": "",
-      "url": ""
-    }
-  ],
-  "scripts": {
-    "dev": "node ./scripts/pre.js && vite",
-    "build": "node ./scripts/pre.js && vite build",
-    "test": "eslint ./src --ext .js --ext .vue",
-    "fix": "eslint ./src --ext .js --ext .vue --fix",
-    "format": "prettier-eslint \"src/**/*.js\" \"src/**/*.vue\" \"src/**/*.json\" --write"
-  },
-  "dependencies": {
-    "@intlify/vite-plugin-vue-i18n": "^6.0.3",
-    "@node-rs/jieba": "^1.6.2",
-    "@unocss/preset-uno": "^0.46.5",
-    "@unocss/preset-web-fonts": "^0.46.5",
-    "@vitejs/plugin-vue": "^3.2.0",
-    "@vueuse/motion": "2.0.0-beta.12",
-    "eslint": "^8.28.0",
-    "eslint-config-standard": "^17.0.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-n": "^15.5.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-vue": "^9.8.0",
-    "js-yaml": "^4.1.0",
-    "lunr": "^2.3.9",
-    "lunr-languages": "^1.10.0",
-    "markdown-it": "^13.0.1",
-    "popmotion": "^11.0.5",
-    "prettier": "^2.8.0",
-    "prettier-eslint": "^15.0.1",
-    "prettier-eslint-cli": "^7.1.0",
-    "swiper": "^8.4.5",
-    "unocss": "^0.46.5",
-    "vite": "^3.2.4",
-    "vue": "^3.2.45",
-    "vue-eslint-parser": "^9.1.0",
-    "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.6"
-  },
-  "type": "module"
+	"name": "baid_website",
+	"private": true,
+	"version": "0.0.0",
+	"homepage": "preivew.beijing.academy",
+	"maintainers": [
+		{
+			"name": "He Li",
+			"email": "li@imlihe.com",
+			"url": "https://imlihe.com"
+		},
+		{
+			"name": "Henry Wang",
+			"email": "henrywang3510@gmail.com",
+			"url": "https://henry3510.com"
+		},
+		{
+			"name": "Kevin Zhao",
+			"email": "",
+			"url": ""
+		},
+		{
+			"name": "Mufeng Li",
+			"email": "",
+			"url": ""
+		},
+		{
+			"name": "Harry Wu",
+			"email": "",
+			"url": ""
+		},
+		{
+			"name": "Muchen Xu",
+			"email": "",
+			"url": ""
+		}
+	],
+	"scripts": {
+		"dev": "node ./scripts/pre.js && vite",
+		"vite": "vite",
+		"build": "node ./scripts/pre.js && vite build",
+		"test": "eslint ./src --ext .js --ext .vue",
+		"fix": "eslint ./src --ext .js --ext .vue --fix",
+		"format": "prettier-eslint \"src/**/*.js\" \"src/**/*.vue\" \"src/**/*.json\" --write"
+	},
+	"dependencies": {
+		"@intlify/vite-plugin-vue-i18n": "^6.0.3",
+		"@node-rs/jieba": "^1.6.2",
+		"@unocss/preset-uno": "^0.46.5",
+		"@unocss/preset-web-fonts": "^0.46.5",
+		"@vitejs/plugin-vue": "^3.2.0",
+		"@vueuse/motion": "2.0.0-beta.12",
+		"eslint": "^8.28.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-n": "^15.5.1",
+		"eslint-plugin-promise": "^6.1.1",
+		"eslint-plugin-vue": "^9.8.0",
+		"js-yaml": "^4.1.0",
+		"lunr": "^2.3.9",
+		"lunr-languages": "^1.10.0",
+		"markdown-it": "^13.0.1",
+		"popmotion": "^11.0.5",
+		"prettier": "^2.8.0",
+		"prettier-eslint": "^15.0.1",
+		"prettier-eslint-cli": "^7.1.0",
+		"swiper": "^8.4.5",
+		"unocss": "^0.46.5",
+		"vite": "^3.2.4",
+		"vue": "^3.2.45",
+		"vue-eslint-parser": "^9.1.0",
+		"vue-i18n": "^9.2.2",
+		"vue-router": "^4.1.6"
+	},
+	"type": "module"
 }
