@@ -10,11 +10,9 @@
       <EducationPhilosophy />
     </section>
     <section id="quote">
-      <QuoteMessage
-        author="WHO"
+      <QuoteMessage author="WHO"
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sequi consequatur nisi non? Fugiat magnam dicta laboriosam mollitia corrupti sed! Repellat quidem quae ad iusto natus aliquam maxime iure ex!"
-        :avatar="avatar"
-      />
+        :avatar="avatar" />
     </section>
     <section id="admissionResults">
       <AdmissionResults />
