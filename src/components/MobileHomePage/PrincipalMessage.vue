@@ -1,12 +1,7 @@
 <template>
   <section class="section relative">
     <div class="absolute w-5 h-5 left-3 top-0">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 56.55765920826161 53"
-        fill="none"
-      >
+      <svg viewBox="0 0 56.55765920826161 53" fill="none">
         <defs>
           <rect id="path_0" x="0" y="0" width="56.55765920826162" height="53" />
         </defs>
@@ -47,21 +42,17 @@
     <div class="m-5 flex justify-between">
       <!-- Content Part -->
       <div class="w-48%">
-        <p class="m-0 my-3 font-sans">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo ipsam,
-          minus doloribus beatae fuga dolore rem
-        </p>
+        <p class="m-0 my-3 font-sans" v-html="pageData.principal_message"></p>
       </div>
-      <img :src="image" alt="" class="w-48% object-cover rounded-xl" />
+      <img
+        :src="pageData.principal_avatar"
+        alt=""
+        class="w-48% object-cover rounded-xl"
+      />
     </div>
 
     <div class="absolute w-5 h-5 right-3 bottom-0">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 56.55765920826161 53"
-        fill="none"
-      >
+      <svg viewBox="0 0 56.55765920826161 53" fill="none">
         <defs>
           <rect id="path_0" x="0" y="0" width="56.55765920826162" height="53" />
         </defs>
@@ -102,5 +93,7 @@
 </template>
 
 <script setup>
-import image from '../../assets/images/HomePage/Autumn.jpg'
+import { inject } from 'vue'
+
+const pageData = inject('data')
 </script>

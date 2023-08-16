@@ -17,14 +17,14 @@
       <div class="mt-15 color-white transition-opacity" v-if="results.length">
         <h2 class="truncate">关键词 {{ text }} 的搜索结果</h2>
         <RouterLink
-          class="block bg-white bg-op-10 w-full rounded-xl pa-5 box-border !decoration-none"
+          class="block bg-white bg-op-10 w-full rounded-xl pa-5 box-border !decoration-none mb-5"
           @click="emit('close')"
           v-for="result in results"
           :key="result.ref"
           :to="db[locale][result.ref].href"
         >
           <h3 class="text-5 m0">{{ db[locale][result.ref].title }}</h3>
-          <p class="op-80 mt-3">{{ db[locale][result.ref].description }}</p>
+          <p class="op-80 mt-3">{{ db[locale][result.ref].intro }}</p>
         </RouterLink>
       </div>
       <div class="color-white mt-15" v-else-if="text.length">
@@ -47,9 +47,11 @@
 input {
   outline: 3px solid rgba(255, 255, 255, 0.1);
 }
+
 input:focus {
   outline: 3px solid rgba(255, 255, 255, 0.3);
 }
+
 a {
   color: white !important;
   text-decoration: underline;
@@ -75,8 +77,9 @@ const idx = {}
 async function loadIndex (lang) {
   if (!idx[lang]) {
     // Load search index
-    const url = '/' + lang + '/search.json'
-    idx[lang] = lunr.Index.load(await (await fetch(url)).json())
+    idx[lang] = lunr.Index.load(
+      await import(`../../../data/${lang}/search.json`)
+    )
     console.log('Loaded index for', lang)
   }
 }
@@ -86,8 +89,7 @@ const db = {}
 async function loadDb (lang) {
   if (!db[lang]) {
     // Load search index
-    const url = '/' + lang + '/db.json'
-    db[lang] = await (await fetch(url)).json()
+    db[lang] = (await import(`../../../data/${lang}/db.json`)).default
     console.log('Loaded db for', lang)
   }
 }

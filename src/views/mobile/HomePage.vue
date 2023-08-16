@@ -4,33 +4,20 @@
     <HomeBackground />
     <MobileHead :img="firstImg"> {{ $t('views.HomePage') }}</MobileHead>
     <section class="section">
-      <MobileTitle> {{ $t('HomePage.SecondSection.Title') }}</MobileTitle>
+      <MobileTitle>{{ data.introduction_title }}</MobileTitle>
       <VideoCard :cover="firstImg"></VideoCard>
       <br />
       <MobileTitle>{{ $t('HomePage.EducationPhilosophy.Title') }}</MobileTitle>
       <MobileCard
-        :items="[
-          {
-            title: $t('HomePage.EducationPhilosophy.1.Top'),
-            content: $t('HomePage.EducationPhilosophy.1.Bottom')
-          },
-          {
-            title: $t('HomePage.EducationPhilosophy.2.Top'),
-            content: $t('HomePage.EducationPhilosophy.2.Bottom')
-          },
-          {
-            title: $t('HomePage.EducationPhilosophy.3.Top'),
-            content: $t('HomePage.EducationPhilosophy.3.Bottom')
-          },
-          {
-            title: $t('HomePage.EducationPhilosophy.4.Top'),
-            content: $t('HomePage.EducationPhilosophy.4.Bottom')
-          }
-        ]"
+        :items="
+          ['motto', 'spirit', 'key_competency', 'cultivation'].map((key) => ({
+            key
+          }))
+        "
         :bg="swiperBg"
         @change="swiperBg = swiperBg === 'white' ? 'blue' : 'white'"
       >
-        <template #item="{ title, content }">
+        <template #item="{ key }">
           <div class="m-5">
             <h3
               class="m-y-0"
@@ -39,7 +26,7 @@
                 'color-white': swiperBg === 'blue'
               }"
             >
-              {{ title }}
+              {{ data[key + '_title'] }}
             </h3>
             <p
               class="m-y-3"
@@ -48,35 +35,68 @@
                 'color-white': swiperBg === 'blue'
               }"
             >
-              {{ content }}
+              {{ data[key + '_content'] }}
             </p>
           </div>
         </template>
       </MobileCard>
       <MobileTitle>遇见BAID</MobileTitle>
-      <MobileCard
-        ><div class="flex h-35 justify-center items-center text-6">
-          内容存疑
-        </div></MobileCard
-      >
+      <MobileCard>
+        <div
+          class="flex h-35 justify-center items-center"
+          v-html="data.introduction"
+        ></div>
+      </MobileCard>
     </section>
     <PrincipalMessage></PrincipalMessage>
-    <NewsSection></NewsSection>
+    <NewsSection :news="news"></NewsSection>
   </HomeSplash>
 </template>
 
 <script setup>
-import HomeBackground from '../../components/MobileHomePage/HomeBackground.vue'
-import MobileCard from '../../components/MobileCard.vue'
-import MobileHead from '../../components/MobileHead.vue'
+import HomeBackground from '@/components/MobileHomePage/HomeBackground.vue'
+import MobileCard from '@/components/MobileCard.vue'
+import MobileHead from '@/components/MobileHead.vue'
 
 import firstImg from '../../assets/images/HomePage/Autumn.jpg?webp'
 import VideoCard from '../../components/VideoCard.vue'
 import MobileTitle from '../../components/MobileTitle.vue'
-import { ref } from 'vue'
+import { ref, computed, provide, watchEffect } from 'vue'
 import NewsSection from '../../components/MobileHomePage/NewsSection.vue'
 import PrincipalMessage from '../../components/MobileHomePage/PrincipalMessage.vue'
 import HomeSplash from '../../components/MobileHomePage/HomeSplash.vue'
 
+import { useI18n } from 'vue-i18n'
+// Data
+import dbZH from '@data/zh-CN/db.json'
+import dbEN from '@data/en-US/db.json'
+import dataZH from '@data/zh-CN/Home.json'
+import dataEN from '@data/en-US/Home.json'
+import { useRoute } from 'vue-router'
+
 const swiperBg = ref('white')
+
+const { locale } = useI18n({ useScope: 'global' })
+
+// Provide page data
+const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
+provide('data', data)
+
+const news = ref([])
+const route = useRoute()
+
+watchEffect(() => {
+  let data
+  if (route.params.lang === 'zh-CN') {
+    data = Object.values(dbZH)
+  } else {
+    data = Object.values(dbEN)
+  }
+
+  // Sort by date
+  data.sort((a, b) => {
+    return new Date(b.date) - new Date(a.date)
+  })
+  news.value = data
+})
 </script>

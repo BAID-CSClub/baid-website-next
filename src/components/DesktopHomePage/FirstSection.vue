@@ -2,7 +2,7 @@
   <div class="h-screen m-t-[-4.25rem] relative overflow-hidden mb-45px">
     <!-- Carousel part -->
     <div class="absolute w-full h-screen">
-      <CarouselVertical :images="images" />
+      <CarouselVertical :images="pageData.carousel_images" />
     </div>
     <!-- Left blue block -->
     <div
@@ -38,17 +38,11 @@
 
 <script setup>
 // Images
-import imgSummer from '../../assets/images/HomePage/Summer.jpg?webp'
-import imgAutumn from '../../assets/images/HomePage/Autumn.jpg?webp'
-import imgDongba1 from '../../assets/images/HomePage/Dongba_1.jpg?webp'
-import imgDongba2 from '../../assets/images/HomePage/Dongba_2.jpg?webp'
-
 import CarouselVertical from '../CarouselVertical.vue'
 import { inject } from 'vue'
 
 // Data
 const pageData = inject('data')
-const images = [imgDongba1, imgSummer, imgDongba2, imgAutumn]
 
 function scrollTo (id) {
   const element = document.querySelector(id)

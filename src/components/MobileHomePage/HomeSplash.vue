@@ -18,7 +18,7 @@
           @swiper="swiper = $event"
           :resistance-ratio="0"
         >
-          <SwiperSlide v-for="img in images" :key="img">
+          <SwiperSlide v-for="img in pageData.carousel_images" :key="img">
             <img
               :src="img"
               class="w-full h-full object-cover"
@@ -43,7 +43,7 @@
         <!-- DOTS -->
         <div class="absolute bottom-3 left-50% translate-x--50% flex z-1">
           <div
-            v-for="(_, index) in images"
+            v-for="(_, index) in pageData.carousel_images"
             :key="index"
             class="border-solid border-white rounded-50% w-3 h-3 m-x-1"
             :class="{ 'bg-white': index === current }"
@@ -78,13 +78,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import img1 from '../../assets/images/HomePage/Autumn.jpg'
-import img2 from '../../assets/images/HomePage/Dongba_1.jpg'
+import { ref, inject } from 'vue'
 import { SwiperSlide, Swiper } from 'swiper/vue'
 import 'swiper/css'
 
-const images = [img1, img2]
+const pageData = inject('data')
 
 const current = ref(0)
 let swiper
@@ -92,7 +90,11 @@ let swiper
 const show = ref(true)
 
 function change (index) {
-  if (current.value !== index && index < images.length && index >= 0) {
+  if (
+    current.value !== index &&
+    index < pageData.carousel_images.length &&
+    index >= 0
+  ) {
     current.value = index
     swiper.slideTo(index)
   }
