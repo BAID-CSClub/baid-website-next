@@ -8,20 +8,33 @@
       <VideoCard :cover="firstImg"></VideoCard>
       <br />
       <MobileTitle>{{ $t('HomePage.EducationPhilosophy.Title') }}</MobileTitle>
-      <MobileCard :items="['motto', 'spirit', 'key_competency', 'cultivation'].map(key => ({ key }))" :bg="swiperBg"
-        @change="swiperBg = swiperBg === 'white' ? 'blue' : 'white'">
+      <MobileCard
+        :items="
+          ['motto', 'spirit', 'key_competency', 'cultivation'].map((key) => ({
+            key
+          }))
+        "
+        :bg="swiperBg"
+        @change="swiperBg = swiperBg === 'white' ? 'blue' : 'white'"
+      >
         <template #item="{ key }">
           <div class="m-5">
-            <h3 class="m-y-0" :class="{
-              'color-[var(--standard-blue)]': swiperBg === 'white',
-              'color-white': swiperBg === 'blue'
-            }">
+            <h3
+              class="m-y-0"
+              :class="{
+                'color-[var(--standard-blue)]': swiperBg === 'white',
+                'color-white': swiperBg === 'blue'
+              }"
+            >
               {{ data[key + '_title'] }}
             </h3>
-            <p class="m-y-3" :class="{
-              'color-black': swiperBg === 'white',
-              'color-white': swiperBg === 'blue'
-            }">
+            <p
+              class="m-y-3"
+              :class="{
+                'color-black': swiperBg === 'white',
+                'color-white': swiperBg === 'blue'
+              }"
+            >
               {{ data[key + '_content'] }}
             </p>
           </div>
@@ -29,8 +42,10 @@
       </MobileCard>
       <MobileTitle>遇见BAID</MobileTitle>
       <MobileCard>
-        <div class="flex h-35 justify-center items-center" v-html="data.introduction">
-        </div>
+        <div
+          class="flex h-35 justify-center items-center"
+          v-html="data.introduction"
+        ></div>
       </MobileCard>
     </section>
     <PrincipalMessage></PrincipalMessage>
@@ -52,15 +67,14 @@ import PrincipalMessage from '../../components/MobileHomePage/PrincipalMessage.v
 import HomeSplash from '../../components/MobileHomePage/HomeSplash.vue'
 
 import { useI18n } from 'vue-i18n'
-
-
-const swiperBg = ref('white')
 // Data
 import dbZH from '@data/zh-CN/db.json'
 import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'
 import dataEN from '@data/en-US/Home.json'
 import { useRoute } from 'vue-router'
+
+const swiperBg = ref('white')
 
 const { locale } = useI18n({ useScope: 'global' })
 
