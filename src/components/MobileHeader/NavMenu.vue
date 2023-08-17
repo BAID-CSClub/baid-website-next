@@ -21,7 +21,7 @@
           </router-link>
         </li>
       </div>
-      <div>
+      <div class="color-white">
         <transition mode="out-in" name="fast-fade">
           <router-link
             class="decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60 text-5 text-white font-sans leading-16"

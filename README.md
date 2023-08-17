@@ -33,7 +33,7 @@
 
 ## 开发时可能要用到的命令
 
-注意，目前`pnpm`已经不再推荐，请使用`yarn`或`npm`。
+理论上可以用任何PM
 
 - `yarn` - 安装依赖
 - `yarn dev` - 打开开发服务器（Vite）
@@ -42,8 +42,7 @@
 
 ## 开发时可能要用到的资料
 
-- UnoCSS 参考：<https://uno.antfu.me/>
-- WindiCSS 参考（与 UnoCSS 完全兼容）：<https://windicss.org/>
+- UnoCSS 参考：<https://unocss.dev/interactive/>
 - Vue3 API 参考：<https://v3.cn.vuejs.org/api/>
 - Vue Router API 参考：<https://router.vuejs.org/api/>
 - Popmotion 参考：<https://popmotion.io/>
@@ -54,3 +53,18 @@
 - Volar (不要使用 Vetur)
 - Prettier ESLint (已配置开箱即用)
 - UnoCSS
+
+## If you want to update npm dependencies:
+
+It was tested that these following packages shoud have their versions pinned:
+
+- `swiper` - `^8`
+   
+   `swiper` is kinda an active project, and its maintainers are quite "radical". They are usually vigorously testing out latest standards (e.g. WebComponents) and leaving old technics behind. Thus updating this package to its latest version usually breaks several APIs and please don't do that.
+
+- `prettier` - `^2`
+
+   It's been a while since the last time that `prettier-eslint` was updated. Cause `prettier-eslint` depends on `prettier@2.x`, any updates will break `yarn format`.
+
+
+There should not be any problems with other deps. Feel free to ignite `yarn upgrade -L`.

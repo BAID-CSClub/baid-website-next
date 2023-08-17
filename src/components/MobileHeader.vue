@@ -38,20 +38,17 @@
 
       <!-- Search -->
       <div
-        class="right-5 top-7.5 fixed w-7 h-7 z-3"
+        class="right-5 top-7 fixed w-7 h-7 z-3"
         :class="{
-          '!color-white': !bgWhite,
           'z-3': !showSearchDelay,
           'z-4': showSearchDelay
         }"
         @click="showSearch = !showSearch"
       >
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 24 24"
           class="transition-opacity-300"
-          :class="{ 'op-0': showSearch }"
+          :class="{ 'op-0': showSearchDelay, 'color-white': !bgWhite }"
         >
           <g
             fill="none"
@@ -59,8 +56,6 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            style="--darkreader-inline-stroke: currentColor"
-            data-darkreader-inline-stroke=""
           >
             <circle cx="10" cy="10" r="7"></circle>
             <path d="M21 21l-6-6"></path>
@@ -68,11 +63,9 @@
         </svg>
         <!-- Close -->
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 24 24"
-          class="relative top--8 transition-opacity-300"
-          :class="{ 'op-0': !showSearch }"
+          class="relative top--8 transition-opacity-300 color-white"
+          :class="{ 'op-0': !showCloseSearch }"
         >
           <g
             fill="none"
@@ -80,8 +73,6 @@
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            style="--darkreader-inline-stroke: currentColor"
-            data-darkreader-inline-stroke=""
           >
             <line x1="18" y1="6" x2="6" y2="18"></line>
             <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -107,6 +98,7 @@ const showMenuDelay = ref(false)
 
 const showSearch = ref(false)
 const showSearchDelay = ref(false)
+const showCloseSearch = ref(false)
 
 function makeDelay (src, dest) {
   watch(src, (val) => {
@@ -114,13 +106,23 @@ function makeDelay (src, dest) {
       dest.value = true
     } else {
       setTimeout(() => {
-        dest.value = false
+        dest.value = val
       }, 300)
     }
   })
 }
 makeDelay(showMenu, showMenuDelay)
 makeDelay(showSearch, showSearchDelay)
+
+watch(showSearch, (val) => {
+  if (val) {
+    setTimeout(() => {
+      showCloseSearch.value = true
+    }, 300)
+  } else {
+    showCloseSearch.value = false
+  }
+})
 
 const bgWhite = ref(false)
 function onScroll () {
