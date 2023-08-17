@@ -86,7 +86,7 @@ for (let page of pages.items) {
 		page.href =
 			"/" +
 			fullLang(page.meta.locale) +
-			"/articles/" +
+			"/news/" +
 			page.date.replaceAll("-", "/") +
 			"/" +
 			page.meta.slug;
@@ -106,7 +106,7 @@ for (let page of pages.items) {
 
 log("\n:: Building Search Index...");
 for (const lang of locales) {
-	const idx = lunr(function() {
+	const idx = lunr(function () {
 		if (lang === "zh-CN") {
 			this.use(lunr.zh);
 		}
@@ -116,7 +116,7 @@ for (const lang of locales) {
 		this.field("body");
 		// Href is not indexed but used for search result
 		this.metadataWhitelist = ["position"];
-		documents[lang].forEach(function(doc) {
+		documents[lang].forEach(function (doc) {
 			this.add(doc);
 		}, this);
 	});
