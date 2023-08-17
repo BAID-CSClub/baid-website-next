@@ -5,18 +5,30 @@
     color="blue"
   >
     <section>
-      <AboutUsIntroduction></AboutUsIntroduction>
-      <AboutUsAlumni></AboutUsAlumni>
-      <AboutUsBlock></AboutUsBlock>
-      <AboutUsCompare></AboutUsCompare>
+      <OverviewSection></OverviewSection>
+      <AlumniSection></AlumniSection>
+      <AccreditationSection></AccreditationSection>
+      <DataSection></DataSection>
     </section>
   </MobileTitleSplash>
 </template>
 
 <script setup>
-import AboutUsIntroduction from '../../components/MobileAboutUs/AboutUsIntroduction.vue'
-import AboutUsAlumni from '../../components/MobileAboutUs/AboutUsAlumni.vue'
-import AboutUsCompare from '../../components/MobileAboutUs/AboutUsCompare.vue'
-import AboutUsBlock from '../../components/MobileAboutUs/AboutUsBlock.vue'
+import OverviewSection from '../../components/MobileAboutUs/OverviewSection.vue'
+import AlumniSection from '../../components/MobileAboutUs/AlumniSection.vue'
+import DataSection from '../../components/MobileAboutUs/DataSection.vue'
+import AccreditationSection from '../../components/MobileAboutUs/AccreditationSection.vue'
 import MobileTitleSplash from '../../components/MobileTitleSplash.vue'
+
+import dataZH from '@data/zh-CN/AboutUs.json'
+import dataEN from '@data/en-US/AboutUs.json'
+
+import { useI18n } from 'vue-i18n'
+import { computed, provide } from 'vue'
+
+const { locale } = useI18n({ useScope: 'global' })
+
+// Provide page data
+const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
+provide('data', data)
 </script>

@@ -131,7 +131,7 @@
             </div>
           </div>
           <div class="flex items-center mt-10">
-            <DesktopSwiper slides="2"
+            <DesktopSwiper slides="3"
               ><swiper-slide
                 v-for="(alumnus, index) in pageData.alumni"
                 :key="alumnus"

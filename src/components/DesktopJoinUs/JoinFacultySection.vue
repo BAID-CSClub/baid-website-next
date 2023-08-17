@@ -2,7 +2,7 @@
   <div class="section font-sans">
     <div>
       <h3 class="text-8">{{ $t('JoinUs.Faculty.Title') }}</h3>
-      <pre>{{ $t('JoinUs.Faculty.Content') }}</pre>
+      <pre v-html="pageData.faculty"></pre>
       <div
         class="flex items-center justify-center text-8 m-t-10 py-10 bg-[var(--standard-blue)] rd-5 color-white"
       >
@@ -28,4 +28,7 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { inject } from 'vue'
+const pageData = inject('data')
+</script>
