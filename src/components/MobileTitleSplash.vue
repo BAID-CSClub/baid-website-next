@@ -17,7 +17,7 @@
         {{ props.top }}<br />{{ props.bottom }}
       </div>
       <div
-        class="absolute b-1.5 p-3 left-50% translate--50% bottom-15 animate-pulse font-sans"
+        class="absolute b-1.5 b-white b-solid p-3 left-50% translate--50% bottom-15 animate-pulse font-sans"
         @click="show = !show"
       >
         了解更多>>>
