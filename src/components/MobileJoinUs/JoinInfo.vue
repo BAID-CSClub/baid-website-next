@@ -3,7 +3,7 @@
     <div class="min-h-[calc(100vh-5rem)]">
       <div class="section">
         <h2 class="text-center m-y-4">{{ props.title }}</h2>
-        <pre class="m-b-4">{{ props.content }}</pre>
+        <pre class="m-b-4" v-html="props.content"></pre>
       </div>
     </div>
     <div class="h-full">

@@ -7,13 +7,13 @@
         @student="
           ;(isNav = false),
             (title = 'JoinUs.Student.Title'),
-            (content = 'JoinUs.Student.Content'),
+            (content = data.student),
             (join = 'JoinUs.Student.Join')
         "
         @faculty="
           ;(isNav = false),
             (title = 'JoinUs.Faculty.Title'),
-            (content = 'JoinUs.Faculty.Content'),
+            (content = data.faculty),
             (join = 'JoinUs.Faculty.Join')
         "
         class="section"
@@ -33,11 +33,21 @@
 import JoinInfo from '../../components/MobileJoinUs/JoinInfo.vue'
 import JoinNav from '../../components/MobileJoinUs/JoinNav.vue'
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+
+import dataZH from '@data/zh-CN/JoinUs.json'
+import dataEN from '@data/en-US/JoinUs.json'
+
+import { useI18n } from 'vue-i18n'
 
 const title = ref('')
 const content = ref('')
 const join = ref('')
 
 const isNav = ref(true)
+
+const { locale } = useI18n({ useScope: 'global' })
+
+// Provide page data
+const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 </script>
