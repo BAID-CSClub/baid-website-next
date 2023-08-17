@@ -44,7 +44,7 @@
 		"format": "prettier-eslint \"src/**/*.js\" \"src/**/*.vue\" \"src/**/*.json\" --write"
 	},
 	"dependencies": {
-		"@intlify/vite-plugin-vue-i18n": "^7.0.0",
+		"@intlify/unplugin-vue-i18n": "^0.12.2",
 		"@node-rs/jieba": "^1.7.2",
 		"@unocss/preset-uno": "^0.55.1",
 		"@unocss/preset-web-fonts": "^0.55.1",
