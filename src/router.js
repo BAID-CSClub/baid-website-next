@@ -73,7 +73,7 @@ export const routes = [
     }
   },
   {
-    path: langPrefix + '/articles/:year/:month/:day/:title',
+    path: langPrefix + '/news/:year/:month/:day/:title',
     name: 'ArticlePage',
     component: () => import(`./views/${clientType}/ArticlePage.vue`)
   },

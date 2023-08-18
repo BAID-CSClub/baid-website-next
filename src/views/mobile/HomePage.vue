@@ -42,10 +42,9 @@
       </MobileCard>
       <MobileTitle>遇见BAID</MobileTitle>
       <MobileCard>
-        <div
-          class="flex h-35 justify-center items-center"
-          v-html="data.introduction"
-        ></div>
+        <div class="m-5">
+          <p v-html="data.introduction" />
+        </div>
       </MobileCard>
     </section>
     <PrincipalMessage></PrincipalMessage>

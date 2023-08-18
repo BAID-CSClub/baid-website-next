@@ -21,7 +21,7 @@
       </router-link>
     </div>
     <div class="flex h-130">
-      <div class="flex-1 relative b-1 b-r-0 m-t--1px m-b--1px">
+      <div class="flex-1 relative b-1 b-black b-solid b-r-0 m-t--1px m-b--1px">
         <div
           class="transition-opacity-300 h-full cursor-pointer"
           :class="{ 'op-0': transition }"
@@ -45,7 +45,7 @@
 
       <div class="w-85 flex flex-col">
         <div
-          class="h-25% flex b-1 transition-all-300 bg-white m-t--1px m-b--1px"
+          class="h-25% flex b-1 b-black b-solid transition-all-300 bg-white m-t--1px m-b--1px"
           :class="{
             'scale-107 shadow-lg !bg-[var(--standard-red)] border-color-[var(--standard-red)]':
               current === index && !transition

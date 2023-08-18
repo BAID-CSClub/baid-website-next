@@ -23,11 +23,9 @@
             :loop="true"
             :autoHeight="true"
           >
-            <swiper-slide v-for="club in clubs" :key="club">
-              <h3 class="text-6">{{ $t(club.name) }}</h3>
-              <p class="my-4">
-                {{ $t(club.description) }}
-              </p>
+            <swiper-slide v-for="item in items" :key="item">
+              <h3 class="text-6">{{ item.name }}</h3>
+              <p class="my-4" v-html="item.content"></p>
               <swiper
                 :modules="[Autoplay, A11y]"
                 :slides-per-view="1"
@@ -37,7 +35,10 @@
                   disableOnInteraction: false
                 }"
               >
-                <swiper-slide v-for="img in club.images" :key="img">
+                <swiper-slide
+                  v-for="img in item.images || [item.image]"
+                  :key="img"
+                >
                   <img
                     :src="img"
                     alt=""
@@ -59,7 +60,6 @@
 
 <script setup>
 import { ref } from 'vue'
-import { clubs } from '../../data/Clubs.js'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, A11y } from 'swiper'
 
@@ -68,6 +68,6 @@ import MobilePopup from '../MobilePopup.vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-const props = defineProps(['title', 'image']) // TODO: More about dialog
+const props = defineProps(['title', 'image', 'items'])
 const showPop = ref(false)
 </script>

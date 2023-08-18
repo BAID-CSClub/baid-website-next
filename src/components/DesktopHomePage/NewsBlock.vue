@@ -28,5 +28,4 @@
 <script setup>
 import ReadMore from '../ReadMore.vue'
 const props = defineProps(['title', 'abstract', 'color', 'img', 'pos', 'link'])
-// console.log(props);
 </script>

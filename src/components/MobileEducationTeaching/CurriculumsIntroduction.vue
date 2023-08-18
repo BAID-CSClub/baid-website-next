@@ -14,18 +14,18 @@
       :loop="true"
       :autoHeight="true"
     >
-      <swiper-slide v-for="item in curriculums" :key="item">
+      <swiper-slide v-for="(item, index) in pageData.curriculums" :key="index">
         <div class="rd-5 box-border m-2 drop-shadow p-2">
           <div class="flex items-center">
-            <img :src="item.icon" class="w-18 block" />
-            <h3 class="m-x-2 text-6">{{ $t(item.title) }}</h3>
+            <img :src="icons[index]" class="w-18 block" />
+            <h3 class="m-x-2 text-6">{{ item.name }}</h3>
           </div>
           <div class="flex flex-col items-center m-y-2">
-            <pre class="m-x-4">{{ $t(item.description) }}</pre>
+            <pre class="m-x-4" v-html="item.content" />
           </div>
         </div>
-      </swiper-slide></swiper
-    >
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
@@ -39,26 +39,13 @@ import { A11y, Pagination } from 'swiper'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
+import { inject } from 'vue'
 
 const modules = [Pagination, A11y]
 
-const curriculums = [
-  {
-    title: 'EducationTeaching.Curriculums.1.Title',
-    description: 'EducationTeaching.Curriculums.1.Description',
-    icon: number1
-  },
-  {
-    title: 'EducationTeaching.Curriculums.2.Title',
-    description: 'EducationTeaching.Curriculums.2.Description',
-    icon: number2
-  },
-  {
-    title: 'EducationTeaching.Curriculums.3.Title',
-    description: 'EducationTeaching.Curriculums.3.Description',
-    icon: number3
-  }
-]
+const pageData = inject('data')
+
+const icons = [number1, number2, number3]
 </script>
 <style scoped>
 .swiper {
