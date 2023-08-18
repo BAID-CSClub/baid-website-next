@@ -19,15 +19,10 @@
         ></NotFancyTitle>
       </div>
       <div
-        :style="{ backgroundImage: 'url(' + imgHeader1 + ')' }"
+        class="bg-[var(--standard-blue)] text-white h-90 flex items-center"
         style="background-size: cover; background-position: center"
       >
-        <div
-          class="text-white h-90 flex items-center"
-          style="background-color: rgba(0, 0, 0, 0.5)"
-        >
-          <DataSection />
-        </div>
+        <DataSection />
       </div>
     </section>
   </div>
