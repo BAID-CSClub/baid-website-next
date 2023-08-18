@@ -22,7 +22,7 @@
           <div
             class="h-220px aspect-1 items-center justify-center flex flex-col"
             style="box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5)"
-            :style="{ 'background-color': club.bgColor, color: club.color }"
+            :style="{ 'background-color': club.bg_color, color: club.color }"
           >
             <div class="text-8 font-title m-1">
               {{ club.name }}

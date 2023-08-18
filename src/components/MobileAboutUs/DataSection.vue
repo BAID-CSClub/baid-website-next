@@ -2,10 +2,10 @@
   <div class="color-white bg-[var(--standard-blue)]">
     <section class="section">
       <MobileTitle>{{ $t('AboutUs.Data.Title') }}</MobileTitle>
-      <div class="flex gap-5">
-        <div v-for="items in Curriculums" :key="items" class="text-center">
-          <h2 class="text-6xl m0">{{ items.data }}</h2>
-          <p class="mt-1">{{ items.description }}</p>
+      <div class="flex flex-col gap-5">
+        <div v-for="datum in pageData.data" :key="datum" class="text-center">
+          <span class="text-24 font-bold font-sans">{{ datum.content }}</span>
+          <p>{{ datum.name }}</p>
         </div>
       </div>
     </section>
@@ -13,8 +13,9 @@
 </template>
 
 <script setup>
+import { inject } from 'vue'
 import MobileTitle from '../MobileTitle.vue'
-
+const pageData = inject('data')
 const Curriculums = [
   {
     data: ' ',
