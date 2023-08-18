@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="relative font-black text-center">
-      <h2 class="text-8 tracking-5 m-y-4">课程体系</h2>
+      <h2 class="text-8 tracking-5 m-y-4">
+        {{ $t('EducationTeaching.Curriculums.Title') }}
+      </h2>
       <!-- <h2 class="text-4 tracking-wider text-gray-300 m-0!">Curriculums</h2> -->
     </div>
     <swiper
