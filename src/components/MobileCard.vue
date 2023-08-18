@@ -15,8 +15,8 @@
       @slide-change="(e) => change(e.activeIndex)"
       :loop="true"
       :auto-height="true"
+      :modules="modules"
     >
-      :modules="[A11y, Autoplay]" >
       <SwiperSlide v-for="(item, index) in props.items" :key="index">
         <slot name="item" v-bind="item"></slot>
       </SwiperSlide>
@@ -46,6 +46,8 @@ import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, A11y } from 'swiper'
 import 'swiper/css'
+
+const modules = [Autoplay, A11y]
 
 const props = defineProps({
   bg: {

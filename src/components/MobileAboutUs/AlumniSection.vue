@@ -2,7 +2,7 @@
   <section class="section">
     <MobileTitle>{{ $t('AboutUs.Alumni.Title') }}</MobileTitle>
     <MobileCard :items="pageData.alumni" :border="false">
-      <template #item="{ image, content, name }">
+      <template #item="{ content, name }">
         <div class="flex flex-col h-auto color-black m-5">
           <p class="p-3 box-border overflow-auto" v-html="content"></p>
           <p class="text-right">——{{ name }}</p>
