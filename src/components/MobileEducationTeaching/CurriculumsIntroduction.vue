@@ -8,7 +8,7 @@
     </div>
     <MobileCard :items="pageData.curriculums" :border="false" :autoplay="false">
       <template #item="{ name, content, index }">
-        <div class="m-b-8 flex flex-col">
+        <div class="m-b-8 flex flex-col color-black">
           <div class="flex items-center m-x-2">
             <img :src="icons[index]" class="w-18 block" />
             <h3 class="m-x-2 text-6">{{ name }}</h3>

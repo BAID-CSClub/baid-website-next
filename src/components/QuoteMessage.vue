@@ -56,7 +56,7 @@
     <img
       :src="pageData.principal_avatar"
       alt="Avatar"
-      class="object-cover md:w-30% md:m-r-30 md:m-t-0 m-t-10 w-1/2 min-w-50 h-50 flex-2"
+      class="object-contain md:w-20% md:m-r-30 md:m-t-0 m-t-10 w-1/2 min-w-50 h-80 flex-2"
     />
     <div class="absolute right-20px bottom-0">
       <svg
