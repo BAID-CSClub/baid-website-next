@@ -16,14 +16,4 @@
 import { inject } from 'vue'
 import MobileTitle from '../MobileTitle.vue'
 const pageData = inject('data')
-const Curriculums = [
-  {
-    data: ' ',
-    description: ' '
-  },
-  {
-    data: '1:7',
-    description: '师生比'
-  }
-]
 </script>

@@ -36,14 +36,9 @@ import number2 from '../../assets/images/Number_2.svg'
 import number3 from '../../assets/images/Number_3.svg'
 import MobileCard from '../MobileCard.vue'
 
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { A11y, Pagination } from 'swiper'
-
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { inject } from 'vue'
-
-const modules = [Pagination, A11y]
 
 const pageData = inject('data')
 
