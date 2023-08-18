@@ -1,9 +1,9 @@
 <template>
   <div
-    class="rounded-4 min-h-35 w-full shadow-lg box-border overflow-hidden relative transition-colors m-y-5"
+    class="rounded-4 min-h-35 w-full shadow-lg box-border overflow-hidden relative transition-colors m-y-5 color-black"
     :class="{
-      'bg-[var(--standard-blue)] color-white': props.bg === 'blue',
-      'bg-white color-[var(--standard-blue)] border-[var(--standard-blue)]':
+      'bg-[var(--standard-blue)] !color-white': props.bg === 'blue',
+      'bg-white !color-[var(--standard-blue)] border-[var(--standard-blue)]':
         props.bg === 'white',
       'border-solid': props.border
     }"
@@ -15,10 +15,14 @@
       @slide-change="(e) => change(e.activeIndex)"
       :loop="true"
       :auto-height="true"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false
+      }"
       :modules="modules"
     >
       <SwiperSlide v-for="(item, index) in props.items" :key="index">
-        <slot name="item" v-bind="item"></slot>
+        <slot name="item" v-bind="item" :index="index"></slot>
       </SwiperSlide>
     </Swiper>
     <div
@@ -42,12 +46,10 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, A11y } from 'swiper'
 import 'swiper/css'
-
-const modules = [Autoplay, A11y]
 
 const props = defineProps({
   bg: {
@@ -60,6 +62,17 @@ const props = defineProps({
   },
   items: {
     default: undefined
+  },
+  autoplay: {
+    default: false
+  }
+})
+
+const modules = computed(() => {
+  if (props.autoplay) {
+    return [Autoplay, A11y]
+  } else {
+    return [A11y]
   }
 })
 

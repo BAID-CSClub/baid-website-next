@@ -2,7 +2,7 @@
   <section class="section">
     <MobileTitle>{{ $t('AboutUs.Accreditation.Title') }}</MobileTitle>
     <pre v-html="pageData.accreditation"></pre>
-    <MobileCard :items="accs" :border="false">
+    <MobileCard :items="accs" :border="false" :autoplay="true">
       <template #item="{ image, name }">
         <div class="bg-yellow flex flex-col justify-center items-center h-45">
           <img :src="image" class="max-h-15 w-auto h-auto object-cover m-b-2" />
