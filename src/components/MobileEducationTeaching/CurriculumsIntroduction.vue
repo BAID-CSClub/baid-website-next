@@ -17,16 +17,6 @@
         </div>
       </template>
     </MobileCard>
-    <!-- <swiper
-      :slides-per-view="1"
-      :space-between="10"
-      :modules="modules"
-      :pagination="{ clickable: true }"
-      :loop="true"
-      :autoHeight="true"
-    >
-
-    </swiper> -->
   </div>
 </template>
 

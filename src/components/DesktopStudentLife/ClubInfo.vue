@@ -6,19 +6,23 @@
     <div
       class="w-full max-w-50vw max-h-80vh bg-white rd-5 p-12 box-border overflow-auto"
     >
-      <h3 class="text-8">
-        {{ props.name }}
-      </h3>
-      <pre class="my-4" v-html="props.description"></pre>
-      <div class="flex items-center px-4">
-        <DesktopSwiper pagination
-          ><swiper-slide v-for="(img, index) in props.images" :key="img"
-            ><img
-              :src="img"
-              class="w-full object-cover aspect-3/2"
-              v-on:click="change(index)"
-              alt="pic1" /></swiper-slide
-        ></DesktopSwiper>
+      <div class="flex flex-col m-b-4">
+        <h3 class="text-8">
+          {{ props.name }}
+        </h3>
+        <pre class="my-4" v-html="props.description"></pre>
+      </div>
+      <div class="flex items-center justify-center">
+        <div class="flex items-center px-4 max-w-160 w-full">
+          <DesktopSwiper
+            ><swiper-slide v-for="(img, index) in props.images" :key="img"
+              ><img
+                :src="img"
+                class="w-full object-cover aspect-3/2"
+                v-on:click="change(index)"
+                alt="pic1" /></swiper-slide
+          ></DesktopSwiper>
+        </div>
       </div>
     </div>
   </div>

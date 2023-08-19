@@ -16,7 +16,10 @@
     </div>
     <Swiper
       :modules="modules"
-      :pagination="{ clickable: true }"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false
+      }"
       :loop="true"
       :slides-per-view="props.slides"
       :space-between="10"
@@ -43,19 +46,28 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { Navigation, Pagination, A11y } from 'swiper'
+import { ref, computed } from 'vue'
+import { Navigation, Autoplay, A11y } from 'swiper'
 import { Swiper } from 'swiper/vue'
 
 import 'swiper/css'
 import 'swiper/css/navigation'
-import 'swiper/css/pagination'
 
-const props = defineProps({ slides: Number, pagination: Boolean })
+const props = defineProps({
+  slides: Number,
+  autoplay: {
+    type: Boolean,
+    default: false
+  }
+})
 
-const modules = props.pagination
-  ? [Navigation, Pagination, A11y]
-  : [Navigation, A11y]
+const modules = computed(() => {
+  if (props.autoplay) {
+    return [Autoplay, A11y, Navigation]
+  } else {
+    return [A11y, Navigation]
+  }
+})
 
 const swiper = ref(null)
 
