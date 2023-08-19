@@ -20,7 +20,11 @@
           </svg>
         </div>
         <div style="flex: 3" class="text-center color-[var(--standard-blue)]">
-          <div class="bg-white rd-5 p-3" style="display: inline-block">
+          <div
+            class="bg-white rd-5 p-3 cursor-pointer"
+            style="display: inline-block"
+            @click="open(pageData.student_portal)"
+          >
             {{ $t('JoinUs.Faculty.Join') }}
           </div>
         </div>
@@ -31,4 +35,8 @@
 <script setup>
 import { inject } from 'vue'
 const pageData = inject('data')
+
+function open (url) {
+  window.open(url)
+}
 </script>

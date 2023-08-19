@@ -60,9 +60,9 @@
     </div>
   </header>
   <div
-    class="bg-white w-full font-sans h-17 fixed left-0 top-10 op-0 transition-all z-9"
+    class="bg-white w-full font-sans h-17 fixed left-0 top-10 op-0 transition-all z-9 pointer-events-none"
     :class="{
-      'top-17 op-100': expand,
+      'top-17 op-100 !pointer-events-auto': expand,
       'bg-op-10': transparent,
       'shadow-lg': fixed
     }"
