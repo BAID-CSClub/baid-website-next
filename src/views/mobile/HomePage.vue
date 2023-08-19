@@ -15,10 +15,11 @@
           }))
         "
         :bg="swiperBg"
+        :autoplay="true"
         @change="swiperBg = swiperBg === 'white' ? 'blue' : 'white'"
       >
         <template #item="{ key }">
-          <div class="m-5">
+          <div class="m-5 m-b-8">
             <h3
               class="m-y-0"
               :class="{
@@ -42,8 +43,8 @@
       </MobileCard>
       <MobileTitle>遇见BAID</MobileTitle>
       <MobileCard>
-        <div class="m-5">
-          <p v-html="data.introduction" />
+        <div class="m-5 color-black">
+          <p v-html="data.admission_results_content" />
         </div>
       </MobileCard>
     </section>

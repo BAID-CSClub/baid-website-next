@@ -1,18 +1,16 @@
 <template>
-  <div class="section">
+  <section class="section">
     <MobileTitle>{{ $t('AboutUs.Alumni.Title') }}</MobileTitle>
     <MobileCard :items="pageData.alumni" :border="false">
-      <template #item="{ image, content }">
-        <div class="flex">
-          <p
-            class="w-50% color-black p-3 h-60 box-border overflow-auto"
-            v-html="content"
-          ></p>
-          <img :src="image" class="h-60 w-50% object-cover" />
-        </div> </template
-      >>
+      <template #item="{ content, name }">
+        <div class="flex flex-col h-auto color-black m-5">
+          <p class="p-3 box-border overflow-auto" v-html="content"></p>
+          <p class="text-right">——{{ name }}</p>
+          <!-- <img :src="image" class="w-40% object-cover" /> -->
+        </div>
+      </template>
     </MobileCard>
-  </div>
+  </section>
 </template>
 
 <script setup>
