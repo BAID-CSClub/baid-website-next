@@ -3,8 +3,8 @@
   <header
     class="w-screen h-17 bg-white flex justify-between items-center transition-all font-sans relative z-10"
     :class="{
-      'important-bg-transparent': transparent,
-      'important:fixed shadow-lg': fixed,
+      '!bg-transparent': transparent,
+      '!fixed shadow-lg': fixed,
       'op-0 top--17': fixed && !fixedShow,
       'op-100 top-0': fixed && fixedShow
     }"
@@ -18,51 +18,22 @@
     </div>
 
     <div class="flex h-full m-r-10 items-center">
-      <div
-        class="flex list-none p-0 relative h-full m-0"
-        v-on:mouseleave="showBlock = false"
-      >
-        <li
-          v-for="(route, index) in routesComputed"
-          v-bind:key="route.name"
-          v-on:mouseover="onHover(index, route.name)"
-          class="h-full font-500 text-16px margin-left-right-10px"
-        >
-          <router-link
-            :to="route.path"
-            class="inline-block w-30 h-full text-center decoration-none opacity-50 transition-colors transition-opacity color-inherit hover:opacity-100 active:opacity-60"
-            style="line-height: 70px"
-            active-class="important-opacity-100"
-            >{{ $t(`views.${route.name}`) }}
-          </router-link>
-        </li>
-        <!-- Block -->
-        <div
-          class="absolute w-30 h-17 bg-black opacity-0 z-10 pointer-events-none transition-opacity"
-          :class="{ 'opacity-10': showBlock }"
-          :style="{ left: blockLeft }"
-        ></div>
-        <!-- Line -->
-        <div
-          class="absolute w-15 h-1 z-10 bottom--0.5px translate-x-1/2 transition-opacity"
-          :style="{ left: lineLeft, 'background-color': lineColor }"
-          :class="{ 'opacity-0': !lineLeft || !showLine }"
-        ></div>
-        <!-- SubMenu -->
-        <div
-          class="absolute top-17 w-60 bg-white opacity-0 z-10 transition-opacity shadow-lg"
-          :class="{ '!opacity-100': showBlock }"
-          :style="{ left: blockLeft }"
-        >
-          <a
-            v-for="(subRoute, index) in subRoutes[hover]"
-            :key="index"
-            :href="subRoute.path"
-            class="h-13 w-full color-black decoration-none flex items-center justify-center op-70 hover:op-100 transition"
-            >{{ $t(subRoute.name) }}</a
-          >
-        </div>
+      <div class="lg:block hidden">
+        <RouterLinks />
       </div>
+      <svg
+        class="lg:hidden block op-50 hover:op-100 active:op-80 transition-all color-inherit"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+        @click="expand = !expand"
+        :class="{ 'rotate-180': expand }"
+      >
+        <path
+          fill="currentColor"
+          d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6l-6-6l1.41-1.41z"
+        />
+      </svg>
       <hr
         class="h-7 w-3px my-0 mx-5 border-none"
         :style="{ 'background-color': color }"
@@ -77,13 +48,7 @@
             )
           "
         >
-          <svg
-            class="w-6 h-10"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 24 18"
-          >
+          <svg class="w-6 h-10" width="32" height="32" viewBox="0 0 24 18">
             <path
               fill="currentColor"
               d="m12.87 15.07l-2.54-2.51l.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5l3.11 3.11l.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7l1.62-4.33L19.12 17h-3.24Z"
@@ -94,165 +59,27 @@
       <SearchBox :color="color"></SearchBox>
     </div>
   </header>
+  <div
+    class="bg-white w-full font-sans h-17 fixed left-0 top-10 op-0 transition-all z-9"
+    :class="{
+      'top-17 op-100': expand,
+      'bg-op-10': transparent,
+      'shadow-lg': fixed
+    }"
+    :style="{ color }"
+  >
+    <RouterLinks />
+  </div>
 </template>
 
 <script setup>
-import { routes } from '../router'
-import { animate } from 'popmotion'
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useI18n } from 'vue-i18n'
 import SchoolLogo from './DesktopHeader/SchoolLogo.vue'
 import SearchBox from './DesktopHeader/SearchBox.vue'
-
-const subRoutes = computed(() => ({
-  HomePage: [
-    {
-      path: '/' + locale.value + '#educationPhilosophy',
-      name: 'HomePage.EducationPhilosophy.Title'
-    },
-    {
-      path: '/' + locale.value + '#admissionResults',
-      name: 'HomePage.AdmissionResults.Title'
-    },
-    {
-      path: '/' + locale.value + '#news',
-      name: 'HomePage.News.Title'
-    }
-  ],
-  AboutUs: [
-    {
-      path: '/' + locale.value + '/about#overview',
-      name: 'AboutUs.Overview.Title'
-    },
-    {
-      path: '/' + locale.value + '/about#alumni',
-      name: 'AboutUs.Alumni.Title'
-    },
-    {
-      path: '/' + locale.value + '/about#accreditation',
-      name: 'AboutUs.Accreditation.Title'
-    },
-    {
-      path: '/' + locale.value + '/about#data',
-      name: 'AboutUs.Data.Title'
-    }
-  ],
-  EducationTeaching: [
-    {
-      path: '/' + locale.value + '/education#curriculum',
-      name: 'EducationTeaching.Curriculums.Title'
-    },
-    {
-      path: '/' + locale.value + '/education#learningMethods',
-      name: 'EducationTeaching.LearningMethods.Title'
-    },
-    {
-      path: '/' + locale.value + '/education#studentGuidance',
-      name: 'EducationTeaching.StudentGuidance.Title'
-    },
-    {
-      path: '/' + locale.value + '/education#wonderfulMoments',
-      name: 'EducationTeaching.WonderfulMoments.Title'
-    }
-  ],
-  StudentLife: [
-    {
-      path: '/' + locale.value + '/studentLife#activities',
-      name: 'StudentLife.Activities.Title'
-    },
-    {
-      path: '/' + locale.value + '/studentLife#clubs',
-      name: 'StudentLife.Clubs.Title'
-    }
-  ]
-}))
-
-const routesComputed = computed(() => {
-  return routes
-    .map((route) => {
-      const path = route.path
-        .replace(':lang(zh-CN|en-US)', locale.value)
-        .replace(':lang(zh-CN|en-US)?', locale.value)
-      return { ...route, path }
-    })
-    .filter(
-      (route) => route.name !== 'NotFound' && route.name !== 'ArticlePage'
-    )
-})
-
-const showBlock = ref(false)
-let blockLeftAnimation
-const blockLeft = ref()
-
-// const showSubmenu = ref(false)
-// let submenuLeftAnimation
-const hover = ref()
-
-function onHover (index, name) {
-  // OnHover: Block animation, Submenu animation
-  if (!showBlock.value) {
-    showBlock.value = true
-    blockLeftAnimation = animate({
-      from: 7.5 * index + 'rem',
-      to: 7.5 * index + 'rem',
-      onUpdate: (v) => {
-        blockLeft.value = v
-      }
-    })
-  } else {
-    blockLeftAnimation.stop()
-    blockLeftAnimation = animate({
-      from: blockLeft.value,
-      to: 7.5 * index + 'rem',
-      onUpdate: (v) => {
-        blockLeft.value = v
-      }
-    })
-  }
-  hover.value = name
-}
-
-const router = useRouter()
-const lineLeft = ref()
-const showLine = ref(false)
-
-router.beforeResolve((to, from) => {
-  if (to.name === from.name) {
-    return
-  }
-  showLine.value = false
-  const index = routesComputed.value.findIndex((item) => item.name === to.name)
-  setTimeout(() => {
-    lineLeft.value = 7.5 * index + 'rem'
-  }, 300) // Wait for the line fadeout animation to finish
-})
-
-let headerCooling = false
-
-router.afterEach((to) => {
-  const index = routesComputed.value.findIndex((item) => item.name === to.name)
-  if (index !== -1) {
-    setTimeout(() => {
-      showLine.value = true
-    }, 300)
-  }
-  headerCooling = true
-  // Process anchor (#...)
-  router.isReady().then(() => {
-    if (to.hash) {
-      const anchor = document.querySelector(to.hash)
-      if (anchor) {
-        anchor.scrollIntoView()
-      }
-    }
-  })
-})
-
-const { locale } = useI18n({ useScope: 'global' })
+import RouterLinks from './DesktopHeader/RouterLinks.vue'
 
 const route = useRoute()
-
 const color = computed(() => {
   if (route.meta.header && route.meta.header.color && !fixed.value) {
     return route.meta.header.color
@@ -260,13 +87,7 @@ const color = computed(() => {
     return '#000'
   }
 })
-const lineColor = computed(() => {
-  if (route.meta.header && route.meta.header.lineColor && !fixed.value) {
-    return route.meta.header.lineColor
-  } else {
-    return '#103C74'
-  }
-})
+
 const transparent = computed(() => {
   if (route.meta.header && route.meta.header.transparent && !fixed.value) {
     return route.meta.header.transparent
@@ -275,12 +96,16 @@ const transparent = computed(() => {
   }
 })
 
+const expand = ref(false)
+
 // When scrolled distance > 100vh, the header will be fixed at the top
 const fixed = ref(false)
 const fixedShow = ref(false)
 let last = window.scrollY
+let headerCooling = false
 onMounted(() => {
   window.onscroll = () => {
+    expand.value = false
     const delta = window.scrollY - last
     if (window.scrollY > window.innerHeight) {
       // After 100vh: fixed
@@ -309,6 +134,21 @@ onMounted(() => {
 
     last = window.scrollY
   }
+})
+
+const router = useRouter()
+
+router.afterEach((to) => {
+  headerCooling = true
+  // Process anchor (#...)
+  router.isReady().then(() => {
+    if (to.hash) {
+      const anchor = document.querySelector(to.hash)
+      if (anchor) {
+        anchor.scrollIntoView()
+      }
+    }
+  })
 })
 
 onUnmounted(() => {

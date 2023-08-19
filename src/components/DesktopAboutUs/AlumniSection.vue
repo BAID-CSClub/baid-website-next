@@ -131,11 +131,12 @@
             </div>
           </div>
           <div class="flex items-center mt-10">
-            <DesktopSwiper slides="3"
-              ><swiper-slide
+            <DesktopSwiper :slides="3">
+              <swiper-slide
                 v-for="(alumnus, index) in pageData.alumni"
                 :key="alumnus"
-                ><img
+              >
+                <img
                   :src="alumnus.image"
                   class="w-full object-cover aspect-3/4 opacity-60 transition-all"
                   :class="{
@@ -144,8 +145,10 @@
                       current !== index && !transition
                   }"
                   v-on:click="change(index)"
-                  alt="pic1" /></swiper-slide
-            ></DesktopSwiper>
+                  alt="pic1"
+                />
+              </swiper-slide>
+            </DesktopSwiper>
           </div>
         </div>
       </div>
