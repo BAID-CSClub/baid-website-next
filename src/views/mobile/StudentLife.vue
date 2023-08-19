@@ -2,14 +2,14 @@
   <div class="w-screen h-[calc(100vh-5rem)] font-sans">
     <div class="placeholder"></div>
     <SplashBlock
-      title="学生社团"
-      :image="camping"
-      :items="data.clubs"
-    ></SplashBlock>
-    <SplashBlock
       title="特色活动"
       :image="archery"
       :items="data.activities"
+    ></SplashBlock>
+    <SplashBlock
+      title="学生社团"
+      :image="camping"
+      :items="data.clubs"
     ></SplashBlock>
   </div>
 </template>

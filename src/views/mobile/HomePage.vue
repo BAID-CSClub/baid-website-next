@@ -5,8 +5,10 @@
     <MobileHead :img="firstImg"> {{ $t('views.HomePage') }}</MobileHead>
     <section class="section">
       <MobileTitle>{{ data.introduction_title }}</MobileTitle>
+      <MobileCard>
+        <pre class="m-5 color-black" v-html="data.introduction"></pre>
+      </MobileCard>
       <VideoCard :cover="firstImg"></VideoCard>
-      <br />
       <MobileTitle>{{ $t('HomePage.EducationPhilosophy.Title') }}</MobileTitle>
       <MobileCard
         :items="
