@@ -80,7 +80,6 @@ const current = ref(0)
 const emit = defineEmits(['change'])
 
 function change (index) {
-  console.log(index)
   if (current.value !== index) {
     current.value = index
     emit('change')

@@ -30,6 +30,7 @@
                 :modules="[Autoplay, A11y]"
                 :slides-per-view="1"
                 :space-between="10"
+                :loop="true"
                 :autoplay="{
                   delay: 2500,
                   disableOnInteraction: false
@@ -49,7 +50,6 @@
             </swiper-slide>
           </swiper>
         </template>
-        <!-- <div></div> -->
         <template v-slot:description>
           <span class="text-white m-4">(左右滑动查看更多内容)</span>
         </template>

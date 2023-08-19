@@ -4,7 +4,9 @@
   --swiper-theme-color: #83050e !important;
 }
 .section {
-  padding: 1rem;
+  padding: 10px 20px;
+  margin: 0 auto;
+  max-width: 77rem;
 }
 
 .drop-shadow {

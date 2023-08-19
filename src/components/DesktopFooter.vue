@@ -1,17 +1,18 @@
 <template>
   <footer
-    class="w-full bg-black h-70 mt-45px"
+    class="w-full bg-black h-70 mt-45px font-sans"
     :style="{ 'background-image': 'url(' + imgFooter + ')' }"
   >
     <div class="cover w-full h-full">
       <div class="flex color-white w-full h-full justify-center items-center">
         <div class="w-50% mx-24 text-right">FOOTER CONTENT</div>
-        <div class="w-50% mx-24">
+        <div class="w-50% mx-24 flex items-center">
           <img
             class="w-sm inline object-cover"
             :src="logoFullWhite"
             alt="logo"
           />
+          <span class="m-x-2 text-8 font-bold">国际部</span>
         </div>
       </div>
     </div>

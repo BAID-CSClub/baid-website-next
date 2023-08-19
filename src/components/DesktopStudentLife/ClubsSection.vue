@@ -1,9 +1,9 @@
 <template>
   <div
     id="container"
-    class="my-10 py-5 flex flex-col justify-center items-center"
+    class="my-10 py-5 flex flex-col justify-center items-center bg-gray-200"
   >
-    <h1 class="text-10 font-300 font-title color-white text-center">
+    <h1 class="text-10 font-300 font-title text-center">
       {{ $t('StudentLife.Clubs.Title') }}
     </h1>
     <div class="flex justify-center items-center w-274">
@@ -62,11 +62,3 @@ const clubName = ref(null)
 const clubDescription = ref(null)
 const clubImgs = ref(null)
 </script>
-
-<style scoped>
-#container {
-  background-image: url('../../assets/images/campusBg3.png?webp');
-  background-repeat: no-repeat;
-  background-size: 100% 600px;
-}
-</style>
