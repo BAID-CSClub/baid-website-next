@@ -5,8 +5,12 @@
         {{ $t('views.AboutUs') }}
       </h1>
     </CarouselHorizontal>
-    <section id="overview"><OverviewSection /></section>
-    <section id="alumni"><AlumniSection /></section>
+    <section id="overview">
+      <OverviewSection />
+    </section>
+    <section id="alumni">
+      <AlumniSection />
+    </section>
     <section id="accreditation" class="bg-gray-200">
       <AccreditationSection />
     </section>

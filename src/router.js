@@ -17,7 +17,6 @@ export const routes = [
         transparent: true, // Tell the navigation component to make the header's bg transparent
         color: '#fff' // Set the header's text color
         // logoType: 'normal' // Set the header's logo type
-        // lineColor: '#fff' // Set the header's line color
       }
     }
   },
