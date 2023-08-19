@@ -7,7 +7,7 @@
       {{ $t('StudentLife.Clubs.Title') }}
     </h1>
     <div class="flex justify-center items-center w-274">
-      <DesktopSwiper slides="4">
+      <DesktopSwiper autoplay="true" slides="4">
         <swiper-slide
           v-for="club in pageData.clubs"
           :key="club"
