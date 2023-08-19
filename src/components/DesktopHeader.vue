@@ -98,12 +98,19 @@ const transparent = computed(() => {
 
 const expand = ref(false)
 
+function onResize () {
+  if (window.innerWidth > 1024) {
+    expand.value = false
+  }
+}
+
 // When scrolled distance > 100vh, the header will be fixed at the top
 const fixed = ref(false)
 const fixedShow = ref(false)
 let last = window.scrollY
 let headerCooling = false
 onMounted(() => {
+  window.addEventListener('resize', onResize)
   window.onscroll = () => {
     expand.value = false
     const delta = window.scrollY - last
@@ -153,6 +160,7 @@ router.afterEach((to) => {
 
 onUnmounted(() => {
   window.onscroll = null
+  window.removeEventListener('resize', onResize)
 })
 </script>
 
