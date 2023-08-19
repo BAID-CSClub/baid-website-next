@@ -8,48 +8,10 @@
       <MobileCard>
         <pre class="m-5 color-black" v-html="data.introduction"></pre>
       </MobileCard>
-      <VideoCard :cover="firstImg"></VideoCard>
-      <MobileTitle>{{ $t('HomePage.EducationPhilosophy.Title') }}</MobileTitle>
-      <MobileCard
-        :items="
-          ['motto', 'spirit', 'key_competency', 'cultivation'].map((key) => ({
-            key
-          }))
-        "
-        :bg="swiperBg"
-        :autoplay="true"
-        @change="swiperBg = swiperBg === 'white' ? 'blue' : 'white'"
-      >
-        <template #item="{ key }">
-          <div class="m-5 m-b-8">
-            <h3
-              class="m-y-0"
-              :class="{
-                'color-[var(--standard-blue)]': swiperBg === 'white',
-                'color-white': swiperBg === 'blue'
-              }"
-            >
-              {{ data[key + '_title'] }}
-            </h3>
-            <p
-              class="m-y-3"
-              :class="{
-                'color-black': swiperBg === 'white',
-                'color-white': swiperBg === 'blue'
-              }"
-            >
-              {{ data[key + '_content'] }}
-            </p>
-          </div>
-        </template>
-      </MobileCard>
-      <MobileTitle>遇见BAID</MobileTitle>
-      <MobileCard>
-        <div class="m-5 color-black">
-          <p v-html="data.admission_results_content" />
-        </div>
-      </MobileCard>
+      <VideoCard class="m-b-0" :cover="firstImg"></VideoCard>
     </section>
+    <EducationPhilosophy></EducationPhilosophy>
+    <AdmissionResults></AdmissionResults>
     <PrincipalMessage></PrincipalMessage>
     <NewsSection :news="news"></NewsSection>
   </HomeSplash>
@@ -75,8 +37,8 @@ import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'
 import dataEN from '@data/en-US/Home.json'
 import { useRoute } from 'vue-router'
-
-const swiperBg = ref('white')
+import AdmissionResults from '../../components/MobileHomePage/AdmissionResults.vue'
+import EducationPhilosophy from '../../components/MobileHomePage/EducationPhilosophy.vue'
 
 const { locale } = useI18n({ useScope: 'global' })
 
