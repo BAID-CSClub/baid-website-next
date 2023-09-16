@@ -6,6 +6,7 @@
         <div
           v-for="(c, i) in pageData.curriculums"
           class="op-70 container w-50"
+          :key="i"
           :class="{ '!op-100 active': current == i }"
           @mouseover="current = i"
         >
@@ -25,6 +26,7 @@
           class="w-full flex flex-col justify-center gap-5 absolute top-0 op-0 h-full"
           v-for="(c, i) in pageData.curriculums"
           :class="{ '!op-100': current == i, 'flex-col-reverse': i % 2 == 0 }"
+          :key="i"
         >
           <div
             class="flex w-full gap-5"
