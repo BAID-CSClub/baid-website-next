@@ -1,7 +1,7 @@
 <template>
-  <div class="section">
+  <div class="section" id="curriculum">
     <NotFancyTitle cn="课程体系" en="Curriculums" color="blue"></NotFancyTitle>
-    <div class="flex gap-16 h-80">
+    <div class="flex gap-16 h-100">
       <div class="w-40% flex flex-col justify-around">
         <div
           v-for="(c, i) in pageData.curriculums"
@@ -16,7 +16,7 @@
             class="absolute top-10 left-0 op-0"
             :class="{ '!op-100': current == i }"
           >
-            <ReadMore />
+            <ReadMore to="/education" />
           </div>
         </div>
       </div>

@@ -11,7 +11,6 @@
       <VideoCard class="m-b-0" :cover="firstImg"></VideoCard>
     </section>
     <EducationPhilosophy></EducationPhilosophy>
-    <AdmissionResults></AdmissionResults>
     <PrincipalMessage></PrincipalMessage>
     <NewsSection :news="news"></NewsSection>
   </HomeSplash>

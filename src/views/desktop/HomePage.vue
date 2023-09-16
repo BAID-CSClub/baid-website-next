@@ -16,9 +16,9 @@
         :avatar="avatar"
       />
     </section>
-    <section id="admissionResults">
-      <AdmissionResults />
-    </section>
+    <!-- <section id="admissionResults"> -->
+    <!--   <AdmissionResults /> -->
+    <!-- </section> -->
     <section id="news" v-if="news.length">
       <HomeNews :newsList="news" />
     </section>

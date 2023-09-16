@@ -1,20 +1,20 @@
 <template>
   <div
-    class="h-100 color-white bg-cover relative transition-all transition-duration-.3s"
+    class="h-120 color-white bg-cover relative transition-all transition-duration-.3s"
     :style="{ backgroundImage: 'url(' + image + ')' }"
     :class="{ 'w-33%': thisActive, 'w-25%': !thisActive }"
     @mousemove="$emit('activate')"
     @mouseleave="$emit('deactivate')"
   >
     <div
-      class="w-full h-full bg-#103c74 bg-op-70 transition transition-duration-.5s relative"
-      :class="{ '!bg-op-10': thisActive }"
+      class="w-full h-full bg-#103c74 bg-op-80 transition transition-duration-.5s relative"
+      :class="{ '!bg-op-40': thisActive }"
     >
       <pre
-        class="text-6 leading-normal text-right"
+        class="pcontent leading-normal text-right"
         :class="{ 'op-0': !delay, 'op-100': delay }"
-        >{{ props.content }}</pre
-      >
+        v-html="props.content"
+      ></pre>
       <h2
         class="text-8 !m-0 tracking-wide text-center write-vertical-left"
         :class="{ center: !thisActive, right: thisActive }"
@@ -64,8 +64,7 @@ pre {
 
   transform: translateY(-50%);
 
-  width: 200px;
-
+  width: 250px;
   transition: all 0.5s;
 }
 
@@ -106,5 +105,11 @@ h2::before {
 .right::before {
   opacity: 1;
   height: 70%;
+}
+</style>
+
+<style>
+.pcontent * {
+  font-size: 1.5rem !important;
 }
 </style>

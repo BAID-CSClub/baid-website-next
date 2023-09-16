@@ -6,7 +6,7 @@
       <template #item="{ image, name }">
         <div class="bg-yellow flex flex-col justify-center items-center h-45">
           <img :src="image" class="max-h-15 w-auto h-auto object-cover m-b-2" />
-          <span class="font-sans">{{ $t(name) }}</span>
+          <span class="font-sans ">{{ $t(name) }}</span>
         </div>
       </template>
     </MobileCard>
