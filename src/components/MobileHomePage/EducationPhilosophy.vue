@@ -28,9 +28,8 @@
               'color-black': swiperBg === 'white',
               'color-white': swiperBg === 'blue'
             }"
-          >
-            {{ pageData[key + '_content'] }}
-          </p>
+            v-html="pageData[key + '_content']"
+          ></p>
         </div>
       </template>
     </MobileCard>

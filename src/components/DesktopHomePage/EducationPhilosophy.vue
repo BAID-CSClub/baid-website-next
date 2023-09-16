@@ -6,6 +6,7 @@
         en="Education Philosophy"
         color="white"
       ></NotFancyTitle>
+
       <div class="flex m-t-10 m-auto justify-items-center">
         <PhilosophyBlock
           v-for="(key, index) in blocks"
