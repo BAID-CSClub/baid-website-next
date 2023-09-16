@@ -12,6 +12,7 @@
     <h1
       class="color-#122A28 m-0 text-10 font-300 font-title"
       v-if="$i18n.locale === 'zh-CN'"
+      :class="{ 'color-white': props.color === 'white' }"
     >
       <span v-for="word in cn" :key="word">
         <span>{{ word.left }}</span>
@@ -28,7 +29,10 @@
     <!-- EN -->
     <h1
       class="color-#122A28 m-0 text-9 font-title font-light"
-      :class="{ 'font-bold !text-11': $i18n.locale === 'en-US' }"
+      :class="{
+        'font-bold !text-11': $i18n.locale === 'en-US',
+        'color-white': props.color === 'white'
+      }"
     >
       <span v-for="word in en" :key="word">
         <span>{{ word.left }}</span>
