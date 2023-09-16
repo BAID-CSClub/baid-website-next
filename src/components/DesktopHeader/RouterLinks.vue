@@ -60,10 +60,6 @@ const subRoutes = computed(() => ({
       name: 'HomePage.EducationPhilosophy.Title'
     },
     {
-      path: '/' + locale.value + '#admissionResults',
-      name: 'HomePage.AdmissionResults.Title'
-    },
-    {
       path: '/' + locale.value + '#news',
       name: 'HomePage.News.Title'
     }
