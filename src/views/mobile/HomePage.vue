@@ -36,7 +36,6 @@ import dbEN from '@data/en-US/db.json'
 import dataZH from '@data/zh-CN/Home.json'
 import dataEN from '@data/en-US/Home.json'
 import { useRoute } from 'vue-router'
-import AdmissionResults from '../../components/MobileHomePage/AdmissionResults.vue'
 import EducationPhilosophy from '../../components/MobileHomePage/EducationPhilosophy.vue'
 
 const { locale } = useI18n({ useScope: 'global' })

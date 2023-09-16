@@ -35,7 +35,6 @@ import FirstSection from '../../components/DesktopHomePage/FirstSection.vue'
 import SecondSection from '../../components/DesktopHomePage/SecondSection.vue'
 import EducationPhilosophy from '../../components/DesktopHomePage/EducationPhilosophy.vue'
 import QuoteMessage from '../../components/QuoteMessage.vue'
-import AdmissionResults from '../../components/DesktopHomePage/AdmissionResults.vue'
 import HomeNews from '../../components/DesktopHomePage/HomeNews.vue'
 // Assets
 import avatar from '../../assets/images/homeBg1.jpg'
