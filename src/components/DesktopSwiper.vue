@@ -9,7 +9,7 @@
         class="block"
       >
         <path
-          fill="var(--standard-red)"
+          :fill="props.arrowColor"
           d="m32.75 44-20-20 20-20 2.8 2.85L18.4 24l17.15 17.15Z"
         />
       </svg>
@@ -37,7 +37,7 @@
         class="block"
       >
         <path
-          fill="var(--standard-red"
+          :fill="props.arrowColor"
           d="m15.2 43.9-2.8-2.85L29.55 23.9 12.4 6.75l2.8-2.85 20 20Z"
         />
       </svg>
@@ -55,6 +55,10 @@ import 'swiper/css/navigation'
 
 const props = defineProps({
   slides: Number,
+  arrowColor: {
+    type: String,
+    default: 'var(--standard-red)'
+  },
   autoplay: {
     type: Boolean,
     default: false

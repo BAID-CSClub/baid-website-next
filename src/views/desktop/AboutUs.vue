@@ -11,7 +11,7 @@
     <section id="alumni">
       <AlumniSection />
     </section>
-    <section id="accreditation" class="bg-gray-200">
+    <section id="accreditation" class="bg-[var(--standard-blue)]">
       <AccreditationSection />
     </section>
     <section id="data">
