@@ -1,27 +1,28 @@
 <template>
-  <div class="section">
-    <NotFancyTitle
-      :cn="$t('AboutUs.Accreditation.Title')"
-      en="Accreditation"
-      color="blue"
-    ></NotFancyTitle>
-    <div class="grid grid-cols-4 grid-rows-2 m-t-6">
-      <p class="col-span-2" v-html="pageData.accreditation"></p>
-      <div></div>
-      <div
-        v-for="acc in accs"
-        :key="acc"
-        class="flex flex-col items-center justify-center m-auto h-40"
-      >
-        <div class="p-4">
-          <img
-            :src="acc.image"
-            :alt="acc.title"
-            class="max-h-14 min-h-12 block"
-          />
-        </div>
-        <p>{{ $t(acc.name) }}</p>
-      </div>
+  <div class="section color-white flex items-center">
+    <div class="w-1/2 p-r-16 border-0 border-r-2 border-white/50 border-solid">
+      <NotFancyTitle
+          :cn="$t('AboutUs.Accreditation.Title')"
+          en="Accreditation"
+          color="white"
+      ></NotFancyTitle>
+      <p class="opacity-80" v-html="pageData.accreditation"></p>
+    </div>
+    <div class="w-1/2 p-l-16">
+      <DesktopSwiper :slides="1" arrow-color="white" :autoplay="true">
+        <swiper-slide
+            v-for="acc in accs"
+            :key="acc">
+          <div class="w-full h-72 my-12 bg-white rounded-xl flex flex-col justify-center items-center">
+            <div class="h-30 text-center">
+              <img class="h-24 mb-5"
+                   :src="acc.image"
+                   :alt="$t(acc.name)">
+              <p class="font-sans text-black">{{ $t(acc.name) }}</p>
+            </div>
+          </div>
+        </swiper-slide>
+      </DesktopSwiper>
     </div>
   </div>
 </template>
@@ -34,6 +35,9 @@ import imgApple from '../../assets/images/AboutUs/Apple.svg'
 import imgCam from '../../assets/images/AboutUs/Cambridge.png?webp'
 
 import NotFancyTitle from '../NotFancyTitle.vue'
+import DesktopSwiper from '@/components/DesktopSwiper.vue'
+import { SwiperSlide } from 'swiper/vue'
+
 import { inject } from 'vue'
 
 const pageData = inject('data')
