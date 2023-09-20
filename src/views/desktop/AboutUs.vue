@@ -16,7 +16,11 @@
     </section>
     <section id="data">
       <div class="section important:p-b-0">
-        <NotFancyTitle :cn="$t('AboutUs.Data.Title')" en="Data" color="blue"></NotFancyTitle>
+        <NotFancyTitle
+          :cn="$t('AboutUs.Data.Title')"
+          en="Data"
+          color="blue"
+        ></NotFancyTitle>
       </div>
       <div class="h-90 flex items-center">
         <DataSection />

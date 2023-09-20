@@ -2,22 +2,20 @@
   <div class="section color-white flex items-center">
     <div class="w-1/2 p-r-16 border-0 border-r-2 border-white/50 border-solid">
       <NotFancyTitle
-          :cn="$t('AboutUs.Accreditation.Title')"
-          en="Accreditation"
-          color="white"
+        :cn="$t('AboutUs.Accreditation.Title')"
+        en="Accreditation"
+        color="white"
       ></NotFancyTitle>
       <p class="opacity-80" v-html="pageData.accreditation"></p>
     </div>
     <div class="w-1/2 p-l-16">
       <DesktopSwiper :slides="1" arrow-color="white" :autoplay="true">
-        <swiper-slide
-            v-for="acc in accs"
-            :key="acc">
-          <div class="w-full h-72 my-12 bg-white rounded-xl flex flex-col justify-center items-center">
+        <swiper-slide v-for="acc in accs" :key="acc">
+          <div
+            class="w-full h-72 my-12 bg-white rounded-xl flex flex-col justify-center items-center"
+          >
             <div class="h-30 text-center">
-              <img class="h-24 mb-5"
-                   :src="acc.image"
-                   :alt="$t(acc.name)">
+              <img class="h-24 mb-5" :src="acc.image" :alt="$t(acc.name)" />
               <p class="font-sans text-black">{{ $t(acc.name) }}</p>
             </div>
           </div>

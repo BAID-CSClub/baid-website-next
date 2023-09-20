@@ -1,7 +1,11 @@
 <template>
   <div class="section">
     <div class="flex items-center flex-row">
-      <div v-for="datum in pageData.data" :key="datum" class="items-center text-center flex flex-col m-24">
+      <div
+        v-for="datum in pageData.data"
+        :key="datum"
+        class="items-center text-center flex flex-col m-24"
+      >
         <div v-html="datum.icon" class="color-[var(--standard-blue)]"></div>
         <span class="text-16 font-bold font-title">
           {{ datum.content }}
