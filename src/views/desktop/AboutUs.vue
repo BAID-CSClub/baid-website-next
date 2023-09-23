@@ -22,10 +22,7 @@
           color="blue"
         ></NotFancyTitle>
       </div>
-      <div
-        class="bg-[var(--standard-blue)] text-white h-90 flex items-center"
-        style="background-size: cover; background-position: center"
-      >
+      <div class="h-90 flex items-center">
         <DataSection />
       </div>
     </section>
