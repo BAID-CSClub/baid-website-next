@@ -1,8 +1,8 @@
 <template>
-  <div class="h-40rem w-full overflow-hidden relative mb-45px">
+  <div class="h-45rem w-full overflow-hidden relative mb-45px">
     <div class="absolute flex" :style="{ left }">
       <img
-        class="h-40rem w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"
+        class="h-45rem w-screen min-w-[var(--shrink-limit)] brightness-80 object-cover"
         v-for="img in props.images"
         :src="img"
         :alt="img"
