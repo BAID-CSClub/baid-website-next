@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CarouselHorizontal :images="[imgHeader1]">
+    <CarouselHorizontal :images="data.carousel_images || []">
       <h1 class="text-18 font-sans color-white">
         {{ $t('views.AboutUs') }}
       </h1>
@@ -30,8 +30,6 @@
 </template>
 
 <script setup>
-import imgHeader1 from '../../assets/images/AboutUs/Header_1.jpg?webp'
-
 import OverviewSection from '../../components/DesktopAboutUs/OverviewSection.vue'
 import AlumniSection from '../../components/DesktopAboutUs/AlumniSection.vue'
 import AccreditationSection from '../../components/DesktopAboutUs/AccreditationSection.vue'

@@ -1,9 +1,12 @@
 <template>
   <div class="section font-sans">
     <div>
-      <h3 class="text-8">{{ $t('JoinUs.Student.Title') }}</h3>
+      <NotFancyTitle
+        :cn="$t('JoinUs.Student.Title')"
+        en="How to Apply"
+      ></NotFancyTitle>
       <pre v-html="pageData.student"></pre>
-      <div
+      <!-- <div
         class="flex items-center justify-center text-8 m-t-10 py-10 bg-[var(--standard-red)] rd-5 color-white"
       >
         <div style="flex: 3" class="text-center">{{ $t('JoinUs.Join') }}</div>
@@ -28,12 +31,13 @@
             {{ $t('JoinUs.Student.Join') }}
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 <script setup>
 import { inject } from 'vue'
+import NotFancyTitle from '../NotFancyTitle.vue'
 const pageData = inject('data')
 
 function open (url) {

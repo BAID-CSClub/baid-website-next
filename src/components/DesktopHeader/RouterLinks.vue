@@ -109,6 +109,16 @@ const subRoutes = computed(() => ({
       path: '/' + locale.value + '/studentLife#clubs',
       name: 'StudentLife.Clubs.Title'
     }
+  ],
+  JoinUs: [
+    {
+      path: '/' + locale.value + '/join#apply',
+      name: 'JoinUs.Student.Title'
+    },
+    {
+      path: '/' + locale.value + '/join#faculty',
+      name: 'JoinUs.Faculty.Title'
+    }
   ]
 }))
 
