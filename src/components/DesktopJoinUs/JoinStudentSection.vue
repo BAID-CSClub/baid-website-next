@@ -40,7 +40,7 @@ import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 const pageData = inject('data')
 
-function open (url) {
-  window.open(url)
-}
+// function open (url) {
+//   window.open(url)
+// }
 </script>
