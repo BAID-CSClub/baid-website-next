@@ -7,12 +7,12 @@
         color="red"
       ></NotFancyTitle>
 
-      <p class="mb-5">中美高中课程合作项目开设AP课程，欢迎初三学生积极报考，期待你们的加入!</p>
+      <p class="mb-5">中美高中课程合作项目开设 AP 课程，欢迎初三学生积极报考，期待你们的加入!</p>
       <div class="w-full bg-[var(--standard-blue)] color-white mb-8">
         <img :src="placeholderImg" class="w-full object-cover h-96">
         <div class="px-5 pb-8">
           <h2 class="mb-3 font-bold">招生计划</h2>
-          <p>面向北京市招收京籍初中毕业生及符合北京市普通高中升学资格的适龄学生，100人。</p>
+          <p>面向北京市招收京籍初中毕业生及符合北京市普通高中升学资格的适龄学生，100 人。</p>
         </div>
       </div>
 
@@ -26,13 +26,13 @@
         <div class="h-80 bg-cover" :style="{'background-image': `url(${placeholderImg})`}">
           <div class="bg-white/60 px-5 pt-3 pb-8 h-48 my-12 mr-20">
             <h2 class="font-bold mb-3">项目学费</h2>
-            <p>每学期5万元人民币 (不含住宿费、教材费、伙食费、校服费等)。</p>
+            <p>每学期 5 万元人民币 (不含住宿费、教材费、伙食费、校服费等)。</p>
           </div>
         </div>
         <div class="h-80 bg-cover" :style="{'background-image': `url(${placeholderImg})`}">
           <div class="bg-white/60 px-5 pt-3 pb-8 h-48 my-12 mr-20">
             <h2 class="font-bold mb-3">住宿安排</h2>
-            <p>本项目办学地址在北京中学金盏校区 (朝阳区楼梓庄北后街2号)。本项目为非住宿项目，为中考成绩优异、离校较远的同学提供住宿。</p>
+            <p>本项目办学地址在北京中学金盏校区 (朝阳区楼梓庄北后街 2 号)。本项目为非住宿项目，为中考成绩优异、离校较远的同学提供住宿。</p>
           </div>
         </div>
         <div class="h-80 bg-cover" :style="{'background-image': `url(${placeholderImg})`}">
