@@ -47,12 +47,12 @@
   </div>
 </template>
 <script setup>
-import placeholderImg from '../../assets/images/homeBg1.jpg';
+import placeholderImg from '../../assets/images/homeBg1.jpg'
 
-import { inject } from 'vue'
+// import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
 
-const pageData = inject('data')
+// const pageData = inject('data')
 
 // function open (url) {
 //   window.open(url)
