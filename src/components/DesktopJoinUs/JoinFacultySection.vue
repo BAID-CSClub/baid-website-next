@@ -29,8 +29,8 @@
         </div>
       </div>
 
-      <div class="w-full bg-cover py-1 mb-8" :style="{'background-image': `url(${placeholderImg})`}">
-        <div class="bg-white/60 px-5 pt-12 pb-16 my-16 mr-1/3">
+      <div class="w-full bg-cover bg-center py-1 mb-8" :style="{'background-image': `url(${camelsImg})`}">
+        <div class="bg-white/60 px-5 pt-12 pb-16 my-20 mr-1/3">
           <h2 class="font-bold mb-3">招聘对象</h2>
           <p>应届生、社会人员、成熟教师均可投递简历。</p>
           <p>京内在职在编教师，35 岁以下。具备骨干称号教师的可适当放宽年龄条件。</p>
@@ -67,7 +67,7 @@
   </div>
 </template>
 <script setup>
-import placeholderImg from '../../assets/images/homeBg1.jpg'
+import camelsImg from '../../assets/images/JoinUs/camels.jpg'
 
 // import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'

@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9e9e0ef-d63e-48e9-8fe1-dc1c9777d805" name="Changes" comment="update accreditation section">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/JoinUs/camels.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/JoinUs/chairs.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/JoinUs/collegec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/JoinUs/event.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/JoinUs/sports.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/JoinUs/working.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DesktopJoinUs/JoinFacultySection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DesktopJoinUs/JoinFacultySection.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DesktopJoinUs/JoinStudentSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DesktopJoinUs/JoinStudentSection.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/desktop/JoinUs.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/desktop/JoinUs.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +53,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/run/media/dreta/Data/projects/code/school/baid-website-next&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/run/media/dreta/Data/projects/code/school/baid-website-next/src/assets/images/JoinUs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -61,6 +68,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images/JoinUs" />
       <recent name="$PROJECT_DIR$/src/components/MobileStudentLife" />
     </key>
   </component>
@@ -86,7 +94,8 @@
       <workItem from="1697965438294" duration="1219000" />
       <workItem from="1697972071044" duration="2793000" />
       <workItem from="1697974901184" duration="880000" />
-      <workItem from="1698061567301" duration="403000" />
+      <workItem from="1698061567301" duration="1612000" />
+      <workItem from="1698063308544" duration="67000" />
     </task>
     <task id="LOCAL-00001" summary="update accreditation section">
       <option name="closed" value="true" />
