@@ -5,12 +5,14 @@
         {{ $t('views.JoinUs') }}
       </h1>
     </CarouselHorizontal>
-    <section id="apply">
-      <JoinStudentSection />
-    </section>
-    <section id="faculty">
-      <JoinFacultySection />
-    </section>
+    <div class="max-w-5xl mx-auto">
+      <section id="apply">
+        <JoinStudentSection />
+      </section>
+      <section id="faculty">
+        <JoinFacultySection />
+      </section>
+    </div>
   </div>
 </template>
 <script setup>

@@ -3,42 +3,60 @@
     <div>
       <NotFancyTitle
         :cn="$t('JoinUs.Student.Title')"
-        en="How to Apply"
+        en="How to apply"
+        color="red"
       ></NotFancyTitle>
-      <pre v-html="pageData.student"></pre>
-      <!-- <div
-        class="flex items-center justify-center text-8 m-t-10 py-10 bg-[var(--standard-red)] rd-5 color-white"
-      >
-        <div style="flex: 3" class="text-center">{{ $t('JoinUs.Join') }}</div>
-        <div style="flex: 1" class="text-center">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="48"
-            width="48"
-            fill="white"
-          >
-            <path
-              d="M22.95 38.9q-.4-.4-.4-1.05t.4-1.05l11.3-11.3H9.5q-.65 0-1.075-.425Q8 24.65 8 24q0-.65.425-1.075Q8.85 22.5 9.5 22.5h24.75l-11.3-11.3q-.4-.4-.4-1.075 0-.675.4-1.075.4-.4 1.05-.4t1.05.4l13.9 13.9q.25.25.35.5.1.25.1.55 0 .25-.1.525t-.35.525l-13.9 13.9q-.4.4-1.05.375-.65-.025-1.05-.425Z"
-            />
-          </svg>
+
+      <p class="mb-5">中美高中课程合作项目开设 AP 课程，欢迎初三学生积极报考，期待你们的加入!</p>
+      <div class="w-full bg-[var(--standard-blue)] color-white mb-8">
+        <img :src="workingImg" class="w-full object-cover h-96">
+        <div class="px-5 pb-8">
+          <h2 class="mb-3 font-bold">招生计划</h2>
+          <p>面向北京市招收京籍初中毕业生及符合北京市普通高中升学资格的适龄学生，100 人。</p>
         </div>
-        <div style="flex: 3" class="text-center color-[var(--standard-red)]">
-          <div
-            class="bg-white rd-5 p-3 cursor-pointer"
-            style="display: inline-block"
-            @click="open(pageData.student_portal)"
-          >
-            {{ $t('JoinUs.Student.Join') }}
+      </div>
+
+      <div class="grid grid-cols-2 grid-rows-2 gap-5">
+        <div class="h-80 bg-cover bg-center" :style="{'background-image': `url(${collegeCImg})`}">
+          <div class="bg-white/60 px-5 pt-3 pb-8 h-48 my-12 mr-20">
+            <h2 class="font-bold mb-3">招生录取</h2>
+            <p>本项目属于中招普通招生录取批次，录取工作依据北京市教委安排有序进行。根据学生中考成绩及加试成绩，择优录取。</p>
           </div>
         </div>
-      </div> -->
+        <div class="h-80 bg-cover bg-center" :style="{'background-image': `url(${eventImg})`}">
+          <div class="bg-white/60 px-5 pt-3 pb-8 h-48 my-12 mr-20">
+            <h2 class="font-bold mb-3">项目学费</h2>
+            <p>每学期 5 万元人民币 (不含住宿费、教材费、伙食费、校服费等)。</p>
+          </div>
+        </div>
+        <div class="h-80 bg-cover bg-center" :style="{'background-image': `url(${chairsImg})`}">
+          <div class="bg-white/60 px-5 pt-3 pb-8 h-48 my-12 mr-20">
+            <h2 class="font-bold mb-3">住宿安排</h2>
+            <p>本项目办学地址在北京中学金盏校区 (朝阳区楼梓庄北后街 2 号)。本项目为非住宿项目，为中考成绩优异、离校较远的同学提供住宿。</p>
+          </div>
+        </div>
+        <div class="h-80 bg-cover bg-center" :style="{'background-image': `url(${sportsImg})`}">
+          <div class="bg-white/60 px-5 pt-3 pb-8 h-48 my-12 mr-20">
+            <h2 class="font-bold mb-3">招生咨询</h2>
+            <p>咨询电话: 010-50951283, 010-50951292 (待确认-李坤老师)</p>
+            <p>咨询邮箱: <a href="mailto:baid@beijingacadademy.com.cn">baid@beijingacademy.com.cn</a> (待确认-李坤老师)</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script setup>
-import { inject } from 'vue'
+import chairsImg from '../../assets/images/JoinUs/chairs.jpg'
+import collegeCImg from '../../assets/images/JoinUs/collegec.jpg'
+import eventImg from '../../assets/images/JoinUs/event.jpg'
+import sportsImg from '../../assets/images/JoinUs/sports.jpg'
+import workingImg from '../../assets/images/JoinUs/working.jpg'
+
+// import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
-const pageData = inject('data')
+
+// const pageData = inject('data')
 
 // function open (url) {
 //   window.open(url)
