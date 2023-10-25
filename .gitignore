@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 
+# IDE
+.idea
 .DS_Store
 *.suo
 *.ntvs*
