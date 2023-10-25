@@ -1,7 +1,11 @@
 <template>
   <div class="section font-sans">
     <div>
-      <NotFancyTitle :cn="$t('JoinUs.Faculty.Title')" en="Work with Us" color="blue"></NotFancyTitle>
+      <NotFancyTitle
+        :cn="$t('JoinUs.Faculty.Title')"
+        en="Work with Us"
+        color="blue"
+      ></NotFancyTitle>
 
       <pre class="mb-5" v-html="pageData.faculty" />
 
@@ -15,11 +19,12 @@
         </div>
       </div>
 
-
-      <ImageCard :bg="pageData.faculty_card_image" :title="pageData.faculty_card_title">
+      <ImageCard
+        :bg="pageData.faculty_card_image"
+        :title="pageData.faculty_card_title"
+      >
         <pre v-html="pageData.faculty_card_content" />
       </ImageCard>
-
 
       <h2>{{ pageData.faculty_process_title }}</h2>
       <div class="flex w-full mb-3">
@@ -35,11 +40,9 @@
   </div>
 </template>
 <script setup>
-import camelsImg from '../../assets/images/JoinUs/camels.jpg'
-
 import { inject } from 'vue'
 import NotFancyTitle from '../NotFancyTitle.vue'
-import ImageCard from './ImageCard.vue';
+import ImageCard from './ImageCard.vue'
 const pageData = inject('data')
 
 // function open (url) {
