@@ -10,7 +10,7 @@
       <pre class="mb-5" v-html="pageData.student"></pre>
 
       <div
-        class="w-full bg-[var(--standard-blue)] color-white mb-8 hover:shadow-xl"
+        class="w-full bg-[var(--standard-blue)] color-white mb-12 hover:shadow-xl"
       >
         <img
           :src="pageData.student_first_image"
@@ -22,7 +22,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-5">
+      <div class="grid grid-cols-2 gap-6">
         <ImageCard
           v-for="card in pageData.student_cards"
           :title="card.name"
