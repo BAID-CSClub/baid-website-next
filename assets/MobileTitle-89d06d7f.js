@@ -1,0 +1,1 @@
+import{_ as t,b as s,c as o,C as n}from"./index-f255d6e4.js";const c={},r={class:"font-sans font-title"};function a(e,l){return s(),o("h2",r,[n(e.$slots,"default")])}const f=t(c,[["render",a]]);export{f as M};
