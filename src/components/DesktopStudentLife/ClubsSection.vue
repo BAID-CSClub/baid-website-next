@@ -12,16 +12,17 @@
           v-for="club in pageData.clubs"
           :key="club"
           @click="
-            ;(clubName = club.name),
-              (clubDescription = club.content),
-              (clubImgs = club.images),
-              (showInfo = true)
+            () => {
+              clubName = club.name
+              clubDescription = club.content
+              clubImgs = club.images
+              showInfo = true
+            }
           "
           class="flex justify-center py-3"
         >
           <div
-            class="h-220px aspect-1 items-center justify-center flex flex-col"
-            style="box-shadow: 8px 4px 4px 3px rgba(0, 0, 0, 0.5)"
+            class="h-220px aspect-1 items-center justify-center flex flex-col transition-300 hover:shadow-xl"
             :style="{ 'background-color': club.bg_color, color: club.color }"
           >
             <div class="text-8 font-title m-1">
