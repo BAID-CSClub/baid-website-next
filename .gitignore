@@ -33,3 +33,7 @@ public/zh-CN
 articles
 
 data
+
+# JetBrains IDE
+.idea/
+*.iml

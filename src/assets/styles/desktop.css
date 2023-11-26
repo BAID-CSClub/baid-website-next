@@ -97,6 +97,10 @@ pre {
   font-family: 'Open Sans', 'Alibaba-PuHuiTi', sans-serif;
 }
 
+.no-size p {
+  font-size: inherit;
+}
+
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
