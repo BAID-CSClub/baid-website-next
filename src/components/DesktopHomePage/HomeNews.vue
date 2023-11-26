@@ -22,9 +22,17 @@
     </div>
 
     <div class="grid grid-cols-3 gap-8">
-      <NewsCard :news="props.newsList[0]" bg="var(--standard-blue)" :light="true" />
+      <NewsCard
+        :news="props.newsList[0]"
+        bg="var(--standard-blue)"
+        :light="true"
+      />
       <NewsCard :news="props.newsList[1]" bg="#eee" />
-      <NewsCard :news="props.newsList[2]" bg="var(--standard-red)" :light="true" />
+      <NewsCard
+        :news="props.newsList[2]"
+        bg="var(--standard-red)"
+        :light="true"
+      />
     </div>
   </div>
 </template>
