@@ -17,7 +17,6 @@ import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 const { locale, t } = useI18n({ useScope: 'global' })
 
-
 const router = useRouter()
 router.beforeEach((to) => {
   const lang = to.params.lang || navigator.language
@@ -28,12 +27,12 @@ router.beforeEach((to) => {
   const title = t('views.' + to.name)
   document.title = title
 
-  if (to.path === import.meta.env.BASE_URL || to.path === "/") {
+  if (to.path === import.meta.env.BASE_URL || to.path === '/') {
     if (window.prod) {
-      return { path: "/" + lang + "/" }
+      return { path: '/' + lang + '/' }
     }
 
-    return { path: import.meta.env.BASE_URL + "/" + lang + "/" }
+    return { path: import.meta.env.BASE_URL + '/' + lang + '/' }
   }
 })
 </script>

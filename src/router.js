@@ -5,8 +5,6 @@ const clientType =
     ? 'mobile'
     : 'desktop'
 
-
-
 let prefix = '/:lang(zh-CN|en-US)'
 
 if (!window.prod) {
@@ -91,5 +89,5 @@ export const routes = [
 
 export default createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })

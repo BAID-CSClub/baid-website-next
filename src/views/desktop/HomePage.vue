@@ -25,7 +25,7 @@
 
 <script setup>
 // Modules
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { computed, provide, ref, watchEffect } from 'vue'
 // Components
@@ -49,8 +49,6 @@ const data = computed(() => (locale.value === 'zh-CN' ? dataZH : dataEN))
 provide('data', data)
 
 const route = useRoute()
-const router = useRouter()
-
 
 const news = ref([])
 
