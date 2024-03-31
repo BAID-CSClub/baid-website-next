@@ -16,19 +16,24 @@ import MobileLayout from './layouts/MobileLayout.vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
 const { locale, t } = useI18n({ useScope: 'global' })
-// locale.value = localStorage.getItem('locale')
-//   ? localStorage.getItem('locale')
-//   : navigator.language.split('-')[0]
+
+
 const router = useRouter()
 router.beforeEach((to) => {
   const lang = to.params.lang || navigator.language
   locale.value = lang
+
   // Set title
+  console.log(to, import.meta.env.BASE_URL, lang)
   const title = t('views.' + to.name)
   document.title = title
 
-  if (!to.params.lang) {
-    return { path: '/' + lang + to.path }
+  if (to.path === import.meta.env.BASE_URL || to.path === "/") {
+    if (window.prod) {
+      return { path: "/" + lang + "/" }
+    }
+
+    return { path: import.meta.env.BASE_URL + "/" + lang + "/" }
   }
 })
 </script>

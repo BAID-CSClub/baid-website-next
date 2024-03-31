@@ -5,11 +5,17 @@ const clientType =
     ? 'mobile'
     : 'desktop'
 
-const langPrefix = '/:lang(zh-CN|en-US)'
+
+
+let prefix = '/:lang(zh-CN|en-US)'
+
+if (!window.prod) {
+  prefix = import.meta.env.BASE_URL + prefix
+}
 
 export const routes = [
   {
-    path: langPrefix + '?',
+    path: prefix,
     name: 'HomePage',
     component: () => import(`./views/${clientType}/HomePage.vue`),
     meta: {
@@ -21,7 +27,7 @@ export const routes = [
     }
   },
   {
-    path: langPrefix + '/about',
+    path: prefix + '/about',
     name: 'AboutUs',
     component: () => import(`./views/${clientType}/AboutUs.vue`),
     meta: {
@@ -30,7 +36,7 @@ export const routes = [
     }
   },
   {
-    path: langPrefix + '/education',
+    path: prefix + '/education',
     name: 'EducationTeaching',
     component: () => import(`./views/${clientType}/EducationTeaching.vue`),
     meta: {
@@ -42,7 +48,7 @@ export const routes = [
     }
   },
   {
-    path: langPrefix + '/studentLife',
+    path: prefix + '/studentLife',
     name: 'StudentLife',
     component: () => import(`./views/${clientType}/StudentLife.vue`),
     meta: {
@@ -52,7 +58,7 @@ export const routes = [
     }
   },
   {
-    path: langPrefix + '/join',
+    path: prefix + '/join',
     name: 'JoinUs',
     component: () => import(`./views/${clientType}/JoinUs.vue`),
     meta: {
@@ -62,7 +68,7 @@ export const routes = [
     }
   },
   {
-    path: langPrefix + '/news',
+    path: prefix + '/news',
     name: 'NewsPage',
     component: () => import(`./views/${clientType}/NewsPage.vue`),
     meta: {
@@ -72,7 +78,7 @@ export const routes = [
     }
   },
   {
-    path: langPrefix + '/news/:year/:month/:day/:title',
+    path: prefix + '/news/:year/:month/:day/:title',
     name: 'ArticlePage',
     component: () => import(`./views/${clientType}/ArticlePage.vue`)
   },
@@ -85,5 +91,5 @@ export const routes = [
 
 export default createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 })
