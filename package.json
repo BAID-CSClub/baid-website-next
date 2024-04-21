@@ -72,5 +72,8 @@
 		"vue-i18n": "^9.2.2",
 		"vue-router": "^4.2.4"
 	},
-	"type": "module"
+	"type": "module",
+	"devDependencies": {
+		"node-fetch": "^3.3.2"
+	}
 }
