@@ -44,7 +44,8 @@
           <RouterLink
             v-for="(result, index) in results"
             :key="result.ref"
-            :to="db[locale][result.ref].href"
+            :to="$BASE_URL + db[locale][result.ref].href"
+            @click="toggleSearchBox()"
             class="color-black decoration-none op-80 hover:op-100 transition"
           >
             <h3 class="m0">{{ db[locale][result.ref].title }}</h3>
@@ -76,60 +77,60 @@ a {
 </style>
 
 <script setup>
-import { watch, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
-import lunr from 'lunr'
-import { RouterLink } from 'vue-router'
+import { watch, ref } from "vue";
+import { useI18n } from "vue-i18n";
+import lunr from "lunr";
+import { RouterLink } from "vue-router";
 
-const props = defineProps(['color'])
+const props = defineProps(["color"]);
 
-const { locale } = useI18n({ useScope: 'global' })
+const { locale } = useI18n({ useScope: "global" });
 
-const idx = {}
+const idx = {};
 
-async function loadIndex (lang) {
+async function loadIndex(lang) {
   if (!idx[lang]) {
     // Load search index
     idx[lang] = lunr.Index.load(
       await import(`../../../data/${lang}/search.json`)
-    )
-    console.log('Loaded index for', lang)
+    );
+    console.log("Loaded index for", lang);
   }
 }
 
-const db = {}
+const db = {};
 
-async function loadDb (lang) {
+async function loadDb(lang) {
   if (!db[lang]) {
     // Load search index
-    db[lang] = (await import(`../../../data/${lang}/db.json`)).default
-    console.log('Loaded db for', lang)
+    db[lang] = (await import(`../../../data/${lang}/db.json`)).default;
+    console.log("Loaded db for", lang);
   }
 }
 
-watch(locale, loadIndex)
-watch(locale, loadDb)
+watch(locale, loadIndex);
+watch(locale, loadDb);
 
-const showSearchBox = ref(false)
+const showSearchBox = ref(false);
 
 const toggleSearchBox = () => {
-  showSearchBox.value = !showSearchBox.value
-}
+  showSearchBox.value = !showSearchBox.value;
+};
 
-const text = ref('')
+const text = ref("");
 
-const results = ref([])
+const results = ref([]);
 
 watch(text, (text) => {
   if (idx[locale.value] && db[locale.value] && text.length > 0) {
-    console.log('Searching for', text)
-    results.value = idx[locale.value].search(text)
+    console.log("Searching for", text);
+    results.value = idx[locale.value].search(text);
   } else {
-    loadIndex(locale.value)
-    loadDb(locale.value)
-    results.value = []
+    loadIndex(locale.value);
+    loadDb(locale.value);
+    results.value = [];
   }
-})
+});
 </script>
 
 <style scoped>

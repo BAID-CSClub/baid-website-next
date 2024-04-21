@@ -1,20 +1,16 @@
 <template>
   <router-link
-    :to="'/' + locale + props.to"
+    :to="to"
     class="decoration-none op-80 hover:op-100 active:op-70 transition-opacity"
   >
     <div class="flex items-center w-min">
       <i class="m-r-2 flex items-center">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
           width="30"
           height="30"
           viewBox="0 0 32.99999997656249 32.99999997656255"
-          fill="none"
         >
           <path
-            id="分组 1"
             fill-rule="evenodd"
             :style="{ fill: props.color }"
             transform="translate(0 2.3092638912203256e-14)  rotate(0 16.499999988281253 16.499999988281253)"
@@ -26,24 +22,42 @@
       <span
         class="w-max font-sans tracking-wide"
         :style="{ color: props.color }"
-        >{{ $t('HomePage.ReadMore') }}</span
+        >{{ $t("HomePage.ReadMore") }}</span
       >
     </div>
   </router-link>
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 const props = defineProps({
   to: {
     type: String,
-    required: true
+    required: true,
   },
   color: {
     type: String,
     required: false,
-    default: 'var(--standard-blue)'
+    default: "var(--standard-blue)",
+  },
+});
+const { locale } = useI18n({ useScope: "global" });
+
+const to = computed(() => {
+  // Trim left and right slashes from props.to
+  let to = props.to.replace(/^\/|\/$/g, "");
+
+  let base = import.meta.env.BASE_URL;
+  if (!base.endsWith("/")) {
+    base += "/";
   }
-})
-const { locale } = useI18n({ useScope: 'global' })
+
+  if (to.startsWith("zh") || to.startsWith("en")) {
+    // Already has locale prefix
+    return base + to;
+  } else {
+    return base + locale.value + "/" + to;
+  }
+});
 </script>

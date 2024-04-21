@@ -57,17 +57,11 @@
       >
         <span>Learn More</span>
         <div class="w10 h10 ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 48 48"
-          >
+          <svg viewBox="0 0 48 48">
             <g fill="none">
               <path
                 d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0z"
                 fill="currentColor"
-                style="--darkreader-inline-fill: currentColor"
-                data-darkreader-inline-fill=""
               ></path>
             </g>
           </svg>
@@ -78,39 +72,40 @@
 </template>
 
 <script setup>
-import { ref, inject } from 'vue'
-import { SwiperSlide, Swiper } from 'swiper/vue'
-import 'swiper/css'
+import { ref, inject } from "vue";
+import { SwiperSlide, Swiper } from "swiper/vue";
+import "swiper/css";
 
-const pageData = inject('data')
+const pageData = inject("data");
 
-const current = ref(0)
-let swiper
+const current = ref(0);
+let swiper;
 
-const show = ref(true)
+const show = ref(true);
 
-function change (index) {
+function change(index) {
+  console.log(pageData.carousel_images);
   if (
     current.value !== index &&
     index < pageData.carousel_images.length &&
     index >= 0
   ) {
-    current.value = index
-    swiper.slideTo(index)
+    current.value = index;
+    swiper.slideTo(index);
   }
 }
 
-let startY = 0
+let startY = 0;
 
-function onStart (e) {
-  startY = e.touches[0].clientY
+function onStart(e) {
+  startY = e.touches[0].clientY;
 }
 
-function onMove (e) {
-  const deltaY = e.touches[0].clientY - startY
+function onMove(e) {
+  const deltaY = e.touches[0].clientY - startY;
 
   if (deltaY < -100) {
-    show.value = false
+    show.value = false;
   }
 }
 </script>
