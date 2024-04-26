@@ -62,13 +62,6 @@ watchEffect(() => {
     data = Object.values(dataEN)
   }
 
-  if (!window.prod) {
-    data = data.map((item) => {
-      item.href = import.meta.env.BASE_URL + item.href
-      return item
-    })
-  }
-
   // Sort by date
   data.sort((a, b) => {
     return new Date(b.date) - new Date(a.date)

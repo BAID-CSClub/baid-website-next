@@ -1,20 +1,16 @@
 <template>
   <router-link
-    :to="'/' + locale + props.to"
+    :to="to"
     class="decoration-none op-80 hover:op-100 active:op-70 transition-opacity"
   >
     <div class="flex items-center w-min">
       <i class="m-r-2 flex items-center">
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
           width="30"
           height="30"
           viewBox="0 0 32.99999997656249 32.99999997656255"
-          fill="none"
         >
           <path
-            id="分组 1"
             fill-rule="evenodd"
             :style="{ fill: props.color }"
             transform="translate(0 2.3092638912203256e-14)  rotate(0 16.499999988281253 16.499999988281253)"
@@ -34,6 +30,7 @@
 
 <script setup>
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 const props = defineProps({
   to: {
     type: String,
@@ -46,4 +43,16 @@ const props = defineProps({
   }
 })
 const { locale } = useI18n({ useScope: 'global' })
+
+const to = computed(() => {
+  // Trim left and right slashes from props.to
+  const to = props.to.replace(/^\/|\/$/g, '')
+
+  if (to.startsWith('zh') || to.startsWith('en')) {
+    // Already has locale prefix
+    return '/' + to
+  } else {
+    return '/' + locale.value + '/' + to
+  }
+})
 </script>

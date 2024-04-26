@@ -45,6 +45,7 @@
             v-for="(result, index) in results"
             :key="result.ref"
             :to="db[locale][result.ref].href"
+            @click="toggleSearchBox()"
             class="color-black decoration-none op-80 hover:op-100 transition"
           >
             <h3 class="m0">{{ db[locale][result.ref].title }}</h3>

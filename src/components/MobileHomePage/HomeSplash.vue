@@ -57,17 +57,11 @@
       >
         <span>Learn More</span>
         <div class="w10 h10 ma">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 48 48"
-          >
+          <svg viewBox="0 0 48 48">
             <g fill="none">
               <path
                 d="M8.366 16.116a1.25 1.25 0 0 0 0 1.768l14.75 14.75a1.25 1.25 0 0 0 1.768 0l14.75-14.75a1.25 1.25 0 0 0-1.768-1.768L24 29.982L10.134 16.116a1.25 1.25 0 0 0-1.768 0z"
                 fill="currentColor"
-                style="--darkreader-inline-fill: currentColor"
-                data-darkreader-inline-fill=""
               ></path>
             </g>
           </svg>
@@ -90,6 +84,7 @@ let swiper
 const show = ref(true)
 
 function change (index) {
+  console.log(pageData.carousel_images)
   if (
     current.value !== index &&
     index < pageData.carousel_images.length &&
