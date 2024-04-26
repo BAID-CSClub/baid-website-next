@@ -72,40 +72,40 @@
 </template>
 
 <script setup>
-import { ref, inject } from "vue";
-import { SwiperSlide, Swiper } from "swiper/vue";
-import "swiper/css";
+import { ref, inject } from 'vue'
+import { SwiperSlide, Swiper } from 'swiper/vue'
+import 'swiper/css'
 
-const pageData = inject("data");
+const pageData = inject('data')
 
-const current = ref(0);
-let swiper;
+const current = ref(0)
+let swiper
 
-const show = ref(true);
+const show = ref(true)
 
-function change(index) {
-  console.log(pageData.carousel_images);
+function change (index) {
+  console.log(pageData.carousel_images)
   if (
     current.value !== index &&
     index < pageData.carousel_images.length &&
     index >= 0
   ) {
-    current.value = index;
-    swiper.slideTo(index);
+    current.value = index
+    swiper.slideTo(index)
   }
 }
 
-let startY = 0;
+let startY = 0
 
-function onStart(e) {
-  startY = e.touches[0].clientY;
+function onStart (e) {
+  startY = e.touches[0].clientY
 }
 
-function onMove(e) {
-  const deltaY = e.touches[0].clientY - startY;
+function onMove (e) {
+  const deltaY = e.touches[0].clientY - startY
 
   if (deltaY < -100) {
-    show.value = false;
+    show.value = false
   }
 }
 </script>

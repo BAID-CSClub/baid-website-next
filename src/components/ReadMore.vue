@@ -22,42 +22,37 @@
       <span
         class="w-max font-sans tracking-wide"
         :style="{ color: props.color }"
-        >{{ $t("HomePage.ReadMore") }}</span
+        >{{ $t('HomePage.ReadMore') }}</span
       >
     </div>
   </router-link>
 </template>
 
 <script setup>
-import { useI18n } from "vue-i18n";
-import { computed } from "vue";
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 const props = defineProps({
   to: {
     type: String,
-    required: true,
+    required: true
   },
   color: {
     type: String,
     required: false,
-    default: "var(--standard-blue)",
-  },
-});
-const { locale } = useI18n({ useScope: "global" });
+    default: 'var(--standard-blue)'
+  }
+})
+const { locale } = useI18n({ useScope: 'global' })
 
 const to = computed(() => {
   // Trim left and right slashes from props.to
-  let to = props.to.replace(/^\/|\/$/g, "");
+  const to = props.to.replace(/^\/|\/$/g, '')
 
-  let base = import.meta.env.BASE_URL;
-  if (!base.endsWith("/")) {
-    base += "/";
-  }
-
-  if (to.startsWith("zh") || to.startsWith("en")) {
+  if (to.startsWith('zh') || to.startsWith('en')) {
     // Already has locale prefix
-    return base + to;
+    return '/' + to
   } else {
-    return base + locale.value + "/" + to;
+    return '/' + locale.value + '/' + to
   }
-});
+})
 </script>

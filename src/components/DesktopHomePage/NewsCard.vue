@@ -25,6 +25,6 @@
 </template>
 
 <script setup>
-import ReadMore from "../ReadMore.vue";
-const props = defineProps(["news", "bg", "light"]);
+import ReadMore from '../ReadMore.vue'
+const props = defineProps(['news', 'bg', 'light'])
 </script>

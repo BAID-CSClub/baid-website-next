@@ -11,34 +11,26 @@
 </template>
 
 <script setup>
-import DesktopLayout from "./layouts/DesktopLayout.vue";
-import MobileLayout from "./layouts/MobileLayout.vue";
-import { useI18n } from "vue-i18n";
-import { useRouter } from "vue-router";
-const { locale, t } = useI18n({ useScope: "global" });
+import DesktopLayout from './layouts/DesktopLayout.vue'
+import MobileLayout from './layouts/MobileLayout.vue'
+import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
+const { locale, t } = useI18n({ useScope: 'global' })
 
-const router = useRouter();
+const router = useRouter()
 router.beforeEach((to) => {
-  const lang = to.params.lang || navigator.language;
-  locale.value = lang;
+  const lang = to.params.lang || navigator.language
+  locale.value = lang
 
   // Set title
-  console.log(to, import.meta.env.BASE_URL, lang);
-  const title = t("views." + to.name);
-  document.title = title;
+  console.log(to, lang)
+  const title = t('views.' + to.name)
+  document.title = title
 
-  if (
-    to.path === import.meta.env.BASE_URL ||
-    to.path === import.meta.env.BASE_URL + "/" ||
-    to.path === "/"
-  ) {
-    if (window.prod) {
-      return { path: "/" + lang + "/" };
-    }
-
-    return { path: import.meta.env.BASE_URL + "/" + lang + "/" };
+  if (to.path === '/') {
+    return { path: '/' + lang + '/' }
   }
-});
+})
 </script>
 
 <style>

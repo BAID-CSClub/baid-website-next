@@ -5,11 +5,7 @@ const clientType =
     ? 'mobile'
     : 'desktop'
 
-let prefix = '/:lang(zh-CN|en-US)'
-
-if (!window.prod) {
-  prefix = import.meta.env.BASE_URL + prefix
-}
+const prefix = '/:lang(zh-CN|en-US)'
 
 export const routes = [
   {

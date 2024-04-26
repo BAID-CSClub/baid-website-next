@@ -24,7 +24,7 @@
         class="flex items-center gap-1 color-black decoration-none op-100 font-18px"
         :to="$BASE_URL + '/' + $i18n.locale + '/news'"
       >
-        <span class="font-sans">{{ $t("HomePage.ReadMore") }}</span>
+        <span class="font-sans">{{ $t('HomePage.ReadMore') }}</span>
         <svg width="25" height="25" viewBox="0 0 16 16">
           <path
             fill="currentColor"
@@ -37,11 +37,11 @@
 </template>
 
 <script setup>
-import MobileTitle from "../MobileTitle.vue";
+import MobileTitle from '../MobileTitle.vue'
 
-import MobileCard from "../MobileCard.vue";
-import { useRouter } from "vue-router";
-const props = defineProps(["news"]);
+import MobileCard from '../MobileCard.vue'
+import { useRouter } from 'vue-router'
+const props = defineProps(['news'])
 
-const router = useRouter();
+const router = useRouter()
 </script>
