@@ -30,8 +30,8 @@
   </footer>
 </template>
 <script setup>
-import logoFullWhite from "../assets/images/logoFullWhite.png?webp";
-import imgFooter from "../assets/images/Footer-blue.jpg?webp";
+import logoFullWhite from '../assets/images/logoFullWhite.png?webp'
+import imgFooter from '../assets/images/Footer-blue.jpg?webp'
 </script>
 <style>
 footer {
