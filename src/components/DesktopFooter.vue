@@ -5,7 +5,18 @@
   >
     <div class="cover w-full h-full">
       <div class="flex color-white w-full h-full justify-center items-center">
-        <div class="w-50% mx-24 text-right">FOOTER CONTENT</div>
+        <div class="w-50% mx-24 flex items-center justify-end">
+          <div>
+            <a
+              class="color-white !decoration-none"
+              href="https://beian.miit.gov.cn"
+              target="_blank"
+            >
+              京ICP备 - 1324564856
+            </a>
+            <p>@2024 BJZX All rights reserved.</p>
+          </div>
+        </div>
         <div class="w-50% mx-24 flex items-center">
           <img
             class="w-sm inline object-cover"
@@ -19,8 +30,8 @@
   </footer>
 </template>
 <script setup>
-import logoFullWhite from '../assets/images/logoFullWhite.png?webp'
-import imgFooter from '../assets/images/Footer-blue.jpg?webp'
+import logoFullWhite from "../assets/images/logoFullWhite.png?webp";
+import imgFooter from "../assets/images/Footer-blue.jpg?webp";
 </script>
 <style>
 footer {
