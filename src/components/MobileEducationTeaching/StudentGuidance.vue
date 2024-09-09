@@ -7,34 +7,32 @@
     </div>
 
     <div
-      class="h-50 rd-5 drop-shadow flex flex-col justify-end p-4 box-border m-y-6 m-x-2"
-      style="
-        background: url(https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-        background-size: cover;
-      "
+      class="h-50 rd-5 drop-shadow flex flex-col justify-end box-border my-6 mx-2 bg-cover overflow-hidden"
+      v-for="data in pageData.student_mentorship"
+      :key="data.title"
+      :style="{ backgroundImage: `url(${data.image})` }"
     >
-      <div class="text-6 font-black">
-        {{ $t('EducationTeaching.StudentGuidance.Content.Title') }}
-      </div>
-      <div class="m-l-2">
-        {{ $t('EducationTeaching.StudentGuidance.Content.Description') }}
-      </div>
-    </div>
-    <div
-      class="h-50 rd-5 drop-shadow flex flex-col justify-end p-4 box-border m-y-6 m-x-2"
-      style="
-        background: url(https://images.unsplash.com/photo-1562564055-71e051d33c19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
-        background-size: cover;
-      "
-    >
-      <div class="text-6 font-black">
-        {{ $t('EducationTeaching.StudentGuidance.Content.Title') }}
-      </div>
-      <div class="m-l-2">
-        {{ $t('EducationTeaching.StudentGuidance.Content.Description') }}
+      <div class="gradient-bg p-4 color-white">
+        <div class="text-6 font-black">
+          {{ data.title }}
+        </div>
+        <div v-html="data.content"></div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { inject } from 'vue'
+const pageData = inject('data')
+</script>
+
+<style scoped>
+.gradient-bg {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+</style>

@@ -14,13 +14,12 @@
         <img
           :src="pageData.learning_methods[current].image"
           class="w-full h-full object-cover"
-          alt="Bg"
         />
         <div
-          class="absolute bottom-0 pa-10 color-white special-bg transition-opacity-300"
+          class="absolute bottom-0 pa-10 pt-20 color-white special-bg transition-opacity-300"
           :class="{ 'op-0': transition }"
         >
-          <h3>{{ pageData.learning_methods[current].title }}</h3>
+          <h2>{{ pageData.learning_methods[current].title }}</h2>
           <p v-html="pageData.learning_methods[current].content"></p>
         </div>
       </div>

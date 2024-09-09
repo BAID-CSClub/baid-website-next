@@ -28,20 +28,20 @@
           :class="{ '!op-100': current == i, 'flex-col-reverse': i % 2 == 0 }"
           :key="i"
         >
-          <div
-            class="flex w-full gap-5"
-            :class="{ 'flex-row-reverse': i % 2 == 0 }"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=500"
-              class="flex-1 w-full h-50"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1688362378188-264c2d01ae9d?w=500"
-              class="flex-1 w-full h-50"
-            />
-          </div>
-          <pre class="" v-html="c.content"></pre>
+          <!-- <div -->
+          <!--   class="flex w-full gap-5" -->
+          <!--   :class="{ 'flex-row-reverse': i % 2 == 0 }" -->
+          <!-- > -->
+          <!--   <img -->
+          <!--     src="https://images.unsplash.com/photo-1610296669228-602fa827fc1f?w=500" -->
+          <!--     class="flex-1 w-full h-50" -->
+          <!--   /> -->
+          <!--   <img -->
+          <!--     src="https://images.unsplash.com/photo-1688362378188-264c2d01ae9d?w=500" -->
+          <!--     class="flex-1 w-full h-50" -->
+          <!--   /> -->
+          <!-- </div> -->
+          <pre v-html="c.content"></pre>
         </div>
       </div>
     </div>

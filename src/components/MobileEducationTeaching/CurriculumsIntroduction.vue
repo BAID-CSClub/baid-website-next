@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="relative font-black text-center">
-      <h2 class="text-8 tracking-5 m-y-4">
+      <h2 class="text-8 tracking-wider m-y-4">
         {{ $t('EducationTeaching.Curriculums.Title') }}
       </h2>
       <!-- <h2 class="text-4 tracking-wider text-gray-300 m-0!">Curriculums</h2> -->
     </div>
     <MobileCard :items="pageData.curriculums" :border="false" :autoplay="false">
       <template #item="{ name, content, index }">
-        <div class="m-b-8 flex flex-col color-black">
+        <div class="mb-8 mt-4 flex flex-col color-black">
           <div class="flex items-center m-x-2">
             <img :src="icons[index]" class="w-18 block" />
             <h3 class="m-x-2 text-6">{{ name }}</h3>
