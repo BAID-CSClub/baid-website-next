@@ -1,12 +1,18 @@
 <template>
   <div
-    class="bg-white text-[var(--standard-red)] b-6 b-[var(--standard-red)] text-6 p-1vw font-title"
+    class="bg-white box-border b-6 text-6 p-5 font-title"
+    :class="{
+      'text-[var(--standard-red)]': props.color === 'red',
+      'text-[var(--standard-blue)]': props.color === 'blue'
+    }"
   >
-    简单介绍
-    <pre class="mt-1">{{ props.content }}</pre>
+    <span>
+      {{ props.title }}
+    </span>
+    <pre class="mt-3" v-html="props.content"></pre>
   </div>
 </template>
 
 <script setup>
-const props = defineProps(['content'])
+const props = defineProps(['title', 'content', 'color'])
 </script>

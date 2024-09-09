@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="relative">
-      <h2 class="text-[var(--standard-red)] font-black! text-8 m-y-4">
+      <h2 class="text-[var(--standard-red)] font-black text-8 m-y-4">
         自主探索<br />多样的<br />学习方式
       </h2>
     </div>
