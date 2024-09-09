@@ -24,7 +24,7 @@
         :space-between="10"
         :autoplay="{
           delay: 2500,
-          disableOnInteraction: false,
+          disableOnInteraction: false
         }"
         :loop="true"
         :pagination="{ clickable: true }"
@@ -42,31 +42,31 @@
 </template>
 
 <script setup>
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
 
-import { Swiper, SwiperSlide } from "swiper/vue";
-import { Pagination, Autoplay, A11y } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Pagination, Autoplay, A11y } from 'swiper'
 
 const slides = [
   {
-    title: "EducationTeaching.WonderfulMoments.Slides.Slide1.Title",
-    description: "EducationTeaching.WonderfulMoments.Slides.Slide1.Description",
+    title: 'EducationTeaching.WonderfulMoments.Slides.Slide1.Title',
+    description: 'EducationTeaching.WonderfulMoments.Slides.Slide1.Description',
     background:
-      "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80",
+      'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   },
   {
-    title: "EducationTeaching.WonderfulMoments.Slides.Slide2.Title",
-    description: "EducationTeaching.WonderfulMoments.Slides.Slide2.Description",
+    title: 'EducationTeaching.WonderfulMoments.Slides.Slide2.Title',
+    description: 'EducationTeaching.WonderfulMoments.Slides.Slide2.Description',
     background:
-      "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80",
+      'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
   },
   {
-    title: "EducationTeaching.WonderfulMoments.Slides.Slide3.Title",
-    description: "EducationTeaching.WonderfulMoments.Slides.Slide3.Description",
+    title: 'EducationTeaching.WonderfulMoments.Slides.Slide3.Title',
+    description: 'EducationTeaching.WonderfulMoments.Slides.Slide3.Description',
     background:
-      "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80",
-  },
-];
+      'https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1776&q=80'
+  }
+]
 </script>

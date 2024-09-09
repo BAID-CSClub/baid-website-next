@@ -153,6 +153,6 @@
   </div>
 </template>
 <script setup>
-import homeBg1 from "../../assets/images/homeBg1.jpg?webp";
-import NotFancyTitle from "../NotFancyTitle.vue";
+import homeBg1 from '../../assets/images/homeBg1.jpg?webp'
+import NotFancyTitle from '../NotFancyTitle.vue'
 </script>

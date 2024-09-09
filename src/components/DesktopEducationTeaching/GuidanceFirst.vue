@@ -18,8 +18,8 @@
 </template>
 
 <script setup>
-import NotFancyTitle from "../NotFancyTitle.vue";
-import img1 from "../../assets/images/le1.png?webp";
-import IntroductionBlock from "./IntroductionBlock.vue";
-const dummyContent = "Introduction goes here!\nAnother line";
+import NotFancyTitle from '../NotFancyTitle.vue'
+import img1 from '../../assets/images/le1.png?webp'
+import IntroductionBlock from './IntroductionBlock.vue'
+const dummyContent = 'Introduction goes here!\nAnother line'
 </script>
