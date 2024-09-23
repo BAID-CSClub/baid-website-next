@@ -33,7 +33,7 @@
           <div
             class="m-2 m-t-0! box-border drop-shadow h-50 rd-5 flex flex-col justify-end overflow-hidden"
           >
-            <img :src="img" class="absolute object-cover block" />
+            <img :src="img" class="absolute object-cover block w-full" />
           </div>
         </swiper-slide>
       </swiper>
