@@ -62,9 +62,21 @@ log("== API Freeze");
 log(" - wagtail_base: ", wagtail_base);
 log(" - search backend: lunr");
 
-const pages = await get("pages/");
+let pages = await get("pages/");
 
-log(" - total pages: ", pages.items.length);
+log(" - total pages: ", pages.meta.total_count);
+
+// Pagination, 20 per page
+const pageItems = pages.items;
+let offset = 20;
+if (pages.meta.total_count > 20) {
+  while (offset < pages.meta.total_count) {
+    console.log(":: Fetching more pages... ", offset);
+    pages = await get("pages/?offset=" + offset);
+    pageItems.push(...pages.items);
+    offset += 20;
+  }
+}
 
 // log(":: Processing Pages...");
 
@@ -74,9 +86,9 @@ const documents = {
 };
 
 let i = 0;
-for (let page of pages.items) {
+for (let page of pageItems) {
   i++;
-  process.stdout.write(`\r:: Processing Pages... ${i}/${pages.items.length}`);
+  process.stdout.write(`\r:: Processing Pages... ${i}/${pageItems.length}`);
   if (page.meta.type === "base.Base" || page.meta.type === "news.NewsIndex") {
     continue;
   }
