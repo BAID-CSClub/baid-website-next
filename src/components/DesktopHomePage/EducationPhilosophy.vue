@@ -13,7 +13,7 @@
           :key="key"
           :title="pageData[key + '_title']"
           :content="pageData[key + '_content']"
-          image="https://images.unsplash.com/photo-1693047995769-80b8b4af4eee"
+          :image="pageData[key + '_bg']"
           :index="index"
           :active="active"
           @activate="active = index"

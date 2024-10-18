@@ -33,10 +33,10 @@
             </svg>
           </a>
         </div>
-        <p class="op-80">{{ item.intro }}</p>
+        <p class="op-80 line-clamp-4">{{ item.intro }}</p>
         <div class="flex-1"></div>
 
-        <p class="op-50">发布于 {{ item.date }}</p>
+        <p class="op-50">{{ $t('NewsPage.Publish') }} {{ item.date }}</p>
       </div>
     </div>
   </section>
