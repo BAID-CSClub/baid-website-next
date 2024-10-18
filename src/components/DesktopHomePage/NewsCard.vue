@@ -9,11 +9,13 @@
       alt="Cover image"
     />
     <div class="px-6 py-3">
-      <h2 class="mb-2">{{ props.news.title }}</h2>
-      <p>
-        <!--{{ props.news.abstract }}-->
-        PLACEHOLDER FOR NEWS PREVIEW
+      <h2 class="mb-2 line-clamp-1">
+        {{ props.news.title }}
+      </h2>
+      <p class="op-80 line-clamp-3">
+        {{ props.news.intro }}
       </p>
+      <p class="op-50">{{ $t('NewsPage.Publish') }} {{ props.news.date }}</p>
     </div>
 
     <ReadMore

@@ -6,7 +6,7 @@
       :key="item.id"
       class="w-full border-solid border-[var(--standard-red)] flex h-70 my-10 cursor-pointer op-100 hover:op-90 active:op-70 transition"
       :class="{
-        'flex-row-reverse !border-[var(--standard-blue)]': index % 2
+        'flex-row-reverse !border-[var(--standard-blue)]': index % 2,
       }"
       @click="router.push(item.href)"
     >
@@ -33,39 +33,39 @@
             </svg>
           </a>
         </div>
-        <p class="op-80">{{ item.intro }}</p>
+        <p class="op-80 line-clamp-4">{{ item.intro }}</p>
         <div class="flex-1"></div>
 
-        <p class="op-50">发布于 {{ item.date }}</p>
+        <p class="op-50">{{ $t("NewsPage.Publish") }} {{ item.date }}</p>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, watchEffect } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import NotFancyTitle from '../../components/NotFancyTitle.vue'
-import dataZH from '@data/zh-CN/db.json'
-import dataEN from '@data/en-US/db.json'
+import { ref, watchEffect } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import NotFancyTitle from "../../components/NotFancyTitle.vue";
+import dataZH from "@data/zh-CN/db.json";
+import dataEN from "@data/en-US/db.json";
 
-const route = useRoute()
-const router = useRouter()
+const route = useRoute();
+const router = useRouter();
 
-const news = ref([])
+const news = ref([]);
 
 watchEffect(() => {
-  let data
-  if (route.params.lang === 'zh-CN') {
-    data = Object.values(dataZH)
+  let data;
+  if (route.params.lang === "zh-CN") {
+    data = Object.values(dataZH);
   } else {
-    data = Object.values(dataEN)
+    data = Object.values(dataEN);
   }
 
   // Sort by date
   data.sort((a, b) => {
-    return new Date(b.date) - new Date(a.date)
-  })
-  news.value = data
-})
+    return new Date(b.date) - new Date(a.date);
+  });
+  news.value = data;
+});
 </script>
