@@ -1,5 +1,9 @@
 # BAID Website @ Next
 
+Please refer to [WebArtistryBAID/Helium](https://github.com/WebArtistryBAID/Helium).
+
+请查看 [WebArtistryBAID/Helium](https://github.com/WebArtistryBAID/Helium)。
+
 ## 项目结构
 
 - `src` - 源码
